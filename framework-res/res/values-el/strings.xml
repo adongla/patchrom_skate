@@ -172,6 +172,17 @@
     <string name="ellipsis_two_dots">‥</string>
     <string name="mmiError">Πρόβλημα σύνδεσης ή μη έγκυρος κώδικας MMI.</string>
     <string name="mmiFdnError">Η λειτουργία περιορίζεται μόνο σε καθορισμένους αριθμούς κλήσης.</string>
+    <string name="profileNameDefault">Προεπιλογή</string>
+    <string name="profileNameWork">Εργασία</string>
+    <string name="profileNameHome">Οικία</string>
+    <string name="profileNameSilent">Αθόρυβο</string>
+    <string name="profileNameNight">Νύχτα</string>
+    <string name="profileGroupPhone">Τηλέφωνο</string>
+    <string name="profileGroupCalendar">Ημερολόγιο</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">Email</string>
+    <string name="profileGroupSMS">SMS</string>
+    <string name="wildcardProfile">Άλλο</string>
     <string name="serviceEnabled">Η υπηρεσία ενεργοποιήθηκε.</string>
     <string name="serviceEnabledFor">Η υπηρεσία ενεργοποιήθηκε για:</string>
     <string name="serviceDisabled">Η υπηρεσία έχει απενεργοποιηθεί.</string>
@@ -282,6 +293,7 @@
     <string name="global_action_lock">Κλείδωμα οθόνης</string>
     <string name="global_action_power_off">Απενεργοποίηση</string>
     <string name="global_action_reboot">Επανεκκίνηση</string>
+    <string name="global_action_choose_profile">Προφίλ</string>
     <string name="global_action_toggle_silent_mode">Λειτουργία σίγασης</string>
     <string name="global_action_silent_mode_on_status">Ο ήχος είναι απενεργοποιημένος</string>
     <string name="global_action_silent_mode_off_status">Ο ήχος είναι ενεργοποιημένος</string>

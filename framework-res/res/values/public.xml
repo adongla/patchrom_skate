@@ -6078,14 +6078,15 @@
     <public type="bool" name="config_telephony_use_own_number_for_voicemail" id="0x0111002b" />
     <public type="bool" name="config_sms_utf8_support" id="0x0111002c" />
     <public type="bool" name="config_mms_content_disposition_support" id="0x0111002d" />
-    <public type="bool" name="config_alwaysUseCdmaRssi" id="0x0111002e" />
-    <public type="bool" name="config_duplicate_port_omadm_wappush" id="0x0111002f" />
-    <public type="bool" name="config_showNavigationBar" id="0x01110030" />
-    <public type="bool" name="config_actionMenuItemAllCaps" id="0x01110031" />
-    <public type="bool" name="config_allowActionMenuItemTextWithIcon" id="0x01110032" />
-    <public type="bool" name="config_wimaxEnabled" id="0x01110033" />
-    <public type="bool" name="config_forceDisableHardwareKeyboard" id="0x01110034" />
-    <public type="bool" name="lockscreen_isPortrait" id="0x01110035" />
+    <public type="bool" name="config_smsSamsungCdmaAlternateMessageIDEncoding" id="0x0111002e" />
+    <public type="bool" name="config_alwaysUseCdmaRssi" id="0x0111002f" />
+    <public type="bool" name="config_duplicate_port_omadm_wappush" id="0x01110030" />
+    <public type="bool" name="config_showNavigationBar" id="0x01110031" />
+    <public type="bool" name="config_actionMenuItemAllCaps" id="0x01110032" />
+    <public type="bool" name="config_allowActionMenuItemTextWithIcon" id="0x01110033" />
+    <public type="bool" name="config_wimaxEnabled" id="0x01110034" />
+    <public type="bool" name="config_forceDisableHardwareKeyboard" id="0x01110035" />
+    <public type="bool" name="lockscreen_isPortrait" id="0x01110036" />
     <public type="fraction" name="config_dimBehindFadeDuration" id="0x01120000" />
     <public type="plurals" name="num_seconds_ago" id="0x01130000" />
     <public type="plurals" name="num_minutes_ago" id="0x01130001" />

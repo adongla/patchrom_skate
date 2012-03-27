@@ -299,7 +299,7 @@
     <string name="global_action_lock">Ekran kilidi</string>
     <string name="global_action_power_off">Kapat</string>
     <string name="global_action_reboot">Yeniden başlat</string>
-    <string name="global_action_choose_profile">Profil seç</string>
+    <string name="global_action_choose_profile">Profil</string>
     <string name="global_action_toggle_silent_mode">Sessiz mod</string>
     <string name="global_action_silent_mode_on_status">Ses KAPALI</string>
     <string name="global_action_silent_mode_off_status">Ses AÇIK</string>

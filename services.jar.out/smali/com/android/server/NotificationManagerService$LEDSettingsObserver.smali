@@ -99,7 +99,7 @@
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 410
-    const-string v1, "notification_light_pulse_custom_enable"
+    const-string v1, "notification_light_pulse_custom_values"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -244,7 +244,7 @@
     .line 442
     iget-object v1, p0, Lcom/android/server/NotificationManagerService$LEDSettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
-    const-string v2, "notification_light_pulse_custom_enable"
+    const-string v2, "notification_light_pulse_custom_values"
 
     invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 

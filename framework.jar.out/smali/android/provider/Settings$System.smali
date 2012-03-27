@@ -254,7 +254,7 @@
 
 .field public static final NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE:Ljava/lang/String; = "notification_light_pulse_custom_enable"
 
-.field public static final NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES:Ljava/lang/String; = "notification_light_pulse_custom_enable"
+.field public static final NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES:Ljava/lang/String; = "notification_light_pulse_custom_values"
 
 .field public static final NOTIFICATION_LIGHT_PULSE_DEFAULT_COLOR:Ljava/lang/String; = "notification_light_pulse_default_color"
 

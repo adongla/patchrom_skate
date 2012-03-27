@@ -21,13 +21,13 @@
 
 .field public static final action_bar_expanded_action_views_exclusive:I = 0x1110004
 
-.field public static final config_actionMenuItemAllCaps:I = 0x1110031
+.field public static final config_actionMenuItemAllCaps:I = 0x1110032
 
-.field public static final config_allowActionMenuItemTextWithIcon:I = 0x1110032
+.field public static final config_allowActionMenuItemTextWithIcon:I = 0x1110033
 
 .field public static final config_allowAllRotations:I = 0x1110013
 
-.field public static final config_alwaysUseCdmaRssi:I = 0x111002e
+.field public static final config_alwaysUseCdmaRssi:I = 0x111002f
 
 .field public static final config_animateScreenLights:I = 0x1110012
 
@@ -57,7 +57,7 @@
 
 .field public static final config_disableMenuKeyInLockScreen:I = 0x111001b
 
-.field public static final config_duplicate_port_omadm_wappush:I = 0x111002f
+.field public static final config_duplicate_port_omadm_wappush:I = 0x1110030
 
 .field public static final config_enableLockBeforeUnlockScreen:I = 0x111001c
 
@@ -67,7 +67,7 @@
 
 .field public static final config_enable_puk_unlock_screen:I = 0x111001e
 
-.field public static final config_forceDisableHardwareKeyboard:I = 0x1110034
+.field public static final config_forceDisableHardwareKeyboard:I = 0x1110035
 
 .field public static final config_intrusiveBatteryLed:I = 0x111001a
 
@@ -83,9 +83,11 @@
 
 .field public static final config_showMenuShortcutsWhenKeyboardPresent:I = 0x111002a
 
-.field public static final config_showNavigationBar:I = 0x1110030
+.field public static final config_showNavigationBar:I = 0x1110031
 
 .field public static final config_sip_wifi_only:I = 0x1110027
+
+.field public static final config_smsSamsungCdmaAlternateMessageIDEncoding:I = 0x111002e
 
 .field public static final config_sms_capable:I = 0x1110026
 
@@ -109,9 +111,9 @@
 
 .field public static final config_wifi_p2p_support:I = 0x111000c
 
-.field public static final config_wimaxEnabled:I = 0x1110033
+.field public static final config_wimaxEnabled:I = 0x1110034
 
-.field public static final lockscreen_isPortrait:I = 0x1110035
+.field public static final lockscreen_isPortrait:I = 0x1110036
 
 .field public static final preferences_prefer_dual_pane:I = 0x1110002
 

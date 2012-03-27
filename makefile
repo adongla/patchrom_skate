@@ -5,6 +5,11 @@
 # The original zip file, MUST be specified by each product
 local-zip-file     := skate.zip
 
+local-miui-modified-apps := Phone AntiSpam Backup Updater
+
+# All apks from MIUI removed
+local-miui-removed-apps := Torch
+
 # All apps need to be removed from original ZIP file
 local-remove-apps := \
 Gallery2 \

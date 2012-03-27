@@ -299,7 +299,7 @@
     <string name="global_action_lock">Bloquear tela</string>
     <string name="global_action_power_off">Desligar</string>
     <string name="global_action_reboot">Reiniciar</string>
-    <string name="global_action_choose_profile">Escolher perfil</string>
+    <string name="global_action_choose_profile">Perfil</string>
     <string name="global_action_toggle_silent_mode">Modo silencioso</string>
     <string name="global_action_silent_mode_on_status">Som DESATIVADO</string>
     <string name="global_action_silent_mode_off_status">O som está ATIVADO</string>

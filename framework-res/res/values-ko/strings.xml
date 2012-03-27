@@ -172,6 +172,17 @@
     <string name="ellipsis_two_dots">‥</string>
     <string name="mmiError">연결에 문제가 있거나 MMI 코드가 잘못되었습니다.</string>
     <string name="mmiFdnError">발신 허용 번호에서만 수행할 수 있는 작업입니다.</string>
+    <string name="profileNameDefault">기본</string>
+    <string name="profileNameWork">직장</string>
+    <string name="profileNameHome">집</string>
+    <string name="profileNameSilent">음소거</string>
+    <string name="profileNameNight">밤</string>
+    <string name="profileGroupPhone">전화</string>
+    <string name="profileGroupCalendar">달력</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">이메일</string>
+    <string name="profileGroupSMS">메시지</string>
+    <string name="wildcardProfile">기타</string>
     <string name="serviceEnabled">서비스를 사용하도록 설정했습니다.</string>
     <string name="serviceEnabledFor">사용 설정된 서비스 목록:</string>
     <string name="serviceDisabled">서비스가 사용 중지되었습니다.</string>
@@ -290,6 +301,8 @@
     <string name="global_actions">휴대전화 옵션</string>
     <string name="global_action_lock">화면 잠금</string>
     <string name="global_action_power_off">종료</string>
+    <string name="global_action_reboot">다시 시작</string>
+    <string name="global_action_choose_profile">프로필 선택</string>
     <string name="global_action_toggle_silent_mode">무음 모드</string>
     <string name="global_action_silent_mode_on_status">소리 꺼짐</string>
     <string name="global_action_silent_mode_off_status">소리 켜짐</string>
@@ -435,7 +448,7 @@
     <string name="permlab_movePackage">애플리케이션 리소스 이동</string>
     <string name="permdesc_movePackage">애플리케이션이 애플리케이션 리소스를 내부에서 외부 미디어로 또는 그 반대로 이동할 수 있도록 합니다.</string>
     <string name="permlab_preventpower">전원 버튼 작동 제한</string>
-    <string name="permdesc_preventpower">어플리케이션이 전원 버튼의 작동을 제한 할 수 있도록 허용합니다.</string>
+    <string name="permdesc_preventpower">애플리케이션이 전원 버튼의 작동을 제한 할 수 있도록 허용합니다.</string>
     <string name="permlab_readLogs">중요한 로그 데이터 읽기</string>
     <string name="permdesc_readLogs">애플리케이션이 시스템의 다양한 로그 파일을 읽을 수 있도록 합니다. 이렇게 되면 애플리케이션은 개인정보 또는 비공개 정보를 포함하여 휴대전화로 수행하는 작업에 대한 일반적인 정보를 검색할 수 있습니다.</string>
     <string name="permlab_anyCodecForPlayback">재생에 모든 미디어 디코더 사용</string>
@@ -1190,5 +1203,5 @@
     <string name="sending">보내는 중...</string>
     <string name="launchBrowserDefault">브라우저를 실행하시겠습니까?</string>
     <string name="SetupCallDefault">통화를 수락하시겠습니까?</string>
-    <string name="app_killed_message">어플리케이션 종료됨</string>
+    <string name="app_killed_message">애플리케이션 종료됨</string>
 </resources>

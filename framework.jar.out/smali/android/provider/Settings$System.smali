@@ -363,7 +363,7 @@
 
 .field public static final STATUS_BAR_BATTERY:Ljava/lang/String; = "status_bar_battery"
 
-.field public static final STATUS_BAR_BRIGHTNESS_TOGGLE:Ljava/lang/String; = "status_bar_brightness_toggle"
+.field public static final STATUS_BAR_BRIGHTNESS_CONTROL:Ljava/lang/String; = "status_bar_brightness_control"
 
 .field public static final STATUS_BAR_CLOCK:Ljava/lang/String; = "status_bar_clock"
 

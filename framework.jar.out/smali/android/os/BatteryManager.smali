@@ -32,6 +32,22 @@
 
 .field public static final BATTERY_STATUS_UNKNOWN:I = 0x1
 
+.field public static final DOCK_STATE_CHARGING:I = 0x2
+
+.field public static final DOCK_STATE_DISCHARGING:I = 0x4
+
+.field public static final DOCK_STATE_DOCKED:I = 0x3
+
+.field public static final DOCK_STATE_UNDOCKED:I = 0x1
+
+.field public static final DOCK_STATE_UNKNOWN:I = 0x0
+
+.field public static final EXTRA_DOCK_AC_ONLINE:Ljava/lang/String; = "dock_ac_online"
+
+.field public static final EXTRA_DOCK_LEVEL:Ljava/lang/String; = "dock_level"
+
+.field public static final EXTRA_DOCK_STATUS:Ljava/lang/String; = "dock_status"
+
 .field public static final EXTRA_HEALTH:Ljava/lang/String; = "health"
 
 .field public static final EXTRA_ICON_SMALL:Ljava/lang/String; = "icon-small"

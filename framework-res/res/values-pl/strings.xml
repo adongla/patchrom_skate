@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Wyłącz połączenia bezprzewodowe</string>
     <string name="screen_lock">Blokada ekranu</string>
     <string name="power_off">Wyłącz</string>
+    <string name="silent_mode_silent">Dzwonek wyłączony</string>
+    <string name="silent_mode_vibrate">Dzwonek z wibracjami</string>
+    <string name="silent_mode_ring">Dzwonek włączony</string>
     <string name="shutdown_progress">Wyłączanie...</string>
     <string name="shutdown_confirm">Telefon zostanie wyłączony</string>
     <string name="shutdown_confirm_question">Czy chcesz wyłączyć?</string>
@@ -736,7 +739,7 @@
     <string name="lockscreen_sim_unlock_progress_dialog_message">Odblokowywanie karty SIM...</string>
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Wzór odblokowania został nieprawidłowo narysowany %d razy. 
 
-Spróbuj ponownie za %d sekund."</string>
+Spróbuj ponownie za %d sek."</string>
     <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Hasło zostało nieprawidłowo wprowadzone %d razy. 
 
 Spróbuj ponownie za %d s."</string>
@@ -745,10 +748,10 @@ Spróbuj ponownie za %d s."</string>
 Spróbuj ponownie za %d s."</string>
     <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"Wzór odblokowania został narysowany nieprawidłowo %d razy. Po kolejnych %d nieudanych próbach telefon trzeba będzie odblokować przez zalogowanie na koncie Google.
 
- Spróbuj ponownie za %d sekund."</string>
+ Spróbuj ponownie za %d sek."</string>
     <string name="lockscreen_failed_attempts_almost_at_wipe" formatted="false">Próbowano %d razy nieprawidłowo odblokować telefon. Po kolejnych %d nieudanych próbach telefon zostanie zresetowany do ustawień fabrycznych, a wszystkie dane użytkownika zostaną utracone.</string>
     <string name="lockscreen_failed_attempts_now_wiping">Próbowano %d razy nieprawidłowo odblokować telefon. Telefon zostanie teraz zresetowany do ustawień fabrycznych.</string>
-    <string name="lockscreen_too_many_failed_attempts_countdown">Spróbuj ponownie za %d sekund.</string>
+    <string name="lockscreen_too_many_failed_attempts_countdown">Spróbuj ponownie za %d sek.</string>
     <string name="lockscreen_forgot_pattern_button_text">Zapomniałeś wzoru?</string>
     <string name="lockscreen_glogin_forgot_pattern">Odblokowanie konta</string>
     <string name="lockscreen_glogin_too_many_attempts">Zbyt wiele prób narysowania wzoru!</string>
@@ -881,13 +884,13 @@ Wybierz opcję OK, aby kontynuować, lub opcję Anuluj, aby pozostać na tej str
     <string name="aerr_application">Niestety, aplikacja %1$s została zatrzymana.</string>
     <string name="aerr_process">Niestety, proces %1$s został zatrzymany.</string>
     <string name="anr_title" />
-    <string name="anr_activity_application">"Aplikacja %2$s nie odpowiada.
+    <string name="anr_activity_application">"Aplikacja %2$s nie reaguje.
 
 Czy chcesz ją zamknąć?"</string>
     <string name="anr_activity_process">"Funkcja %1$s nie odpowiada.
 
 Czy chcesz ją zakończyć?"</string>
-    <string name="anr_application_process">Aplikacja %1$s nie odpowiada. Czy chcesz ją zamknąć?</string>
+    <string name="anr_application_process">Aplikacja %1$s nie reaguje. Czy chcesz ją zamknąć?</string>
     <string name="anr_process">"Proces %1$s nie odpowiada.
 
 Czy chcesz go zakończyć?"</string>
@@ -1156,12 +1159,12 @@ dotyczące konta %s"</string>
     <string name="ssl_certificate">Certyfikat zabezpieczeń</string>
     <string name="ssl_certificate_is_valid">Certyfikat jest ważny.</string>
     <string name="issued_to">Wystawiony dla:</string>
-    <string name="common_name">Nazwa pospolita (CN):</string>
+    <string name="common_name">Nazwa (CN):</string>
     <string name="org_name">Organizacja:</string>
     <string name="org_unit">Jednostka organizacyjna:</string>
     <string name="issued_by">Wystawca:</string>
     <string name="validity_period">Ważność:</string>
-    <string name="issued_on">Data wystawienia:</string>
+    <string name="issued_on">Wystawiony:</string>
     <string name="expires_on">Wygasa:</string>
     <string name="serial_number">Numer seryjny:</string>
     <string name="fingerprints">Odciski cyfrowe:</string>

@@ -265,6 +265,9 @@
     <string name="turn_off_radio">Skakel draadloos af</string>
     <string name="screen_lock">Skermslot</string>
     <string name="power_off">Sit af</string>
+    <string name="silent_mode_silent">Luitoestel af</string>
+    <string name="silent_mode_vibrate">Luitoestel vibreer</string>
+    <string name="silent_mode_ring">Luitoestel aan</string>
     <string name="shutdown_progress">Sit tans af…</string>
     <string name="shutdown_confirm">Jou foon gaan nou afsit.</string>
     <string name="shutdown_confirm_question">Wil jy afskakel?</string>

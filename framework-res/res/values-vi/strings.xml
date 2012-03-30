@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Tắt không dây</string>
     <string name="screen_lock">Khoá màn hình</string>
     <string name="power_off">Tắt nguồn</string>
+    <string name="silent_mode_silent">Tắt chuông</string>
+    <string name="silent_mode_vibrate">Chuông rung</string>
+    <string name="silent_mode_ring">Bật chuông</string>
     <string name="shutdown_progress">Đang tắt…</string>
     <string name="shutdown_confirm">Điện thoại của bạn sẽ tắt.</string>
     <string name="shutdown_confirm_question">Bạn có muốn tắt không?</string>

@@ -1,7 +1,0 @@
-version: 1.4.2.31e6dc5
-apkFileName: Updater.apk
-isFrameworkApk: false
-usesFramework:
-  ids:
-  - 1
-  - 3

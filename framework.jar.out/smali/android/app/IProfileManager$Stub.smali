@@ -26,17 +26,17 @@
 # static fields
 .field private static final DESCRIPTOR:Ljava/lang/String; = "android.app.IProfileManager"
 
-.field static final TRANSACTION_addNotificationGroup:I = 0xd
+.field static final TRANSACTION_addNotificationGroup:I = 0xe
 
 .field static final TRANSACTION_addProfile:I = 0x4
 
 .field static final TRANSACTION_getActiveProfile:I = 0x3
 
-.field static final TRANSACTION_getNotificationGroup:I = 0x11
+.field static final TRANSACTION_getNotificationGroup:I = 0x12
 
-.field static final TRANSACTION_getNotificationGroupForPackage:I = 0x10
+.field static final TRANSACTION_getNotificationGroupForPackage:I = 0x11
 
-.field static final TRANSACTION_getNotificationGroups:I = 0xc
+.field static final TRANSACTION_getNotificationGroups:I = 0xd
 
 .field static final TRANSACTION_getProfile:I = 0x7
 
@@ -44,21 +44,23 @@
 
 .field static final TRANSACTION_getProfiles:I = 0x9
 
+.field static final TRANSACTION_notificationGroupExistsByName:I = 0xc
+
 .field static final TRANSACTION_profileExists:I = 0xa
 
 .field static final TRANSACTION_profileExistsByName:I = 0xb
 
-.field static final TRANSACTION_removeNotificationGroup:I = 0xe
+.field static final TRANSACTION_removeNotificationGroup:I = 0xf
 
 .field static final TRANSACTION_removeProfile:I = 0x5
 
-.field static final TRANSACTION_resetAll:I = 0x12
+.field static final TRANSACTION_resetAll:I = 0x13
 
 .field static final TRANSACTION_setActiveProfile:I = 0x1
 
 .field static final TRANSACTION_setActiveProfileByName:I = 0x2
 
-.field static final TRANSACTION_updateNotificationGroup:I = 0xf
+.field static final TRANSACTION_updateNotificationGroup:I = 0x10
 
 .field static final TRANSACTION_updateProfile:I = 0x6
 
@@ -156,7 +158,7 @@
     .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 294
+    .line 304
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
@@ -649,80 +651,72 @@
     .end local v0           #_arg0:Ljava/lang/String;
     .end local v1           #_result:Z
     :sswitch_c
-    const-string v2, "android.app.IProfileManager"
+    const-string v4, "android.app.IProfileManager"
 
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 202
-    invoke-virtual {p0}, Landroid/app/IProfileManager$Stub;->getNotificationGroups()[Landroid/app/NotificationGroup;
-
-    move-result-object v1
+    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 203
-    .local v1, _result:[Landroid/app/NotificationGroup;
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
 
     .line 204
-    invoke-virtual {p3, v1, v3}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
+    .restart local v0       #_arg0:Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/app/IProfileManager$Stub;->notificationGroupExistsByName(Ljava/lang/String;)Z
+
+    move-result v1
+
+    .line 205
+    .restart local v1       #_result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 206
+    if-eqz v1, :cond_f
+
+    move v2, v3
+
+    :cond_f
+    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 209
-    .end local v1           #_result:[Landroid/app/NotificationGroup;
+    .line 211
+    .end local v0           #_arg0:Ljava/lang/String;
+    .end local v1           #_result:Z
     :sswitch_d
     const-string v2, "android.app.IProfileManager"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 211
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    if-eqz v2, :cond_f
-
     .line 212
-    sget-object v2, Landroid/app/NotificationGroup;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-virtual {p0}, Landroid/app/IProfileManager$Stub;->getNotificationGroups()[Landroid/app/NotificationGroup;
 
-    invoke-interface {v2, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v0
-
-    check-cast v0, Landroid/app/NotificationGroup;
-
-    .line 217
-    .local v0, _arg0:Landroid/app/NotificationGroup;
-    :goto_7
-    invoke-virtual {p0, v0}, Landroid/app/IProfileManager$Stub;->addNotificationGroup(Landroid/app/NotificationGroup;)V
-
-    .line 218
+    .line 213
+    .local v1, _result:[Landroid/app/NotificationGroup;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 214
+    invoke-virtual {p3, v1, v3}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
     goto/16 :goto_0
 
-    .line 215
-    .end local v0           #_arg0:Landroid/app/NotificationGroup;
-    :cond_f
-    const/4 v0, 0x0
-
-    .restart local v0       #_arg0:Landroid/app/NotificationGroup;
-    goto :goto_7
-
-    .line 223
-    .end local v0           #_arg0:Landroid/app/NotificationGroup;
+    .line 219
+    .end local v1           #_result:[Landroid/app/NotificationGroup;
     :sswitch_e
     const-string v2, "android.app.IProfileManager"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 225
+    .line 221
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_10
 
-    .line 226
+    .line 222
     sget-object v2, Landroid/app/NotificationGroup;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v2, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -731,39 +725,39 @@
 
     check-cast v0, Landroid/app/NotificationGroup;
 
-    .line 231
-    .restart local v0       #_arg0:Landroid/app/NotificationGroup;
-    :goto_8
-    invoke-virtual {p0, v0}, Landroid/app/IProfileManager$Stub;->removeNotificationGroup(Landroid/app/NotificationGroup;)V
+    .line 227
+    .local v0, _arg0:Landroid/app/NotificationGroup;
+    :goto_7
+    invoke-virtual {p0, v0}, Landroid/app/IProfileManager$Stub;->addNotificationGroup(Landroid/app/NotificationGroup;)V
 
-    .line 232
+    .line 228
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 229
+    .line 225
     .end local v0           #_arg0:Landroid/app/NotificationGroup;
     :cond_10
     const/4 v0, 0x0
 
     .restart local v0       #_arg0:Landroid/app/NotificationGroup;
-    goto :goto_8
+    goto :goto_7
 
-    .line 237
+    .line 233
     .end local v0           #_arg0:Landroid/app/NotificationGroup;
     :sswitch_f
     const-string v2, "android.app.IProfileManager"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 239
+    .line 235
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_11
 
-    .line 240
+    .line 236
     sget-object v2, Landroid/app/NotificationGroup;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v2, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -772,79 +766,120 @@
 
     check-cast v0, Landroid/app/NotificationGroup;
 
-    .line 245
+    .line 241
     .restart local v0       #_arg0:Landroid/app/NotificationGroup;
-    :goto_9
-    invoke-virtual {p0, v0}, Landroid/app/IProfileManager$Stub;->updateNotificationGroup(Landroid/app/NotificationGroup;)V
+    :goto_8
+    invoke-virtual {p0, v0}, Landroid/app/IProfileManager$Stub;->removeNotificationGroup(Landroid/app/NotificationGroup;)V
 
-    .line 246
+    .line 242
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 243
+    .line 239
     .end local v0           #_arg0:Landroid/app/NotificationGroup;
     :cond_11
     const/4 v0, 0x0
 
     .restart local v0       #_arg0:Landroid/app/NotificationGroup;
-    goto :goto_9
+    goto :goto_8
 
-    .line 251
+    .line 247
     .end local v0           #_arg0:Landroid/app/NotificationGroup;
     :sswitch_10
-    const-string v4, "android.app.IProfileManager"
+    const-string v2, "android.app.IProfileManager"
 
-    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 253
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    .line 249
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    if-eqz v2, :cond_12
+
+    .line 250
+    sget-object v2, Landroid/app/NotificationGroup;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v2, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 254
-    .local v0, _arg0:Ljava/lang/String;
-    invoke-virtual {p0, v0}, Landroid/app/IProfileManager$Stub;->getNotificationGroupForPackage(Ljava/lang/String;)Landroid/app/NotificationGroup;
-
-    move-result-object v1
+    check-cast v0, Landroid/app/NotificationGroup;
 
     .line 255
-    .local v1, _result:Landroid/app/NotificationGroup;
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    .restart local v0       #_arg0:Landroid/app/NotificationGroup;
+    :goto_9
+    invoke-virtual {p0, v0}, Landroid/app/IProfileManager$Stub;->updateNotificationGroup(Landroid/app/NotificationGroup;)V
 
     .line 256
-    if-eqz v1, :cond_12
-
-    .line 257
-    invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 258
-    invoke-virtual {v1, p3, v3}, Landroid/app/NotificationGroup;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
+
+    .line 253
+    .end local v0           #_arg0:Landroid/app/NotificationGroup;
+    :cond_12
+    const/4 v0, 0x0
+
+    .restart local v0       #_arg0:Landroid/app/NotificationGroup;
+    goto :goto_9
 
     .line 261
-    :cond_12
-    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
-
-    goto/16 :goto_0
-
-    .line 267
-    .end local v0           #_arg0:Ljava/lang/String;
-    .end local v1           #_result:Landroid/app/NotificationGroup;
+    .end local v0           #_arg0:Landroid/app/NotificationGroup;
     :sswitch_11
     const-string v4, "android.app.IProfileManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 269
+    .line 263
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 264
+    .local v0, _arg0:Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/app/IProfileManager$Stub;->getNotificationGroupForPackage(Ljava/lang/String;)Landroid/app/NotificationGroup;
+
+    move-result-object v1
+
+    .line 265
+    .local v1, _result:Landroid/app/NotificationGroup;
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 266
+    if-eqz v1, :cond_13
+
+    .line 267
+    invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 268
+    invoke-virtual {v1, p3, v3}, Landroid/app/NotificationGroup;->writeToParcel(Landroid/os/Parcel;I)V
+
+    goto/16 :goto_0
+
+    .line 271
+    :cond_13
+    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 277
+    .end local v0           #_arg0:Ljava/lang/String;
+    .end local v1           #_result:Landroid/app/NotificationGroup;
+    :sswitch_12
+    const-string v4, "android.app.IProfileManager"
+
+    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 279
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    if-eqz v4, :cond_13
+    if-eqz v4, :cond_14
 
-    .line 270
+    .line 280
     sget-object v4, Landroid/os/ParcelUuid;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -853,56 +888,56 @@
 
     check-cast v0, Landroid/os/ParcelUuid;
 
-    .line 275
+    .line 285
     .local v0, _arg0:Landroid/os/ParcelUuid;
     :goto_a
     invoke-virtual {p0, v0}, Landroid/app/IProfileManager$Stub;->getNotificationGroup(Landroid/os/ParcelUuid;)Landroid/app/NotificationGroup;
 
     move-result-object v1
 
-    .line 276
+    .line 286
     .restart local v1       #_result:Landroid/app/NotificationGroup;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 277
-    if-eqz v1, :cond_14
+    .line 287
+    if-eqz v1, :cond_15
 
-    .line 278
+    .line 288
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 279
+    .line 289
     invoke-virtual {v1, p3, v3}, Landroid/app/NotificationGroup;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
-    .line 273
+    .line 283
     .end local v0           #_arg0:Landroid/os/ParcelUuid;
     .end local v1           #_result:Landroid/app/NotificationGroup;
-    :cond_13
+    :cond_14
     const/4 v0, 0x0
 
     .restart local v0       #_arg0:Landroid/os/ParcelUuid;
     goto :goto_a
 
-    .line 282
+    .line 292
     .restart local v1       #_result:Landroid/app/NotificationGroup;
-    :cond_14
+    :cond_15
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 288
+    .line 298
     .end local v0           #_arg0:Landroid/os/ParcelUuid;
     .end local v1           #_result:Landroid/app/NotificationGroup;
-    :sswitch_12
+    :sswitch_13
     const-string v2, "android.app.IProfileManager"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 289
+    .line 299
     invoke-virtual {p0}, Landroid/app/IProfileManager$Stub;->resetAll()V
 
-    .line 290
+    .line 300
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -930,6 +965,7 @@
         0x10 -> :sswitch_10
         0x11 -> :sswitch_11
         0x12 -> :sswitch_12
+        0x13 -> :sswitch_13
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

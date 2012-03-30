@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Изключване на радиото</string>
     <string name="screen_lock">Заключване на екрана</string>
     <string name="power_off">Изключване</string>
+    <string name="silent_mode_silent">Звъненето е изключено</string>
+    <string name="silent_mode_vibrate">Вибрира при звънене</string>
+    <string name="silent_mode_ring">Звъненето е включено</string>
     <string name="shutdown_progress">Изключва се...</string>
     <string name="shutdown_confirm">Телефонът ви ще се изключи.</string>
     <string name="shutdown_confirm_question">Искате ли да изключите?</string>
@@ -291,7 +294,7 @@
     <string name="permgroupdesc_messages">Четене и запис на вашите SMS, имейли и други съобщения.</string>
     <string name="permgrouplab_personalInfo">Вашите лични данни</string>
     <string name="permgroupdesc_personalInfo">Пряк достъп до контактите и календара ви, съхранени в телефона.</string>
-    <string name="permgrouplab_location">Вашето местоположение</string>
+    <string name="permgrouplab_location">Местоположение</string>
     <string name="permgroupdesc_location">Наблюдение на физическото ви местоположение</string>
     <string name="permgrouplab_network">Мрежова комуникация</string>
     <string name="permgroupdesc_network">Разрешаване на достъпа на приложенията до различни мрежови функции.</string>

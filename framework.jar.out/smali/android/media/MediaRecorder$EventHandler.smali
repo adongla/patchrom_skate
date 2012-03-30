@@ -46,16 +46,16 @@
     .parameter "looper"
 
     .prologue
-    .line 857
+    .line 909
     iput-object p1, p0, Landroid/media/MediaRecorder$EventHandler;->this$0:Landroid/media/MediaRecorder;
 
-    .line 858
+    .line 910
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 859
+    .line 911
     iput-object p2, p0, Landroid/media/MediaRecorder$EventHandler;->mMediaRecorder:Landroid/media/MediaRecorder;
 
-    .line 860
+    .line 912
     return-void
 .end method
 
@@ -66,7 +66,7 @@
     .parameter "msg"
 
     .prologue
-    .line 879
+    .line 931
     iget-object v0, p0, Landroid/media/MediaRecorder$EventHandler;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     #getter for: Landroid/media/MediaRecorder;->mNativeContext:I
@@ -76,25 +76,25 @@
 
     if-nez v0, :cond_1
 
-    .line 880
+    .line 932
     const-string v0, "MediaRecorder"
 
     const-string/jumbo v1, "mediarecorder went away with unhandled events"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 900
+    .line 952
     :cond_0
     :goto_0
     return-void
 
-    .line 883
+    .line 935
     :cond_1
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 899
+    .line 951
     const-string v0, "MediaRecorder"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -121,7 +121,7 @@
 
     goto :goto_0
 
-    .line 886
+    .line 938
     :sswitch_0
     iget-object v0, p0, Landroid/media/MediaRecorder$EventHandler;->this$0:Landroid/media/MediaRecorder;
 
@@ -132,7 +132,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 887
+    .line 939
     iget-object v0, p0, Landroid/media/MediaRecorder$EventHandler;->this$0:Landroid/media/MediaRecorder;
 
     #getter for: Landroid/media/MediaRecorder;->mOnErrorListener:Landroid/media/MediaRecorder$OnErrorListener;
@@ -150,7 +150,7 @@
 
     goto :goto_0
 
-    .line 893
+    .line 945
     :sswitch_1
     iget-object v0, p0, Landroid/media/MediaRecorder$EventHandler;->this$0:Landroid/media/MediaRecorder;
 
@@ -161,7 +161,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 894
+    .line 946
     iget-object v0, p0, Landroid/media/MediaRecorder$EventHandler;->this$0:Landroid/media/MediaRecorder;
 
     #getter for: Landroid/media/MediaRecorder;->mOnInfoListener:Landroid/media/MediaRecorder$OnInfoListener;
@@ -179,7 +179,7 @@
 
     goto :goto_0
 
-    .line 883
+    .line 935
     nop
 
     :sswitch_data_0

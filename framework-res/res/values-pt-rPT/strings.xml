@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Desactivar sem fios</string>
     <string name="screen_lock">Bloqueio de ecrã</string>
     <string name="power_off">Desligar</string>
+    <string name="silent_mode_silent">Campainha desativada</string>
+    <string name="silent_mode_vibrate">Campainha em vibração.</string>
+    <string name="silent_mode_ring">Campainha ativada</string>
     <string name="shutdown_progress">A encerrar...</string>
     <string name="shutdown_confirm">O seu telefone irá encerrar.</string>
     <string name="shutdown_confirm_question">Pretende encerrar?</string>

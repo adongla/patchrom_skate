@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 491
+    .line 503
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +47,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 494
+    .line 506
     :try_start_0
     new-instance v1, Landroid/view/Surface;
 
@@ -57,15 +57,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 498
+    .line 510
     :goto_0
     return-object v1
 
-    .line 495
+    .line 507
     :catch_0
     move-exception v0
 
-    .line 496
+    .line 508
     .local v0, e:Ljava/lang/Exception;
     const-string v1, "Surface"
 
@@ -75,7 +75,7 @@
 
     move-object v1, v2
 
-    .line 498
+    .line 510
     goto :goto_0
 .end method
 
@@ -84,7 +84,7 @@
     .parameter "x0"
 
     .prologue
-    .line 491
+    .line 503
     invoke-virtual {p0, p1}, Landroid/view/Surface$1;->createFromParcel(Landroid/os/Parcel;)Landroid/view/Surface;
 
     move-result-object v0
@@ -97,7 +97,7 @@
     .parameter "size"
 
     .prologue
-    .line 502
+    .line 514
     new-array v0, p1, [Landroid/view/Surface;
 
     return-object v0
@@ -108,7 +108,7 @@
     .parameter "x0"
 
     .prologue
-    .line 491
+    .line 503
     invoke-virtual {p0, p1}, Landroid/view/Surface$1;->newArray(I)[Landroid/view/Surface;
 
     move-result-object v0

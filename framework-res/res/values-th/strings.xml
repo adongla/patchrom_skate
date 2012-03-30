@@ -269,6 +269,9 @@
     <string name="turn_off_radio">ปิดระบบไร้สาย</string>
     <string name="screen_lock">ล็อกหน้าจอ</string>
     <string name="power_off">ปิดเครื่อง</string>
+    <string name="silent_mode_silent">ปิดเสียง</string>
+    <string name="silent_mode_vibrate">เสียงเรียกเข้าแบบสั่น</string>
+    <string name="silent_mode_ring">เปิดเสียง</string>
     <string name="shutdown_progress">กำลังปิดระบบ...</string>
     <string name="shutdown_confirm">โทรศัพท์ของคุณจะปิดเครื่อง</string>
     <string name="shutdown_confirm_question">คุณต้องการปิดการทำงานหรือไม่</string>

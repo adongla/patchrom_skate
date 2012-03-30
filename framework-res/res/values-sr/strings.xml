@@ -186,7 +186,7 @@
     <string name="invalidPuk">Унесите PUK који се састоји од 8 цифара или више.</string>
     <string name="needPuk">SIM картица је закључана PUK кодом. Унесите PUK кôд да бисте је откључали.</string>
     <string name="needPuk2">Унесите PUK2 да бисте деблокирали SIM картицу.</string>
-    <string name="ClipMmi">Долазећи ИД позиваоца</string>
+    <string name="ClipMmi">Долазни ИД позиваоца</string>
     <string name="ClirMmi">Одлазни ИД позиваоца</string>
     <string name="CfMmi">Преусмеравање позива</string>
     <string name="CwMmi">Позив на чекању</string>
@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Искључи бежични сигнал</string>
     <string name="screen_lock">Закључај екран</string>
     <string name="power_off">Искључи</string>
+    <string name="silent_mode_silent">Звоно је искључено</string>
+    <string name="silent_mode_vibrate">Вибрација звона</string>
+    <string name="silent_mode_ring">Звоно је укључено</string>
     <string name="shutdown_progress">Искључивање…</string>
     <string name="shutdown_confirm">Телефон ће се искључити.</string>
     <string name="shutdown_confirm_question">Желите ли да искључите телефон?</string>

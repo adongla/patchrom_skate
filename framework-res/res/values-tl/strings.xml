@@ -243,6 +243,9 @@
     <string name="turn_off_radio">I-off ang wireless</string>
     <string name="screen_lock">Pag-lock sa screen</string>
     <string name="power_off">I-off</string>
+    <string name="silent_mode_silent">I-off ang ringer</string>
+    <string name="silent_mode_vibrate">I-vibrate ang ringer</string>
+    <string name="silent_mode_ring">I-on ang ringer</string>
     <string name="shutdown_progress">Nagsa-shut down…</string>
     <string name="shutdown_confirm">Magsa-shut down ang iyong telepono.</string>
     <string name="shutdown_confirm_question">Gusto mo bang mag-shut down?</string>

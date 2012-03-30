@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Desactiva la xarxa sense fil</string>
     <string name="screen_lock">Bloqueig de pantalla</string>
     <string name="power_off">Apaga</string>
+    <string name="silent_mode_silent">Timbre desactivat</string>
+    <string name="silent_mode_vibrate">Mode vibració</string>
+    <string name="silent_mode_ring">Timbre activat</string>
     <string name="shutdown_progress">"S'està apagant..."</string>
     <string name="shutdown_confirm">"El telèfon s'apagarà."</string>
     <string name="shutdown_confirm_question">Vols desconnectar-lo?</string>

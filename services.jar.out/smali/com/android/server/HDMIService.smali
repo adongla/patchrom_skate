@@ -182,7 +182,7 @@
 
     iput v1, p0, Lcom/android/server/HDMIService;->m1920x1080p30_16_9:I
 
-    .line 138
+    .line 140
     new-instance v1, Lcom/android/server/HDMIService$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/HDMIService$1;-><init>(Lcom/android/server/HDMIService;)V
@@ -240,9 +240,15 @@
     .line 135
     iput-boolean v5, p0, Lcom/android/server/HDMIService;->mHDMIUserOption:Z
 
-    .line 136
-    :cond_0
+    .line 138
+    :goto_0
     return-void
+
+    .line 137
+    :cond_0
+    invoke-virtual {p0, v5}, Lcom/android/server/HDMIService;->setHDMIOutput(Z)V
+
+    goto :goto_0
 .end method
 
 .method static synthetic access$000(Lcom/android/server/HDMIService;)Lcom/android/server/HDMIListener;
@@ -263,23 +269,23 @@
     .parameter "eventName"
 
     .prologue
-    .line 195
+    .line 197
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 196
+    .line 198
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "android.intent.category.DEFAULT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 197
+    .line 199
     iget-object v1, p0, Lcom/android/server/HDMIService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 198
+    .line 200
     const-string v1, "HDMIService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -302,7 +308,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
+    .line 201
     return-void
 .end method
 
@@ -312,28 +318,28 @@
     .parameter "modes"
 
     .prologue
-    .line 202
+    .line 204
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 203
+    .line 205
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "android.intent.category.DEFAULT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 204
+    .line 206
     const-string v1, "EDID"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[I)Landroid/content/Intent;
 
-    .line 205
+    .line 207
     iget-object v1, p0, Lcom/android/server/HDMIService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 206
+    .line 208
     const-string v1, "HDMIService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -368,7 +374,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
+    .line 209
     return-void
 .end method
 
@@ -431,7 +437,7 @@
     .locals 1
 
     .prologue
-    .line 191
+    .line 193
     iget-boolean v0, p0, Lcom/android/server/HDMIService;->mHDMIUserOption:Z
 
     return v0
@@ -539,7 +545,7 @@
     .locals 1
 
     .prologue
-    .line 164
+    .line 166
     iget-object v0, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
     invoke-virtual {v0}, Lcom/android/server/HDMIListener;->isHDMIConnected()Z
@@ -553,19 +559,19 @@
     .locals 1
 
     .prologue
-    .line 243
+    .line 245
     invoke-virtual {p0}, Lcom/android/server/HDMIService;->getHDMIUserOption()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 244
+    .line 246
     const-string v0, "HDMI_DISCONNECTED"
 
     invoke-virtual {p0, v0}, Lcom/android/server/HDMIService;->broadcastEvent(Ljava/lang/String;)V
 
-    .line 246
+    .line 248
     :cond_0
     return-void
 .end method
@@ -574,21 +580,21 @@
     .locals 2
 
     .prologue
-    .line 237
+    .line 239
     invoke-virtual {p0}, Lcom/android/server/HDMIService;->getHDMIUserOption()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 238
+    .line 240
     const-string v0, "HDMI_CONNECTED"
 
     iget-object v1, p0, Lcom/android/server/HDMIService;->mHDMIModes:[I
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/HDMIService;->broadcastEvent(Ljava/lang/String;[I)V
 
-    .line 240
+    .line 242
     :cond_0
     return-void
 .end method
@@ -598,27 +604,27 @@
     .parameter "modes"
 
     .prologue
-    .line 210
+    .line 212
     iput-object p1, p0, Lcom/android/server/HDMIService;->mHDMIModes:[I
 
-    .line 211
+    .line 213
     const-string v0, "HDMI_CABLE_CONNECTED"
 
     invoke-virtual {p0, v0}, Lcom/android/server/HDMIService;->broadcastEvent(Ljava/lang/String;)V
 
-    .line 212
+    .line 214
     invoke-virtual {p0}, Lcom/android/server/HDMIService;->getHDMIUserOption()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 213
+    .line 215
     iget-object v1, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
     monitor-enter v1
 
-    .line 214
+    .line 216
     :try_start_0
     iget-object v0, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
@@ -628,19 +634,19 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/HDMIListener;->changeDisplayMode(I)V
 
-    .line 215
+    .line 217
     iget-object v0, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/android/server/HDMIListener;->enableHDMIOutput(Z)V
 
-    .line 216
+    .line 218
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 217
+    .line 219
     iget-object v0, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
     invoke-virtual {v0}, Lcom/android/server/HDMIListener;->getOnlineBroadcast()Z
@@ -649,25 +655,25 @@
 
     if-eqz v0, :cond_0
 
-    .line 218
+    .line 220
     const-string v0, "HDMIService"
 
     const-string v1, "Broadcast HDMI connected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
+    .line 221
     const-string v0, "HDMI_CONNECTED"
 
     iget-object v1, p0, Lcom/android/server/HDMIService;->mHDMIModes:[I
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/HDMIService;->broadcastEvent(Ljava/lang/String;[I)V
 
-    .line 222
+    .line 224
     :cond_0
     return-void
 
-    .line 216
+    .line 218
     :catchall_0
     move-exception v0
 
@@ -683,34 +689,34 @@
     .locals 3
 
     .prologue
-    .line 225
+    .line 227
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/HDMIService;->mHDMIModes:[I
 
-    .line 226
+    .line 228
     const-string v0, "HDMI_CABLE_DISCONNECTED"
 
     invoke-virtual {p0, v0}, Lcom/android/server/HDMIService;->broadcastEvent(Ljava/lang/String;)V
 
-    .line 227
+    .line 229
     invoke-virtual {p0}, Lcom/android/server/HDMIService;->getHDMIUserOption()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 228
+    .line 230
     const-string v0, "HDMI_DISCONNECTED"
 
     invoke-virtual {p0, v0}, Lcom/android/server/HDMIService;->broadcastEvent(Ljava/lang/String;)V
 
-    .line 229
+    .line 231
     iget-object v1, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
     monitor-enter v1
 
-    .line 230
+    .line 232
     :try_start_0
     iget-object v0, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
@@ -718,7 +724,7 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/HDMIListener;->enableHDMIOutput(Z)V
 
-    .line 231
+    .line 233
     iget-object v0, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
     invoke-virtual {p0}, Lcom/android/server/HDMIService;->getHDMIUserOption()Z
@@ -727,14 +733,14 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/HDMIListener;->setHPD(Z)V
 
-    .line 232
+    .line 234
     monitor-exit v1
 
-    .line 234
+    .line 236
     :cond_0
     return-void
 
-    .line 232
+    .line 234
     :catchall_0
     move-exception v0
 
@@ -750,12 +756,12 @@
     .parameter "asHeightRatio"
 
     .prologue
-    .line 187
+    .line 189
     iget-object v0, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
     invoke-virtual {v0, p1}, Lcom/android/server/HDMIListener;->setActionsafeHeightRatio(F)V
 
-    .line 188
+    .line 190
     return-void
 .end method
 
@@ -764,12 +770,12 @@
     .parameter "asWidthRatio"
 
     .prologue
-    .line 183
+    .line 185
     iget-object v0, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
     invoke-virtual {v0, p1}, Lcom/android/server/HDMIListener;->setActionsafeWidthRatio(F)V
 
-    .line 184
+    .line 186
     return-void
 .end method
 
@@ -778,7 +784,7 @@
     .parameter "enableHDMI"
 
     .prologue
-    .line 168
+    .line 170
     iget-object v0, p0, Lcom/android/server/HDMIService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -794,36 +800,36 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 170
+    .line 172
     iput-boolean p1, p0, Lcom/android/server/HDMIService;->mHDMIUserOption:Z
 
-    .line 172
+    .line 174
     iget-object v1, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
     monitor-enter v1
 
-    .line 173
+    .line 175
     if-nez p1, :cond_0
 
-    .line 174
+    .line 176
     :try_start_0
     const-string v0, "HDMI_DISCONNECTED"
 
     invoke-virtual {p0, v0}, Lcom/android/server/HDMIService;->broadcastEvent(Ljava/lang/String;)V
 
-    .line 175
+    .line 177
     const-string v0, "HDMI_CABLE_DISCONNECTED"
 
     invoke-virtual {p0, v0}, Lcom/android/server/HDMIService;->broadcastEvent(Ljava/lang/String;)V
 
-    .line 176
+    .line 178
     iget-object v0, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/android/server/HDMIListener;->enableHDMIOutput(Z)V
 
-    .line 178
+    .line 180
     :cond_0
     iget-object v0, p0, Lcom/android/server/HDMIService;->mListener:Lcom/android/server/HDMIListener;
 
@@ -833,21 +839,21 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/HDMIListener;->setHPD(Z)V
 
-    .line 179
+    .line 181
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 180
+    .line 182
     return-void
 
-    .line 168
+    .line 170
     :cond_1
     const-string v0, "HDMI_OFF"
 
     goto :goto_0
 
-    .line 179
+    .line 181
     :catchall_0
     move-exception v0
 
@@ -863,7 +869,7 @@
     .locals 2
 
     .prologue
-    .line 154
+    .line 156
     iget-object v0, p0, Lcom/android/server/HDMIService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.SHUTDOWN"
@@ -874,7 +880,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 157
+    .line 159
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Requires SHUTDOWN permission"
@@ -883,7 +889,7 @@
 
     throw v0
 
-    .line 160
+    .line 162
     :cond_0
     const-string v0, "HDMIService"
 
@@ -891,6 +897,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
+    .line 163
     return-void
 .end method

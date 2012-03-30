@@ -290,6 +290,9 @@
     <string name="reboot_download">Download</string>
     <string name="reboot_progress">Yeniden başlatılıyor…</string>
     <string name="reboot_confirm">Telefonunuz yeniden başlatılacak.</string>
+    <string name="silent_mode_silent">Telefon zili kapalı</string>
+    <string name="silent_mode_vibrate">Telefon zili titreşimde</string>
+    <string name="silent_mode_ring">Telefon zili açık</string>
     <string name="shutdown_progress">Kapanıyor…</string>
     <string name="shutdown_confirm">Telefonunuz kapanacak.</string>
     <string name="shutdown_confirm_question">Kapatmak istiyor musunuz?</string>
@@ -894,8 +897,8 @@ Devam etmek için Tamam'ı, sayfada kalmak için İptal'i tıklatın."</string>
     <string name="low_internal_storage_view_title">Yer az</string>
     <string name="low_internal_storage_view_text">Telefonun depolama alanı azalıyor.</string>
     <string name="loading">Yükleniyor...</string>
-    <string name="capital_on">AÇIK</string>
-    <string name="capital_off">KAPALI</string>
+    <string name="capital_on">AÇK</string>
+    <string name="capital_off">KPL</string>
     <string name="whichApplication">İşlemi şunu kullanarak tamamla</string>
     <string name="alwaysUse">Varsayılan olarak bu işlem için kullan.</string>
     <string name="clearDefaultHintMsg">"Giriş Ayarları > Uygulamalar > Uygulamaları yönet'te varsayılanı temizleyin."</string>

@@ -33,18 +33,18 @@
     .parameter "annotation"
 
     .prologue
-    .line 2980
+    .line 2982
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$AppNotResponding;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2981
+    .line 2983
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$AppNotResponding;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 2982
+    .line 2984
     iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$AppNotResponding;->mAnnotation:Ljava/lang/String;
 
-    .line 2983
+    .line 2985
     return-void
 .end method
 
@@ -56,7 +56,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2987
+    .line 2989
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$AppNotResponding;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$AppNotResponding;->mApp:Lcom/android/server/am/ProcessRecord;
@@ -65,6 +65,6 @@
 
     invoke-virtual {v0, v1, v3, v3, v2}, Lcom/android/server/am/ActivityManagerService;->appNotResponding(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/ActivityRecord;Lcom/android/server/am/ActivityRecord;Ljava/lang/String;)V
 
-    .line 2988
+    .line 2990
     return-void
 .end method

@@ -268,6 +268,9 @@
     <string name="turn_off_radio">Matikan wayarles</string>
     <string name="screen_lock">Kunci skrin</string>
     <string name="power_off">Matikan kuasa</string>
+    <string name="silent_mode_silent">Pendering dimatikan</string>
+    <string name="silent_mode_vibrate">Pendering bergetar</string>
+    <string name="silent_mode_ring">Pendering dihidupkan</string>
     <string name="shutdown_progress">Mematikan...</string>
     <string name="shutdown_confirm">Telefon anda akan dimatikan.</string>
     <string name="shutdown_confirm_question">Adakah anda mahu menutup?</string>

@@ -938,7 +938,7 @@
 
     const/4 v1, 0x0
 
-    .line 928
+    .line 930
     iget-object v2, p0, Landroid/view/HardwareRenderer$GlRenderer;->mEglThread:Ljava/lang/Thread;
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -947,7 +947,7 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 929
+    .line 931
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -994,7 +994,7 @@
 
     throw v0
 
-    .line 934
+    .line 936
     :cond_0
     iget-object v2, p0, Landroid/view/HardwareRenderer$GlRenderer;->mEglContext:Ljavax/microedition/khronos/egl/EGLContext;
 
@@ -1026,7 +1026,7 @@
 
     if-nez v2, :cond_2
 
-    .line 936
+    .line 938
     :cond_1
     sget-object v2, Landroid/view/HardwareRenderer$GlRenderer;->sEgl:Ljavax/microedition/khronos/egl/EGL10;
 
@@ -1044,7 +1044,7 @@
 
     if-nez v2, :cond_3
 
-    .line 937
+    .line 939
     const-string v2, "HardwareRenderer"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1077,34 +1077,34 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 939
+    .line 941
     invoke-direct {p0, v0}, Landroid/view/HardwareRenderer$GlRenderer;->fallback(Z)V
 
     move v0, v1
 
-    .line 951
+    .line 953
     :cond_2
     :goto_0
     return v0
 
-    .line 942
+    .line 944
     :cond_3
     sget-boolean v0, Landroid/os/SystemProperties;->QCOM_HARDWARE:Z
 
     if-eqz v0, :cond_4
 
-    .line 943
+    .line 945
     iget-boolean v0, p0, Landroid/view/HardwareRenderer$GlRenderer;->mUpdateDirtyRegions:Z
 
     if-eqz v0, :cond_4
 
-    .line 944
+    .line 946
     invoke-direct {p0}, Landroid/view/HardwareRenderer$GlRenderer;->enableDirtyRegions()V
 
-    .line 945
+    .line 947
     iput-boolean v1, p0, Landroid/view/HardwareRenderer$GlRenderer;->mUpdateDirtyRegions:Z
 
-    .line 948
+    .line 950
     :cond_4
     const/4 v0, 0x2
 
@@ -1525,96 +1525,97 @@
 
     move-result v6
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_b
 
     .line 842
     invoke-virtual {p0}, Landroid/view/HardwareRenderer$GlRenderer;->hasDirtyRegions()Z
 
     move-result v6
 
-    if-nez v6, :cond_0
+    if-nez v6, :cond_6
 
     .line 843
     const/4 p4, 0x0
 
-    .line 845
+    .line 847
     :cond_0
+    :goto_0
     iput-boolean v4, p2, Landroid/view/View$AttachInfo;->mIgnoreDirtyState:Z
 
-    .line 846
+    .line 848
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
 
     iput-wide v6, p2, Landroid/view/View$AttachInfo;->mDrawingTime:J
 
-    .line 848
+    .line 850
     iget v6, p1, Landroid/view/View;->mPrivateFlags:I
 
     or-int/lit8 v6, v6, 0x20
 
     iput v6, p1, Landroid/view/View;->mPrivateFlags:I
 
-    .line 850
+    .line 852
     invoke-virtual {p0}, Landroid/view/HardwareRenderer$GlRenderer;->checkCurrent()I
 
     move-result v3
 
-    .line 851
-    .local v3, surfaceState:I
-    if-eqz v3, :cond_a
-
     .line 853
+    .local v3, surfaceState:I
+    if-eqz v3, :cond_b
+
+    .line 855
     const/4 v6, 0x2
 
     if-ne v3, v6, :cond_1
 
-    .line 854
+    .line 856
     const/4 p4, 0x0
 
-    .line 857
+    .line 859
     :cond_1
     sget-boolean v6, Landroid/view/HardwareRenderer$GlRenderer;->sTileRendering:Z
 
     if-eqz v6, :cond_2
 
-    .line 858
+    .line 860
     invoke-virtual {p0, p4}, Landroid/view/HardwareRenderer$GlRenderer;->startTileRendering(Landroid/graphics/Rect;)V
 
-    .line 860
+    .line 862
     :cond_2
     invoke-virtual {p0, p4}, Landroid/view/HardwareRenderer$GlRenderer;->onPreDraw(Landroid/graphics/Rect;)V
 
-    .line 862
+    .line 864
     iget-object v0, p0, Landroid/view/HardwareRenderer$GlRenderer;->mCanvas:Landroid/view/HardwareCanvas;
 
-    .line 863
+    .line 865
     .local v0, canvas:Landroid/view/HardwareCanvas;
     iput-object v0, p2, Landroid/view/View$AttachInfo;->mHardwareCanvas:Landroid/view/HardwareCanvas;
 
-    .line 865
+    .line 867
     invoke-virtual {v0}, Landroid/view/HardwareCanvas;->save()I
 
     move-result v2
 
-    .line 866
+    .line 868
     .local v2, saveCount:I
     invoke-interface {p3, v0}, Landroid/view/HardwareRenderer$HardwareDrawCallbacks;->onHardwarePreDraw(Landroid/view/HardwareCanvas;)V
 
-    .line 869
+    .line 871
     :try_start_0
     iget v6, p1, Landroid/view/View;->mPrivateFlags:I
 
     and-int/2addr v6, v8
 
-    if-ne v6, v8, :cond_6
+    if-ne v6, v8, :cond_7
 
     move v6, v4
 
-    :goto_0
+    :goto_1
     iput-boolean v6, p1, Landroid/view/View;->mRecreateDisplayList:Z
 
-    .line 871
+    .line 873
     iget v6, p1, Landroid/view/View;->mPrivateFlags:I
 
     const v7, 0x7fffffff
@@ -1623,16 +1624,16 @@
 
     iput v6, p1, Landroid/view/View;->mPrivateFlags:I
 
-    .line 873
+    .line 875
     invoke-virtual {p1}, Landroid/view/View;->getDisplayList()Landroid/view/DisplayList;
 
     move-result-object v1
 
-    .line 874
+    .line 876
     .local v1, displayList:Landroid/view/DisplayList;
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
-    .line 875
+    .line 877
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v6
@@ -1649,7 +1650,7 @@
 
     if-eqz v6, :cond_4
 
-    .line 877
+    .line 879
     iget-object v6, p0, Landroid/view/HardwareRenderer$GlRenderer;->mRedrawClip:Landroid/graphics/Rect;
 
     invoke-virtual {v6}, Landroid/graphics/Rect;->isEmpty()Z
@@ -1662,47 +1663,47 @@
 
     move-result-object v6
 
-    if-nez v6, :cond_7
+    if-nez v6, :cond_8
 
-    .line 878
+    .line 880
     :cond_3
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    .line 882
-    :goto_1
+    .line 884
+    :goto_2
     iget-object v6, p0, Landroid/view/HardwareRenderer$GlRenderer;->mRedrawClip:Landroid/graphics/Rect;
 
     invoke-virtual {v6}, Landroid/graphics/Rect;->setEmpty()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 899
+    .line 901
     :cond_4
-    :goto_2
+    :goto_3
     invoke-interface {p3, v0}, Landroid/view/HardwareRenderer$HardwareDrawCallbacks;->onHardwarePostDraw(Landroid/view/HardwareCanvas;)V
 
-    .line 900
+    .line 902
     invoke-virtual {v0, v2}, Landroid/view/HardwareCanvas;->restoreToCount(I)V
 
-    .line 901
+    .line 903
     iput-boolean v5, p1, Landroid/view/View;->mRecreateDisplayList:Z
 
-    .line 904
+    .line 906
     invoke-virtual {p0}, Landroid/view/HardwareRenderer$GlRenderer;->onPostDraw()V
 
-    .line 905
+    .line 907
     sget-boolean v6, Landroid/view/HardwareRenderer$GlRenderer;->sTileRendering:Z
 
     if-eqz v6, :cond_5
 
-    .line 906
+    .line 908
     invoke-virtual {p0}, Landroid/view/HardwareRenderer$GlRenderer;->endTileRendering()V
 
-    .line 908
+    .line 910
     :cond_5
     iput-boolean v5, p2, Landroid/view/View$AttachInfo;->mIgnoreDirtyState:Z
 
-    .line 910
+    .line 912
     sget-object v6, Landroid/view/HardwareRenderer$GlRenderer;->sEgl:Ljavax/microedition/khronos/egl/EGL10;
 
     sget-object v7, Landroid/view/HardwareRenderer$GlRenderer;->sEglDisplay:Ljavax/microedition/khronos/egl/EGLDisplay;
@@ -1711,32 +1712,45 @@
 
     invoke-interface {v6, v7, v8}, Ljavax/microedition/khronos/egl/EGL10;->eglSwapBuffers(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;)Z
 
-    .line 911
+    .line 913
     invoke-virtual {p0}, Landroid/view/HardwareRenderer$GlRenderer;->checkEglErrors()V
 
-    .line 913
-    if-nez p4, :cond_9
+    .line 915
+    if-nez p4, :cond_a
 
-    .line 917
+    .line 919
     .end local v0           #canvas:Landroid/view/HardwareCanvas;
     .end local v1           #displayList:Landroid/view/DisplayList;
     .end local v2           #saveCount:I
     .end local v3           #surfaceState:I
-    :goto_3
+    :goto_4
     return v4
+
+    .line 844
+    :cond_6
+    if-eqz p4, :cond_0
+
+    .line 845
+    iget v6, p0, Landroid/view/HardwareRenderer$GlRenderer;->mWidth:I
+
+    iget v7, p0, Landroid/view/HardwareRenderer$GlRenderer;->mHeight:I
+
+    invoke-virtual {p4, v5, v5, v6, v7}, Landroid/graphics/Rect;->intersect(IIII)Z
+
+    goto/16 :goto_0
 
     .restart local v0       #canvas:Landroid/view/HardwareCanvas;
     .restart local v2       #saveCount:I
     .restart local v3       #surfaceState:I
-    :cond_6
+    :cond_7
     move v6, v5
 
-    .line 869
-    goto :goto_0
+    .line 871
+    goto :goto_1
 
-    .line 880
+    .line 882
     .restart local v1       #displayList:Landroid/view/DisplayList;
-    :cond_7
+    :cond_8
     :try_start_1
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -1748,48 +1762,48 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 899
+    .line 901
     .end local v1           #displayList:Landroid/view/DisplayList;
     :catchall_0
     move-exception v4
 
     invoke-interface {p3, v0}, Landroid/view/HardwareRenderer$HardwareDrawCallbacks;->onHardwarePostDraw(Landroid/view/HardwareCanvas;)V
 
-    .line 900
+    .line 902
     invoke-virtual {v0, v2}, Landroid/view/HardwareCanvas;->restoreToCount(I)V
 
-    .line 901
+    .line 903
     iput-boolean v5, p1, Landroid/view/View;->mRecreateDisplayList:Z
 
     throw v4
 
-    .line 886
+    .line 888
     .restart local v1       #displayList:Landroid/view/DisplayList;
-    :cond_8
+    :cond_9
     :try_start_2
     invoke-virtual {p1, v0}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_9
+    :cond_a
     move v4, v5
 
-    .line 913
-    goto :goto_3
+    .line 915
+    goto :goto_4
 
     .end local v0           #canvas:Landroid/view/HardwareCanvas;
     .end local v1           #displayList:Landroid/view/DisplayList;
     .end local v2           #saveCount:I
     .end local v3           #surfaceState:I
-    :cond_a
+    :cond_b
     move v4, v5
 
-    .line 917
-    goto :goto_3
+    .line 919
+    goto :goto_4
 .end method
 
 .method endTileRendering()V

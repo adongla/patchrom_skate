@@ -47,7 +47,7 @@
     .locals 1
 
     .prologue
-    .line 48
+    .line 49
     new-instance v0, Landroid/app/NotificationGroup$1;
 
     invoke-direct {v0}, Landroid/app/NotificationGroup$1;-><init>()V
@@ -62,20 +62,20 @@
     .parameter "in"
 
     .prologue
-    .line 70
+    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
+    .line 45
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroid/app/NotificationGroup;->mPackages:Ljava/util/Set;
 
-    .line 71
+    .line 72
     invoke-virtual {p0, p1}, Landroid/app/NotificationGroup;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 72
+    .line 73
     return-void
 .end method
 
@@ -85,7 +85,7 @@
     .parameter "x1"
 
     .prologue
-    .line 36
+    .line 37
     invoke-direct {p0, p1}, Landroid/app/NotificationGroup;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -96,14 +96,14 @@
     .parameter "name"
 
     .prologue
-    .line 60
+    .line 61
     const/4 v0, -0x1
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Landroid/app/NotificationGroup;-><init>(Ljava/lang/String;ILjava/util/UUID;)V
 
-    .line 61
+    .line 62
     return-void
 .end method
 
@@ -114,23 +114,23 @@
     .parameter "uuid"
 
     .prologue
-    .line 63
+    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
+    .line 45
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroid/app/NotificationGroup;->mPackages:Ljava/util/Set;
 
-    .line 64
+    .line 65
     iput-object p1, p0, Landroid/app/NotificationGroup;->mName:Ljava/lang/String;
 
-    .line 65
+    .line 66
     iput p2, p0, Landroid/app/NotificationGroup;->mNameResId:I
 
-    .line 66
+    .line 67
     if-eqz p3, :cond_0
 
     move-object v0, p3
@@ -138,7 +138,7 @@
     :goto_0
     iput-object v0, p0, Landroid/app/NotificationGroup;->mUuid:Ljava/util/UUID;
 
-    .line 67
+    .line 68
     if-nez p3, :cond_1
 
     const/4 v0, 0x1
@@ -146,10 +146,10 @@
     :goto_1
     iput-boolean v0, p0, Landroid/app/NotificationGroup;->mDirty:Z
 
-    .line 68
+    .line 69
     return-void
 
-    .line 66
+    .line 67
     :cond_0
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
@@ -157,7 +157,7 @@
 
     goto :goto_0
 
-    .line 67
+    .line 68
     :cond_1
     const/4 v0, 0x0
 
@@ -178,30 +178,30 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 152
+    .line 159
     const-string/jumbo v8, "nameres"
 
     invoke-interface {p0, v11, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 153
+    .line 160
     .local v7, value:Ljava/lang/String;
     const/4 v3, -0x1
 
-    .line 154
+    .line 161
     .local v3, nameResId:I
     const/4 v2, 0x0
 
-    .line 155
+    .line 162
     .local v2, name:Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 157
+    .line 164
     .local v6, uuid:Ljava/util/UUID;
     if-eqz v7, :cond_0
 
-    .line 158
+    .line 165
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
@@ -214,10 +214,10 @@
 
     move-result v3
 
-    .line 159
+    .line 166
     if-lez v3, :cond_0
 
-    .line 160
+    .line 167
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
@@ -226,18 +226,18 @@
 
     move-result-object v2
 
-    .line 164
+    .line 171
     :cond_0
     if-nez v2, :cond_1
 
-    .line 165
+    .line 172
     const-string/jumbo v8, "name"
 
     invoke-interface {p0, v11, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 168
+    .line 175
     :cond_1
     const-string/jumbo v8, "uuid"
 
@@ -245,10 +245,10 @@
 
     move-result-object v7
 
-    .line 169
+    .line 176
     if-eqz v7, :cond_2
 
-    .line 171
+    .line 178
     :try_start_0
     invoke-static {v7}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
     :try_end_0
@@ -256,20 +256,20 @@
 
     move-result-object v6
 
-    .line 177
+    .line 184
     :cond_2
     :goto_0
     new-instance v4, Landroid/app/NotificationGroup;
 
     invoke-direct {v4, v2, v3, v6}, Landroid/app/NotificationGroup;-><init>(Ljava/lang/String;ILjava/util/UUID;)V
 
-    .line 178
+    .line 185
     .local v4, notificationGroup:Landroid/app/NotificationGroup;
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
 
-    .line 179
+    .line 186
     .local v1, event:I
     :goto_1
     const/4 v8, 0x3
@@ -288,13 +288,13 @@
 
     if-nez v8, :cond_5
 
-    .line 180
+    .line 187
     :cond_3
     const/4 v8, 0x2
 
     if-ne v1, v8, :cond_4
 
-    .line 181
+    .line 188
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v8
@@ -307,16 +307,16 @@
 
     if-eqz v8, :cond_4
 
-    .line 182
+    .line 189
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 183
+    .line 190
     .local v5, pkg:Ljava/lang/String;
     invoke-virtual {v4, v5}, Landroid/app/NotificationGroup;->addPackage(Ljava/lang/String;)V
 
-    .line 186
+    .line 193
     .end local v5           #pkg:Ljava/lang/String;
     :cond_4
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -325,13 +325,13 @@
 
     goto :goto_1
 
-    .line 172
+    .line 179
     .end local v1           #event:I
     .end local v4           #notificationGroup:Landroid/app/NotificationGroup;
     :catch_0
     move-exception v0
 
-    .line 173
+    .line 180
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v8, "NotificationGroup"
 
@@ -363,7 +363,7 @@
 
     goto :goto_0
 
-    .line 190
+    .line 197
     .end local v0           #e:Ljava/lang/IllegalArgumentException;
     .restart local v1       #event:I
     .restart local v4       #notificationGroup:Landroid/app/NotificationGroup;
@@ -372,7 +372,7 @@
 
     iput-boolean v8, v4, Landroid/app/NotificationGroup;->mDirty:Z
 
-    .line 192
+    .line 199
     return-object v4
 .end method
 
@@ -383,17 +383,17 @@
     .parameter "pkg"
 
     .prologue
-    .line 88
+    .line 95
     iget-object v0, p0, Landroid/app/NotificationGroup;->mPackages:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 89
+    .line 96
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/NotificationGroup;->mDirty:Z
 
-    .line 90
+    .line 97
     return-void
 .end method
 
@@ -401,7 +401,7 @@
     .locals 1
 
     .prologue
-    .line 111
+    .line 118
     const/4 v0, 0x0
 
     return v0
@@ -411,7 +411,7 @@
     .locals 1
 
     .prologue
-    .line 80
+    .line 81
     iget-object v0, p0, Landroid/app/NotificationGroup;->mName:Ljava/lang/String;
 
     return-object v0
@@ -421,7 +421,7 @@
     .locals 2
 
     .prologue
-    .line 93
+    .line 100
     iget-object v0, p0, Landroid/app/NotificationGroup;->mPackages:Ljava/util/Set;
 
     iget-object v1, p0, Landroid/app/NotificationGroup;->mPackages:Ljava/util/Set;
@@ -445,7 +445,7 @@
     .locals 1
 
     .prologue
-    .line 84
+    .line 91
     iget-object v0, p0, Landroid/app/NotificationGroup;->mUuid:Ljava/util/UUID;
 
     return-object v0
@@ -457,22 +457,22 @@
     .parameter "context"
 
     .prologue
-    .line 132
+    .line 139
     const-string v2, "<notificationGroup "
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 133
+    .line 140
     iget v2, p0, Landroid/app/NotificationGroup;->mNameResId:I
 
     if-lez v2, :cond_0
 
-    .line 134
+    .line 141
     const-string/jumbo v2, "nameres=\""
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 135
+    .line 142
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -485,13 +485,13 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 140
+    .line 147
     :goto_0
     const-string v2, "\" uuid=\""
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 141
+    .line 148
     invoke-virtual {p0}, Landroid/app/NotificationGroup;->getUuid()Ljava/util/UUID;
 
     move-result-object v2
@@ -506,12 +506,12 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 142
+    .line 149
     const-string v2, "\">\n"
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 143
+    .line 150
     iget-object v2, p0, Landroid/app/NotificationGroup;->mPackages:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -532,7 +532,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 144
+    .line 151
     .local v1, pkg:Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -566,7 +566,7 @@
 
     goto :goto_1
 
-    .line 137
+    .line 144
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v1           #pkg:Ljava/lang/String;
     :cond_0
@@ -574,7 +574,7 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 138
+    .line 145
     invoke-virtual {p0}, Landroid/app/NotificationGroup;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -587,19 +587,19 @@
 
     goto :goto_0
 
-    .line 146
+    .line 153
     .restart local v0       #i$:Ljava/util/Iterator;
     :cond_1
     const-string v2, "</notificationGroup>\n"
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 147
+    .line 154
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Landroid/app/NotificationGroup;->mDirty:Z
 
-    .line 148
+    .line 155
     return-void
 .end method
 
@@ -608,7 +608,7 @@
     .parameter "pkg"
 
     .prologue
-    .line 102
+    .line 109
     iget-object v0, p0, Landroid/app/NotificationGroup;->mPackages:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -622,7 +622,7 @@
     .locals 1
 
     .prologue
-    .line 106
+    .line 113
     iget-boolean v0, p0, Landroid/app/NotificationGroup;->mDirty:Z
 
     return v0
@@ -633,21 +633,21 @@
     .parameter "in"
 
     .prologue
-    .line 124
+    .line 131
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/NotificationGroup;->mName:Ljava/lang/String;
 
-    .line 125
+    .line 132
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/NotificationGroup;->mNameResId:I
 
-    .line 126
+    .line 133
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -659,7 +659,7 @@
     :goto_0
     iput-boolean v0, p0, Landroid/app/NotificationGroup;->mDirty:Z
 
-    .line 127
+    .line 134
     sget-object v0, Landroid/os/ParcelUuid;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -674,7 +674,7 @@
 
     iput-object v0, p0, Landroid/app/NotificationGroup;->mUuid:Ljava/util/UUID;
 
-    .line 128
+    .line 135
     iget-object v0, p0, Landroid/app/NotificationGroup;->mPackages:Ljava/util/Set;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
@@ -687,10 +687,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 129
+    .line 136
     return-void
 
-    .line 126
+    .line 133
     :cond_0
     const/4 v0, 0x0
 
@@ -702,17 +702,39 @@
     .parameter "pkg"
 
     .prologue
-    .line 97
+    .line 104
     iget-object v0, p0, Landroid/app/NotificationGroup;->mPackages:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 98
+    .line 105
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/NotificationGroup;->mDirty:Z
 
-    .line 99
+    .line 106
+    return-void
+.end method
+
+.method public setName(Ljava/lang/String;)V
+    .locals 1
+    .parameter "name"
+
+    .prologue
+    .line 85
+    iput-object p1, p0, Landroid/app/NotificationGroup;->mName:Ljava/lang/String;
+
+    .line 86
+    const/4 v0, -0x1
+
+    iput v0, p0, Landroid/app/NotificationGroup;->mNameResId:I
+
+    .line 87
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/app/NotificationGroup;->mDirty:Z
+
+    .line 88
     return-void
 .end method
 
@@ -720,7 +742,7 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 77
     invoke-virtual {p0}, Landroid/app/NotificationGroup;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -736,17 +758,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 116
+    .line 123
     iget-object v0, p0, Landroid/app/NotificationGroup;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 117
+    .line 124
     iget v0, p0, Landroid/app/NotificationGroup;->mNameResId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 118
+    .line 125
     iget-boolean v0, p0, Landroid/app/NotificationGroup;->mDirty:Z
 
     if-eqz v0, :cond_0
@@ -756,7 +778,7 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 119
+    .line 126
     new-instance v0, Landroid/os/ParcelUuid;
 
     iget-object v2, p0, Landroid/app/NotificationGroup;->mUuid:Ljava/util/UUID;
@@ -765,19 +787,19 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/os/ParcelUuid;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 120
+    .line 127
     invoke-virtual {p0}, Landroid/app/NotificationGroup;->getPackages()[Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 121
+    .line 128
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 118
+    .line 125
     goto :goto_0
 .end method

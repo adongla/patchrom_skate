@@ -3320,7 +3320,7 @@
     <style name="Preference.DeviceDefault.RingtonePreference" parent="@style/Preference.Holo.RingtonePreference" />
     <style name="Preference.DeviceDefault.SwitchPreference" parent="@style/Preference.Holo.SwitchPreference" />
     <style name="AlertDialog.DeviceDefault" parent="@style/AlertDialog.Holo" />
-    <style name="AlertDialog.DeviceDefault.Light" parent="@style/AlertDialog.DeviceDefault.Light" />
+    <style name="AlertDialog.DeviceDefault.Light" parent="@style/AlertDialog.Holo.Light" />
     <style name="Animation.DeviceDefault.Activity" parent="@style/Animation.Holo.Activity" />
     <style name="Animation.DeviceDefault.Dialog" parent="@style/Animation.Holo.Dialog" />
     <style name="DialogWindowTitle.DeviceDefault" parent="@style/DialogWindowTitle.Holo" />
@@ -3445,10 +3445,10 @@
     <style name="Theme.DeviceDefault.Dialog.Alert" parent="@style/Theme.Holo.Dialog.Alert">
         <item name="windowTitleStyle">@style/DialogWindowTitle.DeviceDefault</item>
     </style>
-    <style name="Theme.DeviceDefault.Light.Dialog.Alert" parent="@style/Theme.DeviceDefault.Light.Dialog.Alert">
+    <style name="Theme.DeviceDefault.Light.Dialog.Alert" parent="@style/Theme.Holo.Light.Dialog.Alert">
         <item name="windowTitleStyle">@style/DialogWindowTitle.DeviceDefault.Light</item>
     </style>
-    <style name="Theme.DeviceDefault.SearchBar" parent="@style/Theme.DeviceDefault.SearchBar" />
-    <style name="Theme.DeviceDefault.Light.SearchBar" parent="@style/Theme.DeviceDefault.Light.SearchBar" />
+    <style name="Theme.DeviceDefault.SearchBar" parent="@style/Theme.Holo.SearchBar" />
+    <style name="Theme.DeviceDefault.Light.SearchBar" parent="@style/Theme.Holo.Light.SearchBar" />
     <style name="Theme.DeviceDefault.Dialog.NoFrame" parent="@style/Theme.Holo.Dialog.NoFrame" />
 </resources>

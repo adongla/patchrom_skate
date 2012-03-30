@@ -279,6 +279,9 @@
     <string name="reboot_download">Download</string>
     <string name="reboot_progress">Redémarrage en cours...</string>
     <string name="reboot_confirm">Votre appareil va redémarrer</string>
+    <string name="silent_mode_silent">Sonnerie désactivée</string>
+    <string name="silent_mode_vibrate">Sonnerie en mode vibreur</string>
+    <string name="silent_mode_ring">Sonnerie activée</string>
     <string name="shutdown_progress">Arrêt en cours...</string>
     <string name="shutdown_confirm">"Votre téléphone va s'éteindre."</string>
     <string name="shutdown_confirm_question">Éteindre votre appareil ?</string>

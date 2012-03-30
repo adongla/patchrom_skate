@@ -72,7 +72,9 @@
 
 .field public static final DATA_ROAMING:Ljava/lang/String; = "data_roaming"
 
-.field public static final DATA_STALL_ALARM_DELAY_IN_MS:Ljava/lang/String; = "data_stall_alarm_delay_in_ms"
+.field public static final DATA_STALL_ALARM_AGGRESSIVE_DELAY_IN_MS:Ljava/lang/String; = "data_stall_alarm_aggressive_delay_in_ms"
+
+.field public static final DATA_STALL_ALARM_NON_AGGRESSIVE_DELAY_IN_MS:Ljava/lang/String; = "data_stall_alarm_non_aggressive_delay_in_ms"
 
 .field public static final DEFAULT_DNS_SERVER:Ljava/lang/String; = "default_dns_server"
 
@@ -548,7 +550,7 @@
 
     sput-object v0, Landroid/provider/Settings$Secure;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 4546
+    .line 4555
     const/16 v0, 0x1d
 
     new-array v0, v0, [Ljava/lang/String;
@@ -1164,14 +1166,14 @@
     .parameter "provider"
 
     .prologue
-    .line 4585
+    .line 4594
     const-string v1, "location_providers_allowed"
 
     invoke-static {p0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4586
+    .line 4595
     .local v0, allowedProviders:Ljava/lang/String;
     const/16 v1, 0x2c
 
@@ -1263,10 +1265,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 4600
+    .line 4609
     if-eqz p2, :cond_0
 
-    .line 4601
+    .line 4610
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1285,16 +1287,16 @@
 
     move-result-object p1
 
-    .line 4605
+    .line 4614
     :goto_0
     const-string v0, "location_providers_allowed"
 
     invoke-static {p0, v0, p1}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4606
+    .line 4615
     return-void
 
-    .line 4603
+    .line 4612
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

@@ -284,7 +284,10 @@
     <string name="reboot_reboot">Επανεκκίνηση</string>
     <string name="reboot_progress">Επανεκκίνηση…</string>
     <string name="reboot_confirm">Το τηλέφωνό σας θα επανεκκινηθεί.</string>
-    <string name="shutdown_progress">Απενεργοποίηση…</string>
+    <string name="silent_mode_silent">Ειδοποίηση ήχου ανενεργή</string>
+    <string name="silent_mode_vibrate">Δόνηση ειδοποίησης ήχου</string>
+    <string name="silent_mode_ring">Ειδοποίηση ήχου ενεργή</string>
+    <string name="shutdown_progress">Απενεργοποίηση...</string>
     <string name="shutdown_confirm">Το τηλέφωνό σας θα απενεργοποιηθεί.</string>
     <string name="shutdown_confirm_question">Θέλετε να γίνει τερματισμός λειτουργίας;</string>
     <string name="recent_tasks_title">Πρόσφατα</string>

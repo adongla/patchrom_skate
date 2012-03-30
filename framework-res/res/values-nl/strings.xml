@@ -274,10 +274,10 @@
     <string name="reboot_reboot">Normaal herstarten</string>
     <string name="reboot_progress">Herstarten…</string>
     <string name="reboot_confirm">Uw telefoon zal worden herstart.</string>
-    <string name="silent_mode_silent">Beltoon uit</string>
-    <string name="silent_mode_vibrate">Beltoon wordt trilsignaal</string>
-    <string name="silent_mode_ring">Beltoon aan</string>
-    <string name="shutdown_progress">Uitschakelen…</string>
+    <string name="silent_mode_silent">Belsoftware uit</string>
+    <string name="silent_mode_vibrate">Belsoftware op trillen</string>
+    <string name="silent_mode_ring">Belsoftware aan</string>
+    <string name="shutdown_progress">Uitschakelen...</string>
     <string name="shutdown_confirm">Uw telefoon wordt uitgeschakeld.</string>
     <string name="shutdown_confirm_question">Wilt u afsluiten?</string>
     <string name="recent_tasks_title">Recent</string>

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 138
+    .line 140
     iput-object p1, p0, Lcom/android/server/HDMIService$1;->this$0:Lcom/android/server/HDMIService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 140
+    .line 142
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 142
+    .line 144
     .local v0, action:Ljava/lang/String;
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
@@ -65,7 +65,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 147
+    .line 149
     new-instance v1, Ljava/lang/Thread;
 
     iget-object v2, p0, Lcom/android/server/HDMIService$1;->this$0:Lcom/android/server/HDMIService;
@@ -83,11 +83,11 @@
 
     invoke-direct {v1, v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 148
+    .line 150
     .local v1, thread:Ljava/lang/Thread;
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 150
+    .line 152
     .end local v1           #thread:Ljava/lang/Thread;
     :cond_0
     return-void

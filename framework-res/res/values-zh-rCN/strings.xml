@@ -279,6 +279,9 @@
     <string name="reboot_download">下载</string>
     <string name="reboot_progress">正在重启...</string>
     <string name="reboot_confirm">您的手机会重启。</string>
+    <string name="silent_mode_silent">振铃器关闭</string>
+    <string name="silent_mode_vibrate">振铃器振动</string>
+    <string name="silent_mode_ring">振铃器开启</string>
     <string name="shutdown_progress">正在关机...</string>
     <string name="shutdown_confirm">您的手机会关机。</string>
     <string name="shutdown_confirm_question">您要关机吗？</string>
@@ -627,7 +630,7 @@
     <string name="policylab_wipeData">清除所有数据</string>
     <string name="policydesc_wipeData">恢复出厂设置时，将擦除手机上的数据而不发送警告</string>
     <string name="policylab_setGlobalProxy">设置设备全局代理</string>
-    <string name="policydesc_setGlobalProxy">请设置在启用政策的情况下要使用的设备全局代理。只有第一设备管理员才可设置有效的全局代理。</string>
+    <string name="policydesc_setGlobalProxy">请设置在启用规范的情况下要使用的设备全局代理。只有第一设备管理员才可设置有效的全局代理。</string>
     <string name="policylab_expirePassword">设置锁定屏幕密码的有效期</string>
     <string name="policydesc_expirePassword">控制锁定屏幕密码的更改频率</string>
     <string name="policylab_encryptedStorage">设置存储设备加密</string>

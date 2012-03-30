@@ -279,11 +279,14 @@
     <string name="reboot_download">Download</string>
     <string name="reboot_progress">Neu starten…</string>
     <string name="reboot_confirm">Telefon wird neu gestartet.</string>
+    <string name="silent_mode_silent">Klingelton aus</string>
+    <string name="silent_mode_vibrate">Klingeltonmodus \"Vibration\"</string>
+    <string name="silent_mode_ring">Klingelton ein</string>
     <string name="shutdown_progress">Wird heruntergefahren...</string>
     <string name="shutdown_confirm">Telefon wird heruntergefahren.</string>
     <string name="shutdown_confirm_question">Möchten Sie das Gerät herunterfahren?</string>
-    <string name="recent_tasks_title">Zuletzt verwendet</string>
-    <string name="no_recent_tasks">Keine zuletzt verwendeten Apps</string>
+    <string name="recent_tasks_title">Kürzlich geöffnet</string>
+    <string name="no_recent_tasks">Keine kürzlich geöffneten Apps</string>
     <string name="global_actions">Telefonoptionen</string>
     <string name="global_action_lock">Display-Sperre</string>
     <string name="global_action_power_off">Ausschalten</string>
@@ -349,7 +352,7 @@
     <string name="permlab_removeTasks">Aktive Apps beenden</string>
     <string name="permdesc_removeTasks">Ermöglicht einer App das Entfernen von Aufgaben und Beenden der entsprechenden Apps. Schädliche Apps können das Verhalten anderer Apps stören.</string>
     <string name="permlab_setDebugApp">Fehlerbeseitigung für App aktivieren</string>
-    <string name="permdesc_setDebugApp">Ermöglicht einer App, die Fehlerbeseitigung für eine andere Anwendung zu aktivieren. Schädliche Anwendungen können so andere Anwendungen löschen.</string>
+    <string name="permdesc_setDebugApp">Ermöglicht einer App, die Fehlerbeseitigung für eine andere App zu aktivieren. Schädliche Apps können so andere Apps löschen.</string>
     <string name="permlab_changeConfiguration">UI-Einstellungen ändern</string>
     <string name="permdesc_changeConfiguration">Ermöglicht einer App, die aktuelle Konfiguration zu ändern, etwa das Gebietsschema oder die Schriftgröße</string>
     <string name="permlab_enableCarMode">Automodus aktivieren</string>
@@ -383,7 +386,7 @@
     <string name="permlab_batteryStats">Akku-Daten ändern</string>
     <string name="permdesc_batteryStats">Ermöglicht die Änderung von gesammelten Akku-Daten. Nicht für normale Apps vorgesehen.</string>
     <string name="permlab_backup">Systemsicherung und -wiederherstellung kontrollieren</string>
-    <string name="permdesc_backup">Der Anwendung wird die Steuerung des Sicherungs- und Wiederherstellungsmechanismus des Systems ermöglicht. Nicht für normale Apps vorgesehen.</string>
+    <string name="permdesc_backup">Der App wird die Steuerung des Sicherungs- und Wiederherstellungsmechanismus des Systems ermöglicht. Nicht für normale Apps vorgesehen.</string>
     <string name="permlab_confirm_full_backup">Vollständige Sicherung oder Wiederherstellung bestätigen</string>
     <string name="permdesc_confirm_full_backup">Ermöglicht der App den Start der Benutzeroberfläche zur Bestätigung der vollständigen Sicherung. Kann nicht von jeder App verwendet werden.</string>
     <string name="permlab_internalSystemWindow">nicht autorisierte Fenster anzeigen</string>
@@ -445,7 +448,7 @@
     <string name="permlab_writeSettings">allgemeine Systemeinstellungen ändern</string>
     <string name="permdesc_writeSettings">Ermöglicht einer App, die Einstellungsdaten des Systems zu ändern. Schädliche Anwendungen können so die Systemkonfiguration beschädigen.</string>
     <string name="permlab_writeSecureSettings">Sicherheitseinstellungen für das System ändern</string>
-    <string name="permdesc_writeSecureSettings">Der Anwendung wird das Ändern der Sicherheitseinstellungsdaten des Systems ermöglicht. Nicht für normale Apps vorgesehen.</string>
+    <string name="permdesc_writeSecureSettings">Der App wird das Ändern der Sicherheitseinstellungsdaten des Systems ermöglicht. Nicht für normale Apps vorgesehen.</string>
     <string name="permlab_writeGservices">Google Services Map ändern</string>
     <string name="permdesc_writeGservices">Ermöglicht einer App, Änderungen an der Google Services Map vorzunehmen. Nicht für normale Apps vorgesehen.</string>
     <string name="permlab_receiveBootCompleted">Automatisch nach dem Booten starten</string>
@@ -474,7 +477,7 @@
     <string name="permdesc_accessLocationExtraCommands">Zugriff auf zusätzliche Dienstanbieterbefehle für Standort. Schädliche Anwendungen könnten so die Funktionsweise von GPS oder anderen Standortquellen beeinträchtigen.</string>
     <string name="permlab_installLocationProvider">Berechtigung zur Installation eines Standortanbieters</string>
     <string name="permdesc_installLocationProvider">Erstellt simulierte Standortquellen für Testzwecke. Schädliche Anwendungen können so den von den echten Standortquellen wie GPS oder Netzwerkanbieter zurückgegebenen Standort und/oder Status überschreiben oder Ihren Standort überwachen und an eine externe Quelle weitergeben.</string>
-    <string name="permlab_accessFineLocation">Genauer (GPS-) Standort</string>
+    <string name="permlab_accessFineLocation">genauer (GPS-) Standort</string>
     <string name="permdesc_accessFineLocation">Zugriff auf genaue Standortquellen wie GPS auf dem Telefon (falls verfügbar). Schädliche Anwendungen können damit bestimmen, so Sie sich befinden und so Ihren Akku zusätzlich belasten.</string>
     <string name="permlab_accessCoarseLocation">ungefährer (netzwerkbasierter) Standort</string>
     <string name="permdesc_accessCoarseLocation">Greift auf Quellen mit ungefähren Standortbestimmungen wie die Datenbank des Mobilfunknetzes zu, um falls möglich den ungefähren Standort des Tablets festzustellen. Schädliche Anwendungen können damit herausfinden, wo Sie sich ungefähr befinden</string>
@@ -527,7 +530,7 @@
     <string name="permlab_checkinProperties">Auf Check-In-Eigenschaften zugreifen</string>
     <string name="permdesc_checkinProperties">Ermöglicht den Schreib-/Lesezugriff auf vom Check-In-Service hochgeladene Elemente. Nicht für normale Apps vorgesehen.</string>
     <string name="permlab_bindGadget">Widgets auswählen</string>
-    <string name="permdesc_bindGadget">Ermöglicht der App, dem System zu melden, welche Widgets von welcher Anwendung verwendet werden können. Mit dieser Berechtigung können Anwendungen anderen Anwendungen Zugriff auf persönliche Daten gewähren. Nicht für normale Apps vorgesehen.</string>
+    <string name="permdesc_bindGadget">Ermöglicht der App, dem System zu melden, welche Widgets von welcher App verwendet werden können. Mit dieser Berechtigung können Apps anderen Apps Zugriff auf persönliche Daten gewähren. Nicht für normale Apps vorgesehen.</string>
     <string name="permlab_modifyPhoneState">Telefonstatus ändern</string>
     <string name="permdesc_modifyPhoneState">Ermöglicht einer App, die Telefonfunktionen des Geräts zu steuern. Eine Anwendung mit dieser Berechtigung kann unter anderem das Netzwerk wechseln oder die Mobilfunkverbindung des Telefons ein- und ausschalten, ohne Sie darüber zu informieren.</string>
     <string name="permlab_readPhoneState">Telefonstatus lesen und identifizieren</string>
@@ -560,7 +563,7 @@
     <string name="permdesc_useCredentials">Ermöglicht einer App, Authentifizierungs-Token anzufordern</string>
     <string name="permlab_accessNetworkState">Netzwerkstatus anzeigen</string>
     <string name="permdesc_accessNetworkState">Ermöglicht einer App, den Status aller Netzwerke anzuzeigen</string>
-    <string name="permlab_createNetworkSockets">Uneingeschränkter Internetzugriff</string>
+    <string name="permlab_createNetworkSockets">uneingeschränkter Internetzugriff</string>
     <string name="permdesc_createNetworkSockets">Ermöglicht einer App, Netzwerk-Sockets einzurichten</string>
     <string name="permlab_writeApnSettings">Netzwerkeinstellungen und -verkehr ändern/abfangen</string>
     <string name="permdesc_writeApnSettings">Ermöglicht einer App, Netzwerkeinstellungen zu ändern und Netzwerkverkehr abzufangen und zu überprüfen, um beispielsweise den Proxy und den Port eines beliebigen Zugriffspunkts zu ändern. Schädliche Apps können so Netzwerkpakete ohne Ihr Wissen überwachen, weiterleiten oder ändern.</string>
@@ -743,7 +746,7 @@
     <string name="lockscreen_network_locked_message">Netzwerk gesperrt</string>
     <string name="lockscreen_sim_puk_locked_message">PUK-Sperre auf SIM</string>
     <string name="lockscreen_sim_puk_locked_instructions">Weitere Informationen finden Sie in der Bedienungsanleitung oder wenden Sie sich an den Kundendienst.</string>
-    <string name="lockscreen_sim_locked_message">Bitte PIN eingeben</string>
+    <string name="lockscreen_sim_locked_message">PIN eingeben</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">SIM-Karte wird entsperrt...</string>
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Sie haben Ihr Entsperrungsmuster %d-mal falsch gezeichnet. 
 

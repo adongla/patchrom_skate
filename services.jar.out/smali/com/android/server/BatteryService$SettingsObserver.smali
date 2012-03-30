@@ -25,13 +25,13 @@
     .parameter "handler"
 
     .prologue
-    .line 620
+    .line 635
     iput-object p1, p0, Lcom/android/server/BatteryService$SettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
-    .line 621
+    .line 636
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 622
+    .line 637
     return-void
 .end method
 
@@ -41,7 +41,7 @@
     .locals 3
 
     .prologue
-    .line 625
+    .line 640
     iget-object v1, p0, Lcom/android/server/BatteryService$SettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    .line 626
+    .line 641
     .local v0, resolver:Landroid/content/ContentResolver;
     const-string v1, "battery_light_pulse"
 
@@ -65,10 +65,10 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 628
+    .line 643
     invoke-virtual {p0}, Lcom/android/server/BatteryService$SettingsObserver;->update()V
 
-    .line 629
+    .line 644
     return-void
 .end method
 
@@ -77,10 +77,10 @@
     .parameter "selfChange"
 
     .prologue
-    .line 632
+    .line 647
     invoke-virtual {p0}, Lcom/android/server/BatteryService$SettingsObserver;->update()V
 
-    .line 633
+    .line 648
     return-void
 .end method
 
@@ -90,7 +90,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 636
+    .line 651
     iget-object v2, p0, Lcom/android/server/BatteryService$SettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
@@ -102,7 +102,7 @@
 
     move-result-object v1
 
-    .line 637
+    .line 652
     .local v1, resolver:Landroid/content/ContentResolver;
     const-string v2, "battery_light_pulse"
 
@@ -112,7 +112,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 639
+    .line 654
     .local v0, pulseEnabled:Z
     :goto_0
     iget-object v2, p0, Lcom/android/server/BatteryService$SettingsObserver;->this$0:Lcom/android/server/BatteryService;
@@ -124,23 +124,23 @@
 
     if-eq v2, v0, :cond_0
 
-    .line 640
+    .line 655
     iget-object v2, p0, Lcom/android/server/BatteryService$SettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     #setter for: Lcom/android/server/BatteryService;->mLedPulseEnabled:Z
     invoke-static {v2, v0}, Lcom/android/server/BatteryService;->access$602(Lcom/android/server/BatteryService;Z)Z
 
-    .line 641
+    .line 656
     iget-object v2, p0, Lcom/android/server/BatteryService$SettingsObserver;->this$0:Lcom/android/server/BatteryService;
 
     #calls: Lcom/android/server/BatteryService;->updateLedPulse()V
     invoke-static {v2}, Lcom/android/server/BatteryService;->access$700(Lcom/android/server/BatteryService;)V
 
-    .line 643
+    .line 658
     :cond_0
     return-void
 
-    .line 637
+    .line 652
     .end local v0           #pulseEnabled:Z
     :cond_1
     const/4 v0, 0x0

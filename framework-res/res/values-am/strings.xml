@@ -265,6 +265,9 @@
     <string name="turn_off_radio">ገመድ አልባ አጥፋ</string>
     <string name="screen_lock">ማያ ቆልፍ</string>
     <string name="power_off">ኃይል አጥፋ</string>
+    <string name="silent_mode_silent">መጥሪያ ጠፍቷል</string>
+    <string name="silent_mode_vibrate">ነዛሪ መጥሪያ</string>
+    <string name="silent_mode_ring">መጥሪያ በርቷል</string>
     <string name="shutdown_progress">በመዝጋት ላይ...</string>
     <string name="shutdown_confirm">ስልክዎ ይዘጋል።</string>
     <string name="shutdown_confirm_question">መዝጋት ይፈልጋሉ?</string>

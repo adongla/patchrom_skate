@@ -694,7 +694,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 625
+    .line 627
     iget-object v1, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v1, :cond_0
@@ -1043,7 +1043,7 @@
     .locals 1
 
     .prologue
-    .line 632
+    .line 634
     iget-boolean v0, p0, Landroid/widget/VideoView;->mCanPause:Z
 
     return v0
@@ -1053,7 +1053,7 @@
     .locals 1
 
     .prologue
-    .line 636
+    .line 638
     iget-boolean v0, p0, Landroid/widget/VideoView;->mCanSeekBack:Z
 
     return v0
@@ -1063,7 +1063,7 @@
     .locals 1
 
     .prologue
-    .line 640
+    .line 642
     iget-boolean v0, p0, Landroid/widget/VideoView;->mCanSeekForward:Z
 
     return v0
@@ -1073,15 +1073,15 @@
     .locals 1
 
     .prologue
-    .line 618
+    .line 620
     iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 619
+    .line 621
     iget v0, p0, Landroid/widget/VideoView;->mCurrentBufferPercentage:I
 
-    .line 621
+    .line 623
     :goto_0
     return v0
 
@@ -1095,21 +1095,21 @@
     .locals 1
 
     .prologue
-    .line 598
+    .line 600
     invoke-direct {p0}, Landroid/widget/VideoView;->isInPlaybackState()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 599
+    .line 601
     iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
 
     move-result v0
 
-    .line 601
+    .line 603
     :goto_0
     return v0
 
@@ -1123,26 +1123,26 @@
     .locals 1
 
     .prologue
-    .line 586
+    .line 588
     invoke-direct {p0}, Landroid/widget/VideoView;->isInPlaybackState()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 587
+    .line 589
     iget v0, p0, Landroid/widget/VideoView;->mDuration:I
 
     if-lez v0, :cond_0
 
-    .line 588
+    .line 590
     iget v0, p0, Landroid/widget/VideoView;->mDuration:I
 
-    .line 594
+    .line 596
     :goto_0
     return v0
 
-    .line 590
+    .line 592
     :cond_0
     iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -1152,18 +1152,18 @@
 
     iput v0, p0, Landroid/widget/VideoView;->mDuration:I
 
-    .line 591
+    .line 593
     iget v0, p0, Landroid/widget/VideoView;->mDuration:I
 
     goto :goto_0
 
-    .line 593
+    .line 595
     :cond_1
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/VideoView;->mDuration:I
 
-    .line 594
+    .line 596
     iget v0, p0, Landroid/widget/VideoView;->mDuration:I
 
     goto :goto_0
@@ -1173,7 +1173,7 @@
     .locals 1
 
     .prologue
-    .line 614
+    .line 616
     invoke-direct {p0}, Landroid/widget/VideoView;->isInPlaybackState()Z
 
     move-result v0
@@ -1609,10 +1609,10 @@
     .locals 0
 
     .prologue
-    .line 581
+    .line 583
     invoke-direct {p0}, Landroid/widget/VideoView;->openVideo()V
 
-    .line 582
+    .line 584
     return-void
 .end method
 
@@ -1621,28 +1621,28 @@
     .parameter "msec"
 
     .prologue
-    .line 605
+    .line 607
     invoke-direct {p0}, Landroid/widget/VideoView;->isInPlaybackState()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 606
+    .line 608
     iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaPlayer;->seekTo(I)V
 
-    .line 607
+    .line 609
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
-    .line 611
+    .line 613
     :goto_0
     return-void
 
-    .line 609
+    .line 611
     :cond_0
     iput p1, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
@@ -1850,14 +1850,46 @@
 .end method
 
 .method public suspend()V
-    .locals 1
+    .locals 3
 
     .prologue
     .line 577
+    invoke-virtual {p0}, Landroid/widget/VideoView;->getCurrentPosition()I
+
+    move-result v0
+
+    iput v0, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
+
+    .line 578
+    iget-object v0, p0, Landroid/widget/VideoView;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "suspend( ) - will resume at "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 579
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/VideoView;->release(Z)V
 
-    .line 578
+    .line 580
     return-void
 .end method

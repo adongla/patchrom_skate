@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Desactivar función inalámbrica</string>
     <string name="screen_lock">Bloqueo de pantalla</string>
     <string name="power_off">Apagar</string>
+    <string name="silent_mode_silent">Timbre desactivado</string>
+    <string name="silent_mode_vibrate">Modo vibración</string>
+    <string name="silent_mode_ring">Timbre activado</string>
     <string name="shutdown_progress">Apagando...</string>
     <string name="shutdown_confirm">El teléfono se apagará.</string>
     <string name="shutdown_confirm_question">¿Seguro?</string>

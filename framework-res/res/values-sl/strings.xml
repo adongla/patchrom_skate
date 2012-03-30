@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Izklopi brezžično omrežje</string>
     <string name="screen_lock">Zaklep zaslona</string>
     <string name="power_off">Izklopi</string>
+    <string name="silent_mode_silent">Izklopi zvonjenje</string>
+    <string name="silent_mode_vibrate">Zvonjenje z vibriranjem</string>
+    <string name="silent_mode_ring">Vklopi zvonjenje</string>
     <string name="shutdown_progress">Se zaustavlja ...</string>
     <string name="shutdown_confirm">Telefon bo zaustavljen.</string>
     <string name="shutdown_confirm_question">Ali želite izklopiti telefon?</string>

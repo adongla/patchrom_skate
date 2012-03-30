@@ -69,7 +69,7 @@
 
     iput-boolean v0, p0, Landroid/view/HardwareRenderer;->mRequested:Z
 
-    .line 958
+    .line 960
     return-void
 .end method
 

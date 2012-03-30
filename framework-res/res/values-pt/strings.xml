@@ -290,6 +290,9 @@
     <string name="reboot_download">Download</string>
     <string name="reboot_progress">Reiniciando…</string>
     <string name="reboot_confirm">Seu telefone vai reiniciar.</string>
+    <string name="silent_mode_silent">Campainha desligada</string>
+    <string name="silent_mode_vibrate">Vibração da campainha</string>
+    <string name="silent_mode_ring">Campainha ligada</string>
     <string name="shutdown_progress">Encerrando…</string>
     <string name="shutdown_confirm">O seu telefone será desligado.</string>
     <string name="shutdown_confirm_question">Gostaria de desligar?</string>

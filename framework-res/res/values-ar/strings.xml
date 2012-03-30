@@ -269,6 +269,9 @@
     <string name="turn_off_radio">إيقاف تشغيل الشبكة اللاسلكية</string>
     <string name="screen_lock">تأمين الشاشة</string>
     <string name="power_off">إيقاف التشغيل</string>
+    <string name="silent_mode_silent">إيقاف الرنين</string>
+    <string name="silent_mode_vibrate">اهتزاز الرنين</string>
+    <string name="silent_mode_ring">تشغيل الرنين</string>
     <string name="shutdown_progress">جارٍ إيقاف التشغيل...</string>
     <string name="shutdown_confirm">سيتم إيقاف تشغيل هاتفك.</string>
     <string name="shutdown_confirm_question">هل تريد إيقاف التشغيل؟</string>

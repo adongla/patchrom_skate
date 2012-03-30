@@ -268,6 +268,9 @@
     <string name="turn_off_radio">Zima pasiwaya</string>
     <string name="screen_lock">Funga skrini</string>
     <string name="power_off">Nishati imezimwa</string>
+    <string name="silent_mode_silent">Programu ya milio imezimwa</string>
+    <string name="silent_mode_vibrate">Mtetemo wa programu ya milio</string>
+    <string name="silent_mode_ring">Programu ya milio imewashwa</string>
     <string name="shutdown_progress">Inafunga...</string>
     <string name="shutdown_confirm">Simu yako itazima.</string>
     <string name="shutdown_confirm_question">Je, ungependa kuzima?</string>

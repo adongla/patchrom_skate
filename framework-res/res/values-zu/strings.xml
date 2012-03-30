@@ -268,6 +268,9 @@
     <string name="turn_off_radio">Vala okungenantambo</string>
     <string name="screen_lock">Ukuvala isikrini</string>
     <string name="power_off">Vala amandla</string>
+    <string name="silent_mode_silent">Iringa icimile</string>
+    <string name="silent_mode_vibrate">Ukudlidliza kweringa</string>
+    <string name="silent_mode_ring">Iringa iyasebenza</string>
     <string name="shutdown_progress">Ivala shaqa...</string>
     <string name="shutdown_confirm">Ifoni yakho izocima.</string>
     <string name="shutdown_confirm_question">Ungathanda ukuvala shaqa?</string>

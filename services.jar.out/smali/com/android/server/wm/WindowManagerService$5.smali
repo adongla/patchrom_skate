@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 5413
+    .line 5420
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$5;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iput-object p2, p0, Lcom/android/server/wm/WindowManagerService$5;->val$watcherBinder:Landroid/os/IBinder;
@@ -46,14 +46,14 @@
     .locals 5
 
     .prologue
-    .line 5415
+    .line 5422
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$5;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v3, v2, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 5416
+    .line 5423
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -69,7 +69,7 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 5417
+    .line 5424
     iget-object v4, p0, Lcom/android/server/wm/WindowManagerService$5;->val$watcherBinder:Landroid/os/IBinder;
 
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$5;->this$0:Lcom/android/server/wm/WindowManagerService;
@@ -88,7 +88,7 @@
 
     if-ne v4, v2, :cond_1
 
-    .line 5418
+    .line 5425
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$5;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mRotationWatchers:Ljava/util/ArrayList;
@@ -99,11 +99,11 @@
 
     check-cast v1, Landroid/view/IRotationWatcher;
 
-    .line 5419
+    .line 5426
     .local v1, removed:Landroid/view/IRotationWatcher;
     if-eqz v1, :cond_0
 
-    .line 5420
+    .line 5427
     invoke-interface {v1}, Landroid/view/IRotationWatcher;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -112,25 +112,25 @@
 
     invoke-interface {v2, p0, v4}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 5422
+    .line 5429
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
-    .line 5416
+    .line 5423
     .end local v1           #removed:Landroid/view/IRotationWatcher;
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 5425
+    .line 5432
     :cond_2
     monitor-exit v3
 
-    .line 5426
+    .line 5433
     return-void
 
-    .line 5425
+    .line 5432
     :catchall_0
     move-exception v2
 

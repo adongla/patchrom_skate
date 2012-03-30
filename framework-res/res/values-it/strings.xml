@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Disattiva wireless</string>
     <string name="screen_lock">Blocco schermo</string>
     <string name="power_off">Spegni</string>
+    <string name="silent_mode_silent">Suoneria disattivata</string>
+    <string name="silent_mode_vibrate">Suoneria vibrazione</string>
+    <string name="silent_mode_ring">Suoneria attiva</string>
     <string name="shutdown_progress">Spegnimento...</string>
     <string name="shutdown_confirm">Il telefono verrà spento.</string>
     <string name="shutdown_confirm_question">Spegnere?</string>

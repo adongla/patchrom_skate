@@ -255,6 +255,9 @@
     <string name="turn_off_radio">خاموش کردن بی سیم</string>
     <string name="screen_lock">قفل صفحه</string>
     <string name="power_off">خاموش کردن</string>
+    <string name="silent_mode_silent">زنگ خاموش</string>
+    <string name="silent_mode_vibrate">زنگ لرزشی</string>
+    <string name="silent_mode_ring">زنگ روشن</string>
     <string name="shutdown_progress">خاموش کردن...</string>
     <string name="shutdown_confirm">گوشی شما خاموش می شود.</string>
     <string name="shutdown_confirm_question">آیا می خواهید دستگاه را خاموش کنید؟</string>

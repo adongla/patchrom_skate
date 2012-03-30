@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Išjungti bevielį</string>
     <string name="screen_lock">Ekrano užraktas</string>
     <string name="power_off">Išjungti maitinimą</string>
+    <string name="silent_mode_silent">Skambutis išjungtas</string>
+    <string name="silent_mode_vibrate">Vibracija skambinant</string>
+    <string name="silent_mode_ring">Skambutis įjungtas</string>
     <string name="shutdown_progress">Išsijungia...</string>
     <string name="shutdown_confirm">Telefonas bus išjungtas.</string>
     <string name="shutdown_confirm_question">Ar norite stabdyti?</string>

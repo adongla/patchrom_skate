@@ -9752,7 +9752,7 @@
     if-eqz v1, :cond_0
 
     .line 652
-    const v1, 0x1070027
+    const v1, 0x1070028
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -9761,7 +9761,7 @@
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mAutoBrightnessLevels:[I
 
     .line 654
-    const v1, 0x1070028
+    const v1, 0x1070029
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -9770,7 +9770,7 @@
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mLcdBacklightValues:[I
 
     .line 656
-    const v1, 0x1070029
+    const v1, 0x107002a
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -9779,7 +9779,7 @@
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mButtonBacklightValues:[I
 
     .line 658
-    const v1, 0x107002a
+    const v1, 0x107002b
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 

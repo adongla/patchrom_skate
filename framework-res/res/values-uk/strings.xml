@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Вимкнути радіо</string>
     <string name="screen_lock">Заблок. екран</string>
     <string name="power_off">Вимкнути</string>
+    <string name="silent_mode_silent">Дзвінок вимкнено</string>
+    <string name="silent_mode_vibrate">Дзвінок на вібросигналі</string>
+    <string name="silent_mode_ring">Дзвінок увімкнено</string>
     <string name="shutdown_progress">Вимкнення...</string>
     <string name="shutdown_confirm">Ваш телефон буде вимкнено.</string>
     <string name="shutdown_confirm_question">Дійсно вимкнути?</string>

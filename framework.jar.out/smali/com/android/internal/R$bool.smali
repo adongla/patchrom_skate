@@ -69,6 +69,8 @@
 
 .field public static final config_forceDisableHardwareKeyboard:I = 0x1110035
 
+.field public static final config_hasDockBattery:I = 0x1110036
+
 .field public static final config_intrusiveBatteryLed:I = 0x111001a
 
 .field public static final config_intrusiveNotificationLed:I = 0x1110019
@@ -113,7 +115,7 @@
 
 .field public static final config_wimaxEnabled:I = 0x1110034
 
-.field public static final lockscreen_isPortrait:I = 0x1110036
+.field public static final lockscreen_isPortrait:I = 0x1110037
 
 .field public static final preferences_prefer_dual_pane:I = 0x1110002
 
@@ -131,7 +133,7 @@
     .locals 0
 
     .prologue
-    .line 11197
+    .line 11209
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

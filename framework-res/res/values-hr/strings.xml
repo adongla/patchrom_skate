@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Isključi bežičnu vezu</string>
     <string name="screen_lock">Zaključavanje zaslona</string>
     <string name="power_off">Isključi</string>
+    <string name="silent_mode_silent">Zvono isključeno</string>
+    <string name="silent_mode_vibrate">Vibracija zvona</string>
+    <string name="silent_mode_ring">Zvono uključeno</string>
     <string name="shutdown_progress">Isključivanje...</string>
     <string name="shutdown_confirm">Vaš će se telefon ipak isključiti</string>
     <string name="shutdown_confirm_question">Želite li isključiti uređaj?</string>

@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Izslēgt bezvadu tīklu</string>
     <string name="screen_lock">Bloķēt ekrānu</string>
     <string name="power_off">Strāvas padeve ir izslēgta.</string>
+    <string name="silent_mode_silent">Zvanītājs izslēgts</string>
+    <string name="silent_mode_vibrate">Zvanītājs vibrācijas režīmā</string>
+    <string name="silent_mode_ring">Zvanītājs ieslēgts</string>
     <string name="shutdown_progress">Notiek izslēgšana...</string>
     <string name="shutdown_confirm">Tālrunis tiks izslēgts.</string>
     <string name="shutdown_confirm_question">Vai vēlaties beidzēt?</string>

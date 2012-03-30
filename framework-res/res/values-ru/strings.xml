@@ -282,8 +282,8 @@
     <string name="reboot_reboot">Перезагрузка</string>
     <string name="reboot_progress">Перезагрузка…</string>
     <string name="reboot_confirm">Ваш телефон будет перезагружен</string>
-    <string name="silent_mode_silent">Звонок выключен</string>
-    <string name="silent_mode_vibrate">Виброзвонок</string>
+    <string name="silent_mode_silent">Звонок отключен</string>
+    <string name="silent_mode_vibrate">Вибросигнал</string>
     <string name="silent_mode_ring">Звонок включен</string>
     <string name="shutdown_progress">Выключение...</string>
     <string name="shutdown_confirm">Телефон будет выключен.</string>
@@ -752,26 +752,26 @@
     <string name="lockscreen_sim_puk_locked_instructions">См. руководство пользователя или свяжитесь со службой поддержки.</string>
     <string name="lockscreen_sim_locked_message">SIM-карта заблокирована</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Разблокировка SIM-карты…</string>
-    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Количество неудачных попыток ввода графического ключа разблокировки: %d. 
+    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Вы %d раз неверно указали графический ключ. 
 
-Повторите попытку через %d с."</string>
+Повтор через %d сек."</string>
     <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Количество неудачных попыток ввода пароля: %d. 
 
 Повторите попытку через %d с."</string>
     <string name="lockscreen_too_many_failed_pin_attempts_dialog_message" formatted="false">"Количество неудачных попыток ввода PIN-кода: %d. 
 
 Повторите попытку через %d с."</string>
-    <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"Количество неудачных попыток ввода графического ключа разблокировки: %d. После %d неудачных попыток вам будет предложено разблокировать телефон с помощью учетных данных Google.  
+    <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"Вы %d раз неверно указали графический ключ. После %d неверных попыток для разблокировки телефона потребуется войти в аккаунт Google. 
 
- Повторите попытку через %d с."</string>
+ Повтор через %d сек."</string>
     <string name="lockscreen_failed_attempts_almost_at_wipe" formatted="false">Не удалось разблокировать телефон (число попыток: %d). Осталось попыток: %d. После этого будут установлены настройки по умолчанию, что приведет к удалению всех пользовательских данных.</string>
     <string name="lockscreen_failed_attempts_now_wiping">Не удалось разблокировать телефон (число попыток: %d). Будут установлены настройки по умолчанию.</string>
     <string name="lockscreen_too_many_failed_attempts_countdown">Повторите попытку через %d с.</string>
     <string name="lockscreen_forgot_pattern_button_text">Забыли графический ключ?</string>
     <string name="lockscreen_glogin_forgot_pattern">Снятие блокировки аккаунта</string>
     <string name="lockscreen_glogin_too_many_attempts">Слишком много попыток ввода графического ключа!</string>
-    <string name="lockscreen_glogin_instructions">Для разблокировки войдите с помощью своего аккаунта Google</string>
-    <string name="lockscreen_glogin_username_hint">Имя пользователя (электронная почта)</string>
+    <string name="lockscreen_glogin_instructions">Чтобы разблокировать устройство, войдите в свой аккаунт Google.</string>
+    <string name="lockscreen_glogin_username_hint">Имя пользователя (эл. почта)</string>
     <string name="lockscreen_glogin_password_hint">Пароль</string>
     <string name="lockscreen_glogin_submit_button">Вход</string>
     <string name="lockscreen_glogin_invalid_input">Неверное имя пользователя или пароль.</string>

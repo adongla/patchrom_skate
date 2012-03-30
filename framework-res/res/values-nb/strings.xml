@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Slå av trådløst nett</string>
     <string name="screen_lock">Lås skjermen</string>
     <string name="power_off">Slå av</string>
+    <string name="silent_mode_silent">Ringelyd av</string>
+    <string name="silent_mode_vibrate">Vibreringsmodus</string>
+    <string name="silent_mode_ring">Ringelyd på</string>
     <string name="shutdown_progress">Avslutter…</string>
     <string name="shutdown_confirm">Telefonen vil bli slått av.</string>
     <string name="shutdown_confirm_question">Vil du slå av?</string>

@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Inaktivera trådlöst</string>
     <string name="screen_lock">Skärmlås</string>
     <string name="power_off">Stäng av</string>
+    <string name="silent_mode_silent">Ringsignal av</string>
+    <string name="silent_mode_vibrate">Vibrerande ringsignal</string>
+    <string name="silent_mode_ring">Ringsignal på</string>
     <string name="shutdown_progress">Avslutar…</string>
     <string name="shutdown_confirm">Din telefon stängs av.</string>
     <string name="shutdown_confirm_question">Vill du stänga av?</string>

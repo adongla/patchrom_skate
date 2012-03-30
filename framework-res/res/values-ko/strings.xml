@@ -290,9 +290,9 @@
     <string name="reboot_download">Download</string>
     <string name="reboot_progress">다시 시작하는 중…</string>
     <string name="reboot_confirm">휴대전화가 다시 시작됩니다.</string>
-    <string name="silent_mode_silent">소리 끄기</string>
-    <string name="silent_mode_vibrate">진동 모드</string>
-    <string name="silent_mode_ring">소리 켜기</string>
+    <string name="silent_mode_silent">벨소리가 무음입니다.</string>
+    <string name="silent_mode_vibrate">벨소리가 진동입니다.</string>
+    <string name="silent_mode_ring">벨소리가 켜져 있습니다.</string>
     <string name="shutdown_progress">종료 중...</string>
     <string name="shutdown_confirm">휴대전화가 종료됩니다.</string>
     <string name="shutdown_confirm_question">종료하시겠습니까?</string>
@@ -307,8 +307,8 @@
     <string name="global_action_silent_mode_on_status">소리 꺼짐</string>
     <string name="global_action_silent_mode_off_status">소리 켜짐</string>
     <string name="global_actions_toggle_airplane_mode">비행기 모드</string>
-    <string name="global_actions_airplane_mode_on_status">비행기 모드 사용</string>
-    <string name="global_actions_airplane_mode_off_status">비행기 모드 사용 안함</string>
+    <string name="global_actions_airplane_mode_on_status">비행기 모드 사용중</string>
+    <string name="global_actions_airplane_mode_off_status">비행기 모드 사용중이 아님</string>
     <string name="safeMode">안전 모드</string>
     <string name="android_system_label">Android 시스템</string>
     <string name="permgrouplab_costMoney">요금이 부과되는 서비스</string>

@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Vypnúť bezdrôtové pripojenie</string>
     <string name="screen_lock">Uzamknutie obrazovky</string>
     <string name="power_off">Vypnúť</string>
+    <string name="silent_mode_silent">Zvonenie je vypnuté</string>
+    <string name="silent_mode_vibrate">Vibračné zvonenie</string>
+    <string name="silent_mode_ring">Zvonenie je zapnuté</string>
     <string name="shutdown_progress">Prebieha vypínanie...</string>
     <string name="shutdown_confirm">Váš telefón bude vypnutý.</string>
     <string name="shutdown_confirm_question">Chcete zariadenie vypnúť?</string>

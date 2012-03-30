@@ -270,6 +270,9 @@
     <string name="screen_lock">Näytön lukitus</string>
     <string name="power_off">Virta pois</string>
     <string name="global_action_screenshot">Kuvakaappaus</string>
+    <string name="silent_mode_silent">Soittoääni: mykistetty</string>
+    <string name="silent_mode_vibrate">Soittoääni: värinä</string>
+    <string name="silent_mode_ring">Soittoääni: normaali</string>
     <string name="shutdown_progress">Suljetaan...</string>
     <string name="shutdown_confirm">Puhelin suljetaan.</string>
     <string name="shutdown_confirm_question">Haluatko sammuttaa laitteen?</string>
@@ -833,7 +836,7 @@ Valitse OK, jos haluat jatkaa, tai Peruuta, jos et halua siirtyä pois sivulta."
     <string name="searchview_description_query">Hakulauseke</string>
     <string name="searchview_description_clear">Tyhjennä kysely</string>
     <string name="searchview_description_submit">Lähetä kysely</string>
-    <string name="searchview_description_voice">Äänihaku</string>
+    <string name="searchview_description_voice">Puhehaku</string>
     <string name="oneMonthDurationPast">kuukausi sitten</string>
     <string name="beforeOneMonthDurationPast">Yli kuukausi sitten</string>
     <string name="last_month">Viime kuussa</string>

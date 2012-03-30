@@ -291,9 +291,9 @@
     <string name="reboot_download">ダウンロード</string>
     <string name="reboot_progress">再起動中…</string>
     <string name="reboot_confirm">端末は再起動します</string>
-    <string name="silent_mode_silent">着信音 OFF</string>
-    <string name="silent_mode_vibrate">着信振動</string>
-    <string name="silent_mode_ring">着信音 ON</string>
+    <string name="silent_mode_silent">着信音オフ</string>
+    <string name="silent_mode_vibrate">バイブレーション着信</string>
+    <string name="silent_mode_ring">着信音オン</string>
     <string name="shutdown_progress">シャットダウン中...</string>
     <string name="shutdown_confirm">携帯電話の電源を切ります。</string>
     <string name="shutdown_confirm_question">シャットダウンしますか？</string>

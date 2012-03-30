@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Dezactivaţi funcţia wireless</string>
     <string name="screen_lock">Blocaţi ecranul</string>
     <string name="power_off">Opriţi alimentarea</string>
+    <string name="silent_mode_silent">Sonerie dezactivată</string>
+    <string name="silent_mode_vibrate">Vibrare sonerie</string>
+    <string name="silent_mode_ring">Sonerie activată</string>
     <string name="shutdown_progress">Se închide...</string>
     <string name="shutdown_confirm">Telefonul dvs. se va închide.</string>
     <string name="shutdown_confirm_question">Doriţi să închideţi?</string>

@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Matikan nirkabel</string>
     <string name="screen_lock">Kunci layar</string>
     <string name="power_off">Matikan daya</string>
+    <string name="silent_mode_silent">Pendering mati</string>
+    <string name="silent_mode_vibrate">Pendering bergetar</string>
+    <string name="silent_mode_ring">Pendering nyala</string>
     <string name="shutdown_progress">Sedang mematikan...</string>
     <string name="shutdown_confirm">Ponsel Anda akan dimatikan.</string>
     <string name="shutdown_confirm_question">Apakah Anda ingin mematikannya?</string>

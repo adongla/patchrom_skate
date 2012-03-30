@@ -766,7 +766,7 @@
 
     move/from16 v24, v0
 
-    const/16 v25, 0x1f
+    const/16 v25, 0x20
 
     move/from16 v0, v24
 

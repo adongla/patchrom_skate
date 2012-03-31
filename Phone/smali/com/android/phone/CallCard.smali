@@ -856,7 +856,7 @@
 
     const/4 v11, 0x2
 
-    const v12, 0x7f0200d1
+    const v12, 0x7f0200d8
 
     .line 778
     if-eqz p2, :cond_0
@@ -946,7 +946,7 @@
     .line 797
     iget-object v9, p0, Lcom/android/phone/CallCard;->mSecondaryCallPhoto:Lcom/android/phone/InCallContactPhoto;
 
-    const v10, 0x7f0200cd
+    const v10, 0x7f0200d4
 
     invoke-static {v9, v10}, Lcom/android/phone/CallCard;->showImage(Landroid/widget/ImageView;I)V
 
@@ -1329,7 +1329,7 @@
 
     .line 1348
     :cond_0
-    const v0, 0x7f0200d1
+    const v0, 0x7f0200d8
 
     invoke-static {p0, v0}, Lcom/android/phone/CallCard;->showImage(Landroid/widget/ImageView;I)V
 
@@ -1629,7 +1629,7 @@
     if-eqz v8, :cond_0
 
     .line 663
-    const v0, 0x7f02007c
+    const v0, 0x7f020083
 
     goto :goto_0
 
@@ -1866,7 +1866,7 @@
     .line 1179
     iget-object v1, p0, Lcom/android/phone/CallCard;->mPhoto:Lcom/android/phone/InCallContactPhoto;
 
-    const v2, 0x7f0200ce
+    const v2, 0x7f0200d5
 
     invoke-static {v1, v2}, Lcom/android/phone/CallCard;->showImage(Landroid/widget/ImageView;I)V
 
@@ -1918,7 +1918,7 @@
     :cond_1
     iget-object v1, p0, Lcom/android/phone/CallCard;->mPhoto:Lcom/android/phone/InCallContactPhoto;
 
-    const v2, 0x7f0200cd
+    const v2, 0x7f0200d4
 
     invoke-static {v1, v2}, Lcom/android/phone/CallCard;->showImage(Landroid/widget/ImageView;I)V
 
@@ -2345,7 +2345,7 @@
 
     iget-object v6, p0, Lcom/android/phone/CallCard;->mPhoto:Lcom/android/phone/InCallContactPhoto;
 
-    const v8, 0x7f0200d1
+    const v8, 0x7f0200d8
 
     move-object/from16 v1, p1
 
@@ -2723,7 +2723,7 @@
 
     .line 1246
     :cond_4
-    const v6, 0x7f0200cc
+    const v6, 0x7f0200d3
 
     goto :goto_2
 

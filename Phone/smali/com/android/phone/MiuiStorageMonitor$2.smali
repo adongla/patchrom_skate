@@ -67,7 +67,6 @@
     :cond_0
     iget-object v1, p0, Lcom/android/phone/MiuiStorageMonitor$2;->this$0:Lcom/android/phone/MiuiStorageMonitor;
 
-    #getter for: Lcom/android/phone/MiuiStorageMonitor;->mListener:Lcom/android/phone/MiuiStorageMonitor$Listener;
     invoke-static {v1}, Lcom/android/phone/MiuiStorageMonitor;->access$100(Lcom/android/phone/MiuiStorageMonitor;)Lcom/android/phone/MiuiStorageMonitor$Listener;
 
     move-result-object v1

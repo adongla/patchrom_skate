@@ -189,12 +189,12 @@
     <string name="throttle_time_frame">数据使用时段</string>
     <string name="throttle_rate">数据传输速率政策</string>
     <string name="throttle_help">了解详情</string>
-    <string name="throttle_status_subtext">"时段上限为 %3$s，当前值为 %1$s (%2$d٪)
+    <string name="throttle_status_subtext" formatted="false">"时段上限为 %3$s，当前值为 %1$s (%2$d٪)
 下一个时段从 %4$d 天后 (%5$s) 开始"</string>
-    <string name="throttle_data_usage_subtext">时段上限为 %3$s，当前值为 %1$s (%2$d٪)</string>
-    <string name="throttle_data_rate_reduced_subtext">"已超过%1$s速率上限
+    <string name="throttle_data_usage_subtext" formatted="false">时段上限为 %3$s，当前值为 %1$s (%2$d٪)</string>
+    <string name="throttle_data_rate_reduced_subtext" formatted="false">"已超过%1$s速率上限
 数据传输速率已降至 %2$d Kb/s。"</string>
-    <string name="throttle_time_frame_subtext">"此周期已过去 %1$d٪
+    <string name="throttle_time_frame_subtext" formatted="false">"此周期已过去 %1$d٪
 下一个时段将从 %2$d 天后 (%3$s) 开始"</string>
     <string name="throttle_rate_subtext">如果超过了流量上限，则数据传输速率会降至 %1$d Kb/s</string>
     <string name="throttle_help_subtext">有关您运营商的移动网络数据使用政策的详情</string>
@@ -283,7 +283,7 @@
     <string name="cdma_network_preferneces_summary">尚未实现！</string>
     <string name="cdma_network_preferences_dialogtitle">CDMA 网络偏好设置</string>
     <string name="cdma_subscription_title">CDMA 订阅</string>
-    <string name="cdma_subscription_summary">在 RUIM/SIM 和 NV 之间进行切换</string>
+    <string name="cdma_subscription_summary">在UIM和NV之间进行切换</string>
     <string name="cdma_subscription_dialogtitle">订阅</string>
     <string name="cdma_activate_device">激活设备</string>
     <string name="cdma_lte_data_service">设置数据服务</string>
@@ -661,6 +661,11 @@
     <string name="call_forwarding_settings_miui">来电转接设置</string>
     <string name="calling_via_template_miui">"通过^1
 "<b>^2</b>呼叫</string>
+    <string name="call_log_number_limit_miui">通话记录条数限制</string>
+    <string name="call_log_number_limit_summary_miui">为保证效率，限制存储条数</string>
+    <string name="call_log_number_limit_key_title">最大条数</string>
+    <string name="call_log_number_limit_title">设置要保存的通话记录数量</string>
+    <string name="call_log_number_limit_subsummary">%d条</string>
     <string name="call_recording_notification_summary_miui">完成后在通知栏提示</string>
     <string name="call_recording_notification_title_miui">录音通知</string>
     <string name="call_recording_prompt_miui">录音请打开免提</string>
@@ -893,7 +898,8 @@
     <string name="deleting_sim_entry_miui">正在删除SIM卡联系人</string>
     <string name="delete_selected_sim_entry_miui">删除已选联系人</string>
     <string name="import_all_sim_entry_miui">全部导入</string>
-    <string name="cmda_call_miui">CDMA呼叫</string>
+    <string name="cdma_three_way_calls_miui">多方通话</string>
+    <string name="cdma_conference_call_miui">会议电话</string>
     <string name="respond_via_sms_canned_response_1_miui">我现在不方便接听，稍后和您联系。</string>
     <string name="respond_via_sms_canned_response_2_miui">我现在不方便接听，请问有什么事吗？</string>
     <string name="respond_via_sms_canned_response_3_miui">现在有事，我稍后会再打给你。</string>

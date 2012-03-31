@@ -167,7 +167,6 @@
 
     check-cast v4, Landroid/os/AsyncResult;
 
-    #calls: Lcom/android/phone/PhoneApp;->onMMIComplete(Landroid/os/AsyncResult;)V
     invoke-static {v5, v4}, Lcom/android/phone/PhoneApp;->access$300(Lcom/android/phone/PhoneApp;Landroid/os/AsyncResult;)V
 
     goto :goto_0
@@ -291,7 +290,6 @@
     .line 363
     iget-object v4, p0, Lcom/android/phone/PhoneApp$1;->this$0:Lcom/android/phone/PhoneApp;
 
-    #getter for: Lcom/android/phone/PhoneApp;->mPUKEntryActivity:Landroid/app/Activity;
     invoke-static {v4}, Lcom/android/phone/PhoneApp;->access$400(Lcom/android/phone/PhoneApp;)Landroid/app/Activity;
 
     move-result-object v4
@@ -301,7 +299,6 @@
     .line 364
     iget-object v4, p0, Lcom/android/phone/PhoneApp$1;->this$0:Lcom/android/phone/PhoneApp;
 
-    #getter for: Lcom/android/phone/PhoneApp;->mPUKEntryActivity:Landroid/app/Activity;
     invoke-static {v4}, Lcom/android/phone/PhoneApp;->access$400(Lcom/android/phone/PhoneApp;)Landroid/app/Activity;
 
     move-result-object v4
@@ -311,14 +308,12 @@
     .line 365
     iget-object v4, p0, Lcom/android/phone/PhoneApp$1;->this$0:Lcom/android/phone/PhoneApp;
 
-    #setter for: Lcom/android/phone/PhoneApp;->mPUKEntryActivity:Landroid/app/Activity;
     invoke-static {v4, v6}, Lcom/android/phone/PhoneApp;->access$402(Lcom/android/phone/PhoneApp;Landroid/app/Activity;)Landroid/app/Activity;
 
     .line 367
     :cond_6
     iget-object v4, p0, Lcom/android/phone/PhoneApp$1;->this$0:Lcom/android/phone/PhoneApp;
 
-    #getter for: Lcom/android/phone/PhoneApp;->mPUKEntryProgressDialog:Landroid/app/ProgressDialog;
     invoke-static {v4}, Lcom/android/phone/PhoneApp;->access$500(Lcom/android/phone/PhoneApp;)Landroid/app/ProgressDialog;
 
     move-result-object v4
@@ -328,7 +323,6 @@
     .line 368
     iget-object v4, p0, Lcom/android/phone/PhoneApp$1;->this$0:Lcom/android/phone/PhoneApp;
 
-    #getter for: Lcom/android/phone/PhoneApp;->mPUKEntryProgressDialog:Landroid/app/ProgressDialog;
     invoke-static {v4}, Lcom/android/phone/PhoneApp;->access$500(Lcom/android/phone/PhoneApp;)Landroid/app/ProgressDialog;
 
     move-result-object v4
@@ -338,7 +332,6 @@
     .line 369
     iget-object v4, p0, Lcom/android/phone/PhoneApp$1;->this$0:Lcom/android/phone/PhoneApp;
 
-    #setter for: Lcom/android/phone/PhoneApp;->mPUKEntryProgressDialog:Landroid/app/ProgressDialog;
     invoke-static {v4, v6}, Lcom/android/phone/PhoneApp;->access$502(Lcom/android/phone/PhoneApp;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
 
     goto/16 :goto_0
@@ -430,7 +423,6 @@
     .line 401
     iget-object v4, p0, Lcom/android/phone/PhoneApp$1;->this$0:Lcom/android/phone/PhoneApp;
 
-    #getter for: Lcom/android/phone/PhoneApp;->mPreferredTtyMode:I
     invoke-static {v4}, Lcom/android/phone/PhoneApp;->access$600(Lcom/android/phone/PhoneApp;)I
 
     move-result v3
@@ -469,7 +461,6 @@
     :sswitch_c
     iget-object v4, p0, Lcom/android/phone/PhoneApp$1;->this$0:Lcom/android/phone/PhoneApp;
 
-    #calls: Lcom/android/phone/PhoneApp;->handleQueryTTYModeResponse(Landroid/os/Message;)V
     invoke-static {v4, p1}, Lcom/android/phone/PhoneApp;->access$700(Lcom/android/phone/PhoneApp;Landroid/os/Message;)V
 
     goto/16 :goto_0
@@ -478,7 +469,6 @@
     :sswitch_d
     iget-object v4, p0, Lcom/android/phone/PhoneApp$1;->this$0:Lcom/android/phone/PhoneApp;
 
-    #calls: Lcom/android/phone/PhoneApp;->handleSetTTYModeResponse(Landroid/os/Message;)V
     invoke-static {v4, p1}, Lcom/android/phone/PhoneApp;->access$800(Lcom/android/phone/PhoneApp;Landroid/os/Message;)V
 
     goto/16 :goto_0

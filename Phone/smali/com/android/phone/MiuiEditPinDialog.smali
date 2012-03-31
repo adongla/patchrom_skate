@@ -505,11 +505,11 @@
     .locals 11
 
     .prologue
-    const v10, 0x7f0c0309
+    const v10, 0x7f0c0321
 
-    const v9, 0x7f0c0308
+    const v9, 0x7f0c0320
 
-    const v8, 0x7f0c0307
+    const v8, 0x7f0c031f
 
     const/4 v4, 0x1
 
@@ -587,7 +587,7 @@
     .line 335
     iget-object v4, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0c030a
+    const v5, 0x7f0c0322
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -687,7 +687,7 @@
     .line 353
     iget-object v4, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0c030a
+    const v5, 0x7f0c0322
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -711,7 +711,7 @@
     .line 356
     iget-object v4, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0c0316
+    const v5, 0x7f0c032e
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -792,7 +792,7 @@
     .line 371
     iget-object v4, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0c0315
+    const v5, 0x7f0c032d
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -851,7 +851,7 @@
     .line 383
     iget-object v4, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0c030c
+    const v5, 0x7f0c0324
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -875,7 +875,7 @@
     .line 386
     iget-object v4, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0c0316
+    const v5, 0x7f0c032e
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -934,7 +934,7 @@
     .line 398
     iget-object v4, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0c030b
+    const v5, 0x7f0c0323
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -958,7 +958,7 @@
     .line 401
     iget-object v4, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0c0315
+    const v5, 0x7f0c032d
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1126,7 +1126,7 @@
 
     if-eqz v10, :cond_9
 
-    const v9, 0x7f0c02e4
+    const v9, 0x7f0c02fc
 
     .line 168
     .local v9, titleId:I
@@ -1154,7 +1154,7 @@
     .line 172
     iget-object v10, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v11, 0x7f0c033b
+    const v11, 0x7f0c0353
 
     const/4 v12, 0x1
 
@@ -1218,7 +1218,7 @@
 
     iget-object v11, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v12, 0x7f0c033d
+    const v12, 0x7f0c0355
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1235,15 +1235,15 @@
     .line 182
     :cond_6
     :goto_2
-    const v2, 0x7f0c0323
+    const v2, 0x7f0c033b
 
     .line 183
     .local v2, oldPinPukHitId:I
-    const v1, 0x7f0c031a
+    const v1, 0x7f0c0332
 
     .line 184
     .local v1, newPinHitId:I
-    const v0, 0x7f0c02c5
+    const v0, 0x7f0c02dd
 
     .line 244
     .end local v3           #pin1RetryCount:I
@@ -1262,7 +1262,7 @@
     packed-switch v10, :pswitch_data_0
 
     .line 260
-    const v5, 0x7f0c0342
+    const v5, 0x7f0c035a
 
     .line 263
     .local v5, progressId:I
@@ -1412,13 +1412,13 @@
 
     move-result-object v10
 
-    const v11, 0x7f0c02f8
+    const v11, 0x7f0c0310
 
     invoke-virtual {v10, v11}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v10
 
-    const v11, 0x7f0c02f7
+    const v11, 0x7f0c030f
 
     invoke-virtual {v10, v11}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -1441,12 +1441,12 @@
 
     .line 165
     :cond_9
-    const v9, 0x7f0c02ef
+    const v9, 0x7f0c0307
 
     goto/16 :goto_1
 
     :cond_a
-    const v9, 0x7f0c02b0
+    const v9, 0x7f0c02c8
 
     goto/16 :goto_1
 
@@ -1472,7 +1472,7 @@
     .line 189
     iget-object v10, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v11, 0x7f0c033b
+    const v11, 0x7f0c0353
 
     const/4 v12, 0x1
 
@@ -1536,7 +1536,7 @@
 
     iget-object v11, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v12, 0x7f0c034e
+    const v12, 0x7f0c0366
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1553,15 +1553,15 @@
     .line 199
     :cond_e
     :goto_7
-    const v2, 0x7f0c0312
+    const v2, 0x7f0c032a
 
     .line 200
     .restart local v2       #oldPinPukHitId:I
-    const v1, 0x7f0c031a
+    const v1, 0x7f0c0332
 
     .line 201
     .restart local v1       #newPinHitId:I
-    const v0, 0x7f0c02c5
+    const v0, 0x7f0c02dd
 
     .line 202
     .restart local v0       #confirmNewPinHitId:I
@@ -1609,7 +1609,7 @@
 
     if-ne v10, v11, :cond_15
 
-    const v9, 0x7f0c02f8
+    const v9, 0x7f0c0310
 
     .line 205
     .restart local v9       #titleId:I
@@ -1637,7 +1637,7 @@
     .line 209
     iget-object v10, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v11, 0x7f0c033b
+    const v11, 0x7f0c0353
 
     const/4 v12, 0x1
 
@@ -1701,7 +1701,7 @@
 
     iget-object v11, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v12, 0x7f0c033a
+    const v12, 0x7f0c0352
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1718,15 +1718,15 @@
     .line 219
     :cond_14
     :goto_9
-    const v2, 0x7f0c0322
+    const v2, 0x7f0c033a
 
     .line 220
     .restart local v2       #oldPinPukHitId:I
-    const v1, 0x7f0c0319
+    const v1, 0x7f0c0331
 
     .line 221
     .restart local v1       #newPinHitId:I
-    const v0, 0x7f0c02c4
+    const v0, 0x7f0c02dc
 
     .line 222
     .restart local v0       #confirmNewPinHitId:I
@@ -1740,7 +1740,7 @@
     .end local v6           #prompt:Ljava/lang/String;
     .end local v9           #titleId:I
     :cond_15
-    const v9, 0x7f0c02af
+    const v9, 0x7f0c02c7
 
     goto :goto_8
 
@@ -1766,7 +1766,7 @@
     .line 226
     iget-object v10, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v11, 0x7f0c033b
+    const v11, 0x7f0c0353
 
     const/4 v12, 0x1
 
@@ -1830,7 +1830,7 @@
 
     iget-object v11, p0, Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
 
-    const v12, 0x7f0c034e
+    const v12, 0x7f0c0366
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1847,15 +1847,15 @@
     .line 236
     :cond_19
     :goto_a
-    const v2, 0x7f0c0311
+    const v2, 0x7f0c0329
 
     .line 237
     .restart local v2       #oldPinPukHitId:I
-    const v1, 0x7f0c0319
+    const v1, 0x7f0c0331
 
     .line 238
     .restart local v1       #newPinHitId:I
-    const v0, 0x7f0c02c4
+    const v0, 0x7f0c02dc
 
     .line 239
     .restart local v0       #confirmNewPinHitId:I
@@ -1888,7 +1888,7 @@
     .restart local v6       #prompt:Ljava/lang/String;
     .restart local v9       #titleId:I
     :pswitch_0
-    const v5, 0x7f0c0341
+    const v5, 0x7f0c0359
 
     .line 247
     .restart local v5       #progressId:I
@@ -1897,7 +1897,7 @@
     .line 249
     .end local v5           #progressId:I
     :pswitch_1
-    const v5, 0x7f0c0340
+    const v5, 0x7f0c0358
 
     .line 250
     .restart local v5       #progressId:I
@@ -1906,7 +1906,7 @@
     .line 252
     .end local v5           #progressId:I
     :pswitch_2
-    const v5, 0x7f0c033f
+    const v5, 0x7f0c0357
 
     .line 253
     .restart local v5       #progressId:I
@@ -1915,7 +1915,7 @@
     .line 256
     .end local v5           #progressId:I
     :pswitch_3
-    const v5, 0x7f0c033e
+    const v5, 0x7f0c0356
 
     .line 257
     .restart local v5       #progressId:I

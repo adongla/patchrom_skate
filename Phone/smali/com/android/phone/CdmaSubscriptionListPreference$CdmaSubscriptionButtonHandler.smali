@@ -56,7 +56,6 @@
 
     move-result-object v3
 
-    #setter for: Lcom/android/phone/CdmaSubscriptionListPreference;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v2, v3}, Lcom/android/phone/CdmaSubscriptionListPreference;->access$102(Lcom/android/phone/CdmaSubscriptionListPreference;Lcom/android/internal/telephony/Phone;)Lcom/android/internal/telephony/Phone;
 
     .line 118
@@ -87,7 +86,6 @@
     .local v1, cdmaSubscriptionMode:I
     iget-object v2, p0, Lcom/android/phone/CdmaSubscriptionListPreference$CdmaSubscriptionButtonHandler;->this$0:Lcom/android/phone/CdmaSubscriptionListPreference;
 
-    #getter for: Lcom/android/phone/CdmaSubscriptionListPreference;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v2}, Lcom/android/phone/CdmaSubscriptionListPreference;->access$100(Lcom/android/phone/CdmaSubscriptionListPreference;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v2

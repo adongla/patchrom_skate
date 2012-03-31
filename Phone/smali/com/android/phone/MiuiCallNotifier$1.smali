@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 65
+    .line 68
     iput-object p1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "accuracy"
 
     .prologue
-    .line 67
+    .line 70
     return-void
 .end method
 
@@ -62,7 +62,7 @@
 
     const-wide/high16 v5, -0x3fde
 
-    .line 71
+    .line 74
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     iget-object v1, v1, Lcom/android/phone/MiuiCallNotifier;->mRinger:Lcom/android/phone/Ringer;
@@ -75,12 +75,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 109
+    .line 112
     :cond_0
     :goto_0
     return-void
 
-    .line 74
+    .line 77
     :cond_1
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
@@ -92,10 +92,9 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 76
+    .line 79
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #getter for: Lcom/android/phone/MiuiCallNotifier;->mSensorCount:I
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$000(Lcom/android/phone/MiuiCallNotifier;)I
 
     move-result v1
@@ -104,27 +103,25 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 77
+    .line 80
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v2, v2, v3
 
-    #setter for: Lcom/android/phone/MiuiCallNotifier;->mStartZ:F
     invoke-static {v1, v2}, Lcom/android/phone/MiuiCallNotifier;->access$102(Lcom/android/phone/MiuiCallNotifier;F)F
 
-    .line 79
+    .line 82
     :cond_2
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v1, v3
 
-    .line 80
+    .line 83
     .local v0, z:F
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #getter for: Lcom/android/phone/MiuiCallNotifier;->mTurnoverMuteEnable:Z
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$200(Lcom/android/phone/MiuiCallNotifier;)Z
 
     move-result v1
@@ -133,7 +130,6 @@
 
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #getter for: Lcom/android/phone/MiuiCallNotifier;->mTurnoverTriggered:Z
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$300(Lcom/android/phone/MiuiCallNotifier;)Z
 
     move-result v1
@@ -142,7 +138,6 @@
 
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #getter for: Lcom/android/phone/MiuiCallNotifier;->mStartZ:F
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$100(Lcom/android/phone/MiuiCallNotifier;)F
 
     move-result v1
@@ -159,7 +154,7 @@
 
     if-gez v1, :cond_5
 
-    .line 87
+    .line 90
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$404(Lcom/android/phone/MiuiCallNotifier;)I
@@ -170,23 +165,21 @@
 
     if-lt v1, v2, :cond_3
 
-    .line 88
+    .line 91
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     invoke-virtual {v1}, Lcom/android/phone/MiuiCallNotifier;->silenceRinger()V
 
-    .line 89
+    .line 92
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #setter for: Lcom/android/phone/MiuiCallNotifier;->mTurnoverTriggered:Z
     invoke-static {v1, v10}, Lcom/android/phone/MiuiCallNotifier;->access$302(Lcom/android/phone/MiuiCallNotifier;Z)Z
 
-    .line 94
+    .line 97
     :cond_3
     :goto_1
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #getter for: Lcom/android/phone/MiuiCallNotifier;->mHandonRingerEnable:Z
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$500(Lcom/android/phone/MiuiCallNotifier;)Z
 
     move-result v1
@@ -195,7 +188,6 @@
 
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #getter for: Lcom/android/phone/MiuiCallNotifier;->mHandonTriggered:Z
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$600(Lcom/android/phone/MiuiCallNotifier;)Z
 
     move-result v1
@@ -204,7 +196,6 @@
 
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #getter for: Lcom/android/phone/MiuiCallNotifier;->mTurnoverTriggered:Z
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$300(Lcom/android/phone/MiuiCallNotifier;)Z
 
     move-result v1
@@ -213,7 +204,6 @@
 
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #getter for: Lcom/android/phone/MiuiCallNotifier;->mStartZ:F
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$100(Lcom/android/phone/MiuiCallNotifier;)F
 
     move-result v1
@@ -228,7 +218,6 @@
 
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #getter for: Lcom/android/phone/MiuiCallNotifier;->mStartZ:F
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$100(Lcom/android/phone/MiuiCallNotifier;)F
 
     move-result v1
@@ -254,7 +243,7 @@
 
     if-gez v1, :cond_6
 
-    .line 102
+    .line 105
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$704(Lcom/android/phone/MiuiCallNotifier;)I
@@ -265,34 +254,30 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 103
+    .line 106
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #calls: Lcom/android/phone/MiuiCallNotifier;->decrescendoRingerVolume()V
     invoke-static {v1}, Lcom/android/phone/MiuiCallNotifier;->access$800(Lcom/android/phone/MiuiCallNotifier;)V
 
-    .line 104
+    .line 107
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #setter for: Lcom/android/phone/MiuiCallNotifier;->mHandonTriggered:Z
     invoke-static {v1, v10}, Lcom/android/phone/MiuiCallNotifier;->access$602(Lcom/android/phone/MiuiCallNotifier;Z)Z
 
     goto/16 :goto_0
 
-    .line 92
+    .line 95
     :cond_5
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #setter for: Lcom/android/phone/MiuiCallNotifier;->mTurnoverTiggeringCount:I
     invoke-static {v1, v9}, Lcom/android/phone/MiuiCallNotifier;->access$402(Lcom/android/phone/MiuiCallNotifier;I)I
 
     goto :goto_1
 
-    .line 107
+    .line 110
     :cond_6
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier$1;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #setter for: Lcom/android/phone/MiuiCallNotifier;->mHandonTriggeringCount:I
     invoke-static {v1, v9}, Lcom/android/phone/MiuiCallNotifier;->access$702(Lcom/android/phone/MiuiCallNotifier;I)I
 
     goto/16 :goto_0

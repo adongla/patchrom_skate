@@ -42,7 +42,6 @@
     .line 401
     iget-object v0, p0, Lcom/android/phone/CallNotifier$1;->this$0:Lcom/android/phone/CallNotifier;
 
-    #calls: Lcom/android/phone/CallNotifier;->onCfiChanged(Z)V
     invoke-static {v0, p1}, Lcom/android/phone/CallNotifier;->access$100(Lcom/android/phone/CallNotifier;Z)V
 
     .line 402
@@ -57,7 +56,6 @@
     .line 396
     iget-object v0, p0, Lcom/android/phone/CallNotifier$1;->this$0:Lcom/android/phone/CallNotifier;
 
-    #calls: Lcom/android/phone/CallNotifier;->onMwiChanged(Z)V
     invoke-static {v0, p1}, Lcom/android/phone/CallNotifier;->access$000(Lcom/android/phone/CallNotifier;Z)V
 
     .line 397

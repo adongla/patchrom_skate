@@ -45,12 +45,10 @@
     .line 230
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard$1;->this$0:Lcom/android/phone/MiuiCallCard;
 
-    #getter for: Lcom/android/phone/MiuiCallCard;->mElapsedTime:Landroid/widget/TextView;
     invoke-static {v0}, Lcom/android/phone/MiuiCallCard;->access$000(Lcom/android/phone/MiuiCallCard;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    #calls: Lcom/android/phone/MiuiCallCard;->updateElapsedTimeWidget(Landroid/widget/TextView;J)V
     invoke-static {v0, p1, p2}, Lcom/android/phone/MiuiCallCard;->access$100(Landroid/widget/TextView;J)V
 
     .line 231

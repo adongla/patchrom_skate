@@ -76,13 +76,11 @@
 
     move-result v1
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mScoGain:I
     invoke-static {v3, v1}, Lcom/android/phone/BluetoothHandsfree;->access$7402(Lcom/android/phone/BluetoothHandsfree;I)I
 
     .line 2685
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$29;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mAudioManager:Landroid/media/AudioManager;
     invoke-static {v1}, Lcom/android/phone/BluetoothHandsfree;->access$500(Lcom/android/phone/BluetoothHandsfree;)Landroid/media/AudioManager;
 
     move-result-object v1
@@ -98,7 +96,6 @@
     :goto_1
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$29;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mAudioManager:Landroid/media/AudioManager;
     invoke-static {v1}, Lcom/android/phone/BluetoothHandsfree;->access$500(Lcom/android/phone/BluetoothHandsfree;)Landroid/media/AudioManager;
 
     move-result-object v1
@@ -107,7 +104,6 @@
 
     iget-object v4, p0, Lcom/android/phone/BluetoothHandsfree$29;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mScoGain:I
     invoke-static {v4}, Lcom/android/phone/BluetoothHandsfree;->access$7400(Lcom/android/phone/BluetoothHandsfree;)I
 
     move-result v4

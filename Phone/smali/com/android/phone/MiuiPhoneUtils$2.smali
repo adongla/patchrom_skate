@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 580
+    .line 604
     iput-object p1, p0, Lcom/android/phone/MiuiPhoneUtils$2;->val$context:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/android/phone/MiuiPhoneUtils$2;->val$number:Ljava/lang/String;
@@ -51,7 +51,7 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 583
+    .line 607
     new-instance v0, Lcom/android/phone/CallLogAsync$AddCallArgs;
 
     iget-object v1, p0, Lcom/android/phone/MiuiPhoneUtils$2;->val$context:Landroid/content/Context;
@@ -74,7 +74,7 @@
 
     invoke-direct/range {v0 .. v11}, Lcom/android/phone/CallLogAsync$AddCallArgs;-><init>(Landroid/content/Context;Lcom/android/internal/telephony/CallerInfo;Ljava/lang/String;IIJJII)V
 
-    .line 588
+    .line 612
     .local v0, args:Lcom/android/phone/CallLogAsync$AddCallArgs;
     new-instance v1, Lcom/android/phone/CallLogAsync;
 
@@ -82,6 +82,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/phone/CallLogAsync;->addCall(Lcom/android/phone/CallLogAsync$AddCallArgs;)Landroid/os/AsyncTask;
 
-    .line 589
+    .line 613
     return-void
 .end method

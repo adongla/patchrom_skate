@@ -224,7 +224,6 @@
     :pswitch_3
     iget-object v5, p0, Lcom/android/phone/PhoneInterfaceManager$MainThreadHandler;->this$0:Lcom/android/phone/PhoneInterfaceManager;
 
-    #calls: Lcom/android/phone/PhoneInterfaceManager;->answerRingingCallInternal()V
     invoke-static {v5}, Lcom/android/phone/PhoneInterfaceManager;->access$000(Lcom/android/phone/PhoneInterfaceManager;)V
 
     goto :goto_0
@@ -233,7 +232,6 @@
     :pswitch_4
     iget-object v5, p0, Lcom/android/phone/PhoneInterfaceManager$MainThreadHandler;->this$0:Lcom/android/phone/PhoneInterfaceManager;
 
-    #calls: Lcom/android/phone/PhoneInterfaceManager;->silenceRingerInternal()V
     invoke-static {v5}, Lcom/android/phone/PhoneInterfaceManager;->access$100(Lcom/android/phone/PhoneInterfaceManager;)V
 
     goto :goto_0

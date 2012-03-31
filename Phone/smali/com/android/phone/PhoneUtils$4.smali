@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 1567
+    .line 1572
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,12 +40,12 @@
     .end annotation
 
     .prologue
-    .line 1576
+    .line 1581
     move-object v0, p2
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 1581
+    .line 1586
     .local v0, conn:Lcom/android/internal/telephony/Connection;
     iget-boolean v2, p3, Lcom/android/internal/telephony/CallerInfo;->contactExists:Z
 
@@ -69,20 +69,20 @@
 
     if-eqz v2, :cond_3
 
-    .line 1598
+    .line 1603
     :cond_0
     iget v2, p3, Lcom/android/internal/telephony/CallerInfo;->numberPresentation:I
 
     if-nez v2, :cond_1
 
-    .line 1599
+    .line 1604
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getNumberPresentation()I
 
     move-result v2
 
     iput v2, p3, Lcom/android/internal/telephony/CallerInfo;->numberPresentation:I
 
-    .line 1601
+    .line 1606
     :cond_1
     invoke-static {v0}, Lcom/android/phone/MiuiExtraConnectionData;->getOrigDialAddress(Lcom/android/internal/telephony/Connection;)Ljava/lang/String;
 
@@ -90,15 +90,15 @@
 
     iput-object v2, p3, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
-    .line 1619
+    .line 1624
     :cond_2
     :goto_0
     invoke-virtual {v0, p3}, Lcom/android/internal/telephony/Connection;->setUserData(Ljava/lang/Object;)V
 
-    .line 1620
+    .line 1625
     return-void
 
-    .line 1607
+    .line 1612
     :cond_3
     const/4 v2, 0x0
 
@@ -106,21 +106,21 @@
 
     move-result-object v1
 
-    .line 1611
+    .line 1616
     .local v1, newCi:Lcom/android/internal/telephony/CallerInfo;
     if-eqz v1, :cond_2
 
-    .line 1612
+    .line 1617
     iget-object v2, p3, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
     iput-object v2, v1, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
-    .line 1613
+    .line 1618
     iget-object v2, p3, Lcom/android/internal/telephony/CallerInfo;->geoDescription:Ljava/lang/String;
 
     iput-object v2, v1, Lcom/android/internal/telephony/CallerInfo;->geoDescription:Ljava/lang/String;
 
-    .line 1614
+    .line 1619
     move-object p3, v1
 
     goto :goto_0

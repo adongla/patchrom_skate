@@ -26,10 +26,10 @@
     .locals 0
 
     .prologue
-    .line 45
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
+    .line 57
     return-void
 .end method
 
@@ -39,27 +39,27 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 79
     sget-object v0, Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;->IDLE:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
     iput-object v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mCurrentCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
-    .line 77
+    .line 80
     sget-object v0, Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;->IDLE:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
     iput-object v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mPreviousCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
-    .line 78
+    .line 81
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mThreeWayCallOrigStateDialing:Z
 
-    .line 79
+    .line 82
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mAddCallMenuStateAfterCW:Z
 
-    .line 80
+    .line 83
     return-void
 .end method
 
@@ -67,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 115
+    .line 121
     iget-boolean v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mThreeWayCallOrigStateDialing:Z
 
     return v0
@@ -77,7 +77,7 @@
     .locals 1
 
     .prologue
-    .line 129
+    .line 135
     iget-boolean v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mAddCallMenuStateAfterCW:Z
 
     return v0
@@ -87,7 +87,7 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 89
     iget-object v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mCurrentCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
     return-object v0
@@ -97,7 +97,7 @@
     .locals 1
 
     .prologue
-    .line 143
+    .line 149
     iget-object v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mPreviousCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
     return-object v0
@@ -107,27 +107,27 @@
     .locals 1
 
     .prologue
-    .line 150
+    .line 156
     sget-object v0, Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;->IDLE:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
     iput-object v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mCurrentCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
-    .line 151
+    .line 157
     sget-object v0, Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;->IDLE:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
     iput-object v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mPreviousCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
-    .line 152
+    .line 158
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mThreeWayCallOrigStateDialing:Z
 
-    .line 153
+    .line 159
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mAddCallMenuStateAfterCW:Z
 
-    .line 154
+    .line 160
     return-void
 .end method
 
@@ -136,32 +136,35 @@
     .parameter "newState"
 
     .prologue
-    .line 136
+    .line 142
     iput-boolean p1, p0, Lcom/android/phone/CdmaPhoneCallState;->mAddCallMenuStateAfterCW:Z
 
-    .line 137
+    .line 143
     return-void
 .end method
 
 .method public setCurrentCallState(Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;)V
     .locals 2
     .parameter "newState"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
-    .line 93
+    .line 97
     iget-object v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mCurrentCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
     iput-object v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mPreviousCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
-    .line 94
+    .line 98
     iput-object p1, p0, Lcom/android/phone/CdmaPhoneCallState;->mCurrentCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
-    .line 97
+    .line 101
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mThreeWayCallOrigStateDialing:Z
 
-    .line 105
+    .line 109
     iget-object v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mCurrentCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
 
     sget-object v1, Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;->SINGLE_ACTIVE:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
@@ -174,13 +177,18 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 107
+    .line 111
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mAddCallMenuStateAfterCW:Z
 
-    .line 109
+    .line 114
     :cond_0
+    iget-object v0, p0, Lcom/android/phone/CdmaPhoneCallState;->mPreviousCallState:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
+
+    invoke-static {v0, p1}, Lcom/android/phone/MiuiExtraConnectionData;->setCdmaCallState(Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;)V
+
+    .line 115
     return-void
 .end method
 
@@ -189,9 +197,9 @@
     .parameter "newState"
 
     .prologue
-    .line 122
+    .line 128
     iput-boolean p1, p0, Lcom/android/phone/CdmaPhoneCallState;->mThreeWayCallOrigStateDialing:Z
 
-    .line 123
+    .line 129
     return-void
 .end method

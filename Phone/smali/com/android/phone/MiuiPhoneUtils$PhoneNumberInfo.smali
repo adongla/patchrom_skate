@@ -37,29 +37,29 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 53
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
+    .line 56
     iput-object p1, p0, Lcom/android/phone/MiuiPhoneUtils$PhoneNumberInfo;->original:Ljava/lang/String;
 
-    .line 55
+    .line 57
     iput-boolean p2, p0, Lcom/android/phone/MiuiPhoneUtils$PhoneNumberInfo;->isEmergency:Z
 
-    .line 56
+    .line 58
     iget-object v0, p0, Lcom/android/phone/MiuiPhoneUtils$PhoneNumberInfo;->original:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/phone/MiuiPhoneUtils$PhoneNumberInfo;->toDial:Ljava/lang/String;
 
-    .line 57
+    .line 59
     iput-boolean v1, p0, Lcom/android/phone/MiuiPhoneUtils$PhoneNumberInfo;->emergencySuffixAdded:Z
 
-    .line 58
+    .line 60
     iput-boolean v1, p0, Lcom/android/phone/MiuiPhoneUtils$PhoneNumberInfo;->ipPrefixAdded:Z
 
-    .line 59
+    .line 61
     iput-boolean v1, p0, Lcom/android/phone/MiuiPhoneUtils$PhoneNumberInfo;->countryCodeAdded:Z
 
-    .line 60
+    .line 62
     return-void
 .end method

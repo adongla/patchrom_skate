@@ -27,15 +27,15 @@
     .parameter "parentHandler"
 
     .prologue
-    .line 109
+    .line 108
     iput-object p1, p0, Lcom/android/phone/MiuiInCallTouchUi$Handler;->this$0:Lcom/android/phone/MiuiInCallTouchUi;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 110
+    .line 109
     iput-object p2, p0, Lcom/android/phone/MiuiInCallTouchUi$Handler;->mParentHandler:Landroid/os/Handler;
 
-    .line 111
+    .line 110
     return-void
 .end method
 
@@ -46,21 +46,21 @@
     .parameter "msg"
 
     .prologue
-    .line 115
+    .line 114
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 121
+    .line 120
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi$Handler;->mParentHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 123
+    .line 122
     :goto_0
     return-void
 
-    .line 117
+    .line 116
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi$Handler;->this$0:Lcom/android/phone/MiuiInCallTouchUi;
 
@@ -70,7 +70,7 @@
 
     goto :goto_0
 
-    .line 115
+    .line 114
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0

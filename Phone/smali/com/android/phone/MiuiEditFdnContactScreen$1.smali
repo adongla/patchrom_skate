@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c02da
+    const v1, 0x7f0c02f2
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -105,7 +105,6 @@
 
     iget-object v0, p0, Lcom/android/phone/MiuiEditFdnContactScreen$1;->this$0:Lcom/android/phone/MiuiEditFdnContactScreen;
 
-    #getter for: Lcom/android/phone/MiuiEditFdnContactScreen;->mAddContact:Z
     invoke-static {v0}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$100(Lcom/android/phone/MiuiEditFdnContactScreen;)Z
 
     move-result v0
@@ -115,7 +114,6 @@
     sget-object v0, Lcom/android/phone/MiuiEditFdnContactScreen$Actions;->Insert:Lcom/android/phone/MiuiEditFdnContactScreen$Actions;
 
     :goto_1
-    #calls: Lcom/android/phone/MiuiEditFdnContactScreen;->performActions(Lcom/android/phone/MiuiEditFdnContactScreen$Actions;)V
     invoke-static {v1, v0}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$000(Lcom/android/phone/MiuiEditFdnContactScreen;Lcom/android/phone/MiuiEditFdnContactScreen$Actions;)V
 
     goto :goto_0

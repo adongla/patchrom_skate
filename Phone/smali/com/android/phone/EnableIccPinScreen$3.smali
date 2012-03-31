@@ -45,7 +45,6 @@
     .line 131
     iget-object v0, p0, Lcom/android/phone/EnableIccPinScreen$3;->this$0:Lcom/android/phone/EnableIccPinScreen;
 
-    #getter for: Lcom/android/phone/EnableIccPinScreen;->mPinField:Landroid/widget/EditText;
     invoke-static {v0}, Lcom/android/phone/EnableIccPinScreen;->access$100(Lcom/android/phone/EnableIccPinScreen;)Landroid/widget/EditText;
 
     move-result-object v0
@@ -80,13 +79,11 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/EnableIccPinScreen;->showStatus(Ljava/lang/CharSequence;)V
     invoke-static {v0, v1}, Lcom/android/phone/EnableIccPinScreen;->access$200(Lcom/android/phone/EnableIccPinScreen;Ljava/lang/CharSequence;)V
 
     .line 138
     iget-object v0, p0, Lcom/android/phone/EnableIccPinScreen$3;->this$0:Lcom/android/phone/EnableIccPinScreen;
 
-    #calls: Lcom/android/phone/EnableIccPinScreen;->enableIccPin()V
     invoke-static {v0}, Lcom/android/phone/EnableIccPinScreen;->access$300(Lcom/android/phone/EnableIccPinScreen;)V
 
     goto :goto_0

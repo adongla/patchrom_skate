@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 122
+    .line 126
     iput-object p1, p0, Lcom/android/phone/MiuiPreferredNetworkTypeListPreference$1;->this$0:Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,11 @@
     .parameter "dialog"
 
     .prologue
-    .line 125
+    .line 129
     iget-object v0, p0, Lcom/android/phone/MiuiPreferredNetworkTypeListPreference$1;->this$0:Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;
 
     iget-object v1, p0, Lcom/android/phone/MiuiPreferredNetworkTypeListPreference$1;->this$0:Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;
 
-    #getter for: Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;->mCurrentNetworkType:I
     invoke-static {v1}, Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;->access$100(Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;)I
 
     move-result v1
@@ -56,9 +55,8 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;->checkRadioPreference(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;->access$200(Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;Ljava/lang/String;)V
 
-    .line 126
+    .line 130
     return-void
 .end method

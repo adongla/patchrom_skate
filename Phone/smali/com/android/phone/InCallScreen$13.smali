@@ -46,7 +46,6 @@
     .line 3097
     iget-object v0, p0, Lcom/android/phone/InCallScreen$13;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->bailOutAfterErrorDialog()V
     invoke-static {v0}, Lcom/android/phone/InCallScreen;->access$1200(Lcom/android/phone/InCallScreen;)V
 
     .line 3098

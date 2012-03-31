@@ -75,13 +75,11 @@
 
     sget-object v2, Lcom/android/phone/MiuiInCallAnswerWidget$State;->Init:Lcom/android/phone/MiuiInCallAnswerWidget$State;
 
-    #setter for: Lcom/android/phone/MiuiInCallAnswerWidget;->mState:Lcom/android/phone/MiuiInCallAnswerWidget$State;
     invoke-static {v1, v2}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$102(Lcom/android/phone/MiuiInCallAnswerWidget;Lcom/android/phone/MiuiInCallAnswerWidget$State;)Lcom/android/phone/MiuiInCallAnswerWidget$State;
 
     .line 153
     iget-object v1, p0, Lcom/android/phone/MiuiInCallAnswerWidget$1;->this$0:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    #getter for: Lcom/android/phone/MiuiInCallAnswerWidget;->mSlidingHintAnim:Landroid/widget/ImageView;
     invoke-static {v1}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$200(Lcom/android/phone/MiuiInCallAnswerWidget;)Landroid/widget/ImageView;
 
     move-result-object v1
@@ -91,7 +89,6 @@
     .line 154
     iget-object v1, p0, Lcom/android/phone/MiuiInCallAnswerWidget$1;->this$0:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    #getter for: Lcom/android/phone/MiuiInCallAnswerWidget;->mSlidingHintAnim:Landroid/widget/ImageView;
     invoke-static {v1}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$200(Lcom/android/phone/MiuiInCallAnswerWidget;)Landroid/widget/ImageView;
 
     move-result-object v1
@@ -107,7 +104,6 @@
     .line 155
     iget-object v1, p0, Lcom/android/phone/MiuiInCallAnswerWidget$1;->this$0:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    #calls: Lcom/android/phone/MiuiInCallAnswerWidget;->setGrabbedState(I)V
     invoke-static {v1, v3}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$300(Lcom/android/phone/MiuiInCallAnswerWidget;I)V
 
     .line 164
@@ -115,7 +111,6 @@
     :goto_0
     iget-object v1, p0, Lcom/android/phone/MiuiInCallAnswerWidget$1;->this$0:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    #getter for: Lcom/android/phone/MiuiInCallAnswerWidget;->mSlidingDownTargetView:Landroid/view/View;
     invoke-static {v1}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$800(Lcom/android/phone/MiuiInCallAnswerWidget;)Landroid/view/View;
 
     move-result-object v1
@@ -129,7 +124,6 @@
     :cond_1
     iget-object v1, p0, Lcom/android/phone/MiuiInCallAnswerWidget$1;->this$0:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    #getter for: Lcom/android/phone/MiuiInCallAnswerWidget;->mTranslationUpTarget:I
     invoke-static {v1}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$400(Lcom/android/phone/MiuiInCallAnswerWidget;)I
 
     move-result v1
@@ -145,13 +139,11 @@
 
     sget-object v2, Lcom/android/phone/MiuiInCallAnswerWidget$State;->Up:Lcom/android/phone/MiuiInCallAnswerWidget$State;
 
-    #setter for: Lcom/android/phone/MiuiInCallAnswerWidget;->mState:Lcom/android/phone/MiuiInCallAnswerWidget$State;
     invoke-static {v1, v2}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$102(Lcom/android/phone/MiuiInCallAnswerWidget;Lcom/android/phone/MiuiInCallAnswerWidget$State;)Lcom/android/phone/MiuiInCallAnswerWidget$State;
 
     .line 158
     iget-object v1, p0, Lcom/android/phone/MiuiInCallAnswerWidget$1;->this$0:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    #getter for: Lcom/android/phone/MiuiInCallAnswerWidget;->mSlidingGreenBarLight:Landroid/widget/ImageView;
     invoke-static {v1}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$500(Lcom/android/phone/MiuiInCallAnswerWidget;)Landroid/widget/ImageView;
 
     move-result-object v1
@@ -161,7 +153,6 @@
     .line 159
     iget-object v1, p0, Lcom/android/phone/MiuiInCallAnswerWidget$1;->this$0:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    #calls: Lcom/android/phone/MiuiInCallAnswerWidget;->setGrabbedState(I)V
     invoke-static {v1, v3}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$300(Lcom/android/phone/MiuiInCallAnswerWidget;I)V
 
     goto :goto_0
@@ -170,7 +161,6 @@
     :cond_2
     iget-object v1, p0, Lcom/android/phone/MiuiInCallAnswerWidget$1;->this$0:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    #getter for: Lcom/android/phone/MiuiInCallAnswerWidget;->mTranslationDownTarget:I
     invoke-static {v1}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$600(Lcom/android/phone/MiuiInCallAnswerWidget;)I
 
     move-result v1
@@ -186,13 +176,11 @@
 
     sget-object v2, Lcom/android/phone/MiuiInCallAnswerWidget$State;->Down:Lcom/android/phone/MiuiInCallAnswerWidget$State;
 
-    #setter for: Lcom/android/phone/MiuiInCallAnswerWidget;->mState:Lcom/android/phone/MiuiInCallAnswerWidget$State;
     invoke-static {v1, v2}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$102(Lcom/android/phone/MiuiInCallAnswerWidget;Lcom/android/phone/MiuiInCallAnswerWidget$State;)Lcom/android/phone/MiuiInCallAnswerWidget$State;
 
     .line 162
     iget-object v1, p0, Lcom/android/phone/MiuiInCallAnswerWidget$1;->this$0:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    #calls: Lcom/android/phone/MiuiInCallAnswerWidget;->dispatchTriggerEvent(I)V
     invoke-static {v1, v3}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$700(Lcom/android/phone/MiuiInCallAnswerWidget;I)V
 
     goto :goto_0
@@ -215,7 +203,6 @@
     .line 141
     iget-object v0, p0, Lcom/android/phone/MiuiInCallAnswerWidget$1;->this$0:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    #getter for: Lcom/android/phone/MiuiInCallAnswerWidget;->mSlidingGreenBar:Landroid/widget/ImageView;
     invoke-static {v0}, Lcom/android/phone/MiuiInCallAnswerWidget;->access$000(Lcom/android/phone/MiuiInCallAnswerWidget;)Landroid/widget/ImageView;
 
     move-result-object v0

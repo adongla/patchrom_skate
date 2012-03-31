@@ -36,26 +36,26 @@
     .parameter "checkedList"
 
     .prologue
-    .line 44
+    .line 51
     iput-object p1, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->this$0:Lcom/android/phone/MiuiSimContacts;
 
-    .line 45
+    .line 52
     const-string v0, "ImportSelectedSimContactsThread"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 40
+    .line 47
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mCanceled:Z
 
-    .line 46
+    .line 53
     iput-object p2, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mOp:Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
-    .line 47
+    .line 54
     iput-object p3, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mList:Landroid/util/SparseBooleanArray;
 
-    .line 48
+    .line 55
     return-void
 .end method
 
@@ -66,12 +66,12 @@
     .parameter "dialog"
 
     .prologue
-    .line 87
+    .line 94
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mCanceled:Z
 
-    .line 88
+    .line 95
     return-void
 .end method
 
@@ -81,24 +81,24 @@
     .parameter "which"
 
     .prologue
-    .line 79
+    .line 86
     const/4 v0, -0x2
 
     if-ne p2, v0, :cond_0
 
-    .line 80
+    .line 87
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mCanceled:Z
 
-    .line 81
+    .line 88
     iget-object v0, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->this$0:Lcom/android/phone/MiuiSimContacts;
 
     iget-object v0, v0, Lcom/android/phone/MiuiSimContacts;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 83
+    .line 90
     :cond_0
     return-void
 .end method
@@ -109,16 +109,16 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 52
+    .line 59
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mList:Landroid/util/SparseBooleanArray;
 
     if-nez v4, :cond_0
 
-    .line 75
+    .line 82
     :goto_0
     return-void
 
-    .line 56
+    .line 63
     :cond_0
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->this$0:Lcom/android/phone/MiuiSimContacts;
 
@@ -126,7 +126,7 @@
 
     move-result-object v2
 
-    .line 57
+    .line 64
     .local v2, resolver:Landroid/content/ContentResolver;
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mList:Landroid/util/SparseBooleanArray;
 
@@ -134,7 +134,7 @@
 
     move-result v3
 
-    .line 58
+    .line 65
     .local v3, size:I
     const/4 v0, 0x0
 
@@ -142,20 +142,20 @@
     :goto_1
     if-ge v0, v3, :cond_1
 
-    .line 59
+    .line 66
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mList:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v4, v0}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v1
 
-    .line 60
+    .line 67
     .local v1, key:I
     iget-boolean v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mCanceled:Z
 
     if-eqz v4, :cond_2
 
-    .line 73
+    .line 80
     .end local v1           #key:I
     :cond_1
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->this$0:Lcom/android/phone/MiuiSimContacts;
@@ -164,14 +164,14 @@
 
     invoke-virtual {v4}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 74
+    .line 81
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->this$0:Lcom/android/phone/MiuiSimContacts;
 
     invoke-virtual {v4}, Lcom/android/phone/MiuiSimContacts;->finish()V
 
     goto :goto_0
 
-    .line 62
+    .line 69
     .restart local v1       #key:I
     :cond_2
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->this$0:Lcom/android/phone/MiuiSimContacts;
@@ -184,14 +184,14 @@
 
     if-eqz v4, :cond_4
 
-    .line 63
+    .line 70
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mOp:Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
     sget-object v5, Lcom/android/phone/MiuiSimContacts$SimContactOP;->IMPORT:Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
     if-ne v4, v5, :cond_5
 
-    .line 64
+    .line 71
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->this$0:Lcom/android/phone/MiuiSimContacts;
 
     iget-object v4, v4, Lcom/android/phone/MiuiSimContacts;->mCursor:Landroid/database/Cursor;
@@ -202,7 +202,7 @@
 
     invoke-static {v4, v2, v5}, Lcom/android/phone/SimContacts;->actuallyImportOneSimContact(Landroid/database/Cursor;Landroid/content/ContentResolver;Landroid/accounts/Account;)V
 
-    .line 69
+    .line 76
     :cond_3
     :goto_2
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->this$0:Lcom/android/phone/MiuiSimContacts;
@@ -211,13 +211,13 @@
 
     invoke-virtual {v4, v7}, Landroid/app/ProgressDialog;->incrementProgressBy(I)V
 
-    .line 58
+    .line 65
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 65
+    .line 72
     :cond_5
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->mOp:Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
@@ -225,7 +225,7 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 66
+    .line 73
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->this$0:Lcom/android/phone/MiuiSimContacts;
 
     iget-object v5, p0, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->this$0:Lcom/android/phone/MiuiSimContacts;
@@ -246,7 +246,6 @@
 
     move-result-object v6
 
-    #calls: Lcom/android/phone/MiuiSimContacts;->deleteOneSimContact(Ljava/lang/String;Ljava/lang/String;)I
     invoke-static {v4, v5, v6}, Lcom/android/phone/MiuiSimContacts;->access$000(Lcom/android/phone/MiuiSimContacts;Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2

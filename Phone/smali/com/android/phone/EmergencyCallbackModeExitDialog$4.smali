@@ -46,7 +46,6 @@
     .line 215
     iget-object v0, p0, Lcom/android/phone/EmergencyCallbackModeExitDialog$4;->this$0:Lcom/android/phone/EmergencyCallbackModeExitDialog;
 
-    #getter for: Lcom/android/phone/EmergencyCallbackModeExitDialog;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v0}, Lcom/android/phone/EmergencyCallbackModeExitDialog;->access$400(Lcom/android/phone/EmergencyCallbackModeExitDialog;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v0

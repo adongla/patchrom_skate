@@ -172,7 +172,6 @@
     :goto_0
     iget-object v7, p0, Lcom/android/phone/MiuiManageConferenceUtils$1;->this$0:Lcom/android/phone/MiuiManageConferenceUtils;
 
-    #calls: Lcom/android/phone/MiuiManageConferenceUtils;->updateCallerInfo(Lcom/android/phone/MiuiManageConferenceUtils$ConnectionInfo;)V
     invoke-static {v7, v1}, Lcom/android/phone/MiuiManageConferenceUtils;->access$100(Lcom/android/phone/MiuiManageConferenceUtils;Lcom/android/phone/MiuiManageConferenceUtils$ConnectionInfo;)V
 
     .line 95

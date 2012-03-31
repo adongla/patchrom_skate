@@ -14,29 +14,45 @@
 .end annotation
 
 
+# static fields
+.field public static final CDMA_CALL_DEFAULT:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+
 # instance fields
 .field public digits:Ljava/lang/String;
 
-.field public generic:Z
+.field public state:Lcom/android/phone/MiuiConstants$CdmaCallState;
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 47
+    sget-object v0, Lcom/android/phone/MiuiConstants$CdmaCallState;->UnauthenticatedActive:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    sput-object v0, Lcom/android/phone/MiuiExtraConnectionData$ExtraCallData;->CDMA_CALL_DEFAULT:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    return-void
+.end method
+
 .method private constructor <init>()V
     .locals 1
 
     .prologue
-    .line 45
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
+    .line 52
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/phone/MiuiExtraConnectionData$ExtraCallData;->digits:Ljava/lang/String;
 
-    .line 57
-    const/4 v0, 0x0
+    .line 58
+    sget-object v0, Lcom/android/phone/MiuiExtraConnectionData$ExtraCallData;->CDMA_CALL_DEFAULT:Lcom/android/phone/MiuiConstants$CdmaCallState;
 
-    iput-boolean v0, p0, Lcom/android/phone/MiuiExtraConnectionData$ExtraCallData;->generic:Z
+    iput-object v0, p0, Lcom/android/phone/MiuiExtraConnectionData$ExtraCallData;->state:Lcom/android/phone/MiuiConstants$CdmaCallState;
 
     return-void
 .end method
@@ -46,7 +62,7 @@
     .parameter "x0"
 
     .prologue
-    .line 45
+    .line 46
     invoke-direct {p0}, Lcom/android/phone/MiuiExtraConnectionData$ExtraCallData;-><init>()V
 
     return-void

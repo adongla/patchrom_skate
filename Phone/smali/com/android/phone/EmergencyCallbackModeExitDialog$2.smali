@@ -52,7 +52,6 @@
     .line 186
     iget-object v1, p0, Lcom/android/phone/EmergencyCallbackModeExitDialog$2;->this$0:Lcom/android/phone/EmergencyCallbackModeExitDialog;
 
-    #calls: Lcom/android/phone/EmergencyCallbackModeExitDialog;->getDialogText(J)Ljava/lang/CharSequence;
     invoke-static {v1, p1, p2}, Lcom/android/phone/EmergencyCallbackModeExitDialog;->access$300(Lcom/android/phone/EmergencyCallbackModeExitDialog;J)Ljava/lang/CharSequence;
 
     move-result-object v0

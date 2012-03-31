@@ -9,10 +9,10 @@
     .parameter "context"
 
     .prologue
-    .line 891
+    .line 866
     invoke-direct {p0, p1}, Landroid/widget/ToggleButton;-><init>(Landroid/content/Context;)V
 
-    .line 892
+    .line 867
     return-void
 .end method
 
@@ -22,10 +22,10 @@
     .parameter "attrs"
 
     .prologue
-    .line 887
+    .line 862
     invoke-direct {p0, p1, p2}, Landroid/widget/ToggleButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 888
+    .line 863
     return-void
 .end method
 
@@ -36,10 +36,10 @@
     .parameter "defStyle"
 
     .prologue
-    .line 883
+    .line 858
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ToggleButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 884
+    .line 859
     return-void
 .end method
 
@@ -49,14 +49,14 @@
     .locals 3
 
     .prologue
-    .line 896
+    .line 871
     invoke-virtual {p0}, Lcom/android/phone/TextToggleButton;->isEnabled()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 897
+    .line 872
     invoke-virtual {p0}, Lcom/android/phone/TextToggleButton;->isChecked()Z
 
     move-result v1
@@ -78,7 +78,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 898
+    .line 873
     .local v0, checked:Z
     :goto_0
     invoke-virtual {p0}, Lcom/android/phone/TextToggleButton;->getContext()Landroid/content/Context;
@@ -92,28 +92,28 @@
     :goto_1
     invoke-static {p0, v2, v1}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
 
-    .line 905
+    .line 880
     .end local v0           #checked:Z
     :goto_2
     invoke-super {p0}, Landroid/widget/ToggleButton;->refreshDrawableState()V
 
-    .line 906
+    .line 881
     return-void
 
-    .line 897
+    .line 872
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 898
+    .line 873
     .restart local v0       #checked:Z
     :cond_2
     const v1, 0x7f0e003b
 
     goto :goto_1
 
-    .line 902
+    .line 877
     .end local v0           #checked:Z
     :cond_3
     invoke-virtual {p0}, Lcom/android/phone/TextToggleButton;->getContext()Landroid/content/Context;

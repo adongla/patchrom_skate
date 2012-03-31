@@ -35,7 +35,6 @@
     .line 1535
     const-string v0, "CdmaOtaInCallScreenState: constructor init to UNDEFINED"
 
-    #calls: Lcom/android/phone/OtaUtils;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/phone/OtaUtils;->access$100(Ljava/lang/String;)V
 
     .line 1536

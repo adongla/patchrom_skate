@@ -427,9 +427,9 @@
     .parameter "state"
 
     .prologue
-    const/4 v0, 0x0
-
     const/4 v3, 0x1
+
+    const/4 v0, 0x0
 
     .line 141
     invoke-static {}, Lcom/android/phone/MiuiTelephonyCapabilities;->isMiuiEnabled()Z
@@ -495,7 +495,7 @@
 
     const-string v6, "button_enforce_proximity_during_ringing"
 
-    const/4 v7, 0x1
+    const/4 v7, 0x0
 
     invoke-interface {v5, v6, v7}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 

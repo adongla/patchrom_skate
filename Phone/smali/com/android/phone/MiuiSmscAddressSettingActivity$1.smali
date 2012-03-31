@@ -41,7 +41,7 @@
     .prologue
     const/4 v7, 0x0
 
-    const v6, 0x7f0c0353
+    const v6, 0x7f0c036b
 
     const v5, 0x7f0c0029
 
@@ -50,7 +50,6 @@
     .line 56
     iget-object v2, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$1;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->isShowing:Z
     invoke-static {v2}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$000(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Z
 
     move-result v2
@@ -65,7 +64,6 @@
     :cond_0
     iget-object v2, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$1;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mProgressDialog:Landroid/app/ProgressDialog;
     invoke-static {v2}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$100(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Landroid/app/ProgressDialog;
 
     move-result-object v2
@@ -79,7 +77,6 @@
     .line 63
     iget-object v2, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$1;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mProgressDialog:Landroid/app/ProgressDialog;
     invoke-static {v2}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$100(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Landroid/app/ProgressDialog;
 
     move-result-object v2
@@ -126,7 +123,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c02fa
+    const v3, 0x7f0c0312
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -171,7 +168,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c02fb
+    const v3, 0x7f0c0313
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -215,7 +212,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c0352
+    const v3, 0x7f0c036a
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -254,25 +251,21 @@
 
     check-cast v2, Ljava/lang/String;
 
-    #calls: Lcom/android/phone/MiuiSmscAddressSettingActivity;->smscToString(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v4, v2}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$300(Lcom/android/phone/MiuiSmscAddressSettingActivity;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    #setter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mSmscAddress:Ljava/lang/String;
     invoke-static {v3, v2}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$202(Lcom/android/phone/MiuiSmscAddressSettingActivity;Ljava/lang/String;)Ljava/lang/String;
 
     .line 114
     iget-object v2, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$1;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mEditTextSmscAddress:Landroid/widget/EditText;
     invoke-static {v2}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$400(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Landroid/widget/EditText;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$1;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mSmscAddress:Ljava/lang/String;
     invoke-static {v3}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$200(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Ljava/lang/String;
 
     move-result-object v3
@@ -314,7 +307,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c0351
+    const v3, 0x7f0c0369
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 

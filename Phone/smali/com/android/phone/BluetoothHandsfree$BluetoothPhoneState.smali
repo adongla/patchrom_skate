@@ -91,7 +91,6 @@
     iput-object v1, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->mStateReceiver:Landroid/content/BroadcastReceiver;
 
     .line 718
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {p1}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v1
@@ -115,7 +114,6 @@
     iput v1, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->mBattchg:I
 
     .line 722
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {p1}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v1
@@ -135,7 +133,6 @@
     iput v1, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->mSignal:I
 
     .line 728
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {p1}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v1
@@ -151,7 +148,6 @@
     invoke-interface {v1, v2, v3, v4}, Lcom/android/internal/telephony/Phone;->registerForServiceStateChanged(Landroid/os/Handler;ILjava/lang/Object;)V
 
     .line 730
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {p1}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v1
@@ -163,7 +159,6 @@
     invoke-virtual {v1, v2, v3, v4}, Lcom/android/internal/telephony/CallManager;->registerForPreciseCallStateChanged(Landroid/os/Handler;ILjava/lang/Object;)V
 
     .line 732
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {p1}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v1
@@ -198,7 +193,6 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 739
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/phone/BluetoothHandsfree;->access$1900(Lcom/android/phone/BluetoothHandsfree;)Landroid/content/Context;
 
     move-result-object v1
@@ -495,7 +489,6 @@
     :goto_2
     iget-object v10, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mServiceState:Landroid/telephony/ServiceState;
     invoke-static {v10}, Lcom/android/phone/BluetoothHandsfree;->access$2400(Lcom/android/phone/BluetoothHandsfree;)Landroid/telephony/ServiceState;
 
     move-result-object v10
@@ -504,7 +497,6 @@
 
     iget-object v10, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mServiceState:Landroid/telephony/ServiceState;
     invoke-static {v10}, Lcom/android/phone/BluetoothHandsfree;->access$2400(Lcom/android/phone/BluetoothHandsfree;)Landroid/telephony/ServiceState;
 
     move-result-object v10
@@ -517,7 +509,6 @@
 
     iget-object v10, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mServiceState:Landroid/telephony/ServiceState;
     invoke-static {v10}, Lcom/android/phone/BluetoothHandsfree;->access$2400(Lcom/android/phone/BluetoothHandsfree;)Landroid/telephony/ServiceState;
 
     move-result-object v10
@@ -949,7 +940,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v18
@@ -966,7 +956,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v18
@@ -983,7 +972,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v18
@@ -1000,7 +988,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v18
@@ -1017,7 +1004,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mPhoneState:Lcom/android/internal/telephony/Phone$State;
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3300(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/Phone$State;
 
     move-result-object v18
@@ -1035,7 +1021,6 @@
 
     move-object/from16 v0, v18
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mPhoneState:Lcom/android/internal/telephony/Phone$State;
     invoke-static {v0, v11}, Lcom/android/phone/BluetoothHandsfree;->access$3302(Lcom/android/phone/BluetoothHandsfree;Lcom/android/internal/telephony/Phone$State;)Lcom/android/internal/telephony/Phone$State;
 
     .line 1031
@@ -1047,7 +1032,6 @@
 
     move-object/from16 v19, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mPhoneState:Lcom/android/internal/telephony/Phone$State;
     invoke-static/range {v19 .. v19}, Lcom/android/phone/BluetoothHandsfree;->access$3300(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/Phone$State;
 
     move-result-object v19
@@ -1067,7 +1051,6 @@
 
     move-object/from16 v18, v0
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->callStarted()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3500(Lcom/android/phone/BluetoothHandsfree;)V
 
     .line 1041
@@ -1096,7 +1079,6 @@
 
     const/16 v19, 0x0
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mAudioPossible:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/BluetoothHandsfree;->access$202(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     .line 1076
@@ -1264,7 +1246,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mRemoteBrsf:I
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3600(Lcom/android/phone/BluetoothHandsfree;)I
 
     move-result v18
@@ -1311,7 +1292,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v18
@@ -1398,7 +1378,6 @@
 
     move-result-object v18
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3000(Ljava/lang/String;)V
 
     .line 1145
@@ -1451,7 +1430,6 @@
 
     const/16 v19, 0x1
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mAudioPossible:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/BluetoothHandsfree;->access$202(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     .line 1157
@@ -1464,7 +1442,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mRemoteBrsf:I
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3600(Lcom/android/phone/BluetoothHandsfree;)I
 
     move-result v18
@@ -1514,7 +1491,6 @@
 
     move-object/from16 v18, v0
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->callStarted()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3500(Lcom/android/phone/BluetoothHandsfree;)V
 
     .line 1179
@@ -1540,7 +1516,6 @@
 
     const/16 v19, 0x1
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mAudioPossible:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/BluetoothHandsfree;->access$202(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     .line 1184
@@ -1553,7 +1528,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mRemoteBrsf:I
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3600(Lcom/android/phone/BluetoothHandsfree;)I
 
     move-result v18
@@ -1599,7 +1573,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v18
@@ -1647,7 +1620,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCdmaCallsSwapped:Z
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3700(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v7
@@ -1781,7 +1753,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mRemoteBrsf:I
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3600(Lcom/android/phone/BluetoothHandsfree;)I
 
     move-result v18
@@ -1869,7 +1840,6 @@
 
     move-result-object v19
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->sendURC(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/BluetoothHandsfree;->access$1400(Lcom/android/phone/BluetoothHandsfree;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1891,7 +1861,6 @@
 
     const/16 v19, 0x1
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mUserWantsAudio:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/BluetoothHandsfree;->access$3402(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     .line 1034
@@ -1941,7 +1910,6 @@
 
     const/16 v19, 0x1
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mAudioPossible:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/BluetoothHandsfree;->access$202(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     goto/16 :goto_1
@@ -1959,7 +1927,6 @@
 
     const/16 v19, 0x1
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mAudioPossible:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/BluetoothHandsfree;->access$202(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     .line 1055
@@ -1969,7 +1936,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v18
@@ -1997,7 +1963,6 @@
 
     move-object/from16 v18, v0
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->callStarted()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3500(Lcom/android/phone/BluetoothHandsfree;)V
 
     goto/16 :goto_1
@@ -2026,7 +1991,6 @@
 
     const/16 v19, 0x1
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mAudioPossible:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/BluetoothHandsfree;->access$202(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     goto/16 :goto_1
@@ -2134,7 +2098,6 @@
 
     move-object/from16 v20, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mBgndEarliestConnectionTime:J
     invoke-static/range {v20 .. v20}, Lcom/android/phone/BluetoothHandsfree;->access$3800(Lcom/android/phone/BluetoothHandsfree;)J
 
     move-result-wide v20
@@ -2158,7 +2121,6 @@
 
     move-result-wide v19
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mBgndEarliestConnectionTime:J
     invoke-static/range {v18 .. v20}, Lcom/android/phone/BluetoothHandsfree;->access$3802(Lcom/android/phone/BluetoothHandsfree;J)J
 
     goto/16 :goto_4
@@ -2211,7 +2173,6 @@
 
     move-object/from16 v18, v0
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mLocalBrsf:I
     invoke-static/range {v18 .. v18}, Lcom/android/phone/BluetoothHandsfree;->access$3900(Lcom/android/phone/BluetoothHandsfree;)I
 
     move-result v18
@@ -2396,7 +2357,6 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mUserWantsAudio:Z
     invoke-static {v1}, Lcom/android/phone/BluetoothHandsfree;->access$3400(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v1
@@ -2420,7 +2380,6 @@
     .line 1356
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mHandler:Lcom/android/phone/BluetoothHandsfree$HandsfreeMessageHandler;
     invoke-static {v1}, Lcom/android/phone/BluetoothHandsfree;->access$1000(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/phone/BluetoothHandsfree$HandsfreeMessageHandler;
 
     move-result-object v1
@@ -2435,7 +2394,6 @@
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mHandler:Lcom/android/phone/BluetoothHandsfree$HandsfreeMessageHandler;
     invoke-static {v1}, Lcom/android/phone/BluetoothHandsfree;->access$1000(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/phone/BluetoothHandsfree$HandsfreeMessageHandler;
 
     move-result-object v1
@@ -2476,7 +2434,6 @@
 
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mHeadsetType:I
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$2000(Lcom/android/phone/BluetoothHandsfree;)I
 
     move-result v0
@@ -2487,7 +2444,6 @@
 
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mClip:Z
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$2300(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v0
@@ -2496,7 +2452,6 @@
 
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mServiceConnectionEstablished:Z
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$2200(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v0
@@ -2541,7 +2496,6 @@
 
     iget-object v2, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {v2}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v2
@@ -2559,7 +2513,6 @@
     .line 772
     iget-object v2, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mHeadsetType:I
     invoke-static {v2}, Lcom/android/phone/BluetoothHandsfree;->access$2000(Lcom/android/phone/BluetoothHandsfree;)I
 
     move-result v2
@@ -2571,7 +2524,6 @@
     .line 773
     iget-object v2, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mServiceConnectionEstablished:Z
     invoke-static {v2}, Lcom/android/phone/BluetoothHandsfree;->access$2200(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v2
@@ -2611,7 +2563,6 @@
 
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mHeadsetType:I
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$2000(Lcom/android/phone/BluetoothHandsfree;)I
 
     move-result v0
@@ -2622,7 +2573,6 @@
 
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mIndicatorsEnabled:Z
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$2100(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v0
@@ -2631,7 +2581,6 @@
 
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mServiceConnectionEstablished:Z
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$2200(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v0
@@ -2739,7 +2688,6 @@
     .local v2, result:Landroid/bluetooth/AtCommandResult;
     iget-object v4, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->isVirtualCallInProgress()Z
     invoke-static {v4}, Lcom/android/phone/BluetoothHandsfree;->access$4000(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v4
@@ -2758,7 +2706,6 @@
     :goto_0
     iget-object v4, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {v4}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v4
@@ -3105,7 +3052,6 @@
 
     move-result-object v3
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->sendURC(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/android/phone/BluetoothHandsfree;->access$1400(Lcom/android/phone/BluetoothHandsfree;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -3132,7 +3078,6 @@
     .line 746
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v0
@@ -3148,7 +3093,6 @@
     .line 747
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v0
@@ -3160,7 +3104,6 @@
     .line 748
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v0
@@ -3172,7 +3115,6 @@
     .line 751
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v0
@@ -3190,7 +3132,6 @@
     .line 753
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v0
@@ -3204,7 +3145,6 @@
     .line 755
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v0
@@ -3241,7 +3181,6 @@
 
     const-string v1, "+CIEV: 4,0"
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->sendURC(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/BluetoothHandsfree;->access$1400(Lcom/android/phone/BluetoothHandsfree;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3307,7 +3246,6 @@
     .local v0, result:Landroid/bluetooth/AtCommandResult;
     iget-object v4, p0, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mServiceState:Landroid/telephony/ServiceState;
     invoke-static {v4, p2}, Lcom/android/phone/BluetoothHandsfree;->access$2402(Lcom/android/phone/BluetoothHandsfree;Landroid/telephony/ServiceState;)Landroid/telephony/ServiceState;
 
     .line 981
@@ -3414,7 +3352,6 @@
 
     move-result-object v5
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->sendURC(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/phone/BluetoothHandsfree;->access$1400(Lcom/android/phone/BluetoothHandsfree;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3552,7 +3489,6 @@
 
     move-result-object v3
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->sendURC(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/android/phone/BluetoothHandsfree;->access$1400(Lcom/android/phone/BluetoothHandsfree;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

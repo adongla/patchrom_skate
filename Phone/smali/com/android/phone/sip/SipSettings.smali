@@ -1277,7 +1277,7 @@
     iput-object v1, p0, Lcom/android/phone/sip/SipSettings;->mPackageManager:Landroid/content/pm/PackageManager;
 
     .line 170
-    const v1, 0x7f040029
+    const v1, 0x7f04002a
 
     invoke-virtual {p0, v1}, Lcom/android/phone/sip/SipSettings;->setContentView(I)V
 

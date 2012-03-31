@@ -1,5 +1,5 @@
 #
-# Makefile for Skate
+# Makefile for the ZTE Skate
 #
 
 # The original zip file, MUST be specified by each product
@@ -12,7 +12,7 @@ local-miui-removed-apps := Updater
 
 # All apps need to be removed from original ZIP file
 local-remove-apps := \
-Gallery2 \
+Gallery2 Gallery3D \
 Development		       SpareParts \
 DSPManager		       SystemUI
 

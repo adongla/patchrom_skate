@@ -58,7 +58,6 @@
     .local v0, ar:Landroid/os/AsyncResult;
     iget-object v1, p0, Lcom/android/phone/EnableIccPinScreen$1;->this$0:Lcom/android/phone/EnableIccPinScreen;
 
-    #calls: Lcom/android/phone/EnableIccPinScreen;->handleResult(Landroid/os/AsyncResult;)V
     invoke-static {v1, v0}, Lcom/android/phone/EnableIccPinScreen;->access$000(Lcom/android/phone/EnableIccPinScreen;Landroid/os/AsyncResult;)V
 
     goto :goto_0

@@ -55,7 +55,6 @@
     .local v0, replacement:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/phone/InCallScreen$9;->this$0:Lcom/android/phone/InCallScreen;
 
-    #getter for: Lcom/android/phone/InCallScreen;->mWildPromptText:Landroid/widget/EditText;
     invoke-static {v1}, Lcom/android/phone/InCallScreen;->access$1100(Lcom/android/phone/InCallScreen;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -65,7 +64,6 @@
     .line 2217
     iget-object v1, p0, Lcom/android/phone/InCallScreen$9;->this$0:Lcom/android/phone/InCallScreen;
 
-    #getter for: Lcom/android/phone/InCallScreen;->mWildPromptText:Landroid/widget/EditText;
     invoke-static {v1}, Lcom/android/phone/InCallScreen;->access$1100(Lcom/android/phone/InCallScreen;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -83,7 +81,6 @@
 
     const/4 v2, 0x0
 
-    #setter for: Lcom/android/phone/InCallScreen;->mWildPromptText:Landroid/widget/EditText;
     invoke-static {v1, v2}, Lcom/android/phone/InCallScreen;->access$1102(Lcom/android/phone/InCallScreen;Landroid/widget/EditText;)Landroid/widget/EditText;
 
     .line 2220

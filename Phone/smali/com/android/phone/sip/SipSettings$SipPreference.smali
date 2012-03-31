@@ -54,7 +54,6 @@
     .line 109
     iget-object v0, p0, Lcom/android/phone/sip/SipSettings$SipPreference;->this$0:Lcom/android/phone/sip/SipSettings;
 
-    #calls: Lcom/android/phone/sip/SipSettings;->getProfileName(Landroid/net/sip/SipProfile;)Ljava/lang/String;
     invoke-static {v0, p1}, Lcom/android/phone/sip/SipSettings;->access$000(Lcom/android/phone/sip/SipSettings;Landroid/net/sip/SipProfile;)Ljava/lang/String;
 
     move-result-object v0
@@ -216,7 +215,6 @@
 
     iget-object v3, p0, Lcom/android/phone/sip/SipSettings$SipPreference;->this$0:Lcom/android/phone/sip/SipSettings;
 
-    #getter for: Lcom/android/phone/sip/SipSettings;->mUid:I
     invoke-static {v3}, Lcom/android/phone/sip/SipSettings;->access$100(Lcom/android/phone/sip/SipSettings;)I
 
     move-result v3
@@ -232,7 +230,6 @@
 
     iget-object v6, p0, Lcom/android/phone/sip/SipSettings$SipPreference;->this$0:Lcom/android/phone/sip/SipSettings;
 
-    #calls: Lcom/android/phone/sip/SipSettings;->getPackageNameFromUid(I)Ljava/lang/String;
     invoke-static {v6, v1}, Lcom/android/phone/sip/SipSettings;->access$200(Lcom/android/phone/sip/SipSettings;I)Ljava/lang/String;
 
     move-result-object v6

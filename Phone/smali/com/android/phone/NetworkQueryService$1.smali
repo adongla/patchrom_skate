@@ -56,7 +56,6 @@
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    #calls: Lcom/android/phone/NetworkQueryService;->broadcastQueryResults(Landroid/os/AsyncResult;)V
     invoke-static {v1, v0}, Lcom/android/phone/NetworkQueryService;->access$100(Lcom/android/phone/NetworkQueryService;Landroid/os/AsyncResult;)V
 
     goto :goto_0

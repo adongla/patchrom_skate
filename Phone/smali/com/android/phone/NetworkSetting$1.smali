@@ -60,7 +60,6 @@
 
     iget v3, p1, Landroid/os/Message;->arg1:I
 
-    #calls: Lcom/android/phone/NetworkSetting;->networksListLoaded(Ljava/util/List;I)V
     invoke-static {v2, v1, v3}, Lcom/android/phone/NetworkSetting;->access$000(Lcom/android/phone/NetworkSetting;Ljava/util/List;I)V
 
     goto :goto_0
@@ -98,7 +97,6 @@
 
     iget-object v2, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    #calls: Lcom/android/phone/NetworkSetting;->displayNetworkSelectionFailed(Ljava/lang/Throwable;)V
     invoke-static {v1, v2}, Lcom/android/phone/NetworkSetting;->access$100(Lcom/android/phone/NetworkSetting;Ljava/lang/Throwable;)V
 
     goto :goto_0
@@ -107,7 +105,6 @@
     :cond_0
     iget-object v1, p0, Lcom/android/phone/NetworkSetting$1;->this$0:Lcom/android/phone/NetworkSetting;
 
-    #calls: Lcom/android/phone/NetworkSetting;->displayNetworkSelectionSucceeded()V
     invoke-static {v1}, Lcom/android/phone/NetworkSetting;->access$200(Lcom/android/phone/NetworkSetting;)V
 
     goto :goto_0
@@ -154,7 +151,6 @@
 
     iget-object v2, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    #calls: Lcom/android/phone/NetworkSetting;->displayNetworkSelectionFailed(Ljava/lang/Throwable;)V
     invoke-static {v1, v2}, Lcom/android/phone/NetworkSetting;->access$100(Lcom/android/phone/NetworkSetting;Ljava/lang/Throwable;)V
 
     goto :goto_0
@@ -163,7 +159,6 @@
     :cond_2
     iget-object v1, p0, Lcom/android/phone/NetworkSetting$1;->this$0:Lcom/android/phone/NetworkSetting;
 
-    #calls: Lcom/android/phone/NetworkSetting;->displayNetworkSelectionSucceeded()V
     invoke-static {v1}, Lcom/android/phone/NetworkSetting;->access$200(Lcom/android/phone/NetworkSetting;)V
 
     goto :goto_0

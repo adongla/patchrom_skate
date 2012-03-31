@@ -74,7 +74,6 @@
 
     iget-object v2, p0, Lcom/android/phone/MiuiVoicemailSetting$3;->this$0:Lcom/android/phone/MiuiVoicemailSetting;
 
-    #calls: Lcom/android/phone/MiuiVoicemailSetting;->checkForwardingCompleted()Z
     invoke-static {v2}, Lcom/android/phone/MiuiVoicemailSetting;->access$200(Lcom/android/phone/MiuiVoicemailSetting;)Z
 
     move-result v2
@@ -94,7 +93,6 @@
 
     const/16 v3, 0x643
 
-    #calls: Lcom/android/phone/MiuiVoicemailSetting;->dismissDialogSafely(I)V
     invoke-static {v2, v3}, Lcom/android/phone/MiuiVoicemailSetting;->access$400(Lcom/android/phone/MiuiVoicemailSetting;I)V
 
     .line 986
@@ -119,7 +117,6 @@
     :pswitch_1
     iget-object v2, p0, Lcom/android/phone/MiuiVoicemailSetting$3;->this$0:Lcom/android/phone/MiuiVoicemailSetting;
 
-    #getter for: Lcom/android/phone/MiuiVoicemailSetting;->mForwardingChangeResults:Ljava/util/Map;
     invoke-static {v2}, Lcom/android/phone/MiuiVoicemailSetting;->access$100(Lcom/android/phone/MiuiVoicemailSetting;)Ljava/util/Map;
 
     move-result-object v2

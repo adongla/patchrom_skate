@@ -48,12 +48,10 @@
 
     iget-object v1, p0, Lcom/android/phone/MiuiTelocationSetting$3;->this$0:Lcom/android/phone/MiuiTelocationSetting;
 
-    #getter for: Lcom/android/phone/MiuiTelocationSetting;->mTextCountryCode:Landroid/preference/EditTextPreference;
     invoke-static {v1}, Lcom/android/phone/MiuiTelocationSetting;->access$000(Lcom/android/phone/MiuiTelocationSetting;)Landroid/preference/EditTextPreference;
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/MiuiTelocationSetting;->simulatePreferenceClick(Landroid/preference/Preference;)V
     invoke-static {v0, v1}, Lcom/android/phone/MiuiTelocationSetting;->access$100(Lcom/android/phone/MiuiTelocationSetting;Landroid/preference/Preference;)V
 
     .line 100

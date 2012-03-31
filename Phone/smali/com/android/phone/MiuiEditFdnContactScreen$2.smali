@@ -49,7 +49,6 @@
     .local v0, enableButton:Z
     iget-object v1, p0, Lcom/android/phone/MiuiEditFdnContactScreen$2;->this$0:Lcom/android/phone/MiuiEditFdnContactScreen;
 
-    #getter for: Lcom/android/phone/MiuiEditFdnContactScreen;->mNameField:Landroid/widget/EditText;
     invoke-static {v1}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$200(Lcom/android/phone/MiuiEditFdnContactScreen;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -73,7 +72,6 @@
 
     iget-object v1, p0, Lcom/android/phone/MiuiEditFdnContactScreen$2;->this$0:Lcom/android/phone/MiuiEditFdnContactScreen;
 
-    #getter for: Lcom/android/phone/MiuiEditFdnContactScreen;->mNumberField:Landroid/widget/EditText;
     invoke-static {v1}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$300(Lcom/android/phone/MiuiEditFdnContactScreen;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -97,7 +95,6 @@
 
     iget-object v1, p0, Lcom/android/phone/MiuiEditFdnContactScreen$2;->this$0:Lcom/android/phone/MiuiEditFdnContactScreen;
 
-    #getter for: Lcom/android/phone/MiuiEditFdnContactScreen;->mPin2Field:Landroid/widget/EditText;
     invoke-static {v1}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$400(Lcom/android/phone/MiuiEditFdnContactScreen;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -119,7 +116,6 @@
     :cond_2
     iget-object v1, p0, Lcom/android/phone/MiuiEditFdnContactScreen$2;->this$0:Lcom/android/phone/MiuiEditFdnContactScreen;
 
-    #getter for: Lcom/android/phone/MiuiEditFdnContactScreen;->mDeleteButton:Landroid/widget/Button;
     invoke-static {v1}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$500(Lcom/android/phone/MiuiEditFdnContactScreen;)Landroid/widget/Button;
 
     move-result-object v1
@@ -129,7 +125,6 @@
     .line 346
     iget-object v1, p0, Lcom/android/phone/MiuiEditFdnContactScreen$2;->this$0:Lcom/android/phone/MiuiEditFdnContactScreen;
 
-    #getter for: Lcom/android/phone/MiuiEditFdnContactScreen;->mOkButton:Landroid/widget/Button;
     invoke-static {v1}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$600(Lcom/android/phone/MiuiEditFdnContactScreen;)Landroid/widget/Button;
 
     move-result-object v1

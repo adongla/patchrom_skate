@@ -62,7 +62,6 @@
     .line 89
     iget-object v1, p0, Lcom/android/phone/IccNetworkDepersonalizationPanel$2;->this$0:Lcom/android/phone/IccNetworkDepersonalizationPanel;
 
-    #calls: Lcom/android/phone/IccNetworkDepersonalizationPanel;->indicateError()V
     invoke-static {v1}, Lcom/android/phone/IccNetworkDepersonalizationPanel;->access$100(Lcom/android/phone/IccNetworkDepersonalizationPanel;)V
 
     .line 90
@@ -83,7 +82,6 @@
     :cond_1
     iget-object v1, p0, Lcom/android/phone/IccNetworkDepersonalizationPanel$2;->this$0:Lcom/android/phone/IccNetworkDepersonalizationPanel;
 
-    #calls: Lcom/android/phone/IccNetworkDepersonalizationPanel;->indicateSuccess()V
     invoke-static {v1}, Lcom/android/phone/IccNetworkDepersonalizationPanel;->access$300(Lcom/android/phone/IccNetworkDepersonalizationPanel;)V
 
     .line 100

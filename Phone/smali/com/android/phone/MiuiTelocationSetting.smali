@@ -257,7 +257,7 @@
     .parameter "objValue"
 
     .prologue
-    const v5, 0x7f0c02cf
+    const v5, 0x7f0c02e7
 
     const v6, 0x104000a
 
@@ -407,7 +407,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0c02cd
+    const v5, 0x7f0c02e5
 
     invoke-virtual {v4, v5}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -472,7 +472,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0c02ce
+    const v5, 0x7f0c02e6
 
     invoke-virtual {v4, v5}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 

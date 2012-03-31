@@ -41,7 +41,6 @@
     .line 2250
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$10;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->redial()Landroid/bluetooth/AtCommandResult;
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$5900(Lcom/android/phone/BluetoothHandsfree;)Landroid/bluetooth/AtCommandResult;
 
     move-result-object v0

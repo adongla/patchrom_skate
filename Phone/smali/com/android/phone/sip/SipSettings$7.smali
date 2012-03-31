@@ -50,7 +50,6 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/phone/sip/SipSettings$7;->this$0:Lcom/android/phone/sip/SipSettings;
 
-    #getter for: Lcom/android/phone/sip/SipSettings;->mSipManager:Landroid/net/sip/SipManager;
     invoke-static {v1}, Lcom/android/phone/sip/SipSettings;->access$900(Lcom/android/phone/sip/SipSettings;)Landroid/net/sip/SipManager;
 
     move-result-object v1

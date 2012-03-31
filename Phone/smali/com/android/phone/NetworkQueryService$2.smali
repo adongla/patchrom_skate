@@ -60,7 +60,6 @@
     .line 117
     iget-object v0, p0, Lcom/android/phone/NetworkQueryService$2;->this$0:Lcom/android/phone/NetworkQueryService;
 
-    #getter for: Lcom/android/phone/NetworkQueryService;->mState:I
     invoke-static {v0}, Lcom/android/phone/NetworkQueryService;->access$200(Lcom/android/phone/NetworkQueryService;)I
 
     move-result v0
@@ -80,7 +79,6 @@
     :pswitch_1
     iget-object v0, p0, Lcom/android/phone/NetworkQueryService$2;->this$0:Lcom/android/phone/NetworkQueryService;
 
-    #getter for: Lcom/android/phone/NetworkQueryService;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v0}, Lcom/android/phone/NetworkQueryService;->access$300(Lcom/android/phone/NetworkQueryService;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
@@ -102,7 +100,6 @@
 
     const/4 v2, -0x2
 
-    #setter for: Lcom/android/phone/NetworkQueryService;->mState:I
     invoke-static {v0, v2}, Lcom/android/phone/NetworkQueryService;->access$202(Lcom/android/phone/NetworkQueryService;I)I
 
     goto :goto_0

@@ -81,7 +81,6 @@
 
     const-string v2, "Settings: onCreate()..."
 
-    #calls: Lcom/android/phone/RespondViaSmsManager;->log(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/android/phone/RespondViaSmsManager;->access$100(Ljava/lang/String;)V
 
     .line 366
@@ -268,7 +267,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/RespondViaSmsManager;->log(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/phone/RespondViaSmsManager;->access$100(Ljava/lang/String;)V
 
     :cond_0

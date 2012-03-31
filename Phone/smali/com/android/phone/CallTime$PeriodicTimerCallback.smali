@@ -62,7 +62,6 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/android/phone/CallTime;->mTimerRunning:Z
     invoke-static {v0, v1}, Lcom/android/phone/CallTime;->access$002(Lcom/android/phone/CallTime;Z)Z
 
     .line 175

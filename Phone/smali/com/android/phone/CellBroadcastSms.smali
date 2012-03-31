@@ -350,7 +350,6 @@
     .line 494
     iget-object v0, p0, Lcom/android/phone/CellBroadcastSms;->mListLanguage:Landroid/preference/ListPreference;
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->getConfigDataLanguage()I
     invoke-static {}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$600()I
 
     move-result v3
@@ -1386,13 +1385,11 @@
     .line 444
     const/16 v0, 0x1f
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsNoOfStructs(I)V
     invoke-static {v0}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$400(I)V
 
     .line 446
     iget-object v0, p0, Lcom/android/phone/CellBroadcastSms;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->getCbSmsAllValues()[I
     invoke-static {}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$500()[I
 
     move-result-object v1
@@ -1434,7 +1431,6 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteLanguage(I)V
     invoke-static {v0}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$200(I)V
 
     .line 332
@@ -1568,7 +1564,6 @@
 
     move-result v0
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v1}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 203
@@ -1578,7 +1573,6 @@
 
     move-result v0
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v1}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto :goto_0
@@ -1596,7 +1590,6 @@
 
     move-result v0
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v3}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 208
@@ -1606,7 +1599,6 @@
 
     move-result v0
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v3}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto :goto_0
@@ -1624,7 +1616,6 @@
 
     move-result v0
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v4}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 212
@@ -1634,7 +1625,6 @@
 
     move-result v0
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v4}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto :goto_0
@@ -1654,7 +1644,6 @@
 
     const/16 v2, 0x14
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 216
@@ -1666,7 +1655,6 @@
 
     const/16 v2, 0x14
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -1686,7 +1674,6 @@
 
     const/16 v2, 0x15
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 219
@@ -1698,7 +1685,6 @@
 
     const/16 v2, 0x15
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -1718,7 +1704,6 @@
 
     const/16 v2, 0x16
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 222
@@ -1730,7 +1715,6 @@
 
     const/16 v2, 0x16
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -1750,7 +1734,6 @@
 
     const/16 v2, 0x17
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 226
@@ -1762,7 +1745,6 @@
 
     const/16 v2, 0x17
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -1782,7 +1764,6 @@
 
     const/16 v2, 0x18
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 229
@@ -1794,7 +1775,6 @@
 
     const/16 v2, 0x18
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -1814,7 +1794,6 @@
 
     const/16 v2, 0x19
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 233
@@ -1826,7 +1805,6 @@
 
     const/16 v2, 0x19
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -1846,7 +1824,6 @@
 
     const/16 v2, 0x1a
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 237
@@ -1858,7 +1835,6 @@
 
     const/16 v2, 0x1a
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -1878,7 +1854,6 @@
 
     const/16 v2, 0x1b
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 241
@@ -1890,7 +1865,6 @@
 
     const/16 v2, 0x1b
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -1910,7 +1884,6 @@
 
     const/16 v2, 0x1c
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 244
@@ -1922,7 +1895,6 @@
 
     const/16 v2, 0x1c
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -1942,7 +1914,6 @@
 
     const/16 v2, 0x1d
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 247
@@ -1954,7 +1925,6 @@
 
     const/16 v2, 0x1d
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -1974,7 +1944,6 @@
 
     const/16 v2, 0x1e
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 251
@@ -1986,7 +1955,6 @@
 
     const/16 v2, 0x1e
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2006,7 +1974,6 @@
 
     const/16 v2, 0x1f
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 255
@@ -2018,7 +1985,6 @@
 
     const/16 v2, 0x1f
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2036,7 +2002,6 @@
 
     move-result v0
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v5}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 258
@@ -2046,7 +2011,6 @@
 
     move-result v0
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v5}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2066,7 +2030,6 @@
 
     const/4 v2, 0x5
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 262
@@ -2078,7 +2041,6 @@
 
     const/4 v2, 0x5
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2098,7 +2060,6 @@
 
     const/4 v2, 0x6
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 266
@@ -2110,7 +2071,6 @@
 
     const/4 v2, 0x6
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2130,7 +2090,6 @@
 
     const/4 v2, 0x7
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 270
@@ -2142,7 +2101,6 @@
 
     const/4 v2, 0x7
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2162,7 +2120,6 @@
 
     const/16 v2, 0x8
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 273
@@ -2174,7 +2131,6 @@
 
     const/16 v2, 0x8
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2194,7 +2150,6 @@
 
     const/16 v2, 0x9
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 277
@@ -2206,7 +2161,6 @@
 
     const/16 v2, 0x9
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2226,7 +2180,6 @@
 
     const/16 v2, 0xa
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 281
@@ -2238,7 +2191,6 @@
 
     const/16 v2, 0xa
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2258,7 +2210,6 @@
 
     const/16 v2, 0xb
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 285
@@ -2270,7 +2221,6 @@
 
     const/16 v2, 0xb
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2290,7 +2240,6 @@
 
     const/16 v2, 0xc
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 288
@@ -2302,7 +2251,6 @@
 
     const/16 v2, 0xc
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2322,7 +2270,6 @@
 
     const/16 v2, 0xd
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 292
@@ -2334,7 +2281,6 @@
 
     const/16 v2, 0xd
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2354,7 +2300,6 @@
 
     const/16 v2, 0xe
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 296
@@ -2366,7 +2311,6 @@
 
     const/16 v2, 0xe
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2386,7 +2330,6 @@
 
     const/16 v2, 0xf
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 300
@@ -2398,7 +2341,6 @@
 
     const/16 v2, 0xf
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2418,7 +2360,6 @@
 
     const/16 v2, 0x10
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 303
@@ -2430,7 +2371,6 @@
 
     const/16 v2, 0x10
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2450,7 +2390,6 @@
 
     const/16 v2, 0x11
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 307
@@ -2462,7 +2401,6 @@
 
     const/16 v2, 0x11
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2482,7 +2420,6 @@
 
     const/16 v2, 0x12
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 311
@@ -2494,7 +2431,6 @@
 
     const/16 v2, 0x12
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0
@@ -2514,7 +2450,6 @@
 
     const/16 v2, 0x13
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setConfigDataCompleteBSelected(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$000(ZI)V
 
     .line 315
@@ -2526,7 +2461,6 @@
 
     const/16 v2, 0x13
 
-    #calls: Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->setCbSmsBSelectedValue(ZI)V
     invoke-static {v0, v2}, Lcom/android/phone/CellBroadcastSms$CellBroadcastSmsConfig;->access$100(ZI)V
 
     goto/16 :goto_0

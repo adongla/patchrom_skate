@@ -161,7 +161,6 @@
 
     move-result-object v2
 
-    #calls: Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/phone/NotificationMgr;->access$200(Lcom/android/phone/NotificationMgr;Ljava/lang/String;)V
 
     .line 415
@@ -200,7 +199,6 @@
 
     const-string v1, "call log query complete."
 
-    #calls: Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/NotificationMgr;->access$200(Lcom/android/phone/NotificationMgr;Ljava/lang/String;)V
 
     .line 349
@@ -250,14 +248,12 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/NotificationMgr;->access$200(Lcom/android/phone/NotificationMgr;Ljava/lang/String;)V
 
     .line 357
     :cond_2
     iget-object v0, p0, Lcom/android/phone/NotificationMgr$QueryHandler;->this$0:Lcom/android/phone/NotificationMgr;
 
-    #getter for: Lcom/android/phone/NotificationMgr;->mQueryHandler:Lcom/android/phone/NotificationMgr$QueryHandler;
     invoke-static {v0}, Lcom/android/phone/NotificationMgr;->access$300(Lcom/android/phone/NotificationMgr;)Lcom/android/phone/NotificationMgr$QueryHandler;
 
     move-result-object v0
@@ -295,7 +291,6 @@
 
     const-string v1, "closing call log cursor."
 
-    #calls: Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/NotificationMgr;->access$200(Lcom/android/phone/NotificationMgr;Ljava/lang/String;)V
 
     .line 363
@@ -316,7 +311,6 @@
 
     const-string v1, "contact query complete."
 
-    #calls: Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/NotificationMgr;->access$200(Lcom/android/phone/NotificationMgr;Ljava/lang/String;)V
 
     .line 370
@@ -379,7 +373,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/NotificationMgr;->access$200(Lcom/android/phone/NotificationMgr;Ljava/lang/String;)V
 
     .line 376
@@ -408,7 +401,6 @@
 
     const-string v1, "sending notification."
 
-    #calls: Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/NotificationMgr;->access$200(Lcom/android/phone/NotificationMgr;Ljava/lang/String;)V
 
     .line 382
@@ -436,7 +428,6 @@
 
     const-string v1, "closing contact cursor."
 
-    #calls: Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/NotificationMgr;->access$200(Lcom/android/phone/NotificationMgr;Ljava/lang/String;)V
 
     .line 385

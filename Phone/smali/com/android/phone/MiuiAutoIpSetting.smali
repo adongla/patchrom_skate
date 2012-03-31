@@ -33,7 +33,7 @@
     .locals 5
 
     .prologue
-    const v4, 0x7f0c0285
+    const v4, 0x7f0c0298
 
     const v3, 0x1010355
 
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c030e
+    const v1, 0x7f0c0326
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -121,7 +121,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c0274
+    const v1, 0x7f0c0287
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -239,7 +239,7 @@
     .local v0, ipPrefix:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/phone/MiuiAutoIpSetting;->mTextIpPrefix:Landroid/preference/EditTextPreference;
 
-    const v5, 0x7f0c030f
+    const v5, 0x7f0c0327
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -453,7 +453,7 @@
     .line 51
     iget-object v5, p0, Lcom/android/phone/MiuiAutoIpSetting;->mTextIpPrefix:Landroid/preference/EditTextPreference;
 
-    const v6, 0x7f0c030f
+    const v6, 0x7f0c0327
 
     new-array v7, v4, [Ljava/lang/Object;
 

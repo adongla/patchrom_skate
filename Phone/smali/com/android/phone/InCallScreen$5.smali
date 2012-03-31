@@ -45,7 +45,6 @@
     .line 1660
     iget-object v0, p0, Lcom/android/phone/InCallScreen$5;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->updateScreen()V
     invoke-static {v0}, Lcom/android/phone/InCallScreen;->access$100(Lcom/android/phone/InCallScreen;)V
 
     .line 1661

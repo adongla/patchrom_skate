@@ -1624,7 +1624,7 @@
 
     if-ne v0, v1, :cond_7
 
-    const v1, 0x7f0c026e
+    const v1, 0x7f0c0281
 
     :goto_2
     invoke-virtual {v2, v1}, Landroid/widget/Button;->setText(I)V
@@ -1644,7 +1644,7 @@
 
     .line 374
     :cond_7
-    const v1, 0x7f0c026c
+    const v1, 0x7f0c027f
 
     goto :goto_2
 .end method

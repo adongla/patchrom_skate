@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 658
+    .line 682
     iput-object p2, p0, Lcom/android/phone/MiuiPhoneUtils$4;->val$phone:Lcom/android/internal/telephony/Phone;
 
     iput p3, p0, Lcom/android/phone/MiuiPhoneUtils$4;->val$commandInterfaceCFReason:I
@@ -59,7 +59,7 @@
     .locals 6
 
     .prologue
-    .line 661
+    .line 685
     iget-object v0, p0, Lcom/android/phone/MiuiPhoneUtils$4;->val$phone:Lcom/android/internal/telephony/Phone;
 
     iget v1, p0, Lcom/android/phone/MiuiPhoneUtils$4;->val$commandInterfaceCFReason:I
@@ -76,6 +76,6 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/android/internal/telephony/Phone;->setCallForwardingOption(IILjava/lang/String;ILandroid/os/Message;)V
 
-    .line 663
+    .line 687
     return-void
 .end method

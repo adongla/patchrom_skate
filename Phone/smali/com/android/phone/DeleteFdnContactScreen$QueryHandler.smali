@@ -49,7 +49,6 @@
     .line 178
     iget-object v1, p0, Lcom/android/phone/DeleteFdnContactScreen$QueryHandler;->this$0:Lcom/android/phone/DeleteFdnContactScreen;
 
-    #calls: Lcom/android/phone/DeleteFdnContactScreen;->displayProgress(Z)V
     invoke-static {v1, v0}, Lcom/android/phone/DeleteFdnContactScreen;->access$000(Lcom/android/phone/DeleteFdnContactScreen;Z)V
 
     .line 179
@@ -60,7 +59,6 @@
     const/4 v0, 0x1
 
     :cond_0
-    #calls: Lcom/android/phone/DeleteFdnContactScreen;->handleResult(Z)V
     invoke-static {v1, v0}, Lcom/android/phone/DeleteFdnContactScreen;->access$100(Lcom/android/phone/DeleteFdnContactScreen;Z)V
 
     .line 180

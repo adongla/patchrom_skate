@@ -74,7 +74,6 @@
 
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting$3;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
-    #calls: Lcom/android/phone/CallFeaturesSetting;->checkForwardingCompleted()Z
     invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$200(Lcom/android/phone/CallFeaturesSetting;)Z
 
     move-result v2
@@ -94,7 +93,6 @@
 
     const/16 v3, 0x25b
 
-    #calls: Lcom/android/phone/CallFeaturesSetting;->dismissDialogSafely(I)V
     invoke-static {v2, v3}, Lcom/android/phone/CallFeaturesSetting;->access$400(Lcom/android/phone/CallFeaturesSetting;I)V
 
     .line 1083
@@ -119,7 +117,6 @@
     :pswitch_1
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting$3;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
-    #getter for: Lcom/android/phone/CallFeaturesSetting;->mForwardingChangeResults:Ljava/util/Map;
     invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$100(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
 
     move-result-object v2

@@ -84,7 +84,7 @@
 
     .prologue
     .line 64
-    const v2, 0x7f040024
+    const v2, 0x7f040025
 
     invoke-virtual {p0, v2}, Lcom/android/phone/EditPinPreference;->setDialogLayoutResource(I)V
 

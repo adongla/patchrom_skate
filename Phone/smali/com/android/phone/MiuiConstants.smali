@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/phone/MiuiConstants$CdmaCallState;,
         Lcom/android/phone/MiuiConstants$AudioMode;
     }
 .end annotation
@@ -39,6 +40,6 @@
     .line 3
     invoke-direct {p0}, Lcom/android/phone/Constants;-><init>()V
 
-    .line 4
+    .line 16
     return-void
 .end method

@@ -2739,7 +2739,6 @@
     .line 1205
     iget-object v4, p0, Lcom/android/phone/CallNotifier;->mEmergencyTonePlayerVibrator:Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;
 
-    #calls: Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->stop()V
     invoke-static {v4}, Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->access$300(Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;)V
 
     .line 1214
@@ -3600,7 +3599,6 @@
     .line 892
     iget-object v6, p0, Lcom/android/phone/CallNotifier;->mEmergencyTonePlayerVibrator:Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;
 
-    #calls: Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->start()V
     invoke-static {v6}, Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->access$200(Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;)V
 
     .line 905
@@ -3685,7 +3683,6 @@
     .line 898
     iget-object v6, p0, Lcom/android/phone/CallNotifier;->mEmergencyTonePlayerVibrator:Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;
 
-    #calls: Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->stop()V
     invoke-static {v6}, Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->access$300(Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;)V
 
     goto :goto_1

@@ -278,7 +278,7 @@
     .line 40
     iget-object v0, p0, Lcom/android/phone/MiuiManageConferenceUtils;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    const v1, 0x7f0700c5
+    const v1, 0x7f0700c4
 
     invoke-virtual {v0, v1}, Lcom/android/phone/InCallScreen;->findViewById(I)Landroid/view/View;
 

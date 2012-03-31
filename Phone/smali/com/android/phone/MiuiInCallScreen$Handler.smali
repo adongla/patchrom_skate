@@ -82,7 +82,6 @@
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen$Handler;->this$0:Lcom/android/phone/MiuiInCallScreen;
 
-    #calls: Lcom/android/phone/MiuiInCallScreen;->startCallRecord()V
     invoke-static {v0}, Lcom/android/phone/MiuiInCallScreen;->access$000(Lcom/android/phone/MiuiInCallScreen;)V
 
     goto :goto_0

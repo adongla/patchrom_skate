@@ -50,7 +50,6 @@
 
     sget-object v1, Lcom/android/phone/MiuiEditFdnContactScreen$Actions;->Delete:Lcom/android/phone/MiuiEditFdnContactScreen$Actions;
 
-    #calls: Lcom/android/phone/MiuiEditFdnContactScreen;->performActions(Lcom/android/phone/MiuiEditFdnContactScreen$Actions;)V
     invoke-static {v0, v1}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$000(Lcom/android/phone/MiuiEditFdnContactScreen;Lcom/android/phone/MiuiEditFdnContactScreen$Actions;)V
 
     .line 306

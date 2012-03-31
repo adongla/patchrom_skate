@@ -49,7 +49,6 @@
     .line 387
     iget-object v0, p0, Lcom/android/phone/MiuiEditFdnContactScreen$QueryHandler;->this$0:Lcom/android/phone/MiuiEditFdnContactScreen;
 
-    #calls: Lcom/android/phone/MiuiEditFdnContactScreen;->dismissProgress()V
     invoke-static {v0}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$700(Lcom/android/phone/MiuiEditFdnContactScreen;)V
 
     .line 388
@@ -62,7 +61,6 @@
     const/4 v0, 0x1
 
     :goto_0
-    #calls: Lcom/android/phone/MiuiEditFdnContactScreen;->handleResult(Lcom/android/phone/MiuiEditFdnContactScreen$Actions;ZZ)V
     invoke-static {v2, v3, v0, v1}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$800(Lcom/android/phone/MiuiEditFdnContactScreen;Lcom/android/phone/MiuiEditFdnContactScreen$Actions;ZZ)V
 
     .line 389
@@ -87,7 +85,6 @@
     .line 373
     iget-object v0, p0, Lcom/android/phone/MiuiEditFdnContactScreen$QueryHandler;->this$0:Lcom/android/phone/MiuiEditFdnContactScreen;
 
-    #calls: Lcom/android/phone/MiuiEditFdnContactScreen;->dismissProgress()V
     invoke-static {v0}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$700(Lcom/android/phone/MiuiEditFdnContactScreen;)V
 
     .line 374
@@ -100,7 +97,6 @@
     const/4 v0, 0x1
 
     :goto_0
-    #calls: Lcom/android/phone/MiuiEditFdnContactScreen;->handleResult(Lcom/android/phone/MiuiEditFdnContactScreen$Actions;ZZ)V
     invoke-static {v2, v3, v0, v1}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$800(Lcom/android/phone/MiuiEditFdnContactScreen;Lcom/android/phone/MiuiEditFdnContactScreen$Actions;ZZ)V
 
     .line 375
@@ -136,7 +132,6 @@
     .line 380
     iget-object v0, p0, Lcom/android/phone/MiuiEditFdnContactScreen$QueryHandler;->this$0:Lcom/android/phone/MiuiEditFdnContactScreen;
 
-    #calls: Lcom/android/phone/MiuiEditFdnContactScreen;->dismissProgress()V
     invoke-static {v0}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$700(Lcom/android/phone/MiuiEditFdnContactScreen;)V
 
     .line 381
@@ -149,7 +144,6 @@
     const/4 v0, 0x1
 
     :goto_0
-    #calls: Lcom/android/phone/MiuiEditFdnContactScreen;->handleResult(Lcom/android/phone/MiuiEditFdnContactScreen$Actions;ZZ)V
     invoke-static {v2, v3, v0, v1}, Lcom/android/phone/MiuiEditFdnContactScreen;->access$800(Lcom/android/phone/MiuiEditFdnContactScreen;Lcom/android/phone/MiuiEditFdnContactScreen$Actions;ZZ)V
 
     .line 382

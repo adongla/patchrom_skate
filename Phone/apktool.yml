@@ -1,4 +1,4 @@
-version: 1.4.3
+version: 1.4.2.31e6dc5
 apkFileName: Phone.apk
 isFrameworkApk: false
 usesFramework:

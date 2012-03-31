@@ -267,7 +267,7 @@
     invoke-super {p0, p1}, Lcom/android/phone/IccPanel;->onCreate(Landroid/os/Bundle;)V
 
     .line 118
-    const v2, 0x7f040028
+    const v2, 0x7f040029
 
     invoke-virtual {p0, v2}, Lcom/android/phone/IccNetworkDepersonalizationPanel;->setContentView(I)V
 

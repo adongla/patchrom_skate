@@ -53,7 +53,6 @@
 
     iget-object v1, p0, Lcom/android/phone/MiuiTelocationSetting$2;->val$countryCode:Ljava/lang/String;
 
-    #calls: Lcom/android/phone/MiuiTelocationSetting;->setCountryCode(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/MiuiTelocationSetting;->access$200(Lcom/android/phone/MiuiTelocationSetting;Ljava/lang/String;)V
 
     .line 81

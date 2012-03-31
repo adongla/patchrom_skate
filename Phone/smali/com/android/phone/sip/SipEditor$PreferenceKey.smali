@@ -542,7 +542,6 @@
     .line 133
     iget-object v1, p0, Lcom/android/phone/sip/SipEditor$PreferenceKey;->preference:Landroid/preference/Preference;
 
-    #calls: Lcom/android/phone/sip/SipEditor;->scramble(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {p1}, Lcom/android/phone/sip/SipEditor;->access$100(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -557,7 +556,6 @@
 
     if-ne p0, v1, :cond_4
 
-    #calls: Lcom/android/phone/sip/SipEditor;->getDefaultDisplayName()Ljava/lang/String;
     invoke-static {}, Lcom/android/phone/sip/SipEditor;->access$200()Ljava/lang/String;
 
     move-result-object v1

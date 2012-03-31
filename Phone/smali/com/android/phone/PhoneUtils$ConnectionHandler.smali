@@ -323,7 +323,6 @@
 
     const/4 v10, 0x0
 
-    #calls: Lcom/android/phone/PhoneUtils;->setMuteInternal(Lcom/android/internal/telephony/Phone;Z)V
     invoke-static {v9, v10}, Lcom/android/phone/PhoneUtils;->access$100(Lcom/android/internal/telephony/Phone;Z)V
 
     goto/16 :goto_0

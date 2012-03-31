@@ -211,7 +211,6 @@
     .line 643
     iget-object v7, p0, Lcom/android/phone/sip/SipEditor$AdvancedSettings;->this$0:Lcom/android/phone/sip/SipEditor;
 
-    #calls: Lcom/android/phone/sip/SipEditor;->setupPreference(Landroid/preference/Preference;)V
     invoke-static {v7, v5}, Lcom/android/phone/sip/SipEditor;->access$900(Lcom/android/phone/sip/SipEditor;Landroid/preference/Preference;)V
 
     .line 644

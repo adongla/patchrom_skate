@@ -91,7 +91,6 @@
 
     move-result-object v3
 
-    #calls: Lcom/android/phone/Settings;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/phone/Settings;->access$100(Ljava/lang/String;)V
 
     .line 455
@@ -133,7 +132,6 @@
 
     move-result-object v3
 
-    #calls: Lcom/android/phone/Settings;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/phone/Settings;->access$100(Ljava/lang/String;)V
 
     .line 466
@@ -187,7 +185,6 @@
 
     move-result-object v3
 
-    #calls: Lcom/android/phone/Settings;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/phone/Settings;->access$100(Ljava/lang/String;)V
 
     .line 480
@@ -196,7 +193,6 @@
     .line 482
     const-string v3, "handleGetPreferredNetworkTypeResponse: if 2: modemNetworkMode != settingsNetworkMode"
 
-    #calls: Lcom/android/phone/Settings;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/phone/Settings;->access$100(Ljava/lang/String;)V
 
     .line 486
@@ -221,7 +217,6 @@
 
     move-result-object v3
 
-    #calls: Lcom/android/phone/Settings;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/phone/Settings;->access$100(Ljava/lang/String;)V
 
     .line 493
@@ -245,13 +240,11 @@
     :cond_1
     iget-object v3, p0, Lcom/android/phone/Settings$MyHandler;->this$0:Lcom/android/phone/Settings;
 
-    #calls: Lcom/android/phone/Settings;->UpdatePreferredNetworkModeSummary(I)V
     invoke-static {v3, v1}, Lcom/android/phone/Settings;->access$200(Lcom/android/phone/Settings;I)V
 
     .line 501
     iget-object v3, p0, Lcom/android/phone/Settings$MyHandler;->this$0:Lcom/android/phone/Settings;
 
-    #getter for: Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
     invoke-static {v3}, Lcom/android/phone/Settings;->access$300(Lcom/android/phone/Settings;)Landroid/preference/ListPreference;
 
     move-result-object v3
@@ -280,7 +273,6 @@
     .line 504
     const-string v3, "handleGetPreferredNetworkTypeResponse: lte only: no action"
 
-    #calls: Lcom/android/phone/Settings;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/phone/Settings;->access$100(Ljava/lang/String;)V
 
     goto :goto_0
@@ -289,7 +281,6 @@
     :cond_4
     const-string v3, "handleGetPreferredNetworkTypeResponse: else: reset to default"
 
-    #calls: Lcom/android/phone/Settings;->log(Ljava/lang/String;)V
     invoke-static {v3}, Lcom/android/phone/Settings;->access$100(Ljava/lang/String;)V
 
     .line 507
@@ -317,7 +308,6 @@
     .line 516
     iget-object v2, p0, Lcom/android/phone/Settings$MyHandler;->this$0:Lcom/android/phone/Settings;
 
-    #getter for: Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
     invoke-static {v2}, Lcom/android/phone/Settings;->access$300(Lcom/android/phone/Settings;)Landroid/preference/ListPreference;
 
     move-result-object v2
@@ -383,7 +373,6 @@
     .line 528
     iget-object v0, p0, Lcom/android/phone/Settings$MyHandler;->this$0:Lcom/android/phone/Settings;
 
-    #getter for: Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
     invoke-static {v0}, Lcom/android/phone/Settings;->access$300(Lcom/android/phone/Settings;)Landroid/preference/ListPreference;
 
     move-result-object v0

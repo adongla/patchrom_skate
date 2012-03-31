@@ -146,14 +146,12 @@
     .line 229
     iget-object v2, p0, Lcom/android/phone/sip/SipSettings$1;->this$0:Lcom/android/phone/sip/SipSettings;
 
-    #calls: Lcom/android/phone/sip/SipSettings;->addProfile(Landroid/net/sip/SipProfile;)V
     invoke-static {v2, v1}, Lcom/android/phone/sip/SipSettings;->access$300(Lcom/android/phone/sip/SipSettings;Landroid/net/sip/SipProfile;)V
 
     .line 231
     :cond_1
     iget-object v2, p0, Lcom/android/phone/sip/SipSettings$1;->this$0:Lcom/android/phone/sip/SipSettings;
 
-    #calls: Lcom/android/phone/sip/SipSettings;->updateProfilesStatus()V
     invoke-static {v2}, Lcom/android/phone/sip/SipSettings;->access$400(Lcom/android/phone/sip/SipSettings;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0

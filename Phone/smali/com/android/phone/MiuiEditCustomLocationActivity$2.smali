@@ -62,7 +62,6 @@
 
     iget-object v5, p0, Lcom/android/phone/MiuiEditCustomLocationActivity$2;->this$0:Lcom/android/phone/MiuiEditCustomLocationActivity;
 
-    #getter for: Lcom/android/phone/MiuiEditCustomLocationActivity;->mId:I
     invoke-static {v5}, Lcom/android/phone/MiuiEditCustomLocationActivity;->access$200(Lcom/android/phone/MiuiEditCustomLocationActivity;)I
 
     move-result v5

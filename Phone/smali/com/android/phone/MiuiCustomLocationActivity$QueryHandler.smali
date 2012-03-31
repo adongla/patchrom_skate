@@ -54,7 +54,6 @@
     .line 128
     iget-object v0, p0, Lcom/android/phone/MiuiCustomLocationActivity$QueryHandler;->this$0:Lcom/android/phone/MiuiCustomLocationActivity;
 
-    #calls: Lcom/android/phone/MiuiCustomLocationActivity;->changeCursor(Landroid/database/Cursor;)V
     invoke-static {v0, p3}, Lcom/android/phone/MiuiCustomLocationActivity;->access$100(Lcom/android/phone/MiuiCustomLocationActivity;Landroid/database/Cursor;)V
 
     .line 130

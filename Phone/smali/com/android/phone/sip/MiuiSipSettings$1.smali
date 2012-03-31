@@ -46,7 +46,6 @@
     .line 62
     iget-object v0, p0, Lcom/android/phone/sip/MiuiSipSettings$1;->this$0:Lcom/android/phone/sip/MiuiSipSettings;
 
-    #calls: Lcom/android/phone/sip/MiuiSipSettings;->handleSipCallOptionsChange(Ljava/lang/Object;)V
     invoke-static {v0, p2}, Lcom/android/phone/sip/MiuiSipSettings;->access$000(Lcom/android/phone/sip/MiuiSipSettings;Ljava/lang/Object;)V
 
     .line 63

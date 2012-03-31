@@ -53,7 +53,6 @@
     .local p1, networkInfoArray:Ljava/util/List;,"Ljava/util/List<Lcom/android/internal/telephony/OperatorInfo;>;"
     iget-object v1, p0, Lcom/android/phone/NetworkSetting$3;->this$0:Lcom/android/phone/NetworkSetting;
 
-    #getter for: Lcom/android/phone/NetworkSetting;->mHandler:Landroid/os/Handler;
     invoke-static {v1}, Lcom/android/phone/NetworkSetting;->access$500(Lcom/android/phone/NetworkSetting;)Landroid/os/Handler;
 
     move-result-object v1

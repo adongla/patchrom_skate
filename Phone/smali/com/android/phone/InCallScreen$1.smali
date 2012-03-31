@@ -204,7 +204,6 @@
     :sswitch_3
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->updateScreen()V
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$100(Lcom/android/phone/InCallScreen;)V
 
     .line 320
@@ -224,7 +223,6 @@
 
     check-cast v3, Landroid/os/AsyncResult;
 
-    #calls: Lcom/android/phone/InCallScreen;->onMMIInitiate(Landroid/os/AsyncResult;)V
     invoke-static {v4, v3}, Lcom/android/phone/InCallScreen;->access$200(Lcom/android/phone/InCallScreen;Landroid/os/AsyncResult;)V
 
     goto :goto_0
@@ -233,7 +231,6 @@
     :sswitch_5
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->onMMICancel()V
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$300(Lcom/android/phone/InCallScreen;)V
 
     goto/16 :goto_0
@@ -335,7 +332,6 @@
     :sswitch_8
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->addVoiceMailNumberPanel()V
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$400(Lcom/android/phone/InCallScreen;)V
 
     goto/16 :goto_0
@@ -344,7 +340,6 @@
     :sswitch_9
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->dontAddVoiceMailNumber()V
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$500(Lcom/android/phone/InCallScreen;)V
 
     goto/16 :goto_0
@@ -371,7 +366,6 @@
     :sswitch_c
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->updateScreen()V
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$100(Lcom/android/phone/InCallScreen;)V
 
     goto/16 :goto_0
@@ -411,7 +405,6 @@
     .line 396
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->updateScreen()V
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$100(Lcom/android/phone/InCallScreen;)V
 
     .line 397
@@ -470,7 +463,6 @@
     :sswitch_10
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #getter for: Lcom/android/phone/InCallScreen;->mPausePromptDialog:Landroid/app/AlertDialog;
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$600(Lcom/android/phone/InCallScreen;)Landroid/app/AlertDialog;
 
     move-result-object v3
@@ -494,7 +486,6 @@
     :cond_6
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #getter for: Lcom/android/phone/InCallScreen;->mPausePromptDialog:Landroid/app/AlertDialog;
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$600(Lcom/android/phone/InCallScreen;)Landroid/app/AlertDialog;
 
     move-result-object v3
@@ -504,7 +495,6 @@
     .line 417
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #setter for: Lcom/android/phone/InCallScreen;->mPausePromptDialog:Landroid/app/AlertDialog;
     invoke-static {v3, v6}, Lcom/android/phone/InCallScreen;->access$602(Lcom/android/phone/InCallScreen;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 
     goto/16 :goto_0
@@ -522,7 +512,6 @@
     .line 423
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->updateProviderOverlay()V
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$700(Lcom/android/phone/InCallScreen;)V
 
     goto/16 :goto_0
@@ -531,7 +520,6 @@
     :sswitch_12
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->updateScreen()V
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$100(Lcom/android/phone/InCallScreen;)V
 
     goto/16 :goto_0
@@ -540,7 +528,6 @@
     :sswitch_13
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->onIncomingRing()V
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$800(Lcom/android/phone/InCallScreen;)V
 
     goto/16 :goto_0
@@ -549,7 +536,6 @@
     :sswitch_14
     iget-object v3, p0, Lcom/android/phone/InCallScreen$1;->this$0:Lcom/android/phone/InCallScreen;
 
-    #calls: Lcom/android/phone/InCallScreen;->onNewRingingConnection()V
     invoke-static {v3}, Lcom/android/phone/InCallScreen;->access$900(Lcom/android/phone/InCallScreen;)V
 
     goto/16 :goto_0

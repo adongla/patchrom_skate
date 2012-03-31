@@ -40,7 +40,7 @@
 
     const/4 v2, 0x0
 
-    .line 28
+    .line 35
     new-instance v0, Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
     const-string v1, "DELETE"
@@ -49,7 +49,7 @@
 
     sput-object v0, Lcom/android/phone/MiuiSimContacts$SimContactOP;->DELETE:Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
-    .line 29
+    .line 36
     new-instance v0, Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
     const-string v1, "IMPORT"
@@ -58,7 +58,7 @@
 
     sput-object v0, Lcom/android/phone/MiuiSimContacts$SimContactOP;->IMPORT:Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
-    .line 27
+    .line 34
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/android/phone/MiuiSimContacts$SimContactOP;
@@ -87,7 +87,7 @@
     .end annotation
 
     .prologue
-    .line 27
+    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -98,7 +98,7 @@
     .parameter
 
     .prologue
-    .line 27
+    .line 34
     const-class v0, Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -114,7 +114,7 @@
     .locals 1
 
     .prologue
-    .line 27
+    .line 34
     sget-object v0, Lcom/android/phone/MiuiSimContacts$SimContactOP;->$VALUES:[Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
     invoke-virtual {v0}, [Lcom/android/phone/MiuiSimContacts$SimContactOP;->clone()Ljava/lang/Object;

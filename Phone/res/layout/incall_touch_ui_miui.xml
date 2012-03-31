@@ -16,13 +16,12 @@
                         <LinearLayout style="@style/Miui.TableColumn">
                             <ToggleButton android:id="@id/holdButton" android:visibility="gone" android:textOn="@string/onscreen_hold_text_miui" android:textOff="@string/onscreen_hold_text_miui" android:drawableTop="@drawable/ic_in_call_touch_round_hold_miui" style="@style/Miui.ToolButtonStyle" />
                             <Button android:id="@id/swapButton" android:visibility="gone" android:text="@string/onscreen_swap_calls_text_miui" android:drawableTop="@drawable/ic_in_call_touch_round_swap_miui" style="@style/Miui.ToolButtonStyle" />
-                            <Button android:id="@id/cdmaFlashButton" android:visibility="gone" android:text="@string/onscreen_send_flash_text_miui" android:drawableTop="@drawable/ic_in_call_touch_round_send_flash_miui" style="@style/Miui.ToolButtonStyle" />
                         </LinearLayout>
                         <LinearLayout style="@style/Miui.TableColumn">
                             <Button android:id="@id/recordStartButton" android:visibility="gone" android:text="@string/onscreen_call_record_miui" android:drawableTop="@drawable/ic_in_call_touch_start_record_miui" style="@style/Miui.ToolButtonStyle" />
                             <LinearLayout android:orientation="vertical" android:id="@id/recordStopButton" android:visibility="gone" style="@style/Miui.ToolButtonStyle">
                                 <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_in_call_touch_stop_record_miui" />
-                                <Chronometer android:textColor="#ffff0000" android:gravity="center" android:id="@id/callRecordTimer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_call_recording_miui" />
+                                <Chronometer android:textSize="14.0dip" android:textColor="#ffff0000" android:gravity="center" android:id="@id/callRecordTimer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_call_recording_miui" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>

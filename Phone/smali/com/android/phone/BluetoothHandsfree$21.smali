@@ -53,7 +53,6 @@
 
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$21;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mClip:Z
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$2300(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v0
@@ -139,7 +138,6 @@
 
     move-result v1
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mClip:Z
     invoke-static {v0, v1}, Lcom/android/phone/BluetoothHandsfree;->access$2302(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     .line 2554

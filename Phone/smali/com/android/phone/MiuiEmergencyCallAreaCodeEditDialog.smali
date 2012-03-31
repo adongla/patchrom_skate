@@ -127,7 +127,7 @@
     invoke-virtual {v2, v1}, Landroid/widget/EditText;->setInputType(I)V
 
     .line 73
-    const v1, 0x7f0c02eb
+    const v1, 0x7f0c0303
 
     invoke-virtual {v2, v1}, Landroid/widget/EditText;->setHint(I)V
 
@@ -153,7 +153,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c0273
+    const v1, 0x7f0c0286
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -163,7 +163,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0c02ea
+    const v7, 0x7f0c0302
 
     new-instance v0, Lcom/android/phone/MiuiEmergencyCallAreaCodeEditDialog$1;
 

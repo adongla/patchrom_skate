@@ -45,7 +45,6 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/phone/sip/SipSettings$3;->this$0:Lcom/android/phone/sip/SipSettings;
 
-    #calls: Lcom/android/phone/sip/SipSettings;->retrieveSipLists()V
     invoke-static {v1}, Lcom/android/phone/sip/SipSettings;->access$600(Lcom/android/phone/sip/SipSettings;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

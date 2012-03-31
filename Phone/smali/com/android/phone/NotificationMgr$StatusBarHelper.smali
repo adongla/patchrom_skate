@@ -144,7 +144,6 @@
 
     move-result-object v2
 
-    #calls: Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/phone/NotificationMgr;->access$200(Lcom/android/phone/NotificationMgr;Ljava/lang/String;)V
 
     .line 261

@@ -189,12 +189,12 @@ Switch to the new provider anyway?"</string>
     <string name="throttle_time_frame">Data use period</string>
     <string name="throttle_rate">Data rate policy</string>
     <string name="throttle_help">Learn more</string>
-    <string name="throttle_status_subtext">"%1$s (%2$d٪) of %3$s period maximum
+    <string name="throttle_status_subtext" formatted="false">"%1$s (%2$d٪) of %3$s period maximum
 Next period starts in %4$d days (%5$s)"</string>
-    <string name="throttle_data_usage_subtext">%1$s (%2$d٪) of %3$s period maximum</string>
-    <string name="throttle_data_rate_reduced_subtext">"%1$s maximum exceeded
+    <string name="throttle_data_usage_subtext" formatted="false">%1$s (%2$d٪) of %3$s period maximum</string>
+    <string name="throttle_data_rate_reduced_subtext" formatted="false">"%1$s maximum exceeded
 Data rate reduced to %2$d Kb/s"</string>
-    <string name="throttle_time_frame_subtext">"%1$d٪ of cycle elapsed
+    <string name="throttle_time_frame_subtext" formatted="false">"%1$d٪ of cycle elapsed
 Next period starts in %2$d days (%3$s)"</string>
     <string name="throttle_rate_subtext">Data rate reduced to %1$d Kb/s if data use limit is exceeded</string>
     <string name="throttle_help_subtext">"More information about your carrier's mobile network data use policy"</string>
@@ -283,7 +283,7 @@ Next period starts in %2$d days (%3$s)"</string>
     <string name="cdma_network_preferneces_summary">Not implemented yet!</string>
     <string name="cdma_network_preferences_dialogtitle">CDMA network preferences</string>
     <string name="cdma_subscription_title">CDMA Subscription</string>
-    <string name="cdma_subscription_summary">Change between RUIM/SIM and NV</string>
+    <string name="cdma_subscription_summary">Change between UIM and NV</string>
     <string name="cdma_subscription_dialogtitle">subscription</string>
     <string name="cdma_activate_device">Activate device</string>
     <string name="cdma_lte_data_service">Set up data service</string>
@@ -682,6 +682,11 @@ end call on hold"</string>
     <string name="call_forwarding_settings_miui">Call forwarding settings</string>
     <string name="calling_via_template_miui">"Calling via ^1
 "<b>^2</b></string>
+    <string name="call_log_number_limit_miui">Call log quantity restrictions</string>
+    <string name="call_log_number_limit_summary_miui">Limit the storage amount of call log to ensure efficiency</string>
+    <string name="call_log_number_limit_key_title">Maximum</string>
+    <string name="call_log_number_limit_title">Set the storage amount of call log</string>
+    <string name="call_log_number_limit_subsummary">%d</string>
     <string name="call_recording_notification_summary_miui">Show notification in status bar when recording is completed</string>
     <string name="call_recording_notification_title_miui">Call recording notification</string>
     <string name="call_recording_prompt_miui">Open call recording</string>
@@ -914,7 +919,8 @@ Please notice that SIM card will be trashed if failed again!"</string>
     <string name="deleting_sim_entry_miui">Deleting contacts on SIM card</string>
     <string name="delete_selected_sim_entry_miui">Delete selected contacts</string>
     <string name="import_all_sim_entry_miui">Import all</string>
-    <string name="cmda_call_miui">Cdma Call</string>
+    <string name="cdma_three_way_calls_miui">Three-way Call</string>
+    <string name="cdma_conference_call_miui">Conference Call</string>
     <string name="respond_via_sms_canned_response_1_miui">"I'm sorry I can't answer the phone right now. I'll get back to you later."</string>
     <string name="respond_via_sms_canned_response_2_miui">"I'm sorry I can't answer the phone right now. What can I do for you please?"</string>
     <string name="respond_via_sms_canned_response_3_miui">"I'm super busy right now. Call you later."</string>

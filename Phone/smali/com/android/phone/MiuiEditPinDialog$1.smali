@@ -45,7 +45,6 @@
     .line 95
     iget-object v0, p0, Lcom/android/phone/MiuiEditPinDialog$1;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mListener:Lcom/android/phone/MiuiEditPinDialog$DialogClosedListener;
     invoke-static {v0}, Lcom/android/phone/MiuiEditPinDialog;->access$000(Lcom/android/phone/MiuiEditPinDialog;)Lcom/android/phone/MiuiEditPinDialog$DialogClosedListener;
 
     move-result-object v0
@@ -55,7 +54,6 @@
     .line 96
     iget-object v0, p0, Lcom/android/phone/MiuiEditPinDialog$1;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mListener:Lcom/android/phone/MiuiEditPinDialog$DialogClosedListener;
     invoke-static {v0}, Lcom/android/phone/MiuiEditPinDialog;->access$000(Lcom/android/phone/MiuiEditPinDialog;)Lcom/android/phone/MiuiEditPinDialog$DialogClosedListener;
 
     move-result-object v0

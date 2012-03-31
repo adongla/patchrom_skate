@@ -25,13 +25,13 @@
     .parameter "cr"
 
     .prologue
-    .line 184
+    .line 185
     iput-object p1, p0, Lcom/android/phone/ADNList$QueryHandler;->this$0:Lcom/android/phone/ADNList;
 
-    .line 185
+    .line 186
     invoke-direct {p0, p2}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 186
+    .line 187
     return-void
 .end method
 
@@ -44,13 +44,12 @@
     .parameter "result"
 
     .prologue
-    .line 212
+    .line 213
     iget-object v0, p0, Lcom/android/phone/ADNList$QueryHandler;->this$0:Lcom/android/phone/ADNList;
 
-    #calls: Lcom/android/phone/ADNList;->reQuery()V
-    invoke-static {v0}, Lcom/android/phone/ADNList;->access$200(Lcom/android/phone/ADNList;)V
+    invoke-static {v0}, Lcom/android/phone/ADNList;->access$100(Lcom/android/phone/ADNList;)V
 
-    .line 213
+    .line 214
     return-void
 .end method
 
@@ -61,13 +60,12 @@
     .parameter "uri"
 
     .prologue
-    .line 200
+    .line 201
     iget-object v0, p0, Lcom/android/phone/ADNList$QueryHandler;->this$0:Lcom/android/phone/ADNList;
 
-    #calls: Lcom/android/phone/ADNList;->reQuery()V
-    invoke-static {v0}, Lcom/android/phone/ADNList;->access$200(Lcom/android/phone/ADNList;)V
+    invoke-static {v0}, Lcom/android/phone/ADNList;->access$100(Lcom/android/phone/ADNList;)V
 
-    .line 201
+    .line 202
     return-void
 .end method
 
@@ -78,26 +76,24 @@
     .parameter "c"
 
     .prologue
-    .line 191
+    .line 192
     iget-object v0, p0, Lcom/android/phone/ADNList$QueryHandler;->this$0:Lcom/android/phone/ADNList;
 
     iput-object p3, v0, Lcom/android/phone/ADNList;->mCursor:Landroid/database/Cursor;
 
-    .line 192
+    .line 193
     iget-object v0, p0, Lcom/android/phone/ADNList$QueryHandler;->this$0:Lcom/android/phone/ADNList;
 
-    #calls: Lcom/android/phone/ADNList;->setAdapter()V
     invoke-static {v0}, Lcom/android/phone/ADNList;->access$000(Lcom/android/phone/ADNList;)V
 
-    .line 193
+    .line 194
     iget-object v0, p0, Lcom/android/phone/ADNList$QueryHandler;->this$0:Lcom/android/phone/ADNList;
 
     const/4 v1, 0x0
 
-    #calls: Lcom/android/phone/ADNList;->displayProgress(Z)V
-    invoke-static {v0, v1}, Lcom/android/phone/ADNList;->access$100(Lcom/android/phone/ADNList;Z)V
+    invoke-virtual {v0, v1}, Lcom/android/phone/ADNList;->displayProgress(Z)V
 
-    .line 194
+    .line 195
     return-void
 .end method
 
@@ -108,12 +104,11 @@
     .parameter "result"
 
     .prologue
-    .line 206
+    .line 207
     iget-object v0, p0, Lcom/android/phone/ADNList$QueryHandler;->this$0:Lcom/android/phone/ADNList;
 
-    #calls: Lcom/android/phone/ADNList;->reQuery()V
-    invoke-static {v0}, Lcom/android/phone/ADNList;->access$200(Lcom/android/phone/ADNList;)V
+    invoke-static {v0}, Lcom/android/phone/ADNList;->access$100(Lcom/android/phone/ADNList;)V
 
-    .line 207
+    .line 208
     return-void
 .end method

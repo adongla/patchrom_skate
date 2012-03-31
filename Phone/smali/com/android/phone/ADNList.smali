@@ -100,7 +100,7 @@
 
     iput v0, p0, Lcom/android/phone/ADNList;->mInitialSelection:I
 
-    .line 183
+    .line 184
     return-void
 .end method
 
@@ -115,19 +115,7 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/phone/ADNList;Z)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 42
-    invoke-direct {p0, p1}, Lcom/android/phone/ADNList;->displayProgress(Z)V
-
-    return-void
-.end method
-
-.method static synthetic access$200(Lcom/android/phone/ADNList;)V
+.method static synthetic access$100(Lcom/android/phone/ADNList;)V
     .locals 0
     .parameter "x0"
 
@@ -138,62 +126,6 @@
     return-void
 .end method
 
-.method private displayProgress(Z)V
-    .locals 3
-    .parameter "flag"
-
-    .prologue
-    .line 170
-    iget-object v1, p0, Lcom/android/phone/ADNList;->mEmptyText:Landroid/widget/TextView;
-
-    if-eqz p1, :cond_0
-
-    const v0, 0x7f0c013e
-
-    :goto_0
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
-
-    .line 173
-    invoke-virtual {p0}, Lcom/android/phone/ADNList;->getWindow()Landroid/view/Window;
-
-    move-result-object v1
-
-    const/4 v2, 0x5
-
-    if-eqz p1, :cond_2
-
-    const/4 v0, -0x1
-
-    :goto_1
-    invoke-virtual {v1, v2, v0}, Landroid/view/Window;->setFeatureInt(II)V
-
-    .line 176
-    return-void
-
-    .line 170
-    :cond_0
-    invoke-static {p0}, Lcom/android/phone/ADNList;->isAirplaneModeOn(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const v0, 0x7f0c0141
-
-    goto :goto_0
-
-    :cond_1
-    const v0, 0x7f0c013f
-
-    goto :goto_0
-
-    .line 173
-    :cond_2
-    const/4 v0, -0x2
-
-    goto :goto_1
-.end method
-
 .method private static isAirplaneModeOn(Landroid/content/Context;)Z
     .locals 3
     .parameter "context"
@@ -201,7 +133,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 179
+    .line 180
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -250,7 +182,7 @@
     .line 114
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/android/phone/ADNList;->displayProgress(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/phone/ADNList;->displayProgress(Z)V
 
     .line 115
     return-void
@@ -342,6 +274,65 @@
 
 
 # virtual methods
+.method protected displayProgress(Z)V
+    .locals 3
+    .parameter "flag"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_ACCESS:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    .line 171
+    iget-object v1, p0, Lcom/android/phone/ADNList;->mEmptyText:Landroid/widget/TextView;
+
+    if-eqz p1, :cond_0
+
+    const v0, 0x7f0c013e
+
+    :goto_0
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
+
+    .line 174
+    invoke-virtual {p0}, Lcom/android/phone/ADNList;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    const/4 v2, 0x5
+
+    if-eqz p1, :cond_2
+
+    const/4 v0, -0x1
+
+    :goto_1
+    invoke-virtual {v1, v2, v0}, Landroid/view/Window;->setFeatureInt(II)V
+
+    .line 177
+    return-void
+
+    .line 171
+    :cond_0
+    invoke-static {p0}, Lcom/android/phone/ADNList;->isAirplaneModeOn(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const v0, 0x7f0c0141
+
+    goto :goto_0
+
+    :cond_1
+    const v0, 0x7f0c013f
+
+    goto :goto_0
+
+    .line 174
+    :cond_2
+    const/4 v0, -0x2
+
+    goto :goto_1
+.end method
+
 .method protected newAdapter()Landroid/widget/CursorAdapter;
     .locals 6
 

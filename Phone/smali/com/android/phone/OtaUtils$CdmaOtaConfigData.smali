@@ -39,7 +39,6 @@
     .line 1514
     const-string v0, "CdmaOtaConfigData constructor!"
 
-    #calls: Lcom/android/phone/OtaUtils;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/phone/OtaUtils;->access$100(Ljava/lang/String;)V
 
     .line 1515

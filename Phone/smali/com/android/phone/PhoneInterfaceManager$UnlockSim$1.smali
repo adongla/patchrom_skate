@@ -78,7 +78,6 @@
     if-nez v4, :cond_0
 
     :goto_1
-    #setter for: Lcom/android/phone/PhoneInterfaceManager$UnlockSim;->mResult:Z
     invoke-static {v3, v1}, Lcom/android/phone/PhoneInterfaceManager$UnlockSim;->access$302(Lcom/android/phone/PhoneInterfaceManager$UnlockSim;Z)Z
 
     .line 472
@@ -86,7 +85,6 @@
 
     const/4 v3, 0x1
 
-    #setter for: Lcom/android/phone/PhoneInterfaceManager$UnlockSim;->mDone:Z
     invoke-static {v1, v3}, Lcom/android/phone/PhoneInterfaceManager$UnlockSim;->access$402(Lcom/android/phone/PhoneInterfaceManager$UnlockSim;Z)Z
 
     .line 473

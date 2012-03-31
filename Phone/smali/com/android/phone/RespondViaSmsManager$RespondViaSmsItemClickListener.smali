@@ -95,7 +95,6 @@
 
     move-result-object v4
 
-    #calls: Lcom/android/phone/RespondViaSmsManager;->log(Ljava/lang/String;)V
     invoke-static {v4}, Lcom/android/phone/RespondViaSmsManager;->access$100(Ljava/lang/String;)V
 
     .line 214
@@ -121,7 +120,6 @@
 
     iget-object v5, p0, Lcom/android/phone/RespondViaSmsManager$RespondViaSmsItemClickListener;->mPhoneNumber:Ljava/lang/String;
 
-    #calls: Lcom/android/phone/RespondViaSmsManager;->launchSmsCompose(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/phone/RespondViaSmsManager;->access$200(Lcom/android/phone/RespondViaSmsManager;Ljava/lang/String;)V
 
     .line 255
@@ -148,7 +146,6 @@
 
     iget-object v5, p0, Lcom/android/phone/RespondViaSmsManager$RespondViaSmsItemClickListener;->mPhoneNumber:Ljava/lang/String;
 
-    #calls: Lcom/android/phone/RespondViaSmsManager;->sendText(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v4, v5, v2}, Lcom/android/phone/RespondViaSmsManager;->access$300(Lcom/android/phone/RespondViaSmsManager;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 229

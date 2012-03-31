@@ -44,7 +44,6 @@
     .line 432
     iget-object v0, p0, Lcom/android/phone/SipCallOptionHandler$2;->this$0:Lcom/android/phone/SipCallOptionHandler;
 
-    #calls: Lcom/android/phone/SipCallOptionHandler;->getPrimarySipPhone()V
     invoke-static {v0}, Lcom/android/phone/SipCallOptionHandler;->access$800(Lcom/android/phone/SipCallOptionHandler;)V
 
     .line 433

@@ -52,7 +52,6 @@
 
     const-string v0, "RespondViaSmsCancelListener.onCancel()..."
 
-    #calls: Lcom/android/phone/RespondViaSmsManager;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/phone/RespondViaSmsManager;->access$100(Ljava/lang/String;)V
 
     .line 283

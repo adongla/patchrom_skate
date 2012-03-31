@@ -48,7 +48,6 @@
     .line 203
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mCpbrIndex1:I
     invoke-static {v3}, Lcom/android/phone/BluetoothAtPhonebook;->access$600(Lcom/android/phone/BluetoothAtPhonebook;)I
 
     move-result v3
@@ -58,7 +57,6 @@
     .line 205
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mHandsfree:Lcom/android/phone/BluetoothHandsfree;
     invoke-static {v3}, Lcom/android/phone/BluetoothAtPhonebook;->access$200(Lcom/android/phone/BluetoothAtPhonebook;)Lcom/android/phone/BluetoothHandsfree;
 
     move-result-object v3
@@ -117,25 +115,21 @@
     :goto_1
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #setter for: Lcom/android/phone/BluetoothAtPhonebook;->mCpbrIndex1:I
     invoke-static {v3, v1}, Lcom/android/phone/BluetoothAtPhonebook;->access$602(Lcom/android/phone/BluetoothAtPhonebook;I)I
 
     .line 226
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #setter for: Lcom/android/phone/BluetoothAtPhonebook;->mCpbrIndex2:I
     invoke-static {v3, v2}, Lcom/android/phone/BluetoothAtPhonebook;->access$702(Lcom/android/phone/BluetoothAtPhonebook;I)I
 
     .line 227
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #setter for: Lcom/android/phone/BluetoothAtPhonebook;->mCheckingAccessPermission:Z
     invoke-static {v3, v4}, Lcom/android/phone/BluetoothAtPhonebook;->access$802(Lcom/android/phone/BluetoothAtPhonebook;Z)Z
 
     .line 229
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #calls: Lcom/android/phone/BluetoothAtPhonebook;->checkAccessPermission()Z
     invoke-static {v3}, Lcom/android/phone/BluetoothAtPhonebook;->access$900(Lcom/android/phone/BluetoothAtPhonebook;)Z
 
     move-result v3
@@ -145,13 +139,11 @@
     .line 230
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #setter for: Lcom/android/phone/BluetoothAtPhonebook;->mCheckingAccessPermission:Z
     invoke-static {v3, v5}, Lcom/android/phone/BluetoothAtPhonebook;->access$802(Lcom/android/phone/BluetoothAtPhonebook;Z)Z
 
     .line 231
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #calls: Lcom/android/phone/BluetoothAtPhonebook;->processCpbrCommand()Landroid/bluetooth/AtCommandResult;
     invoke-static {v3}, Lcom/android/phone/BluetoothAtPhonebook;->access$1000(Lcom/android/phone/BluetoothAtPhonebook;)Landroid/bluetooth/AtCommandResult;
 
     move-result-object v0
@@ -162,12 +154,10 @@
 
     iget-object v4, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #setter for: Lcom/android/phone/BluetoothAtPhonebook;->mCpbrIndex2:I
     invoke-static {v4, v6}, Lcom/android/phone/BluetoothAtPhonebook;->access$702(Lcom/android/phone/BluetoothAtPhonebook;I)I
 
     move-result v4
 
-    #setter for: Lcom/android/phone/BluetoothAtPhonebook;->mCpbrIndex1:I
     invoke-static {v3, v4}, Lcom/android/phone/BluetoothAtPhonebook;->access$602(Lcom/android/phone/BluetoothAtPhonebook;I)I
 
     goto :goto_0
@@ -185,7 +175,6 @@
     .line 220
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mHandsfree:Lcom/android/phone/BluetoothHandsfree;
     invoke-static {v3}, Lcom/android/phone/BluetoothAtPhonebook;->access$200(Lcom/android/phone/BluetoothAtPhonebook;)Lcom/android/phone/BluetoothHandsfree;
 
     move-result-object v3
@@ -231,7 +220,6 @@
 
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mCurrentPhonebook:Ljava/lang/String;
     invoke-static {v3}, Lcom/android/phone/BluetoothAtPhonebook;->access$300(Lcom/android/phone/BluetoothAtPhonebook;)Ljava/lang/String;
 
     move-result-object v3
@@ -293,14 +281,12 @@
 
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mCurrentPhonebook:Ljava/lang/String;
     invoke-static {v3}, Lcom/android/phone/BluetoothAtPhonebook;->access$300(Lcom/android/phone/BluetoothAtPhonebook;)Ljava/lang/String;
 
     move-result-object v3
 
     const/4 v4, 0x0
 
-    #calls: Lcom/android/phone/BluetoothAtPhonebook;->getPhonebookResult(Ljava/lang/String;Z)Lcom/android/phone/BluetoothAtPhonebook$PhonebookResult;
     invoke-static {v2, v3, v4}, Lcom/android/phone/BluetoothAtPhonebook;->access$500(Lcom/android/phone/BluetoothAtPhonebook;Ljava/lang/String;Z)Lcom/android/phone/BluetoothAtPhonebook$PhonebookResult;
 
     move-result-object v0
@@ -312,7 +298,6 @@
     .line 253
     iget-object v2, p0, Lcom/android/phone/BluetoothAtPhonebook$3;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mHandsfree:Lcom/android/phone/BluetoothHandsfree;
     invoke-static {v2}, Lcom/android/phone/BluetoothAtPhonebook;->access$200(Lcom/android/phone/BluetoothAtPhonebook;)Lcom/android/phone/BluetoothHandsfree;
 
     move-result-object v2

@@ -67,7 +67,6 @@
 
     const-string v1, "mRingHandler: PLAY_RING_ONCE..."
 
-    #calls: Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/phone/Ringer;->access$100(Ljava/lang/String;)V
 
     .line 328
@@ -113,7 +112,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/phone/Ringer;->access$100(Ljava/lang/String;)V
 
     .line 331
@@ -207,7 +205,6 @@
     :try_start_1
     iget-object v1, p0, Lcom/android/phone/Ringer$1;->this$0:Lcom/android/phone/Ringer;
 
-    #getter for: Lcom/android/phone/Ringer;->mFirstRingStartTime:J
     invoke-static {v1}, Lcom/android/phone/Ringer;->access$200(Lcom/android/phone/Ringer;)J
 
     move-result-wide v3
@@ -225,7 +222,6 @@
 
     move-result-wide v3
 
-    #setter for: Lcom/android/phone/Ringer;->mFirstRingStartTime:J
     invoke-static {v1, v3, v4}, Lcom/android/phone/Ringer;->access$202(Lcom/android/phone/Ringer;J)J
 
     .line 349
@@ -264,7 +260,6 @@
 
     const-string v1, "mRingHandler: STOP_RING..."
 
-    #calls: Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/phone/Ringer;->access$100(Ljava/lang/String;)V
 
     .line 354
@@ -318,7 +313,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
     invoke-static {v1}, Lcom/android/phone/Ringer;->access$100(Ljava/lang/String;)V
 
     goto :goto_1

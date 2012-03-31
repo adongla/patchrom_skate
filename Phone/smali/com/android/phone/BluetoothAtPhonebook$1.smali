@@ -51,7 +51,6 @@
 
     iget-object v2, p0, Lcom/android/phone/BluetoothAtPhonebook$1;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mCharacterSet:Ljava/lang/String;
     invoke-static {v2}, Lcom/android/phone/BluetoothAtPhonebook;->access$100(Lcom/android/phone/BluetoothAtPhonebook;)Ljava/lang/String;
 
     move-result-object v2
@@ -155,7 +154,6 @@
     :cond_1
     iget-object v1, p0, Lcom/android/phone/BluetoothAtPhonebook$1;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #setter for: Lcom/android/phone/BluetoothAtPhonebook;->mCharacterSet:Ljava/lang/String;
     invoke-static {v1, v0}, Lcom/android/phone/BluetoothAtPhonebook;->access$102(Lcom/android/phone/BluetoothAtPhonebook;Ljava/lang/String;)Ljava/lang/String;
 
     .line 146
@@ -169,7 +167,6 @@
     :cond_2
     iget-object v1, p0, Lcom/android/phone/BluetoothAtPhonebook$1;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mHandsfree:Lcom/android/phone/BluetoothHandsfree;
     invoke-static {v1}, Lcom/android/phone/BluetoothAtPhonebook;->access$200(Lcom/android/phone/BluetoothAtPhonebook;)Lcom/android/phone/BluetoothHandsfree;
 
     move-result-object v1

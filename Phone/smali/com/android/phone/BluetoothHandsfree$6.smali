@@ -51,7 +51,6 @@
 
     iget-object v2, p0, Lcom/android/phone/BluetoothHandsfree$6;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mLocalBrsf:I
     invoke-static {v2}, Lcom/android/phone/BluetoothHandsfree;->access$3900(Lcom/android/phone/BluetoothHandsfree;)I
 
     move-result v2
@@ -126,7 +125,6 @@
 
     move-result v0
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mRemoteBrsf:I
     invoke-static {v1, v0}, Lcom/android/phone/BluetoothHandsfree;->access$3602(Lcom/android/phone/BluetoothHandsfree;I)I
 
     .line 2121

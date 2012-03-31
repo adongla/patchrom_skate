@@ -44,7 +44,6 @@
     .line 292
     iget-object v0, p0, Lcom/android/phone/ChangeIccPinScreen$4;->this$0:Lcom/android/phone/ChangeIccPinScreen;
 
-    #getter for: Lcom/android/phone/ChangeIccPinScreen;->mPUKAlert:Landroid/app/AlertDialog;
     invoke-static {v0}, Lcom/android/phone/ChangeIccPinScreen;->access$1300(Lcom/android/phone/ChangeIccPinScreen;)Landroid/app/AlertDialog;
 
     move-result-object v0

@@ -59,7 +59,6 @@
 
     iget-object v1, p0, Lcom/android/phone/sip/SipEditor$2;->this$0:Lcom/android/phone/sip/SipEditor;
 
-    #getter for: Lcom/android/phone/sip/SipEditor;->mPrimaryAccountSelector:Lcom/android/phone/sip/SipEditor$PrimaryAccountSelector;
     invoke-static {v1}, Lcom/android/phone/sip/SipEditor;->access$300(Lcom/android/phone/sip/SipEditor;)Lcom/android/phone/sip/SipEditor$PrimaryAccountSelector;
 
     move-result-object v1
@@ -73,14 +72,12 @@
     .line 422
     iget-object v1, p0, Lcom/android/phone/sip/SipEditor$2;->this$0:Lcom/android/phone/sip/SipEditor;
 
-    #calls: Lcom/android/phone/sip/SipEditor;->unregisterOldPrimaryAccount()V
     invoke-static {v1}, Lcom/android/phone/sip/SipEditor;->access$400(Lcom/android/phone/sip/SipEditor;)V
 
     .line 425
     :cond_0
     iget-object v1, p0, Lcom/android/phone/sip/SipEditor$2;->this$0:Lcom/android/phone/sip/SipEditor;
 
-    #getter for: Lcom/android/phone/sip/SipEditor;->mPrimaryAccountSelector:Lcom/android/phone/sip/SipEditor$PrimaryAccountSelector;
     invoke-static {v1}, Lcom/android/phone/sip/SipEditor;->access$300(Lcom/android/phone/sip/SipEditor;)Lcom/android/phone/sip/SipEditor$PrimaryAccountSelector;
 
     move-result-object v1
@@ -94,7 +91,6 @@
 
     iget-object v2, p0, Lcom/android/phone/sip/SipEditor$2;->val$oldProfile:Landroid/net/sip/SipProfile;
 
-    #calls: Lcom/android/phone/sip/SipEditor;->deleteAndUnregisterProfile(Landroid/net/sip/SipProfile;)V
     invoke-static {v1, v2}, Lcom/android/phone/sip/SipEditor;->access$500(Lcom/android/phone/sip/SipEditor;Landroid/net/sip/SipProfile;)V
 
     .line 427
@@ -102,7 +98,6 @@
 
     iget-object v2, p0, Lcom/android/phone/sip/SipEditor$2;->val$newProfile:Landroid/net/sip/SipProfile;
 
-    #calls: Lcom/android/phone/sip/SipEditor;->saveAndRegisterProfile(Landroid/net/sip/SipProfile;)V
     invoke-static {v1, v2}, Lcom/android/phone/sip/SipEditor;->access$600(Lcom/android/phone/sip/SipEditor;Landroid/net/sip/SipProfile;)V
 
     .line 428
@@ -133,7 +128,6 @@
     .line 431
     iget-object v1, p0, Lcom/android/phone/sip/SipEditor$2;->this$0:Lcom/android/phone/sip/SipEditor;
 
-    #calls: Lcom/android/phone/sip/SipEditor;->showAlert(Ljava/lang/Throwable;)V
     invoke-static {v1, v0}, Lcom/android/phone/sip/SipEditor;->access$700(Lcom/android/phone/sip/SipEditor;Ljava/lang/Throwable;)V
 
     goto :goto_0

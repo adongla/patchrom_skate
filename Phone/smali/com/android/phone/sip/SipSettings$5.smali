@@ -50,7 +50,6 @@
     .end local p1
     iget-object v1, p1, Lcom/android/phone/sip/SipSettings$SipPreference;->mProfile:Landroid/net/sip/SipProfile;
 
-    #calls: Lcom/android/phone/sip/SipSettings;->handleProfileClick(Landroid/net/sip/SipProfile;)V
     invoke-static {v0, v1}, Lcom/android/phone/sip/SipSettings;->access$700(Lcom/android/phone/sip/SipSettings;Landroid/net/sip/SipProfile;)V
 
     .line 380

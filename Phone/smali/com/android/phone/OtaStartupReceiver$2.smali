@@ -67,7 +67,6 @@
 
     iget-object v4, p0, Lcom/android/phone/OtaStartupReceiver$2;->this$0:Lcom/android/phone/OtaStartupReceiver;
 
-    #getter for: Lcom/android/phone/OtaStartupReceiver;->mOtaspMode:I
     invoke-static {v4}, Lcom/android/phone/OtaStartupReceiver;->access$000(Lcom/android/phone/OtaStartupReceiver;)I
 
     move-result v4
@@ -85,14 +84,12 @@
     .line 71
     iget-object v2, p0, Lcom/android/phone/OtaStartupReceiver$2;->this$0:Lcom/android/phone/OtaStartupReceiver;
 
-    #getter for: Lcom/android/phone/OtaStartupReceiver;->mContext:Landroid/content/Context;
     invoke-static {v2}, Lcom/android/phone/OtaStartupReceiver;->access$100(Lcom/android/phone/OtaStartupReceiver;)Landroid/content/Context;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/phone/OtaStartupReceiver$2;->this$0:Lcom/android/phone/OtaStartupReceiver;
 
-    #getter for: Lcom/android/phone/OtaStartupReceiver;->mHandler:Landroid/os/Handler;
     invoke-static {v3}, Lcom/android/phone/OtaStartupReceiver;->access$200(Lcom/android/phone/OtaStartupReceiver;)Landroid/os/Handler;
 
     move-result-object v3
@@ -161,14 +158,12 @@
     .line 90
     iget-object v2, p0, Lcom/android/phone/OtaStartupReceiver$2;->this$0:Lcom/android/phone/OtaStartupReceiver;
 
-    #getter for: Lcom/android/phone/OtaStartupReceiver;->mContext:Landroid/content/Context;
     invoke-static {v2}, Lcom/android/phone/OtaStartupReceiver;->access$100(Lcom/android/phone/OtaStartupReceiver;)Landroid/content/Context;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/phone/OtaStartupReceiver$2;->this$0:Lcom/android/phone/OtaStartupReceiver;
 
-    #getter for: Lcom/android/phone/OtaStartupReceiver;->mHandler:Landroid/os/Handler;
     invoke-static {v3}, Lcom/android/phone/OtaStartupReceiver;->access$200(Lcom/android/phone/OtaStartupReceiver;)Landroid/os/Handler;
 
     move-result-object v3

@@ -270,7 +270,6 @@
     if-ne v3, v0, :cond_8
 
     :goto_4
-    #setter for: Lcom/android/phone/PhoneApp;->mIsHeadsetPlugged:Z
     invoke-static {v2, v0}, Lcom/android/phone/PhoneApp;->access$902(Lcom/android/phone/PhoneApp;Z)Z
 
     .line 1481
@@ -333,7 +332,6 @@
 
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
-    #getter for: Lcom/android/phone/PhoneApp;->mPUKEntryActivity:Landroid/app/Activity;
     invoke-static {v0}, Lcom/android/phone/PhoneApp;->access$400(Lcom/android/phone/PhoneApp;)Landroid/app/Activity;
 
     move-result-object v0
@@ -414,7 +412,6 @@
     .line 1496
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
-    #calls: Lcom/android/phone/PhoneApp;->initForNewRadioTechnology()V
     invoke-static {v0}, Lcom/android/phone/PhoneApp;->access$1000(Lcom/android/phone/PhoneApp;)V
 
     goto/16 :goto_1
@@ -579,7 +576,6 @@
 
     move-result v2
 
-    #setter for: Lcom/android/phone/PhoneApp;->mPreferredTtyMode:I
     invoke-static {v0, v2}, Lcom/android/phone/PhoneApp;->access$602(Lcom/android/phone/PhoneApp;I)I
 
     .line 1523

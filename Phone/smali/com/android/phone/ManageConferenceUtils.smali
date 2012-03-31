@@ -297,7 +297,7 @@
     .line 82
     iget-object v3, p0, Lcom/android/phone/ManageConferenceUtils;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    const v4, 0x7f0700c1
+    const v4, 0x7f0700c0
 
     invoke-virtual {v3, v4}, Lcom/android/phone/InCallScreen;->findViewById(I)Landroid/view/View;
 
@@ -325,7 +325,7 @@
     :cond_2
     iget-object v3, p0, Lcom/android/phone/ManageConferenceUtils;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    const v4, 0x7f0700c2
+    const v4, 0x7f0700c1
 
     invoke-virtual {v3, v4}, Lcom/android/phone/InCallScreen;->findViewById(I)Landroid/view/View;
 
@@ -390,7 +390,7 @@
     :cond_3
     iget-object v3, p0, Lcom/android/phone/ManageConferenceUtils;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    const v4, 0x7f0700cb
+    const v4, 0x7f0700ca
 
     invoke-virtual {v3, v4}, Lcom/android/phone/InCallScreen;->findViewById(I)Landroid/view/View;
 
@@ -419,11 +419,11 @@
 
     :array_0
     .array-data 0x4
+        0xc5t 0x0t 0x7t 0x7ft
         0xc6t 0x0t 0x7t 0x7ft
         0xc7t 0x0t 0x7t 0x7ft
         0xc8t 0x0t 0x7t 0x7ft
         0xc9t 0x0t 0x7t 0x7ft
-        0xcat 0x0t 0x7t 0x7ft
     .end array-data
 .end method
 

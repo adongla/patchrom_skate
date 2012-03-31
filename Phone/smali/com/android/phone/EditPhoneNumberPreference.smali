@@ -82,7 +82,7 @@
     iput-object v1, p0, Lcom/android/phone/EditPhoneNumberPreference;->mEncodedText:Ljava/lang/String;
 
     .line 123
-    const v1, 0x7f040023
+    const v1, 0x7f040024
 
     invoke-virtual {p0, v1}, Lcom/android/phone/EditPhoneNumberPreference;->setDialogLayoutResource(I)V
 
@@ -714,7 +714,7 @@
     .line 266
     :cond_0
     :goto_0
-    const v0, 0x7f02007e
+    const v0, 0x7f020085
 
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 

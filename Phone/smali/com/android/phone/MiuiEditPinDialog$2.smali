@@ -39,11 +39,11 @@
     .parameter "msg"
 
     .prologue
-    const v6, 0x7f0c0338
+    const v6, 0x7f0c0350
 
-    const v5, 0x7f0c028e
+    const v5, 0x7f0c02a1
 
-    const v2, 0x7f0c028d
+    const v2, 0x7f0c02a0
 
     const/4 v4, 0x1
 
@@ -67,7 +67,6 @@
     :pswitch_0
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mProgressDialog:Landroid/app/ProgressDialog;
     invoke-static {v1}, Lcom/android/phone/MiuiEditPinDialog;->access$100(Lcom/android/phone/MiuiEditPinDialog;)Landroid/app/ProgressDialog;
 
     move-result-object v1
@@ -77,7 +76,6 @@
     .line 422
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->process()V
     invoke-static {v1}, Lcom/android/phone/MiuiEditPinDialog;->access$200(Lcom/android/phone/MiuiEditPinDialog;)V
 
     goto :goto_0
@@ -90,7 +88,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    #setter for: Lcom/android/phone/MiuiEditPinDialog;->mErrorMessage:Ljava/lang/String;
     invoke-static {v2, v1}, Lcom/android/phone/MiuiEditPinDialog;->access$302(Lcom/android/phone/MiuiEditPinDialog;Ljava/lang/String;)Ljava/lang/String;
 
     .line 426
@@ -101,7 +98,6 @@
     .line 427
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mProgressDialog:Landroid/app/ProgressDialog;
     invoke-static {v1}, Lcom/android/phone/MiuiEditPinDialog;->access$100(Lcom/android/phone/MiuiEditPinDialog;)Landroid/app/ProgressDialog;
 
     move-result-object v1
@@ -126,7 +122,6 @@
     .line 432
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
     invoke-static {v1}, Lcom/android/phone/MiuiEditPinDialog;->access$400(Lcom/android/phone/MiuiEditPinDialog;)Landroid/content/Context;
 
     move-result-object v1
@@ -147,7 +142,6 @@
     :cond_1
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->dismiss(Z)V
     invoke-static {v1, v3}, Lcom/android/phone/MiuiEditPinDialog;->access$500(Lcom/android/phone/MiuiEditPinDialog;Z)V
 
     goto :goto_0
@@ -171,7 +165,6 @@
     .line 441
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
     invoke-static {v1}, Lcom/android/phone/MiuiEditPinDialog;->access$400(Lcom/android/phone/MiuiEditPinDialog;)Landroid/content/Context;
 
     move-result-object v1
@@ -192,7 +185,6 @@
     :cond_2
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->dismiss(Z)V
     invoke-static {v1, v3}, Lcom/android/phone/MiuiEditPinDialog;->access$500(Lcom/android/phone/MiuiEditPinDialog;Z)V
 
     goto :goto_0
@@ -220,7 +212,6 @@
     .line 450
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
     invoke-static {v1}, Lcom/android/phone/MiuiEditPinDialog;->access$400(Lcom/android/phone/MiuiEditPinDialog;)Landroid/content/Context;
 
     move-result-object v1
@@ -241,15 +232,13 @@
     :cond_3
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    const v2, 0x7f0c033c
+    const v2, 0x7f0c0354
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->showToast(I)V
     invoke-static {v1, v2}, Lcom/android/phone/MiuiEditPinDialog;->access$600(Lcom/android/phone/MiuiEditPinDialog;I)V
 
     .line 454
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->dismiss(Z)V
     invoke-static {v1, v3}, Lcom/android/phone/MiuiEditPinDialog;->access$500(Lcom/android/phone/MiuiEditPinDialog;Z)V
 
     goto/16 :goto_0
@@ -280,7 +269,6 @@
     .line 462
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
     invoke-static {v1}, Lcom/android/phone/MiuiEditPinDialog;->access$400(Lcom/android/phone/MiuiEditPinDialog;)Landroid/content/Context;
 
     move-result-object v1
@@ -301,7 +289,6 @@
     :cond_4
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->dismiss(Z)V
     invoke-static {v1, v3}, Lcom/android/phone/MiuiEditPinDialog;->access$500(Lcom/android/phone/MiuiEditPinDialog;Z)V
 
     .line 465
@@ -309,7 +296,6 @@
 
     iget-object v2, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
     invoke-static {v2}, Lcom/android/phone/MiuiEditPinDialog;->access$400(Lcom/android/phone/MiuiEditPinDialog;)Landroid/content/Context;
 
     move-result-object v2
@@ -322,7 +308,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c0339
+    const v2, 0x7f0c0351
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -354,13 +340,11 @@
     :cond_5
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->showToast(I)V
     invoke-static {v1, v6}, Lcom/android/phone/MiuiEditPinDialog;->access$600(Lcom/android/phone/MiuiEditPinDialog;I)V
 
     .line 476
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->dismiss(Z)V
     invoke-static {v1, v3}, Lcom/android/phone/MiuiEditPinDialog;->access$500(Lcom/android/phone/MiuiEditPinDialog;Z)V
 
     goto/16 :goto_0
@@ -381,12 +365,11 @@
     .line 482
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
     invoke-static {v1}, Lcom/android/phone/MiuiEditPinDialog;->access$400(Lcom/android/phone/MiuiEditPinDialog;)Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0c0290
+    const v2, 0x7f0c02a3
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -404,15 +387,13 @@
     :cond_6
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    const v2, 0x7f0c033c
+    const v2, 0x7f0c0354
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->showToast(I)V
     invoke-static {v1, v2}, Lcom/android/phone/MiuiEditPinDialog;->access$600(Lcom/android/phone/MiuiEditPinDialog;I)V
 
     .line 485
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->dismiss(Z)V
     invoke-static {v1, v3}, Lcom/android/phone/MiuiEditPinDialog;->access$500(Lcom/android/phone/MiuiEditPinDialog;Z)V
 
     goto/16 :goto_0
@@ -436,12 +417,11 @@
     .line 492
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #getter for: Lcom/android/phone/MiuiEditPinDialog;->mContext:Landroid/content/Context;
     invoke-static {v1}, Lcom/android/phone/MiuiEditPinDialog;->access$400(Lcom/android/phone/MiuiEditPinDialog;)Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0c028f
+    const v2, 0x7f0c02a2
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -459,13 +439,11 @@
     :cond_7
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->showToast(I)V
     invoke-static {v1, v6}, Lcom/android/phone/MiuiEditPinDialog;->access$600(Lcom/android/phone/MiuiEditPinDialog;I)V
 
     .line 495
     iget-object v1, p0, Lcom/android/phone/MiuiEditPinDialog$2;->this$0:Lcom/android/phone/MiuiEditPinDialog;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog;->dismiss(Z)V
     invoke-static {v1, v3}, Lcom/android/phone/MiuiEditPinDialog;->access$500(Lcom/android/phone/MiuiEditPinDialog;Z)V
 
     goto/16 :goto_0

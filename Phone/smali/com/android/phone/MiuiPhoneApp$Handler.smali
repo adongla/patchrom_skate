@@ -178,7 +178,6 @@
     :goto_1
     iget-object v2, p0, Lcom/android/phone/MiuiPhoneApp$Handler;->this$0:Lcom/android/phone/MiuiPhoneApp;
 
-    #calls: Lcom/android/phone/MiuiPhoneApp;->isInCallScreenForeground()Z
     invoke-static {v2}, Lcom/android/phone/MiuiPhoneApp;->access$000(Lcom/android/phone/MiuiPhoneApp;)Z
 
     move-result v2
@@ -268,7 +267,6 @@
     :goto_2
     iget-object v2, p0, Lcom/android/phone/MiuiPhoneApp$Handler;->this$0:Lcom/android/phone/MiuiPhoneApp;
 
-    #calls: Lcom/android/phone/MiuiPhoneApp;->isInCallScreenForeground()Z
     invoke-static {v2}, Lcom/android/phone/MiuiPhoneApp;->access$000(Lcom/android/phone/MiuiPhoneApp;)Z
 
     move-result v2

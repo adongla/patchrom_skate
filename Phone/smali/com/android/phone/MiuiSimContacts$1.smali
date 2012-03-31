@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 152
+    .line 176
     iput-object p1, p0, Lcom/android/phone/MiuiSimContacts$1;->this$0:Lcom/android/phone/MiuiSimContacts;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,18 +43,17 @@
     .parameter "which"
 
     .prologue
-    .line 155
+    .line 179
     iget-object v0, p0, Lcom/android/phone/MiuiSimContacts$1;->this$0:Lcom/android/phone/MiuiSimContacts;
 
-    const v1, 0x7f0c037a
+    const v1, 0x7f0c0392
 
-    const v2, 0x7f0c0379
+    const v2, 0x7f0c0391
 
     sget-object v3, Lcom/android/phone/MiuiSimContacts$SimContactOP;->DELETE:Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
     iget-object v4, p0, Lcom/android/phone/MiuiSimContacts$1;->this$0:Lcom/android/phone/MiuiSimContacts;
 
-    #getter for: Lcom/android/phone/MiuiSimContacts;->mList:Landroid/widget/EditableListView;
     invoke-static {v4}, Lcom/android/phone/MiuiSimContacts;->access$100(Lcom/android/phone/MiuiSimContacts;)Landroid/widget/EditableListView;
 
     move-result-object v4
@@ -63,9 +62,8 @@
 
     move-result-object v4
 
-    #calls: Lcom/android/phone/MiuiSimContacts;->doSimContactsAction(IILcom/android/phone/MiuiSimContacts$SimContactOP;Landroid/util/SparseBooleanArray;)V
     invoke-static {v0, v1, v2, v3, v4}, Lcom/android/phone/MiuiSimContacts;->access$200(Lcom/android/phone/MiuiSimContacts;IILcom/android/phone/MiuiSimContacts$SimContactOP;Landroid/util/SparseBooleanArray;)V
 
-    .line 158
+    .line 182
     return-void
 .end method

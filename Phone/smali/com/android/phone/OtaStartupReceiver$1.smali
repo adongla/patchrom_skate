@@ -42,7 +42,6 @@
     .line 59
     iget-object v0, p0, Lcom/android/phone/OtaStartupReceiver$1;->this$0:Lcom/android/phone/OtaStartupReceiver;
 
-    #setter for: Lcom/android/phone/OtaStartupReceiver;->mOtaspMode:I
     invoke-static {v0, p1}, Lcom/android/phone/OtaStartupReceiver;->access$002(Lcom/android/phone/OtaStartupReceiver;I)I
 
     .line 60
@@ -60,7 +59,6 @@
 
     iget-object v2, p0, Lcom/android/phone/OtaStartupReceiver$1;->this$0:Lcom/android/phone/OtaStartupReceiver;
 
-    #getter for: Lcom/android/phone/OtaStartupReceiver;->mOtaspMode:I
     invoke-static {v2}, Lcom/android/phone/OtaStartupReceiver;->access$000(Lcom/android/phone/OtaStartupReceiver;)I
 
     move-result v2

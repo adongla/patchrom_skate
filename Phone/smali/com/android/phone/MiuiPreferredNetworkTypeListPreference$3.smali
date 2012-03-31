@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 112
+    .line 116
     iput-object p1, p0, Lcom/android/phone/MiuiPreferredNetworkTypeListPreference$3;->this$0:Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;
 
     iput p2, p0, Lcom/android/phone/MiuiPreferredNetworkTypeListPreference$3;->val$networkType:I
@@ -48,14 +48,13 @@
     .parameter "which"
 
     .prologue
-    .line 115
+    .line 119
     iget-object v0, p0, Lcom/android/phone/MiuiPreferredNetworkTypeListPreference$3;->this$0:Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;
 
     iget v1, p0, Lcom/android/phone/MiuiPreferredNetworkTypeListPreference$3;->val$networkType:I
 
-    #calls: Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;->handleClick(I)V
     invoke-static {v0, v1}, Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;->access$300(Lcom/android/phone/MiuiPreferredNetworkTypeListPreference;I)V
 
-    .line 116
+    .line 120
     return-void
 .end method

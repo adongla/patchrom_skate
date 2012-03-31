@@ -25,10 +25,10 @@
     .locals 0
 
     .prologue
-    .line 63
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
+    .line 68
     return-void
 .end method
 
@@ -37,7 +37,7 @@
     .parameter "retrier"
 
     .prologue
-    .line 79
+    .line 81
     invoke-static {}, Lcom/android/phone/MiuiPhoneUtils;->access$000()Landroid/os/Handler;
 
     move-result-object v0

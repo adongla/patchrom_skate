@@ -46,7 +46,6 @@
     .line 267
     iget-object v1, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$4;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mEditTextSmscAddress:Landroid/widget/EditText;
     invoke-static {v1}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$400(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -63,7 +62,6 @@
     .local v0, newAddress:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$4;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mSmscAddress:Ljava/lang/String;
     invoke-static {v1}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$200(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Ljava/lang/String;
 
     move-result-object v1
@@ -77,7 +75,6 @@
     .line 269
     iget-object v1, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$4;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mProgressDialog:Landroid/app/ProgressDialog;
     invoke-static {v1}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$100(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Landroid/app/ProgressDialog;
 
     move-result-object v1
@@ -87,21 +84,18 @@
     .line 270
     iget-object v1, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$4;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v1}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$700(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$4;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #calls: Lcom/android/phone/MiuiSmscAddressSettingActivity;->stringToSmsc(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v2, v0}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$500(Lcom/android/phone/MiuiSmscAddressSettingActivity;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$4;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mHandler:Landroid/os/Handler;
     invoke-static {v3}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$600(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Landroid/os/Handler;
 
     move-result-object v3
@@ -117,7 +111,6 @@
     .line 272
     iget-object v1, p0, Lcom/android/phone/MiuiSmscAddressSettingActivity$4;->this$0:Lcom/android/phone/MiuiSmscAddressSettingActivity;
 
-    #getter for: Lcom/android/phone/MiuiSmscAddressSettingActivity;->mHandler:Landroid/os/Handler;
     invoke-static {v1}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->access$600(Lcom/android/phone/MiuiSmscAddressSettingActivity;)Landroid/os/Handler;
 
     move-result-object v1

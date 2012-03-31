@@ -28,7 +28,7 @@
     .parameter
 
     .prologue
-    .line 696
+    .line 720
     iput-object p2, p0, Lcom/android/phone/MiuiPhoneUtils$8;->val$phone:Lcom/android/internal/telephony/Phone;
 
     iput p3, p0, Lcom/android/phone/MiuiPhoneUtils$8;->val$commandInterfaceCLIRMode:I
@@ -44,7 +44,7 @@
     .locals 3
 
     .prologue
-    .line 699
+    .line 723
     iget-object v0, p0, Lcom/android/phone/MiuiPhoneUtils$8;->val$phone:Lcom/android/internal/telephony/Phone;
 
     iget v1, p0, Lcom/android/phone/MiuiPhoneUtils$8;->val$commandInterfaceCLIRMode:I
@@ -55,6 +55,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/internal/telephony/Phone;->setOutgoingCallerIdDisplay(ILandroid/os/Message;)V
 
-    .line 700
+    .line 724
     return-void
 .end method

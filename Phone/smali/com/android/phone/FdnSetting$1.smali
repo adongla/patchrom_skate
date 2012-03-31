@@ -80,13 +80,11 @@
 
     const v4, 0x7f0c015e
 
-    #calls: Lcom/android/phone/FdnSetting;->displayMessage(I)V
     invoke-static {v3, v4}, Lcom/android/phone/FdnSetting;->access$000(Lcom/android/phone/FdnSetting;I)V
 
     .line 221
     iget-object v3, p0, Lcom/android/phone/FdnSetting$1;->this$0:Lcom/android/phone/FdnSetting;
 
-    #calls: Lcom/android/phone/FdnSetting;->resetPinChangeStateForPUK2()V
     invoke-static {v3}, Lcom/android/phone/FdnSetting;->access$100(Lcom/android/phone/FdnSetting;)V
 
     .line 226
@@ -95,7 +93,6 @@
     :goto_1
     iget-object v3, p0, Lcom/android/phone/FdnSetting$1;->this$0:Lcom/android/phone/FdnSetting;
 
-    #calls: Lcom/android/phone/FdnSetting;->updateEnableFDN()V
     invoke-static {v3}, Lcom/android/phone/FdnSetting;->access$200(Lcom/android/phone/FdnSetting;)V
 
     goto :goto_0
@@ -107,7 +104,6 @@
 
     const v4, 0x7f0c013c
 
-    #calls: Lcom/android/phone/FdnSetting;->displayMessage(I)V
     invoke-static {v3, v4}, Lcom/android/phone/FdnSetting;->access$000(Lcom/android/phone/FdnSetting;I)V
 
     goto :goto_1
@@ -190,7 +186,6 @@
     :cond_2
     iget-object v3, p0, Lcom/android/phone/FdnSetting$1;->this$0:Lcom/android/phone/FdnSetting;
 
-    #getter for: Lcom/android/phone/FdnSetting;->mPinChangeState:I
     invoke-static {v3}, Lcom/android/phone/FdnSetting;->access$300(Lcom/android/phone/FdnSetting;)I
 
     move-result v3
@@ -204,14 +199,12 @@
 
     const v4, 0x7f0c0157
 
-    #calls: Lcom/android/phone/FdnSetting;->displayMessage(I)V
     invoke-static {v3, v4}, Lcom/android/phone/FdnSetting;->access$000(Lcom/android/phone/FdnSetting;I)V
 
     .line 258
     :goto_2
     iget-object v3, p0, Lcom/android/phone/FdnSetting$1;->this$0:Lcom/android/phone/FdnSetting;
 
-    #getter for: Lcom/android/phone/FdnSetting;->mSkipOldPin:Z
     invoke-static {v3}, Lcom/android/phone/FdnSetting;->access$400(Lcom/android/phone/FdnSetting;)Z
 
     move-result v3
@@ -221,7 +214,6 @@
     .line 259
     iget-object v3, p0, Lcom/android/phone/FdnSetting$1;->this$0:Lcom/android/phone/FdnSetting;
 
-    #calls: Lcom/android/phone/FdnSetting;->resetPinChangeState()V
     invoke-static {v3}, Lcom/android/phone/FdnSetting;->access$500(Lcom/android/phone/FdnSetting;)V
 
     goto/16 :goto_0
@@ -232,7 +224,6 @@
 
     const v4, 0x7f0c0158
 
-    #calls: Lcom/android/phone/FdnSetting;->displayMessage(I)V
     invoke-static {v3, v4}, Lcom/android/phone/FdnSetting;->access$000(Lcom/android/phone/FdnSetting;I)V
 
     goto :goto_2
@@ -241,7 +232,6 @@
     :cond_4
     iget-object v3, p0, Lcom/android/phone/FdnSetting$1;->this$0:Lcom/android/phone/FdnSetting;
 
-    #calls: Lcom/android/phone/FdnSetting;->resetPinChangeStateForPUK2()V
     invoke-static {v3}, Lcom/android/phone/FdnSetting;->access$100(Lcom/android/phone/FdnSetting;)V
 
     goto/16 :goto_0
@@ -253,7 +243,6 @@
 
     const v4, 0x7f0c015c
 
-    #calls: Lcom/android/phone/FdnSetting;->displayMessage(I)V
     invoke-static {v3, v4}, Lcom/android/phone/FdnSetting;->access$000(Lcom/android/phone/FdnSetting;I)V
 
     .line 267
@@ -261,13 +250,11 @@
 
     const/4 v4, 0x0
 
-    #setter for: Lcom/android/phone/FdnSetting;->mSkipOldPin:Z
     invoke-static {v3, v4}, Lcom/android/phone/FdnSetting;->access$402(Lcom/android/phone/FdnSetting;Z)Z
 
     .line 268
     iget-object v3, p0, Lcom/android/phone/FdnSetting$1;->this$0:Lcom/android/phone/FdnSetting;
 
-    #calls: Lcom/android/phone/FdnSetting;->resetPinChangeState()V
     invoke-static {v3}, Lcom/android/phone/FdnSetting;->access$500(Lcom/android/phone/FdnSetting;)V
 
     goto/16 :goto_0

@@ -47,7 +47,6 @@
 
     iget-object v2, p0, Lcom/android/phone/BluetoothHandsfree$30;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
     invoke-static {v2}, Lcom/android/phone/BluetoothHandsfree;->access$1800(Lcom/android/phone/BluetoothHandsfree;)Lcom/android/internal/telephony/CallManager;
 
     move-result-object v2

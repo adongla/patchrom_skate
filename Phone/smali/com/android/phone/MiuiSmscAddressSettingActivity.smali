@@ -793,7 +793,7 @@
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0c0353
+    const v1, 0x7f0c036b
 
     invoke-virtual {p0, v1}, Lcom/android/phone/MiuiSmscAddressSettingActivity;->getString(I)Ljava/lang/String;
 

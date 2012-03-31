@@ -56,7 +56,6 @@
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    #calls: Lcom/android/phone/EmergencyCallbackModeService;->resetEcmTimer(Landroid/os/AsyncResult;)V
     invoke-static {v1, v0}, Lcom/android/phone/EmergencyCallbackModeService;->access$000(Lcom/android/phone/EmergencyCallbackModeService;Landroid/os/AsyncResult;)V
 
     goto :goto_0

@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 1126
+    .line 1131
     iput-object p1, p0, Lcom/android/phone/PhoneUtils$3;->val$phone:Lcom/android/internal/telephony/Phone;
 
     iput-object p2, p0, Lcom/android/phone/PhoneUtils$3;->val$inputText:Landroid/widget/EditText;
@@ -54,16 +54,16 @@
     .parameter "event"
 
     .prologue
-    .line 1128
+    .line 1133
     sparse-switch p2, :sswitch_data_0
 
-    .line 1137
+    .line 1142
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1131
+    .line 1136
     :sswitch_0
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -71,7 +71,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1132
+    .line 1137
     iget-object v0, p0, Lcom/android/phone/PhoneUtils$3;->val$phone:Lcom/android/internal/telephony/Phone;
 
     iget-object v1, p0, Lcom/android/phone/PhoneUtils$3;->val$inputText:Landroid/widget/EditText;
@@ -86,18 +86,18 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/Phone;->sendUssdResponse(Ljava/lang/String;)V
 
-    .line 1133
+    .line 1138
     iget-object v0, p0, Lcom/android/phone/PhoneUtils$3;->val$newDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1135
+    .line 1140
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1128
+    .line 1133
     nop
 
     :sswitch_data_0

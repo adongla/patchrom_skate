@@ -53,7 +53,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/sip/SipSettings;->showRegistrationMessage(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/phone/sip/SipSettings;->access$1100(Lcom/android/phone/sip/SipSettings;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 466
@@ -77,7 +76,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/sip/SipSettings;->showRegistrationMessage(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/phone/sip/SipSettings;->access$1100(Lcom/android/phone/sip/SipSettings;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 461
@@ -114,7 +112,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/sip/SipSettings;->showRegistrationMessage(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/phone/sip/SipSettings;->access$1100(Lcom/android/phone/sip/SipSettings;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 501
@@ -133,7 +130,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/sip/SipSettings;->showRegistrationMessage(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/phone/sip/SipSettings;->access$1100(Lcom/android/phone/sip/SipSettings;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -150,7 +146,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/sip/SipSettings;->showRegistrationMessage(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/phone/sip/SipSettings;->access$1100(Lcom/android/phone/sip/SipSettings;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -167,7 +162,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/sip/SipSettings;->showRegistrationMessage(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/phone/sip/SipSettings;->access$1100(Lcom/android/phone/sip/SipSettings;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -197,7 +191,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/sip/SipSettings;->showRegistrationMessage(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/phone/sip/SipSettings;->access$1100(Lcom/android/phone/sip/SipSettings;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -214,7 +207,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/sip/SipSettings;->showRegistrationMessage(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/phone/sip/SipSettings;->access$1100(Lcom/android/phone/sip/SipSettings;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -231,7 +223,6 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/sip/SipSettings;->showRegistrationMessage(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, v1}, Lcom/android/phone/sip/SipSettings;->access$1100(Lcom/android/phone/sip/SipSettings;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0

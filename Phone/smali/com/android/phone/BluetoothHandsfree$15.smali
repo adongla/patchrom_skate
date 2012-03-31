@@ -54,7 +54,6 @@
     .local v2, phoneType:I
     iget-object v4, p0, Lcom/android/phone/BluetoothHandsfree$15;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->isVirtualCallInProgress()Z
     invoke-static {v4}, Lcom/android/phone/BluetoothHandsfree;->access$4000(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v4
@@ -146,7 +145,6 @@
     .line 2338
     iget-object v4, p0, Lcom/android/phone/BluetoothHandsfree$15;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->cdmaGetClccResult()Landroid/bluetooth/AtCommandResult;
     invoke-static {v4}, Lcom/android/phone/BluetoothHandsfree;->access$6700(Lcom/android/phone/BluetoothHandsfree;)Landroid/bluetooth/AtCommandResult;
 
     move-result-object v3
@@ -162,7 +160,6 @@
     .line 2340
     iget-object v4, p0, Lcom/android/phone/BluetoothHandsfree$15;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #calls: Lcom/android/phone/BluetoothHandsfree;->gsmGetClccResult()Landroid/bluetooth/AtCommandResult;
     invoke-static {v4}, Lcom/android/phone/BluetoothHandsfree;->access$6800(Lcom/android/phone/BluetoothHandsfree;)Landroid/bluetooth/AtCommandResult;
 
     move-result-object v3

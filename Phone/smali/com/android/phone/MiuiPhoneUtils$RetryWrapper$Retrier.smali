@@ -26,18 +26,18 @@
     .parameter "orig"
 
     .prologue
-    .line 70
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
+    .line 73
     iput-object p1, p0, Lcom/android/phone/MiuiPhoneUtils$RetryWrapper$Retrier;->orig:Landroid/os/Message;
 
-    .line 72
+    .line 74
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/phone/MiuiPhoneUtils$RetryWrapper$Retrier;->retryCount:I
 
-    .line 73
+    .line 75
     return-void
 .end method
 

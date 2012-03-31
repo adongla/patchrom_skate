@@ -96,7 +96,7 @@
     :pswitch_0
     iget-object v2, v0, Lcom/android/phone/MiuiCustomLocationActivity$ItemView;->type:Landroid/widget/TextView;
 
-    const v3, 0x7f0c0321
+    const v3, 0x7f0c0339
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -106,7 +106,7 @@
     :pswitch_1
     iget-object v2, v0, Lcom/android/phone/MiuiCustomLocationActivity$ItemView;->type:Landroid/widget/TextView;
 
-    const v3, 0x7f0c0320
+    const v3, 0x7f0c0338
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -116,7 +116,7 @@
     :pswitch_2
     iget-object v2, v0, Lcom/android/phone/MiuiCustomLocationActivity$ItemView;->type:Landroid/widget/TextView;
 
-    const v3, 0x7f0c031e
+    const v3, 0x7f0c0336
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -141,7 +141,6 @@
     .line 80
     iget-object v1, p0, Lcom/android/phone/MiuiCustomLocationActivity$CustomLocationAdapter;->this$0:Lcom/android/phone/MiuiCustomLocationActivity;
 
-    #getter for: Lcom/android/phone/MiuiCustomLocationActivity;->mInflater:Landroid/view/LayoutInflater;
     invoke-static {v1}, Lcom/android/phone/MiuiCustomLocationActivity;->access$000(Lcom/android/phone/MiuiCustomLocationActivity;)Landroid/view/LayoutInflater;
 
     move-result-object v1

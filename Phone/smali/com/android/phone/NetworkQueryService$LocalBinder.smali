@@ -41,7 +41,6 @@
     .line 68
     iget-object v0, p0, Lcom/android/phone/NetworkQueryService$LocalBinder;->this$0:Lcom/android/phone/NetworkQueryService;
 
-    #getter for: Lcom/android/phone/NetworkQueryService;->mBinder:Lcom/android/phone/INetworkQueryService$Stub;
     invoke-static {v0}, Lcom/android/phone/NetworkQueryService;->access$000(Lcom/android/phone/NetworkQueryService;)Lcom/android/phone/INetworkQueryService$Stub;
 
     move-result-object v0

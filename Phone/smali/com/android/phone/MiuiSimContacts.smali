@@ -19,6 +19,8 @@
 # instance fields
 .field private mAdapter:Landroid/widget/SimpleCursorAdapter;
 
+.field private mEmptyText:Landroid/widget/TextView;
+
 .field private mList:Landroid/widget/EditableListView;
 
 .field private mModeCallBack:Lcom/android/phone/MiuiSimContacts$ModeCallback;
@@ -29,15 +31,15 @@
     .locals 1
 
     .prologue
-    .line 26
+    .line 33
     invoke-direct {p0}, Lcom/android/phone/SimContacts;-><init>()V
 
-    .line 93
+    .line 100
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mModeCallBack:Lcom/android/phone/MiuiSimContacts$ModeCallback;
 
-    .line 188
+    .line 212
     return-void
 .end method
 
@@ -48,7 +50,7 @@
     .parameter "x2"
 
     .prologue
-    .line 26
+    .line 33
     invoke-direct {p0, p1, p2}, Lcom/android/phone/MiuiSimContacts;->deleteOneSimContact(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -61,7 +63,7 @@
     .parameter "x0"
 
     .prologue
-    .line 26
+    .line 33
     iget-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mList:Landroid/widget/EditableListView;
 
     return-object v0
@@ -76,7 +78,7 @@
     .parameter "x4"
 
     .prologue
-    .line 26
+    .line 33
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/phone/MiuiSimContacts;->doSimContactsAction(IILcom/android/phone/MiuiSimContacts$SimContactOP;Landroid/util/SparseBooleanArray;)V
 
     return-void
@@ -87,7 +89,7 @@
     .parameter "x0"
 
     .prologue
-    .line 26
+    .line 33
     invoke-direct {p0}, Lcom/android/phone/MiuiSimContacts;->showDeleteSelectedDialog()V
 
     return-void
@@ -99,14 +101,14 @@
     .parameter "number"
 
     .prologue
-    .line 33
+    .line 40
     const-string v2, "content://icc/adn"
 
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 34
+    .line 41
     .local v0, adnUri:Landroid/net/Uri;
     const-string v2, "tag=\'%s\' AND number=\'%s\'"
 
@@ -126,7 +128,7 @@
 
     move-result-object v1
 
-    .line 35
+    .line 42
     .local v1, where:Ljava/lang/String;
     invoke-virtual {p0}, Lcom/android/phone/MiuiSimContacts;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -149,24 +151,24 @@
     .parameter "checkedList"
 
     .prologue
-    .line 130
+    .line 154
     invoke-virtual {p0, p1}, Lcom/android/phone/MiuiSimContacts;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 131
+    .line 155
     .local v2, title:Ljava/lang/String;
     invoke-virtual {p0, p2}, Lcom/android/phone/MiuiSimContacts;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 132
+    .line 156
     .local v0, message:Ljava/lang/String;
     new-instance v1, Lcom/android/phone/MiuiSimContacts$SimContactsThread;
 
     invoke-direct {v1, p0, p3, p4}, Lcom/android/phone/MiuiSimContacts$SimContactsThread;-><init>(Lcom/android/phone/MiuiSimContacts;Lcom/android/phone/MiuiSimContacts$SimContactOP;Landroid/util/SparseBooleanArray;)V
 
-    .line 133
+    .line 157
     .local v1, thread:Lcom/android/phone/MiuiSimContacts$SimContactsThread;
     new-instance v3, Landroid/app/ProgressDialog;
 
@@ -174,24 +176,24 @@
 
     iput-object v3, p0, Lcom/android/phone/MiuiSimContacts;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    .line 134
+    .line 158
     iget-object v3, p0, Lcom/android/phone/MiuiSimContacts;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v3, v2}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 135
+    .line 159
     iget-object v3, p0, Lcom/android/phone/MiuiSimContacts;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v3, v0}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 136
+    .line 160
     iget-object v3, p0, Lcom/android/phone/MiuiSimContacts;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Landroid/app/ProgressDialog;->setProgressStyle(I)V
 
-    .line 137
+    .line 161
     iget-object v3, p0, Lcom/android/phone/MiuiSimContacts;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const/4 v4, -0x2
@@ -204,14 +206,14 @@
 
     invoke-virtual {v3, v4, v5, v1}, Landroid/app/ProgressDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 139
+    .line 163
     iget-object v3, p0, Lcom/android/phone/MiuiSimContacts;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Landroid/app/ProgressDialog;->setProgress(I)V
 
-    .line 140
+    .line 164
     iget-object v3, p0, Lcom/android/phone/MiuiSimContacts;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {p4}, Landroid/util/SparseBooleanArray;->size()I
@@ -220,16 +222,42 @@
 
     invoke-virtual {v3, v4}, Landroid/app/ProgressDialog;->setMax(I)V
 
-    .line 141
+    .line 165
     iget-object v3, p0, Lcom/android/phone/MiuiSimContacts;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v3}, Landroid/app/ProgressDialog;->show()V
 
-    .line 142
+    .line 166
     invoke-virtual {v1}, Lcom/android/phone/MiuiSimContacts$SimContactsThread;->start()V
 
-    .line 143
+    .line 167
     return-void
+.end method
+
+.method private isAirplaneModeOn(Landroid/content/Context;)Z
+    .locals 3
+    .parameter "context"
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 148
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "airplane_mode_on"
+
+    invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    return v0
 .end method
 
 .method private setupActionBar()V
@@ -238,19 +266,19 @@
     .prologue
     const/16 v1, 0x10
 
-    .line 110
+    .line 119
     invoke-static {p0}, Lcom/android/phone/MiuiPhoneUtils;->setActionBar(Landroid/app/Activity;)V
 
-    .line 111
+    .line 120
     invoke-virtual {p0}, Lcom/android/phone/MiuiSimContacts;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 112
+    .line 121
     .local v0, actionBar:Landroid/app/ActionBar;
     invoke-virtual {v0, v1, v1}, Landroid/app/ActionBar;->setDisplayOptions(II)V
 
-    .line 113
+    .line 122
     return-void
 .end method
 
@@ -260,12 +288,12 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 146
+    .line 170
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0c0377
+    const v1, 0x7f0c038f
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -277,7 +305,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c0378
+    const v1, 0x7f0c0390
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -327,20 +355,76 @@
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 161
+    .line 185
     return-void
 .end method
 
 
 # virtual methods
+.method protected displayProgress(Z)V
+    .locals 3
+    .parameter "flag"
+
+    .prologue
+    .line 139
+    iget-object v1, p0, Lcom/android/phone/MiuiSimContacts;->mEmptyText:Landroid/widget/TextView;
+
+    if-eqz p1, :cond_0
+
+    const v0, 0x7f0c013e
+
+    :goto_0
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
+
+    .line 142
+    invoke-virtual {p0}, Lcom/android/phone/MiuiSimContacts;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    const/4 v2, 0x5
+
+    if-eqz p1, :cond_2
+
+    const/4 v0, -0x1
+
+    :goto_1
+    invoke-virtual {v1, v2, v0}, Landroid/view/Window;->setFeatureInt(II)V
+
+    .line 145
+    return-void
+
+    .line 139
+    :cond_0
+    invoke-direct {p0, p0}, Lcom/android/phone/MiuiSimContacts;->isAirplaneModeOn(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const v0, 0x7f0c0141
+
+    goto :goto_0
+
+    :cond_1
+    const v0, 0x7f0c013f
+
+    goto :goto_0
+
+    .line 142
+    :cond_2
+    const/4 v0, -0x2
+
+    goto :goto_1
+.end method
+
 .method protected newAdapter()Landroid/widget/CursorAdapter;
     .locals 6
 
     .prologue
-    .line 123
+    .line 132
     new-instance v0, Landroid/widget/SimpleCursorAdapter;
 
-    const v2, 0x7f040027
+    const v2, 0x7f040028
 
     iget-object v3, p0, Lcom/android/phone/MiuiSimContacts;->mCursor:Landroid/database/Cursor;
 
@@ -354,7 +438,7 @@
 
     iput-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mAdapter:Landroid/widget/SimpleCursorAdapter;
 
-    .line 125
+    .line 134
     iget-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mAdapter:Landroid/widget/SimpleCursorAdapter;
 
     return-object v0
@@ -365,15 +449,15 @@
     .parameter "icicle"
 
     .prologue
-    .line 97
+    .line 105
     invoke-super {p0, p1}, Lcom/android/phone/SimContacts;->onCreate(Landroid/os/Bundle;)V
 
-    .line 98
-    const v0, 0x7f040025
+    .line 106
+    const v0, 0x7f040026
 
     invoke-virtual {p0, v0}, Lcom/android/phone/MiuiSimContacts;->setContentView(I)V
 
-    .line 99
+    .line 107
     invoke-virtual {p0}, Lcom/android/phone/MiuiSimContacts;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
@@ -382,26 +466,26 @@
 
     iput-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mList:Landroid/widget/EditableListView;
 
-    .line 100
+    .line 108
     iget-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mList:Landroid/widget/EditableListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/EditableListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 101
+    .line 109
     iget-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mList:Landroid/widget/EditableListView;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/widget/EditableListView;->setChoiceMode(I)V
 
-    .line 102
+    .line 110
     iget-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mList:Landroid/widget/EditableListView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/EditableListView;->setCheckBoxVisiableInNoneEditMode(Z)V
 
-    .line 103
+    .line 111
     new-instance v0, Lcom/android/phone/MiuiSimContacts$ModeCallback;
 
     iget-object v1, p0, Lcom/android/phone/MiuiSimContacts;->mList:Landroid/widget/EditableListView;
@@ -410,24 +494,35 @@
 
     iput-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mModeCallBack:Lcom/android/phone/MiuiSimContacts$ModeCallback;
 
-    .line 104
+    .line 112
     iget-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mModeCallBack:Lcom/android/phone/MiuiSimContacts$ModeCallback;
 
     const v1, 0x7f0f0001
 
     invoke-virtual {v0, v1}, Lcom/android/phone/MiuiSimContacts$ModeCallback;->setSplitActionBarMenuId(I)V
 
-    .line 105
+    .line 113
     iget-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mList:Landroid/widget/EditableListView;
 
     iget-object v1, p0, Lcom/android/phone/MiuiSimContacts;->mModeCallBack:Lcom/android/phone/MiuiSimContacts$ModeCallback;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditableListView;->setMultiChoiceModeListener(Landroid/widget/EditableListView$EditableListViewListener;)V
 
-    .line 106
+    .line 114
+    const v0, 0x1020004
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/MiuiSimContacts;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mEmptyText:Landroid/widget/TextView;
+
+    .line 115
     invoke-direct {p0}, Lcom/android/phone/MiuiSimContacts;->setupActionBar()V
 
-    .line 107
+    .line 116
     return-void
 .end method
 
@@ -436,7 +531,7 @@
     .parameter "menu"
 
     .prologue
-    .line 117
+    .line 126
     invoke-virtual {p0}, Lcom/android/phone/MiuiSimContacts;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
@@ -445,7 +540,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    .line 118
+    .line 127
     const/4 v0, 0x1
 
     return v0
@@ -468,7 +563,7 @@
     .end annotation
 
     .prologue
-    .line 185
+    .line 209
     .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/android/phone/MiuiSimContacts;->mList:Landroid/widget/EditableListView;
 
@@ -476,7 +571,7 @@
 
     invoke-virtual {v0, p3, v1}, Landroid/widget/EditableListView;->setItemChecked(IZ)V
 
-    .line 186
+    .line 210
     return-void
 .end method
 
@@ -487,14 +582,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 165
+    .line 189
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v3
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 180
+    .line 204
     invoke-super {p0, p1}, Lcom/android/phone/SimContacts;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v2
@@ -503,7 +598,7 @@
     :goto_0
     return v2
 
-    .line 167
+    .line 191
     :sswitch_0
     const-string v3, "com.android.contacts"
 
@@ -513,7 +608,7 @@
 
     goto :goto_0
 
-    .line 170
+    .line 194
     :sswitch_1
     iget-object v3, p0, Lcom/android/phone/MiuiSimContacts;->mAdapter:Landroid/widget/SimpleCursorAdapter;
 
@@ -527,12 +622,12 @@
 
     if-lez v3, :cond_0
 
-    .line 171
+    .line 195
     new-instance v1, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v1}, Landroid/util/SparseBooleanArray;-><init>()V
 
-    .line 172
+    .line 196
     .local v1, list:Landroid/util/SparseBooleanArray;
     const/4 v0, 0x0
 
@@ -546,19 +641,19 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 173
+    .line 197
     invoke-virtual {v1, v0, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 172
+    .line 196
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 175
+    .line 199
     :cond_1
-    const v3, 0x7f0c0305
+    const v3, 0x7f0c031d
 
-    const v4, 0x7f0c0303
+    const v4, 0x7f0c031b
 
     sget-object v5, Lcom/android/phone/MiuiSimContacts$SimContactOP;->IMPORT:Lcom/android/phone/MiuiSimContacts$SimContactOP;
 
@@ -566,7 +661,7 @@
 
     goto :goto_0
 
-    .line 165
+    .line 189
     nop
 
     :sswitch_data_0

@@ -60,7 +60,6 @@
 
     iget-object v1, p0, Lcom/android/phone/sip/SipSettings$6;->val$profile:Landroid/net/sip/SipProfile;
 
-    #calls: Lcom/android/phone/sip/SipSettings;->unregisterProfile(Landroid/net/sip/SipProfile;)V
     invoke-static {v0, v1}, Lcom/android/phone/sip/SipSettings;->access$800(Lcom/android/phone/sip/SipSettings;Landroid/net/sip/SipProfile;)V
 
     .line 400

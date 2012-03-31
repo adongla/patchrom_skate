@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 312
+    .line 309
     iput-object p1, p0, Lcom/android/phone/MiuiInCallScreen$1;->this$0:Lcom/android/phone/MiuiInCallScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,11 @@
     .parameter "errorCode"
 
     .prologue
-    .line 315
+    .line 312
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen$1;->this$0:Lcom/android/phone/MiuiInCallScreen;
 
-    #calls: Lcom/android/phone/MiuiInCallScreen;->stopCallRecord(I)V
     invoke-static {v0, p1}, Lcom/android/phone/MiuiInCallScreen;->access$100(Lcom/android/phone/MiuiInCallScreen;I)V
 
-    .line 316
+    .line 313
     return-void
 .end method

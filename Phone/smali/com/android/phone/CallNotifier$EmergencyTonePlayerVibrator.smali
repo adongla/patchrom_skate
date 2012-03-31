@@ -114,7 +114,6 @@
     .local v0, ringerMode:I
     iget-object v1, p0, Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->this$0:Lcom/android/phone/CallNotifier;
 
-    #getter for: Lcom/android/phone/CallNotifier;->mIsEmergencyToneOn:I
     invoke-static {v1}, Lcom/android/phone/CallNotifier;->access$700(Lcom/android/phone/CallNotifier;)I
 
     move-result v1
@@ -180,7 +179,6 @@
     .line 1948
     iget-object v1, p0, Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->this$0:Lcom/android/phone/CallNotifier;
 
-    #setter for: Lcom/android/phone/CallNotifier;->mCurrentEmergencyToneState:I
     invoke-static {v1, v5}, Lcom/android/phone/CallNotifier;->access$802(Lcom/android/phone/CallNotifier;I)I
 
     .line 1958
@@ -192,7 +190,6 @@
     :cond_1
     iget-object v1, p0, Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->this$0:Lcom/android/phone/CallNotifier;
 
-    #getter for: Lcom/android/phone/CallNotifier;->mIsEmergencyToneOn:I
     invoke-static {v1}, Lcom/android/phone/CallNotifier;->access$700(Lcom/android/phone/CallNotifier;)I
 
     move-result v1
@@ -228,7 +225,6 @@
     .line 1955
     iget-object v1, p0, Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->this$0:Lcom/android/phone/CallNotifier;
 
-    #setter for: Lcom/android/phone/CallNotifier;->mCurrentEmergencyToneState:I
     invoke-static {v1, v4}, Lcom/android/phone/CallNotifier;->access$802(Lcom/android/phone/CallNotifier;I)I
 
     goto :goto_0
@@ -243,7 +239,6 @@
     .line 1966
     iget-object v0, p0, Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->this$0:Lcom/android/phone/CallNotifier;
 
-    #getter for: Lcom/android/phone/CallNotifier;->mCurrentEmergencyToneState:I
     invoke-static {v0}, Lcom/android/phone/CallNotifier;->access$800(Lcom/android/phone/CallNotifier;)I
 
     move-result v0
@@ -280,7 +275,6 @@
     :goto_0
     iget-object v0, p0, Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->this$0:Lcom/android/phone/CallNotifier;
 
-    #setter for: Lcom/android/phone/CallNotifier;->mCurrentEmergencyToneState:I
     invoke-static {v0, v2}, Lcom/android/phone/CallNotifier;->access$802(Lcom/android/phone/CallNotifier;I)I
 
     .line 1978
@@ -290,7 +284,6 @@
     :cond_1
     iget-object v0, p0, Lcom/android/phone/CallNotifier$EmergencyTonePlayerVibrator;->this$0:Lcom/android/phone/CallNotifier;
 
-    #getter for: Lcom/android/phone/CallNotifier;->mCurrentEmergencyToneState:I
     invoke-static {v0}, Lcom/android/phone/CallNotifier;->access$800(Lcom/android/phone/CallNotifier;)I
 
     move-result v0

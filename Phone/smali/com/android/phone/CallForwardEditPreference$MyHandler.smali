@@ -106,7 +106,6 @@
     :goto_1
     iget-object v7, p0, Lcom/android/phone/CallForwardEditPreference$MyHandler;->this$0:Lcom/android/phone/CallForwardEditPreference;
 
-    #calls: Lcom/android/phone/CallForwardEditPreference;->updateSummaryText()V
     invoke-static {v7}, Lcom/android/phone/CallForwardEditPreference;->access$200(Lcom/android/phone/CallForwardEditPreference;)V
 
     .line 238
@@ -189,7 +188,6 @@
     .line 199
     iget-object v7, p0, Lcom/android/phone/CallForwardEditPreference$MyHandler;->this$0:Lcom/android/phone/CallForwardEditPreference;
 
-    #getter for: Lcom/android/phone/CallForwardEditPreference;->mServiceClass:I
     invoke-static {v7}, Lcom/android/phone/CallForwardEditPreference;->access$100(Lcom/android/phone/CallForwardEditPreference;)I
 
     move-result v7

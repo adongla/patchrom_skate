@@ -31,23 +31,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 20
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
+    .line 28
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/phone/MiuiExtraConnectionData$ExtraData;->digitsPressed:Ljava/lang/String;
 
-    .line 32
+    .line 33
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/phone/MiuiExtraConnectionData$ExtraData;->firewallCode:I
 
-    .line 37
+    .line 38
     iput-object v1, p0, Lcom/android/phone/MiuiExtraConnectionData$ExtraData;->origDialAddress:Ljava/lang/String;
 
-    .line 42
+    .line 43
     iput-object v1, p0, Lcom/android/phone/MiuiExtraConnectionData$ExtraData;->suppServiceNotification:Lcom/android/internal/telephony/gsm/SuppServiceNotification;
 
     return-void
@@ -58,7 +58,7 @@
     .parameter "x0"
 
     .prologue
-    .line 20
+    .line 21
     invoke-direct {p0}, Lcom/android/phone/MiuiExtraConnectionData$ExtraData;-><init>()V
 
     return-void

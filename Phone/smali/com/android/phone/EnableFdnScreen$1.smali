@@ -58,7 +58,6 @@
     .local v0, ar:Landroid/os/AsyncResult;
     iget-object v1, p0, Lcom/android/phone/EnableFdnScreen$1;->this$0:Lcom/android/phone/EnableFdnScreen;
 
-    #calls: Lcom/android/phone/EnableFdnScreen;->handleResult(Landroid/os/AsyncResult;)V
     invoke-static {v1, v0}, Lcom/android/phone/EnableFdnScreen;->access$000(Lcom/android/phone/EnableFdnScreen;Landroid/os/AsyncResult;)V
 
     goto :goto_0

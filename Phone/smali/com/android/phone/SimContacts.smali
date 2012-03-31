@@ -597,7 +597,7 @@
     .line 255
     new-instance v0, Landroid/widget/SimpleCursorAdapter;
 
-    const v2, 0x7f040026
+    const v2, 0x7f040027
 
     iget-object v3, p0, Lcom/android/phone/SimContacts;->mCursor:Landroid/database/Cursor;
 

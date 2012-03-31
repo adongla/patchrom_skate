@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 864
+    .line 839
     iput-object p1, p0, Lcom/android/phone/MiuiInCallTouchUi$2;->this$0:Lcom/android/phone/MiuiInCallTouchUi;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -43,10 +43,9 @@
 
     const/4 v2, 0x0
 
-    .line 867
+    .line 842
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi$2;->this$0:Lcom/android/phone/MiuiInCallTouchUi;
 
-    #getter for: Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
     invoke-static {v0}, Lcom/android/phone/MiuiInCallTouchUi;->access$000(Lcom/android/phone/MiuiInCallTouchUi;)Landroid/widget/ToggleButton;
 
     move-result-object v3
@@ -68,17 +67,15 @@
     :goto_0
     invoke-virtual {v3, v0}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 868
+    .line 843
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi$2;->this$0:Lcom/android/phone/MiuiInCallTouchUi;
 
-    #getter for: Lcom/android/phone/MiuiInCallTouchUi;->mToolsButton:Landroid/widget/ToggleButton;
     invoke-static {v0}, Lcom/android/phone/MiuiInCallTouchUi;->access$200(Lcom/android/phone/MiuiInCallTouchUi;)Landroid/widget/ToggleButton;
 
     move-result-object v3
 
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi$2;->this$0:Lcom/android/phone/MiuiInCallTouchUi;
 
-    #getter for: Lcom/android/phone/MiuiInCallTouchUi;->mToolsPanel:Landroid/view/View;
     invoke-static {v0}, Lcom/android/phone/MiuiInCallTouchUi;->access$100(Lcom/android/phone/MiuiInCallTouchUi;)Landroid/view/View;
 
     move-result-object v0
@@ -94,17 +91,15 @@
     :goto_1
     invoke-virtual {v3, v0}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 869
+    .line 844
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi$2;->this$0:Lcom/android/phone/MiuiInCallTouchUi;
 
-    #getter for: Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
     invoke-static {v0}, Lcom/android/phone/MiuiInCallTouchUi;->access$400(Lcom/android/phone/MiuiInCallTouchUi;)Landroid/widget/ToggleButton;
 
     move-result-object v0
 
     iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi$2;->this$0:Lcom/android/phone/MiuiInCallTouchUi;
 
-    #getter for: Lcom/android/phone/MiuiInCallTouchUi;->mAudioModePanel:Landroid/view/View;
     invoke-static {v3}, Lcom/android/phone/MiuiInCallTouchUi;->access$300(Lcom/android/phone/MiuiInCallTouchUi;)Landroid/view/View;
 
     move-result-object v3
@@ -118,24 +113,24 @@
     :goto_2
     invoke-virtual {v0, v1}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 870
+    .line 845
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 867
+    .line 842
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 868
+    .line 843
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 869
+    .line 844
     goto :goto_2
 .end method

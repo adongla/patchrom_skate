@@ -58,12 +58,10 @@
 
     iget-object v1, p0, Lcom/android/phone/AccelerometerListener$2;->this$0:Lcom/android/phone/AccelerometerListener;
 
-    #getter for: Lcom/android/phone/AccelerometerListener;->mPendingOrientation:I
     invoke-static {v1}, Lcom/android/phone/AccelerometerListener;->access$200(Lcom/android/phone/AccelerometerListener;)I
 
     move-result v1
 
-    #setter for: Lcom/android/phone/AccelerometerListener;->mOrientation:I
     invoke-static {v0, v1}, Lcom/android/phone/AccelerometerListener;->access$102(Lcom/android/phone/AccelerometerListener;I)I
 
     .line 150
@@ -81,7 +79,6 @@
 
     iget-object v0, p0, Lcom/android/phone/AccelerometerListener$2;->this$0:Lcom/android/phone/AccelerometerListener;
 
-    #getter for: Lcom/android/phone/AccelerometerListener;->mOrientation:I
     invoke-static {v0}, Lcom/android/phone/AccelerometerListener;->access$100(Lcom/android/phone/AccelerometerListener;)I
 
     move-result v0
@@ -106,14 +103,12 @@
     .line 155
     iget-object v0, p0, Lcom/android/phone/AccelerometerListener$2;->this$0:Lcom/android/phone/AccelerometerListener;
 
-    #getter for: Lcom/android/phone/AccelerometerListener;->mListener:Lcom/android/phone/AccelerometerListener$OrientationListener;
     invoke-static {v0}, Lcom/android/phone/AccelerometerListener;->access$300(Lcom/android/phone/AccelerometerListener;)Lcom/android/phone/AccelerometerListener$OrientationListener;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/phone/AccelerometerListener$2;->this$0:Lcom/android/phone/AccelerometerListener;
 
-    #getter for: Lcom/android/phone/AccelerometerListener;->mOrientation:I
     invoke-static {v1}, Lcom/android/phone/AccelerometerListener;->access$100(Lcom/android/phone/AccelerometerListener;)I
 
     move-result v1
@@ -139,7 +134,6 @@
     :try_start_1
     iget-object v0, p0, Lcom/android/phone/AccelerometerListener$2;->this$0:Lcom/android/phone/AccelerometerListener;
 
-    #getter for: Lcom/android/phone/AccelerometerListener;->mOrientation:I
     invoke-static {v0}, Lcom/android/phone/AccelerometerListener;->access$100(Lcom/android/phone/AccelerometerListener;)I
 
     move-result v0

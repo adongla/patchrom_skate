@@ -52,7 +52,6 @@
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/MiuiStorageMonitor$1;->this$0:Lcom/android/phone/MiuiStorageMonitor;
 
-    #calls: Lcom/android/phone/MiuiStorageMonitor;->checkStorageSpace()V
     invoke-static {v0}, Lcom/android/phone/MiuiStorageMonitor;->access$000(Lcom/android/phone/MiuiStorageMonitor;)V
 
     goto :goto_0

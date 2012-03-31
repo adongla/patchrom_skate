@@ -501,7 +501,6 @@
 
     check-cast v3, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;
 
-    #getter for: Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->mState:I
     invoke-static {v3}, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->access$000(Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -636,7 +635,6 @@
 
     check-cast v4, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;
 
-    #getter for: Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->mState:I
     invoke-static {v4}, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->access$000(Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;)I
 
     move-result v4
@@ -700,7 +698,6 @@
 
     check-cast v4, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;
 
-    #setter for: Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->mHeadsetType:I
     invoke-static {v4, v2}, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->access$702(Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;I)I
 
     .line 551
@@ -805,7 +802,6 @@
 
     check-cast v4, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;
 
-    #setter for: Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->mHeadsetType:I
     invoke-static {v4, v2}, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->access$702(Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;I)I
 
     .line 566
@@ -873,7 +869,6 @@
 
     check-cast v4, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;
 
-    #setter for: Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->mHeadsetType:I
     invoke-static {v4, v2}, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->access$702(Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;I)I
 
     .line 580
@@ -999,7 +994,6 @@
 
     check-cast v3, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;
 
-    #getter for: Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->mState:I
     invoke-static {v3}, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->access$000(Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;)I
 
     move-result v2
@@ -1095,7 +1089,6 @@
 
     const/4 v4, 0x0
 
-    #setter for: Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->mHeadset:Landroid/bluetooth/HeadsetBase;
     invoke-static {v3, v4}, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->access$2102(Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;Landroid/bluetooth/HeadsetBase;)Landroid/bluetooth/HeadsetBase;
 
     .line 485
@@ -1109,7 +1102,6 @@
 
     const/4 v4, 0x0
 
-    #setter for: Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->mHeadsetType:I
     invoke-static {v3, v4}, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->access$702(Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;I)I
 
     .line 488
@@ -1122,7 +1114,6 @@
 
     check-cast v3, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;
 
-    #setter for: Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->mState:I
     invoke-static {v3, p2}, Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;->access$002(Lcom/android/phone/BluetoothHeadsetService$BluetoothRemoteHeadset;I)I
 
     .line 490

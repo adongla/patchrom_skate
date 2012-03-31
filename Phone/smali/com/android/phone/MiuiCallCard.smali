@@ -297,7 +297,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1022
+    .line 1033
     invoke-virtual {p1}, Landroid/widget/TextView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v4
@@ -310,19 +310,19 @@
 
     int-to-float v3, v4
 
-    .line 1025
+    .line 1036
     .local v3, widthView:F
     invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 1026
+    .line 1037
     .local v0, params:Landroid/view/ViewGroup$LayoutParams;
     iget v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     if-gez v4, :cond_0
 
-    .line 1027
+    .line 1038
     invoke-static {v6, v6}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v4
@@ -333,69 +333,69 @@
 
     invoke-virtual {p1, v4, v5}, Landroid/widget/TextView;->measure(II)V
 
-    .line 1029
+    .line 1040
     invoke-virtual {p1}, Landroid/widget/TextView;->getMeasuredHeight()I
 
     move-result v4
 
     iput v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 1030
+    .line 1041
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1033
+    .line 1044
     :cond_0
     iget v1, p0, Lcom/android/phone/MiuiCallCard;->mMaxTextSizeOfDigits:F
 
-    .line 1034
+    .line 1045
     .local v1, textSize:F
     iget-object v4, p0, Lcom/android/phone/MiuiCallCard;->mPaintForMeasureText:Landroid/graphics/Paint;
 
     invoke-virtual {v4, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 1035
+    .line 1046
     iget-object v4, p0, Lcom/android/phone/MiuiCallCard;->mPaintForMeasureText:Landroid/graphics/Paint;
 
     invoke-virtual {v4, p2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
     move-result v2
 
-    .line 1036
+    .line 1047
     .local v2, widthText:F
     :goto_0
     cmpl-float v4, v2, v3
 
     if-lez v4, :cond_1
 
-    .line 1038
+    .line 1049
     const/high16 v4, 0x3f80
 
     sub-float/2addr v1, v4
 
-    .line 1039
+    .line 1050
     iget v4, p0, Lcom/android/phone/MiuiCallCard;->mMinTextSizeOfDigits:F
 
     cmpg-float v4, v1, v4
 
     if-gez v4, :cond_2
 
-    .line 1040
+    .line 1051
     iget v1, p0, Lcom/android/phone/MiuiCallCard;->mMinTextSizeOfDigits:F
 
-    .line 1046
+    .line 1057
     :cond_1
     invoke-virtual {p1, v6, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 1047
+    .line 1058
     return-void
 
-    .line 1043
+    .line 1054
     :cond_2
     iget-object v4, p0, Lcom/android/phone/MiuiCallCard;->mPaintForMeasureText:Landroid/graphics/Paint;
 
     invoke-virtual {v4, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 1044
+    .line 1055
     iget-object v4, p0, Lcom/android/phone/MiuiCallCard;->mPaintForMeasureText:Landroid/graphics/Paint;
 
     invoke-virtual {v4, p2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
@@ -413,18 +413,18 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 560
+    .line 556
     new-instance v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;
 
     const/4 v0, 0x0
 
     invoke-direct {v8, p0, v0}, Lcom/android/phone/MiuiCallCard$CallCardInfo;-><init>(Lcom/android/phone/MiuiCallCard;Lcom/android/phone/MiuiCallCard$1;)V
 
-    .line 561
+    .line 557
     .local v8, info:Lcom/android/phone/MiuiCallCard$CallCardInfo;
     if-eqz p2, :cond_0
 
-    .line 562
+    .line 558
     invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
@@ -435,18 +435,27 @@
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_1
+    if-ne v0, v1, :cond_2
 
     invoke-direct {p0, p1}, Lcom/android/phone/MiuiCallCard;->isCdmaThreeWayOrConf(Lcom/android/internal/telephony/Call;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 564
+    .line 560
+    invoke-static {p1}, Lcom/android/phone/MiuiExtraConnectionData;->getCdmaCallState(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/android/phone/MiuiConstants$CdmaCallState;->ThreeWayIncoming:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    if-ne v0, v1, :cond_1
+
+    .line 561
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0c037c
+    const v1, 0x7f0c0394
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -455,20 +464,35 @@
     iput-object v0, v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;->name:Ljava/lang/String;
 
     .line 565
+    :goto_0
     const-string v0, ""
 
     iput-object v0, v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;->phoneNumber:Ljava/lang/String;
 
     .line 600
     :cond_0
-    :goto_0
+    :goto_1
     return-object v8
 
-    .line 568
+    .line 563
     :cond_1
+    iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mContext:Landroid/content/Context;
+
+    const v1, 0x7f0c0395
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;->name:Ljava/lang/String;
+
+    goto :goto_0
+
+    .line 568
+    :cond_2
     iget v0, p2, Lcom/android/internal/telephony/CallerInfo;->photoResource:I
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 570
     invoke-virtual {p0}, Lcom/android/phone/MiuiCallCard;->getResources()Landroid/content/res/Resources;
@@ -484,15 +508,15 @@
     iput-object v0, v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;->photo:Landroid/graphics/drawable/Drawable;
 
     .line 585
-    :cond_2
-    :goto_1
+    :cond_3
+    :goto_2
     iget-object v0, p2, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     .line 586
     const-string v0, ""
@@ -500,7 +524,7 @@
     iput-object v0, v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;->phoneNumber:Ljava/lang/String;
 
     .line 596
-    :goto_2
+    :goto_3
     invoke-static {p2}, Lcom/android/phone/MiuiPhoneUtils;->getDisplayName(Lcom/android/internal/telephony/CallerInfo;)Ljava/lang/String;
 
     move-result-object v0
@@ -514,34 +538,34 @@
 
     iput-object v0, v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;->extraInfo:Ljava/lang/String;
 
-    goto :goto_0
+    goto :goto_1
 
     .line 571
-    :cond_3
+    :cond_4
     iget-object v0, p2, Lcom/android/internal/telephony/CallerInfo;->cachedPhoto:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     iget-boolean v0, p2, Lcom/android/internal/telephony/CallerInfo;->isCachedPhotoCurrent:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     .line 573
     iget-object v0, p2, Lcom/android/internal/telephony/CallerInfo;->cachedPhoto:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;->photo:Landroid/graphics/drawable/Drawable;
 
-    goto :goto_1
+    goto :goto_2
 
     .line 574
-    :cond_4
+    :cond_5
     iget-wide v0, p2, Lcom/android/internal/telephony/CallerInfo;->person_id:J
 
     const-wide/16 v2, 0x0
 
     cmp-long v0, v0, v2
 
-    if-lez v0, :cond_2
+    if-lez v0, :cond_3
 
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mPhotoTracker:Landroid/pim/ContactsAsyncHelper$ImageTracker;
 
@@ -549,7 +573,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     .line 575
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mPhotoTracker:Landroid/pim/ContactsAsyncHelper$ImageTracker;
@@ -588,11 +612,11 @@
 
     invoke-static/range {v0 .. v7}, Landroid/pim/ContactsAsyncHelper;->updateImageViewWithContactPhotoAsync(Lcom/android/internal/telephony/CallerInfo;ILandroid/pim/ContactsAsyncHelper$OnImageLoadCompleteListener;Ljava/lang/Object;Landroid/content/Context;Landroid/widget/ImageView;Landroid/net/Uri;I)V
 
-    goto :goto_1
+    goto :goto_2
 
     .line 587
     .end local v6           #personUri:Landroid/net/Uri;
-    :cond_5
+    :cond_6
     iget-object v0, p2, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
     const-string v1, "sip:"
@@ -601,7 +625,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     .line 588
     iget-object v0, p2, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
@@ -614,10 +638,10 @@
 
     iput-object v0, v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;->phoneNumber:Ljava/lang/String;
 
-    goto :goto_2
+    goto :goto_3
 
     .line 589
-    :cond_6
+    :cond_7
     invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
@@ -628,22 +652,22 @@
 
     const/4 v1, 0x3
 
-    if-ne v0, v1, :cond_7
+    if-ne v0, v1, :cond_8
 
     .line 590
     iget-object v0, p2, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
     iput-object v0, v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;->phoneNumber:Ljava/lang/String;
 
-    goto :goto_2
+    goto :goto_3
 
     .line 593
-    :cond_7
+    :cond_8
     iget-object v0, p2, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
     iput-object v0, v8, Lcom/android/phone/MiuiCallCard$CallCardInfo;->phoneNumber:Ljava/lang/String;
 
-    goto :goto_2
+    goto :goto_3
 .end method
 
 .method private createPostDialTextAppearanceSpan()Landroid/text/style/TextAppearanceSpan;
@@ -694,43 +718,45 @@
     .parameter "view"
 
     .prologue
-    .line 1084
+    .line 1095
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
 
     move-result-object v0
 
-    .line 1085
+    .line 1096
     .local v0, eventText:Ljava/util/List;,"Ljava/util/List<Ljava/lang/CharSequence;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 1086
+    .line 1097
     .local v1, size:I
     invoke-virtual {p2, p1}, Landroid/view/View;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
 
-    .line 1088
+    .line 1099
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
 
     if-ne v1, v2, :cond_0
 
-    .line 1089
+    .line 1100
     const/4 v2, 0x0
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1091
+    .line 1102
     :cond_0
     return-void
 .end method
 
 .method private getCallCardInfo(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiCallCard$CallCardInfo;
-    .locals 10
+    .locals 11
     .parameter
 
     .prologue
+    const v10, 0x7f0c016c
+
     const/4 v9, 0x2
 
     const/4 v2, 0x1
@@ -803,7 +829,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f0c02a7
+    const v3, 0x7f0c02bf
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -879,7 +905,7 @@
 
     iput-object v0, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
 
-    .line 759
+    .line 763
     :cond_2
     :goto_2
     return-object v1
@@ -904,7 +930,7 @@
 
     .line 629
     :goto_3
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_f
 
     .line 630
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mPhotoTracker:Landroid/pim/ContactsAsyncHelper$ImageTracker;
@@ -986,7 +1012,7 @@
     :cond_6
     instance-of v0, v1, Lcom/android/internal/telephony/CallerInfo;
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     move-object v0, v1
 
@@ -1097,7 +1123,7 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 756
+    .line 760
     const-string v2, "CallCard"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1144,9 +1170,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0c016c
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1166,7 +1190,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0c02a5
+    const v4, 0x7f0c02bd
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -1196,11 +1220,42 @@
 
     .line 726
     :pswitch_2
+    invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v0
+
+    if-ne v0, v9, :cond_d
+
+    invoke-static {p1}, Lcom/android/phone/MiuiExtraConnectionData;->getCdmaCallState(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/android/phone/MiuiConstants$CdmaCallState;->UnauthenticatedActive:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    if-ne v0, v2, :cond_d
+
+    .line 728
+    invoke-virtual {p0}, Lcom/android/phone/MiuiCallCard;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->callStatus:Ljava/lang/String;
+
+    .line 730
+    :cond_d
     iput-object v4, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
 
     goto/16 :goto_2
 
-    .line 730
+    .line 734
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/phone/MiuiCallCard;->getResources()Landroid/content/res/Resources;
 
@@ -1214,12 +1269,12 @@
 
     iput-object v0, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->callStatus:Ljava/lang/String;
 
-    .line 731
+    .line 735
     iput-object v4, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
 
     goto/16 :goto_2
 
-    .line 735
+    .line 739
     :pswitch_4
     invoke-virtual {p0}, Lcom/android/phone/MiuiCallCard;->getResources()Landroid/content/res/Resources;
 
@@ -1233,12 +1288,12 @@
 
     iput-object v0, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->callStatus:Ljava/lang/String;
 
-    .line 736
+    .line 740
     iput-object v4, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
 
     goto/16 :goto_2
 
-    .line 740
+    .line 744
     :pswitch_5
     invoke-virtual {p0}, Lcom/android/phone/MiuiCallCard;->getResources()Landroid/content/res/Resources;
 
@@ -1252,26 +1307,26 @@
 
     iput-object v0, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->callStatus:Ljava/lang/String;
 
-    .line 741
+    .line 745
     invoke-static {p1}, Lcom/android/phone/CallTime;->getCallDuration(Lcom/android/internal/telephony/Call;)J
 
     move-result-wide v2
 
-    .line 742
+    .line 746
     const-wide/16 v4, 0x0
 
     cmp-long v0, v2, v4
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_e
 
-    .line 743
+    .line 747
     invoke-virtual {p0, p1}, Lcom/android/phone/MiuiCallCard;->getCallFailedString(Lcom/android/internal/telephony/Call;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
 
-    .line 744
+    .line 748
     iget-object v0, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->callStatus:Ljava/lang/String;
 
     iget-object v2, v1, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
@@ -1282,12 +1337,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 745
+    .line 749
     invoke-virtual {p0}, Lcom/android/phone/MiuiCallCard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f0c031b
+    const v2, 0x7f0c0333
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1297,8 +1352,8 @@
 
     goto/16 :goto_2
 
-    .line 748
-    :cond_d
+    .line 752
+    :cond_e
     const-wide/16 v4, 0x3e8
 
     div-long/2addr v2, v4
@@ -1311,7 +1366,7 @@
 
     goto/16 :goto_2
 
-    .line 753
+    .line 757
     :pswitch_6
     const-string v0, "CallCard"
 
@@ -1321,12 +1376,12 @@
 
     goto/16 :goto_2
 
-    :cond_e
+    :cond_f
     move v0, v2
 
     goto/16 :goto_4
 
-    :cond_f
+    :cond_10
     move-object v3, v4
 
     goto/16 :goto_3
@@ -1357,16 +1412,16 @@
 
     const/4 v13, 0x0
 
-    .line 489
+    .line 495
     new-instance v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;
 
     invoke-direct {v6, p0, v12}, Lcom/android/phone/MiuiCallCard$CallCardInfo;-><init>(Lcom/android/phone/MiuiCallCard;Lcom/android/phone/MiuiCallCard$1;)V
 
-    .line 491
+    .line 497
     .local v6, info:Lcom/android/phone/MiuiCallCard$CallCardInfo;
     iput-boolean v11, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->isConference:Z
 
-    .line 492
+    .line 498
     invoke-virtual {p0}, Lcom/android/phone/MiuiCallCard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
@@ -1379,10 +1434,10 @@
 
     iput-object v9, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->name:Ljava/lang/String;
 
-    .line 493
+    .line 499
     iput-object v12, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
 
-    .line 495
+    .line 501
     invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v9
@@ -1395,74 +1450,74 @@
 
     if-ne v9, v10, :cond_1
 
-    .line 502
+    .line 508
     iput-boolean v13, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->isConference:Z
 
-    .line 503
+    .line 509
     invoke-direct {p0, p1}, Lcom/android/phone/MiuiCallCard;->getCallCardInfo(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiCallCard$CallCardInfo;
 
     move-result-object v6
 
-    .line 539
+    .line 545
     .end local v6           #info:Lcom/android/phone/MiuiCallCard$CallCardInfo;
     :cond_0
     :goto_0
     return-object v6
 
-    .line 505
+    .line 511
     .restart local v6       #info:Lcom/android/phone/MiuiCallCard$CallCardInfo;
     :cond_1
     invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getConnections()Ljava/util/List;
 
     move-result-object v2
 
-    .line 506
+    .line 512
     .local v2, connections:Ljava/util/List;,"Ljava/util/List<Lcom/android/internal/telephony/Connection;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v3
 
-    .line 507
+    .line 513
     .local v3, count:I
     const/4 v1, 0x0
 
-    .line 508
+    .line 514
     .local v1, callerInfo:Lcom/android/internal/telephony/CallerInfo;
     if-lez v3, :cond_5
 
-    .line 509
+    .line 515
     const/4 v5, 0x0
 
     .local v5, i:I
     :goto_1
     if-ge v5, v3, :cond_5
 
-    .line 510
+    .line 516
     invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 511
+    .line 517
     .local v0, c:Lcom/android/internal/telephony/Connection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getUserData()Ljava/lang/Object;
 
     move-result-object v7
 
-    .line 512
+    .line 518
     .local v7, o:Ljava/lang/Object;
     instance-of v9, v7, Lcom/android/phone/PhoneUtils$CallerInfoToken;
 
     if-eqz v9, :cond_2
 
-    .line 513
+    .line 519
     check-cast v7, Lcom/android/phone/PhoneUtils$CallerInfoToken;
 
     .end local v7           #o:Ljava/lang/Object;
     iget-object v1, v7, Lcom/android/phone/PhoneUtils$CallerInfoToken;->currentInfo:Lcom/android/internal/telephony/CallerInfo;
 
-    .line 519
+    .line 525
     :goto_2
     iget-object v9, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->phoneNumber:Ljava/lang/String;
 
@@ -1472,7 +1527,7 @@
 
     if-eqz v9, :cond_4
 
-    .line 520
+    .line 526
     invoke-direct {p0, p1, v1}, Lcom/android/phone/MiuiCallCard;->createCallCardInfo(Lcom/android/internal/telephony/Call;Lcom/android/internal/telephony/CallerInfo;)Lcom/android/phone/MiuiCallCard$CallCardInfo;
 
     move-result-object v9
@@ -1481,13 +1536,13 @@
 
     iput-object v9, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->phoneNumber:Ljava/lang/String;
 
-    .line 509
+    .line 515
     :goto_3
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 514
+    .line 520
     .restart local v7       #o:Ljava/lang/Object;
     :cond_2
     instance-of v9, v7, Lcom/android/internal/telephony/CallerInfo;
@@ -1496,12 +1551,12 @@
 
     move-object v1, v7
 
-    .line 515
+    .line 521
     check-cast v1, Lcom/android/internal/telephony/CallerInfo;
 
     goto :goto_2
 
-    .line 517
+    .line 523
     :cond_3
     const-string v9, "CallCard"
 
@@ -1511,7 +1566,7 @@
 
     goto :goto_2
 
-    .line 522
+    .line 528
     .end local v7           #o:Ljava/lang/Object;
     :cond_4
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1548,7 +1603,7 @@
 
     goto :goto_3
 
-    .line 526
+    .line 532
     .end local v0           #c:Lcom/android/internal/telephony/Connection;
     .end local v5           #i:I
     :cond_5
@@ -1556,7 +1611,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f0c02cc
+    const v10, 0x7f0c02e4
 
     new-array v11, v11, [Ljava/lang/Object;
 
@@ -1572,18 +1627,18 @@
 
     iput-object v9, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->telocation:Ljava/lang/String;
 
-    .line 527
+    .line 533
     invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v8
 
-    .line 528
+    .line 534
     .local v8, state:Lcom/android/internal/telephony/Call$State;
     sget-object v9, Lcom/android/internal/telephony/Call$State;->HOLDING:Lcom/android/internal/telephony/Call$State;
 
     if-ne v8, v9, :cond_6
 
-    .line 529
+    .line 535
     invoke-virtual {p0}, Lcom/android/phone/MiuiCallCard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
@@ -1596,13 +1651,13 @@
 
     iput-object v9, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->callStatus:Ljava/lang/String;
 
-    .line 533
+    .line 539
     :cond_6
     invoke-static {p1}, Lcom/android/phone/MiuiExtraConnectionData;->getDigitsPressed(Lcom/android/internal/telephony/Call;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 534
+    .line 540
     .local v4, digitsPressed:Ljava/lang/String;
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -1610,15 +1665,15 @@
 
     if-lez v9, :cond_0
 
-    .line 535
+    .line 541
     iget-object v9, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->name:Ljava/lang/String;
 
     iput-object v9, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->phoneNumber:Ljava/lang/String;
 
-    .line 536
+    .line 542
     iput-object v4, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->name:Ljava/lang/String;
 
-    .line 537
+    .line 543
     const-string v9, ""
 
     iput-object v9, v6, Lcom/android/phone/MiuiCallCard$CallCardInfo;->telocation:Ljava/lang/String;
@@ -1631,16 +1686,16 @@
     .parameter "call"
 
     .prologue
-    .line 763
+    .line 767
     const/4 v0, 0x0
 
-    .line 764
+    .line 768
     .local v0, conn:Lcom/android/internal/telephony/Connection;
     invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getEarliestConnection()Lcom/android/internal/telephony/Connection;
 
     move-result-object v0
 
-    .line 765
+    .line 769
     return-object v0
 .end method
 
@@ -1879,68 +1934,33 @@
 .end method
 
 .method private isCdmaThreeWayOrConf(Lcom/android/internal/telephony/Call;)Z
-    .locals 4
+    .locals 2
     .parameter "call"
 
     .prologue
-    const/4 v2, 0x1
+    .line 549
+    invoke-static {p1}, Lcom/android/phone/MiuiExtraConnectionData;->getCdmaCallState(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiConstants$CdmaCallState;
 
-    .line 543
-    invoke-static {p1}, Lcom/android/phone/MiuiExtraConnectionData;->isGeneric(Lcom/android/internal/telephony/Call;)Z
+    move-result-object v0
 
-    move-result v0
+    .line 550
+    .local v0, state:Lcom/android/phone/MiuiConstants$CdmaCallState;
+    sget-object v1, Lcom/android/phone/MiuiConstants$CdmaCallState;->Conference:Lcom/android/phone/MiuiConstants$CdmaCallState;
 
-    .line 544
-    .local v0, result:Z
-    if-nez v0, :cond_2
+    if-eq v0, v1, :cond_0
 
-    .line 545
-    invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->isGeneric()Z
+    sget-object v1, Lcom/android/phone/MiuiConstants$CdmaCallState;->ThreeWayIncoming:Lcom/android/phone/MiuiConstants$CdmaCallState;
 
-    move-result v0
-
-    .line 546
-    if-nez v0, :cond_1
-
-    .line 547
-    iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mApplication:Lcom/android/phone/PhoneApp;
-
-    iget-object v3, v3, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
-
-    invoke-virtual {v3}, Lcom/android/phone/CdmaPhoneCallState;->getCurrentCallState()Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
-
-    move-result-object v1
-
-    .line 548
-    .local v1, state:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
-    sget-object v3, Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;->THRWAY_ACTIVE:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
-
-    if-eq v1, v3, :cond_0
-
-    sget-object v3, Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;->CONF_CALL:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
-
-    if-ne v1, v3, :cond_3
+    if-ne v0, v1, :cond_1
 
     :cond_0
-    move v0, v2
+    const/4 v1, 0x1
 
-    .line 551
-    .end local v1           #state:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
-    :cond_1
     :goto_0
-    if-eqz v0, :cond_2
+    return v1
 
-    .line 552
-    invoke-static {p1, v2}, Lcom/android/phone/MiuiExtraConnectionData;->setGeneric(Lcom/android/internal/telephony/Call;Z)V
-
-    .line 555
-    :cond_2
-    return v0
-
-    .line 548
-    .restart local v1       #state:Lcom/android/phone/CdmaPhoneCallState$PhoneCallState;
-    :cond_3
-    const/4 v0, 0x0
+    :cond_1
+    const/4 v1, 0x0
 
     goto :goto_0
 .end method
@@ -2087,17 +2107,17 @@
 
     const/high16 v3, 0x3f00
 
-    .line 449
+    .line 455
     if-eqz p2, :cond_2
 
     const-wide/16 v0, 0xc8
 
-    .line 450
+    .line 456
     .local v0, duration:J
     :goto_0
     if-eqz p1, :cond_3
 
-    .line 451
+    .line 457
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mFirstCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->getAlpha()F
@@ -2108,7 +2128,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 452
+    .line 458
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mFirstCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2117,7 +2137,7 @@
 
     invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 453
+    .line 459
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mFirstCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2126,7 +2146,7 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    .line 454
+    .line 460
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mFirstCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2135,7 +2155,7 @@
 
     invoke-virtual {v2, v4}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 456
+    .line 462
     :cond_0
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mSecondCallCard:Landroid/widget/LinearLayout;
 
@@ -2155,7 +2175,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 457
+    .line 463
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mSecondCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2164,7 +2184,7 @@
 
     invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 458
+    .line 464
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mSecondCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2173,7 +2193,7 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    .line 459
+    .line 465
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mSecondCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2182,19 +2202,19 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 473
+    .line 479
     :cond_1
     :goto_1
     return-void
 
-    .line 449
+    .line 455
     .end local v0           #duration:J
     :cond_2
     const-wide/16 v0, 0x0
 
     goto :goto_0
 
-    .line 462
+    .line 468
     .restart local v0       #duration:J
     :cond_3
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mFirstCallCard:Landroid/widget/LinearLayout;
@@ -2207,7 +2227,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 463
+    .line 469
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mFirstCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2216,7 +2236,7 @@
 
     invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 464
+    .line 470
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mFirstCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2225,7 +2245,7 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    .line 465
+    .line 471
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mFirstCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2234,7 +2254,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 467
+    .line 473
     :cond_4
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mSecondCallCard:Landroid/widget/LinearLayout;
 
@@ -2254,7 +2274,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 468
+    .line 474
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mSecondCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2263,7 +2283,7 @@
 
     invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 469
+    .line 475
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mSecondCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2272,7 +2292,7 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    .line 470
+    .line 476
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mSecondCallCard:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2298,12 +2318,12 @@
     .parameter "isForegroundCall"
 
     .prologue
-    .line 810
+    .line 814
     invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v1
 
-    .line 813
+    .line 817
     .local v1, state:Lcom/android/internal/telephony/Call$State;
     invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
 
@@ -2327,19 +2347,19 @@
 
     move-result-object v0
 
-    .line 816
+    .line 820
     .local v0, info:Lcom/android/phone/MiuiCallCard$CallCardInfo;
     :goto_0
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->name:Ljava/lang/String;
 
     invoke-virtual {p2, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 817
+    .line 821
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->phoneNumber:Ljava/lang/String;
 
     invoke-direct {p0, p1, p3, v2}, Lcom/android/phone/MiuiCallCard;->updatePhoneNumberField(Lcom/android/internal/telephony/Call;Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 819
+    .line 823
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->telocation:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -2348,12 +2368,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 820
+    .line 824
     const/16 v2, 0x8
 
     invoke-virtual {p4, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 826
+    .line 830
     :goto_1
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->callStatus:Ljava/lang/String;
 
@@ -2363,85 +2383,85 @@
 
     if-eqz v2, :cond_4
 
-    .line 827
+    .line 831
     if-eqz p7, :cond_0
 
-    .line 828
+    .line 832
     const/4 v2, 0x0
 
     invoke-virtual {p7, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 830
+    .line 834
     :cond_0
     const/16 v2, 0x8
 
     invoke-virtual {p6, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 839
+    .line 843
     :goto_2
     const/4 v2, 0x0
 
     invoke-virtual {p8, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 840
+    .line 844
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
 
     if-nez v2, :cond_6
 
-    .line 841
+    .line 845
     invoke-virtual {p9, p1}, Lcom/android/phone/CallTime;->setActiveCallMode(Lcom/android/internal/telephony/Call;)V
 
-    .line 842
+    .line 846
     invoke-virtual {p9}, Lcom/android/phone/CallTime;->reset()V
 
-    .line 843
+    .line 847
     invoke-virtual {p9}, Lcom/android/phone/CallTime;->periodicUpdateTimer()V
 
-    .line 852
+    .line 856
     :goto_3
     iget-boolean v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->isConference:Z
 
     if-eqz v2, :cond_8
 
-    .line 853
+    .line 857
     const/4 v2, 0x0
 
     invoke-virtual {p5, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 854
+    .line 858
     invoke-virtual {p5, p10}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 859
+    .line 863
     :goto_4
     if-eqz p10, :cond_1
 
-    .line 860
+    .line 864
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mPhoto:Landroid/widget/ImageView;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 861
+    .line 865
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mBigPhoto:Landroid/widget/ImageView;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 862
+    .line 866
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mLockScreenWallpaper:Landroid/widget/ImageView;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 863
+    .line 867
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->photo:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_1
 
-    .line 864
+    .line 868
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->photo:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -2452,28 +2472,28 @@
 
     if-le v2, v3, :cond_9
 
-    .line 865
+    .line 869
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mBigPhoto:Landroid/widget/ImageView;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 866
+    .line 870
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mBigPhoto:Landroid/widget/ImageView;
 
     iget-object v3, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->photo:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 867
+    .line 871
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mLockScreenWallpaper:Landroid/widget/ImageView;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 875
+    .line 879
     :cond_1
     :goto_5
     invoke-virtual {p6}, Landroid/widget/TextView;->getVisibility()I
@@ -2492,25 +2512,25 @@
 
     if-ne v2, v3, :cond_a
 
-    .line 877
+    .line 881
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mExtraInfo:Landroid/widget/TextView;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 878
+    .line 882
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mExtraInfo:Landroid/widget/TextView;
 
     iget-object v3, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->extraInfo:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 882
+    .line 886
     :goto_6
     return-void
 
-    .line 813
+    .line 817
     .end local v0           #info:Lcom/android/phone/MiuiCallCard$CallCardInfo;
     :cond_2
     invoke-direct {p0, p1}, Lcom/android/phone/MiuiCallCard;->getCallCardInfo(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiCallCard$CallCardInfo;
@@ -2519,43 +2539,43 @@
 
     goto/16 :goto_0
 
-    .line 822
+    .line 826
     .restart local v0       #info:Lcom/android/phone/MiuiCallCard$CallCardInfo;
     :cond_3
     const/4 v2, 0x0
 
     invoke-virtual {p4, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 823
+    .line 827
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->telocation:Ljava/lang/String;
 
     invoke-virtual {p4, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_1
 
-    .line 832
+    .line 836
     :cond_4
     if-eqz p7, :cond_5
 
-    .line 833
+    .line 837
     const/16 v2, 0x8
 
     invoke-virtual {p7, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 835
+    .line 839
     :cond_5
     const/4 v2, 0x0
 
     invoke-virtual {p6, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 836
+    .line 840
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->callStatus:Ljava/lang/String;
 
     invoke-virtual {p6, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_2
 
-    .line 844
+    .line 848
     :cond_6
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
 
@@ -2565,30 +2585,30 @@
 
     if-eqz v2, :cond_7
 
-    .line 845
+    .line 849
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
 
     invoke-virtual {p8, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 846
+    .line 850
     const/16 v2, 0x8
 
     invoke-virtual {p8, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_3
 
-    .line 848
+    .line 852
     :cond_7
     invoke-virtual {p9}, Lcom/android/phone/CallTime;->cancelTimer()V
 
-    .line 849
+    .line 853
     iget-object v2, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->elapsedTime:Ljava/lang/String;
 
     invoke-virtual {p8, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_3
 
-    .line 856
+    .line 860
     :cond_8
     const/16 v2, 0x8
 
@@ -2596,7 +2616,7 @@
 
     goto/16 :goto_4
 
-    .line 868
+    .line 872
     :cond_9
     iget v2, p0, Lcom/android/phone/MiuiCallCard;->mState:I
 
@@ -2604,14 +2624,14 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 869
+    .line 873
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mPhoto:Landroid/widget/ImageView;
 
     iget-object v3, v0, Lcom/android/phone/MiuiCallCard$CallCardInfo;->photo:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 870
+    .line 874
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mPhoto:Landroid/widget/ImageView;
 
     const/4 v3, 0x0
@@ -2620,7 +2640,7 @@
 
     goto :goto_5
 
-    .line 880
+    .line 884
     :cond_a
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mExtraInfo:Landroid/widget/TextView;
 
@@ -2792,7 +2812,7 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 435
+    .line 441
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mFirstName:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mFirstPhoneNumber:Landroid/widget/TextView;
@@ -2817,7 +2837,7 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/android/phone/MiuiCallCard;->updateCall(Lcom/android/internal/telephony/Call;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/view/View;Landroid/widget/TextView;Landroid/widget/ImageView;Landroid/widget/TextView;Lcom/android/phone/CallTime;Z)V
 
-    .line 440
+    .line 446
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mSecondName:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mSecondPhoneNumber:Landroid/widget/TextView;
@@ -2845,13 +2865,13 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/android/phone/MiuiCallCard;->updateCall(Lcom/android/internal/telephony/Call;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/view/View;Landroid/widget/TextView;Landroid/widget/ImageView;Landroid/widget/TextView;Lcom/android/phone/CallTime;Z)V
 
-    .line 445
+    .line 451
     invoke-direct {p0, p3, v11}, Lcom/android/phone/MiuiCallCard;->switchFrontgroundCallCard(ZZ)V
 
-    .line 446
+    .line 452
     return-void
 
-    .line 440
+    .line 446
     :cond_0
     const/4 v10, 0x0
 
@@ -2864,23 +2884,23 @@
     .parameter "timeElapsed"
 
     .prologue
-    .line 941
+    .line 945
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 942
+    .line 946
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 946
+    .line 950
     :goto_0
     return-void
 
-    .line 944
+    .line 948
     :cond_0
     invoke-static {p1, p2}, Landroid/text/format/DateUtils;->formatElapsedTime(J)Ljava/lang/String;
 
@@ -2895,7 +2915,7 @@
     .locals 0
 
     .prologue
-    .line 894
+    .line 898
     return-void
 .end method
 
@@ -2906,25 +2926,25 @@
     .parameter "number"
 
     .prologue
-    .line 791
+    .line 795
     invoke-static {p1}, Lcom/android/phone/PhoneUtils;->isConferenceCall(Lcom/android/internal/telephony/Call;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 792
+    .line 796
     invoke-direct {p0, p1}, Lcom/android/phone/MiuiCallCard;->getSingleConnection(Lcom/android/internal/telephony/Call;)Lcom/android/internal/telephony/Connection;
 
     move-result-object v0
 
-    .line 793
+    .line 797
     .local v0, c:Lcom/android/internal/telephony/Connection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getRemainingPostDialString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 794
+    .line 798
     .local v1, s:Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2938,12 +2958,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 795
+    .line 799
     new-instance v2, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v2, p3}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 796
+    .line 800
     .local v2, ssb:Landroid/text/SpannableStringBuilder;
     invoke-direct {p0}, Lcom/android/phone/MiuiCallCard;->createPostDialTextAppearanceSpan()Landroid/text/style/TextAppearanceSpan;
 
@@ -2967,17 +2987,17 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 799
+    .line 803
     invoke-virtual {p2, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 804
+    .line 808
     .end local v0           #c:Lcom/android/internal/telephony/Connection;
     .end local v1           #s:Ljava/lang/String;
     .end local v2           #ssb:Landroid/text/SpannableStringBuilder;
     :goto_0
     return-void
 
-    .line 803
+    .line 807
     :cond_0
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -2989,10 +3009,10 @@
     .parameter "call"
 
     .prologue
-    .line 428
+    .line 434
     invoke-direct {p0, p1}, Lcom/android/phone/MiuiCallCard;->updateSingleCall(Lcom/android/internal/telephony/Call;)V
 
-    .line 429
+    .line 435
     return-void
 .end method
 
@@ -3001,7 +3021,7 @@
     .parameter "call"
 
     .prologue
-    .line 481
+    .line 487
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mName:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mPhoneNumber:Landroid/widget/TextView;
@@ -3026,7 +3046,7 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/android/phone/MiuiCallCard;->updateCall(Lcom/android/internal/telephony/Call;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/view/View;Landroid/widget/TextView;Landroid/widget/ImageView;Landroid/widget/TextView;Lcom/android/phone/CallTime;Z)V
 
-    .line 485
+    .line 491
     return-void
 .end method
 
@@ -3037,122 +3057,122 @@
     .parameter "event"
 
     .prologue
-    .line 1055
+    .line 1066
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mName:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1056
+    .line 1067
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mPhoto:Landroid/widget/ImageView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1057
+    .line 1068
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mPhoneNumber:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1058
+    .line 1069
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mTelocation:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1059
+    .line 1070
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mCallStatus:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1060
+    .line 1071
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mElapsedTime:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1061
+    .line 1072
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mConferenceManagerButton:Landroid/view/View;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1062
+    .line 1073
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mExtraInfo:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1064
+    .line 1075
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mDoubleCallsInfoBar:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 1065
+    .line 1076
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mFirstName:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1066
+    .line 1077
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mFirstPhoneNumber:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1067
+    .line 1078
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mFirstTelocation:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1068
+    .line 1079
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mFirstCallStatus:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1069
+    .line 1080
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mFirstCallStatusImage:Landroid/widget/ImageView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1070
+    .line 1081
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mFirstElapsedTime:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1071
+    .line 1082
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mFirstConferenceManagerButton:Landroid/view/View;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1072
+    .line 1083
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mSecondName:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1073
+    .line 1084
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mSecondPhoneNumber:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1074
+    .line 1085
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mSecondTelocation:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1075
+    .line 1086
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mSecondCallStatus:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1076
+    .line 1087
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mSecondCallStatusImage:Landroid/widget/ImageView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1077
+    .line 1088
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mSecondElapsedTime:Landroid/widget/TextView;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1078
+    .line 1089
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mSecondConferenceManagerButton:Landroid/view/View;
 
     invoke-direct {p0, p1, v0}, Lcom/android/phone/MiuiCallCard;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;Landroid/view/View;)V
 
-    .line 1080
+    .line 1091
     :cond_0
     const/4 v0, 0x1
 
@@ -3175,17 +3195,17 @@
     .prologue
     const/16 v4, 0x8
 
-    .line 963
+    .line 967
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mDoubleCallsInfoBar:Landroid/view/View;
 
     if-eqz v2, :cond_0
 
-    .line 964
+    .line 968
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mDoubleCallsInfoBar:Landroid/view/View;
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 968
+    .line 972
     :cond_0
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mInfoBar:Landroid/view/ViewGroup;
 
@@ -3193,7 +3213,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 969
+    .line 973
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -3207,7 +3227,7 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 970
+    .line 974
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mInfoBar:Landroid/view/ViewGroup;
 
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -3216,12 +3236,12 @@
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 969
+    .line 973
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 972
+    .line 976
     :cond_1
     return-void
 .end method
@@ -3231,15 +3251,15 @@
     .parameter
 
     .prologue
-    .line 976
+    .line 980
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    .line 979
+    .line 983
     sparse-switch v0, :sswitch_data_0
 
-    .line 989
+    .line 993
     const-string v1, "CallCard"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3272,11 +3292,11 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 992
+    .line 996
     :goto_0
     return-void
 
-    .line 985
+    .line 989
     :sswitch_0
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
@@ -3286,7 +3306,7 @@
 
     goto :goto_0
 
-    .line 979
+    .line 983
     nop
 
     :sswitch_data_0
@@ -3479,12 +3499,12 @@
     .parameter "imagePresent"
 
     .prologue
-    .line 923
+    .line 927
     move-object v0, p2
 
     check-cast v0, Lcom/android/internal/telephony/CallerInfo;
 
-    .line 924
+    .line 928
     .local v0, info:Lcom/android/internal/telephony/CallerInfo;
     iget-object v2, v0, Lcom/android/internal/telephony/CallerInfo;->cachedPhoto:Landroid/graphics/drawable/Drawable;
 
@@ -3496,22 +3516,22 @@
 
     const/4 v1, 0x1
 
-    .line 925
+    .line 929
     .local v1, success:Z
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 926
+    .line 930
     const/4 v2, 0x0
 
     invoke-virtual {p3, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 927
+    .line 931
     const/16 v2, 0x8
 
     invoke-virtual {p3, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 928
+    .line 932
     new-instance v3, Landroid/graphics/drawable/BitmapDrawable;
 
     iget-object v2, p0, Lcom/android/phone/MiuiCallCard;->mContext:Landroid/content/Context;
@@ -3540,7 +3560,7 @@
 
     iput-object v3, v0, Lcom/android/internal/telephony/CallerInfo;->cachedPhoto:Landroid/graphics/drawable/Drawable;
 
-    .line 931
+    .line 935
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v2
@@ -3549,11 +3569,11 @@
 
     invoke-virtual {p0, v2}, Lcom/android/phone/MiuiCallCard;->updateState(Lcom/android/internal/telephony/CallManager;)V
 
-    .line 933
+    .line 937
     :cond_0
     return-void
 
-    .line 924
+    .line 928
     .end local v1           #success:Z
     :cond_1
     const/4 v1, 0x0
@@ -3568,12 +3588,12 @@
     .parameter "ci"
 
     .prologue
-    .line 904
+    .line 908
     instance-of v0, p2, Lcom/android/internal/telephony/Call;
 
     if-eqz v0, :cond_0
 
-    .line 909
+    .line 913
     invoke-virtual {p0}, Lcom/android/phone/MiuiCallCard;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -3589,14 +3609,14 @@
 
     invoke-static {v0, v1, p0, v2}, Lcom/android/phone/PhoneUtils;->startGetCallerInfo(Landroid/content/Context;Lcom/android/internal/telephony/Connection;Lcom/android/internal/telephony/CallerInfoAsyncQuery$OnQueryCompleteListener;Ljava/lang/Object;)Lcom/android/phone/PhoneUtils$CallerInfoToken;
 
-    .line 911
+    .line 915
     iget-object v0, p0, Lcom/android/phone/MiuiCallCard;->mApplication:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {p0, v0}, Lcom/android/phone/MiuiCallCard;->updateState(Lcom/android/internal/telephony/CallManager;)V
 
-    .line 913
+    .line 917
     :cond_0
     return-void
 .end method
@@ -3640,7 +3660,9 @@
     .locals 7
 
     .prologue
-    .line 998
+    const/4 v5, 0x2
+
+    .line 1002
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mApplication:Lcom/android/phone/PhoneApp;
 
     iget-object v3, v3, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -3649,13 +3671,13 @@
 
     move-result-object v2
 
-    .line 999
+    .line 1003
     .local v2, fgCall:Lcom/android/internal/telephony/Call;
     invoke-static {v2}, Lcom/android/phone/MiuiExtraConnectionData;->getDigitsPressed(Lcom/android/internal/telephony/Call;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1000
+    .line 1004
     .local v1, digits:Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -3663,7 +3685,7 @@
 
     if-nez v3, :cond_0
 
-    .line 1001
+    .line 1005
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -3672,40 +3694,72 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 1002
+    .line 1006
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mApplication:Lcom/android/phone/PhoneApp;
 
     iget-object v3, v3, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {p0, v3}, Lcom/android/phone/MiuiCallCard;->updateState(Lcom/android/internal/telephony/CallManager;)V
 
-    .line 1019
+    .line 1030
     :cond_0
     :goto_0
     return-void
 
-    .line 1004
+    .line 1008
     :cond_1
     iget v3, p0, Lcom/android/phone/MiuiCallCard;->mState:I
 
-    const/4 v4, 0x2
+    if-ne v3, v5, :cond_2
 
-    if-ne v3, v4, :cond_2
-
-    .line 1005
+    .line 1009
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mName:Landroid/widget/TextView;
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1006
+    .line 1010
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mName:Landroid/widget/TextView;
 
     invoke-direct {p0, v3, v1}, Lcom/android/phone/MiuiCallCard;->adaptiveTextSize(Landroid/widget/TextView;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1008
+    .line 1012
     :cond_2
+    invoke-virtual {v2}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v3
+
+    if-ne v3, v5, :cond_3
+
+    .line 1013
+    iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mFirstName:Landroid/widget/TextView;
+
+    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1014
+    iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mFirstName:Landroid/widget/TextView;
+
+    invoke-direct {p0, v3, v1}, Lcom/android/phone/MiuiCallCard;->adaptiveTextSize(Landroid/widget/TextView;Ljava/lang/String;)V
+
+    .line 1015
+    iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mSecondName:Landroid/widget/TextView;
+
+    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1016
+    iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mSecondName:Landroid/widget/TextView;
+
+    invoke-direct {p0, v3, v1}, Lcom/android/phone/MiuiCallCard;->adaptiveTextSize(Landroid/widget/TextView;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 1018
+    :cond_3
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mApplication:Lcom/android/phone/PhoneApp;
 
     iget-object v3, v3, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -3714,7 +3768,7 @@
 
     move-result-object v0
 
-    .line 1009
+    .line 1019
     .local v0, bgCall:Lcom/android/internal/telephony/Call;
     invoke-static {v2}, Lcom/android/phone/CallTime;->getCallDuration(Lcom/android/internal/telephony/Call;)J
 
@@ -3726,27 +3780,27 @@
 
     cmp-long v3, v3, v5
 
-    if-lez v3, :cond_3
+    if-lez v3, :cond_4
 
-    .line 1010
+    .line 1020
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mFirstName:Landroid/widget/TextView;
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1011
+    .line 1021
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mFirstName:Landroid/widget/TextView;
 
     invoke-direct {p0, v3, v1}, Lcom/android/phone/MiuiCallCard;->adaptiveTextSize(Landroid/widget/TextView;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1013
-    :cond_3
+    .line 1023
+    :cond_4
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mSecondName:Landroid/widget/TextView;
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1014
+    .line 1024
     iget-object v3, p0, Lcom/android/phone/MiuiCallCard;->mSecondName:Landroid/widget/TextView;
 
     invoke-direct {p0, v3, v1}, Lcom/android/phone/MiuiCallCard;->adaptiveTextSize(Landroid/widget/TextView;Ljava/lang/String;)V
@@ -3763,7 +3817,7 @@
 
     const/4 v5, 0x0
 
-    .line 772
+    .line 776
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->isAlive()Z
@@ -3776,19 +3830,19 @@
 
     move-result-object v1
 
-    .line 773
+    .line 777
     .local v1, call:Lcom/android/internal/telephony/Call;
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 774
+    .line 778
     iget v6, p0, Lcom/android/phone/MiuiCallCard;->mState:I
 
     const/4 v7, 0x2
 
     if-ne v6, v7, :cond_2
 
-    .line 775
+    .line 779
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mPhoneNumber:Landroid/widget/TextView;
 
     invoke-direct {p0, v1}, Lcom/android/phone/MiuiCallCard;->getCallCardInfo(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiCallCard$CallCardInfo;
@@ -3799,19 +3853,19 @@
 
     invoke-direct {p0, v1, v5, v6}, Lcom/android/phone/MiuiCallCard;->updatePhoneNumberField(Lcom/android/internal/telephony/Call;Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 788
+    .line 792
     :cond_0
     :goto_1
     return-void
 
-    .line 772
+    .line 776
     .end local v1           #call:Lcom/android/internal/telephony/Call;
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 777
+    .line 781
     .restart local v1       #call:Lcom/android/internal/telephony/Call;
     :cond_2
     iget-object v6, p0, Lcom/android/phone/MiuiCallCard;->mApplication:Lcom/android/phone/PhoneApp;
@@ -3822,7 +3876,7 @@
 
     move-result-object v2
 
-    .line 778
+    .line 782
     .local v2, fgCall:Lcom/android/internal/telephony/Call;
     iget-object v6, p0, Lcom/android/phone/MiuiCallCard;->mApplication:Lcom/android/phone/PhoneApp;
 
@@ -3832,7 +3886,7 @@
 
     move-result-object v0
 
-    .line 779
+    .line 783
     .local v0, bgCall:Lcom/android/internal/telephony/Call;
     invoke-static {v2}, Lcom/android/phone/CallTime;->getCallDuration(Lcom/android/internal/telephony/Call;)J
 
@@ -3848,7 +3902,7 @@
 
     move v3, v4
 
-    .line 780
+    .line 784
     .local v3, isFgCallFirst:Z
     :goto_2
     if-eqz v3, :cond_3
@@ -3860,13 +3914,13 @@
 
     if-ne v1, v0, :cond_6
 
-    .line 781
+    .line 785
     .local v4, isFirst:Z
     :cond_4
     :goto_3
     if-eqz v4, :cond_7
 
-    .line 782
+    .line 786
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mFirstPhoneNumber:Landroid/widget/TextView;
 
     invoke-direct {p0, v2}, Lcom/android/phone/MiuiCallCard;->getCallCardInfo(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiCallCard$CallCardInfo;
@@ -3884,17 +3938,17 @@
     :cond_5
     move v3, v5
 
-    .line 779
+    .line 783
     goto :goto_2
 
     .restart local v3       #isFgCallFirst:Z
     :cond_6
     move v4, v5
 
-    .line 780
+    .line 784
     goto :goto_3
 
-    .line 784
+    .line 788
     .restart local v4       #isFirst:Z
     :cond_7
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mSecondPhoneNumber:Landroid/widget/TextView;
@@ -3934,11 +3988,11 @@
     .parameter "cm"
 
     .prologue
-    const/4 v12, 0x2
-
     const/4 v5, 0x1
 
     const/4 v6, 0x0
+
+    const/4 v12, 0x2
 
     const/4 v11, 0x3
 
@@ -3975,7 +4029,7 @@
 
     sget-object v8, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v7, v8, :cond_1
+    if-eq v7, v8, :cond_2
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
@@ -3985,7 +4039,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_1
+    if-nez v7, :cond_2
 
     .line 329
     iput v5, p0, Lcom/android/phone/MiuiCallCard;->mState:I
@@ -3993,19 +4047,20 @@
     .line 330
     move-object v2, v3
 
-    .line 376
+    .line 382
+    :cond_0
     :goto_0
     invoke-direct {p0}, Lcom/android/phone/MiuiCallCard;->updateCallCard()V
 
-    .line 378
+    .line 384
     iget v7, p0, Lcom/android/phone/MiuiCallCard;->mState:I
 
     packed-switch v7, :pswitch_data_0
 
-    .line 389
+    .line 395
     invoke-direct {p0}, Lcom/android/phone/MiuiCallCard;->updateNoCall()V
 
-    .line 396
+    .line 402
     :goto_1
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mPhoto:Landroid/widget/ImageView;
 
@@ -4013,13 +4068,13 @@
 
     move-result v5
 
-    if-eqz v5, :cond_0
+    if-eqz v5, :cond_1
 
     iget v5, p0, Lcom/android/phone/MiuiCallCard;->mState:I
 
-    if-eq v5, v11, :cond_0
+    if-eq v5, v11, :cond_1
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_9
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
 
@@ -4029,23 +4084,23 @@
 
     move-result v5
 
-    if-eq v5, v12, :cond_8
+    if-eq v5, v12, :cond_9
 
     invoke-static {v2}, Lcom/android/phone/PhoneUtils;->isConferenceCall(Lcom/android/internal/telephony/Call;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_8
+    if-eqz v5, :cond_9
 
-    .line 401
-    :cond_0
+    .line 407
+    :cond_1
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mCallCard:Landroid/widget/LinearLayout;
 
     const/16 v6, 0x13
 
     invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    .line 406
+    .line 412
     :goto_2
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mPhoto:Landroid/widget/ImageView;
 
@@ -4053,22 +4108,22 @@
 
     move-result v5
 
-    if-nez v5, :cond_9
+    if-nez v5, :cond_a
 
-    .line 407
+    .line 413
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mTelocation:Landroid/widget/TextView;
 
     iget v6, p0, Lcom/android/phone/MiuiCallCard;->mTelocationMaxWidthWithPhoto:I
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setMaxWidth(I)V
 
-    .line 412
+    .line 418
     :goto_3
     iget v5, p0, Lcom/android/phone/MiuiCallCard;->mState:I
 
-    if-ne v5, v11, :cond_a
+    if-ne v5, v11, :cond_b
 
-    .line 413
+    .line 419
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mFirstName:Landroid/widget/TextView;
 
     iget-object v6, p0, Lcom/android/phone/MiuiCallCard;->mFirstName:Landroid/widget/TextView;
@@ -4083,7 +4138,7 @@
 
     invoke-direct {p0, v5, v6}, Lcom/android/phone/MiuiCallCard;->adaptiveTextSize(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 414
+    .line 420
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mSecondName:Landroid/widget/TextView;
 
     iget-object v6, p0, Lcom/android/phone/MiuiCallCard;->mSecondName:Landroid/widget/TextView;
@@ -4098,19 +4153,19 @@
 
     invoke-direct {p0, v5, v6}, Lcom/android/phone/MiuiCallCard;->adaptiveTextSize(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 418
+    .line 424
     :goto_4
     return-void
 
     .line 332
-    :cond_1
+    :cond_2
     invoke-virtual {v1}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v7
 
     sget-object v8, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v7, v8, :cond_3
+    if-eq v7, v8, :cond_4
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
@@ -4118,7 +4173,7 @@
 
     sget-object v8, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v7, v8, :cond_3
+    if-eq v7, v8, :cond_4
 
     .line 343
     iput v11, p0, Lcom/android/phone/MiuiCallCard;->mState:I
@@ -4134,7 +4189,7 @@
 
     cmp-long v7, v7, v9
 
-    if-lez v7, :cond_2
+    if-lez v7, :cond_3
 
     .line 345
     move-object v2, v1
@@ -4145,7 +4200,7 @@
     goto/16 :goto_0
 
     .line 348
-    :cond_2
+    :cond_3
     move-object v2, v0
 
     .line 349
@@ -4154,14 +4209,14 @@
     goto/16 :goto_0
 
     .line 352
-    :cond_3
+    :cond_4
     invoke-virtual {v1}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v7
 
     sget-object v8, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    if-ne v7, v8, :cond_4
+    if-ne v7, v8, :cond_5
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
@@ -4169,10 +4224,10 @@
 
     sget-object v8, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v7, v8, :cond_6
+    if-eq v7, v8, :cond_7
 
     .line 354
-    :cond_4
+    :cond_5
     iput v12, p0, Lcom/android/phone/MiuiCallCard;->mState:I
 
     .line 355
@@ -4182,52 +4237,83 @@
 
     sget-object v8, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v7, v8, :cond_5
+    if-eq v7, v8, :cond_6
 
     move-object v2, v1
 
+    .line 356
     :goto_5
+    invoke-virtual {v2}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v7
+
+    invoke-interface {v7}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v7
+
+    if-ne v7, v12, :cond_0
+
+    invoke-static {v2}, Lcom/android/phone/MiuiExtraConnectionData;->getCdmaCallState(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    move-result-object v7
+
+    sget-object v8, Lcom/android/phone/MiuiConstants$CdmaCallState;->ThreeWayOutgoing:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    if-ne v7, v8, :cond_0
+
+    .line 358
+    iput v11, p0, Lcom/android/phone/MiuiCallCard;->mState:I
+
+    .line 359
+    invoke-static {v2}, Lcom/android/phone/MiuiCdmaSecondCall;->getInstance(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiCdmaSecondCall;
+
+    move-result-object v4
+
+    .line 360
+    move-object v1, v4
+
     goto/16 :goto_0
 
-    :cond_5
+    :cond_6
     move-object v2, v0
 
+    .line 355
     goto :goto_5
 
-    .line 372
-    :cond_6
+    .line 378
+    :cond_7
     iput v6, p0, Lcom/android/phone/MiuiCallCard;->mState:I
 
     goto/16 :goto_0
 
-    .line 380
+    .line 386
     :pswitch_0
     invoke-direct {p0, v3}, Lcom/android/phone/MiuiCallCard;->updateRingingCall(Lcom/android/internal/telephony/Call;)V
 
     goto/16 :goto_1
 
-    .line 383
+    .line 389
     :pswitch_1
-    if-ne v2, v1, :cond_7
+    if-ne v2, v1, :cond_8
 
     :goto_6
     invoke-direct {p0, v2, v4, v5}, Lcom/android/phone/MiuiCallCard;->updateDoubleCalls(Lcom/android/internal/telephony/Call;Lcom/android/internal/telephony/Call;Z)V
 
     goto/16 :goto_1
 
-    :cond_7
+    :cond_8
     move v5, v6
 
     goto :goto_6
 
-    .line 386
+    .line 392
     :pswitch_2
     invoke-direct {p0, v2}, Lcom/android/phone/MiuiCallCard;->updateSingleCall(Lcom/android/internal/telephony/Call;)V
 
     goto/16 :goto_1
 
-    .line 403
-    :cond_8
+    .line 409
+    :cond_9
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mCallCard:Landroid/widget/LinearLayout;
 
     const/16 v6, 0x11
@@ -4236,8 +4322,8 @@
 
     goto/16 :goto_2
 
-    .line 409
-    :cond_9
+    .line 415
+    :cond_a
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mTelocation:Landroid/widget/TextView;
 
     iget v6, p0, Lcom/android/phone/MiuiCallCard;->mTelocationMaxWidthWithoutPhoto:I
@@ -4246,8 +4332,8 @@
 
     goto/16 :goto_3
 
-    .line 416
-    :cond_a
+    .line 422
+    :cond_b
     iget-object v5, p0, Lcom/android/phone/MiuiCallCard;->mName:Landroid/widget/TextView;
 
     iget-object v6, p0, Lcom/android/phone/MiuiCallCard;->mName:Landroid/widget/TextView;
@@ -4262,9 +4348,9 @@
 
     invoke-direct {p0, v5, v6}, Lcom/android/phone/MiuiCallCard;->adaptiveTextSize(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    goto :goto_4
+    goto/16 :goto_4
 
-    .line 378
+    .line 384
     nop
 
     :pswitch_data_0

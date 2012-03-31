@@ -13,15 +13,15 @@
     .parameter "app"
 
     .prologue
-    .line 41
+    .line 42
     invoke-direct {p0, p1}, Lcom/android/phone/NotificationMgr;-><init>(Lcom/android/phone/PhoneApp;)V
 
-    .line 23
+    .line 24
     const/16 v0, 0x2710
 
     iput v0, p0, Lcom/android/phone/MiuiNotificationMgr;->mCurrentCallRecordNotificationId:I
 
-    .line 42
+    .line 43
     return-void
 .end method
 
@@ -30,30 +30,30 @@
     .parameter
 
     .prologue
-    .line 28
+    .line 29
     const-class v1, Lcom/android/phone/NotificationMgr;
 
     monitor-enter v1
 
-    .line 29
+    .line 30
     :try_start_0
     sget-object v0, Lcom/android/phone/MiuiNotificationMgr;->sInstance:Lcom/android/phone/NotificationMgr;
 
     if-nez v0, :cond_0
 
-    .line 30
+    .line 31
     new-instance v0, Lcom/android/phone/MiuiNotificationMgr;
 
     invoke-direct {v0, p0}, Lcom/android/phone/MiuiNotificationMgr;-><init>(Lcom/android/phone/PhoneApp;)V
 
     sput-object v0, Lcom/android/phone/MiuiNotificationMgr;->sInstance:Lcom/android/phone/NotificationMgr;
 
-    .line 32
+    .line 33
     sget-object v0, Lcom/android/phone/MiuiNotificationMgr;->sInstance:Lcom/android/phone/NotificationMgr;
 
     invoke-virtual {v0}, Lcom/android/phone/NotificationMgr;->updateNotificationsAtStartup()V
 
-    .line 36
+    .line 37
     :goto_0
     sget-object v0, Lcom/android/phone/MiuiNotificationMgr;->sInstance:Lcom/android/phone/NotificationMgr;
 
@@ -61,7 +61,7 @@
 
     return-object v0
 
-    .line 34
+    .line 35
     :cond_0
     const-string v0, "MiuiNotificationMgr"
 
@@ -89,7 +89,7 @@
 
     goto :goto_0
 
-    .line 37
+    .line 38
     :catchall_0
     move-exception v0
 
@@ -104,14 +104,14 @@
     .locals 3
 
     .prologue
-    .line 98
+    .line 120
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.APPLICATION_MESSAGE_UPDATE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 99
+    .line 121
     .local v0, intent:Landroid/content/Intent;
     const-string v2, "android.intent.extra.update_application_message"
 
@@ -128,22 +128,22 @@
     :goto_0
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 102
+    .line 124
     const-string v1, "android.intent.extra.update_application_flatten_name"
 
     const-string v2, "com.android.contacts/.TwelveKeyDialer"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 104
+    .line 126
     iget-object v1, p0, Lcom/android/phone/MiuiNotificationMgr;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 105
+    .line 127
     return-void
 
-    .line 99
+    .line 121
     :cond_0
     const/4 v1, 0x0
 
@@ -156,10 +156,10 @@
     .locals 3
 
     .prologue
-    .line 89
+    .line 111
     invoke-super {p0}, Lcom/android/phone/NotificationMgr;->cancelInCall()V
 
-    .line 92
+    .line 114
     iget-object v0, p0, Lcom/android/phone/MiuiNotificationMgr;->mApp:Lcom/android/phone/PhoneApp;
 
     new-instance v1, Landroid/content/Intent;
@@ -172,7 +172,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/phone/PhoneApp;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 95
+    .line 117
     return-void
 .end method
 
@@ -180,13 +180,13 @@
     .locals 0
 
     .prologue
-    .line 62
+    .line 63
     invoke-super {p0}, Lcom/android/phone/NotificationMgr;->cancelMissedCallNotification()V
 
-    .line 63
+    .line 64
     invoke-direct {p0}, Lcom/android/phone/MiuiNotificationMgr;->sendApplicationUpdateMessage()V
 
-    .line 64
+    .line 65
     return-void
 .end method
 
@@ -195,10 +195,10 @@
     .parameter "note"
 
     .prologue
-    .line 46
+    .line 47
     invoke-super {p0, p1}, Lcom/android/phone/NotificationMgr;->configureLedNotification(Landroid/app/Notification;)V
 
-    .line 47
+    .line 48
     iget-object v3, p0, Lcom/android/phone/MiuiNotificationMgr;->mApp:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v3}, Lcom/android/phone/PhoneApp;->getContentResolver()Landroid/content/ContentResolver;
@@ -213,7 +213,7 @@
 
     move-result v0
 
-    .line 50
+    .line 51
     .local v0, color:I
     iget-object v3, p0, Lcom/android/phone/MiuiNotificationMgr;->mApp:Lcom/android/phone/PhoneApp;
 
@@ -229,16 +229,16 @@
 
     move-result v1
 
-    .line 53
+    .line 54
     .local v1, freq:I
     iput v0, p1, Landroid/app/Notification;->ledARGB:I
 
-    .line 54
+    .line 55
     invoke-static {v1}, Lmiui/app/ExtraNotification;->getLedPwmOffOn(I)[I
 
     move-result-object v2
 
-    .line 55
+    .line 56
     .local v2, offOn:[I
     const/4 v3, 0x0
 
@@ -246,22 +246,135 @@
 
     iput v3, p1, Landroid/app/Notification;->ledOffMS:I
 
-    .line 56
+    .line 57
     const/4 v3, 0x1
 
     aget v3, v2, v3
 
     iput v3, p1, Landroid/app/Notification;->ledOnMS:I
 
-    .line 57
+    .line 58
     iget v3, p1, Landroid/app/Notification;->defaults:I
 
     and-int/lit8 v3, v3, -0x5
 
     iput v3, p1, Landroid/app/Notification;->defaults:I
 
-    .line 58
+    .line 59
     return-void
+.end method
+
+.method protected getInCallNotificationDisplayName(Lcom/android/internal/telephony/Call;)Ljava/lang/String;
+    .locals 4
+    .parameter "currentCall"
+
+    .prologue
+    .line 91
+    invoke-virtual {p1}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_3
+
+    .line 92
+    invoke-static {p1}, Lcom/android/phone/MiuiExtraConnectionData;->getCdmaCallState(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    move-result-object v1
+
+    .line 93
+    .local v1, state:Lcom/android/phone/MiuiConstants$CdmaCallState;
+    sget-object v2, Lcom/android/phone/MiuiConstants$CdmaCallState;->ThreeWayIncoming:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    if-ne v1, v2, :cond_0
+
+    .line 94
+    iget-object v2, p0, Lcom/android/phone/MiuiNotificationMgr;->mApp:Lcom/android/phone/PhoneApp;
+
+    invoke-virtual {v2}, Lcom/android/phone/PhoneApp;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0c0394
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 106
+    .end local v1           #state:Lcom/android/phone/MiuiConstants$CdmaCallState;
+    .local v0, displayName:Ljava/lang/String;
+    :goto_0
+    return-object v0
+
+    .line 95
+    .end local v0           #displayName:Ljava/lang/String;
+    .restart local v1       #state:Lcom/android/phone/MiuiConstants$CdmaCallState;
+    :cond_0
+    sget-object v2, Lcom/android/phone/MiuiConstants$CdmaCallState;->Conference:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    if-ne v1, v2, :cond_1
+
+    .line 96
+    iget-object v2, p0, Lcom/android/phone/MiuiNotificationMgr;->mApp:Lcom/android/phone/PhoneApp;
+
+    invoke-virtual {v2}, Lcom/android/phone/PhoneApp;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0c0395
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .restart local v0       #displayName:Ljava/lang/String;
+    goto :goto_0
+
+    .line 97
+    .end local v0           #displayName:Ljava/lang/String;
+    :cond_1
+    sget-object v2, Lcom/android/phone/MiuiConstants$CdmaCallState;->ThreeWayOutgoing:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    if-ne v1, v2, :cond_2
+
+    .line 98
+    invoke-static {p1}, Lcom/android/phone/MiuiCdmaSecondCall;->getInstance(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiCdmaSecondCall;
+
+    move-result-object v2
+
+    invoke-super {p0, v2}, Lcom/android/phone/NotificationMgr;->getInCallNotificationDisplayName(Lcom/android/internal/telephony/Call;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .restart local v0       #displayName:Ljava/lang/String;
+    goto :goto_0
+
+    .line 100
+    .end local v0           #displayName:Ljava/lang/String;
+    :cond_2
+    invoke-super {p0, p1}, Lcom/android/phone/NotificationMgr;->getInCallNotificationDisplayName(Lcom/android/internal/telephony/Call;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .restart local v0       #displayName:Ljava/lang/String;
+    goto :goto_0
+
+    .line 103
+    .end local v0           #displayName:Ljava/lang/String;
+    .end local v1           #state:Lcom/android/phone/MiuiConstants$CdmaCallState;
+    :cond_3
+    invoke-super {p0, p1}, Lcom/android/phone/NotificationMgr;->getInCallNotificationDisplayName(Lcom/android/internal/telephony/Call;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .restart local v0       #displayName:Ljava/lang/String;
+    goto :goto_0
 .end method
 
 .method public updateCallRecordNotification(ZLjava/lang/String;Ljava/lang/String;)V
@@ -271,12 +384,12 @@
     .parameter "fileName"
 
     .prologue
-    .line 129
+    .line 151
     new-instance v8, Landroid/content/Intent;
 
     invoke-direct {v8}, Landroid/content/Intent;-><init>()V
 
-    .line 130
+    .line 152
     .local v8, intent:Landroid/content/Intent;
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -284,22 +397,22 @@
 
     if-nez v1, :cond_1
 
-    .line 132
+    .line 154
     const/high16 v1, 0x1000
 
     invoke-virtual {v8, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 133
+    .line 155
     const-string v1, "android.intent.category.DEFAULT"
 
     invoke-virtual {v8, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 134
+    .line 156
     const-string v1, "android.intent.action.PICK"
 
     invoke-virtual {v8, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 135
+    .line 157
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -324,7 +437,7 @@
 
     invoke-virtual {v8, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 140
+    .line 162
     :goto_0
     new-instance v0, Landroid/app/Notification;
 
@@ -340,7 +453,7 @@
 
     if-eqz p1, :cond_2
 
-    const v3, 0x7f0c029f
+    const v3, 0x7f0c02b7
 
     :goto_1
     invoke-virtual {v6, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -353,7 +466,7 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/app/Notification;-><init>(Landroid/content/Context;ILjava/lang/CharSequence;JLjava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/content/Intent;)V
 
-    .line 146
+    .line 168
     .local v0, notification:Landroid/app/Notification;
     iget v1, v0, Landroid/app/Notification;->flags:I
 
@@ -361,22 +474,22 @@
 
     iput v1, v0, Landroid/app/Notification;->flags:I
 
-    .line 147
+    .line 169
     invoke-virtual {p0, v0}, Lcom/android/phone/MiuiNotificationMgr;->configureLedNotification(Landroid/app/Notification;)V
 
-    .line 148
+    .line 170
     iget v1, p0, Lcom/android/phone/MiuiNotificationMgr;->mCurrentCallRecordNotificationId:I
 
     const v2, 0x7ffffffe
 
     if-lt v1, v2, :cond_0
 
-    .line 149
+    .line 171
     const/16 v1, 0x2710
 
     iput v1, p0, Lcom/android/phone/MiuiNotificationMgr;->mCurrentCallRecordNotificationId:I
 
-    .line 151
+    .line 173
     :cond_0
     iget v1, p0, Lcom/android/phone/MiuiNotificationMgr;->mCurrentCallRecordNotificationId:I
 
@@ -384,17 +497,17 @@
 
     iput v1, p0, Lcom/android/phone/MiuiNotificationMgr;->mCurrentCallRecordNotificationId:I
 
-    .line 152
+    .line 174
     iget-object v1, p0, Lcom/android/phone/MiuiNotificationMgr;->mNotificationManager:Landroid/app/NotificationManager;
 
     iget v2, p0, Lcom/android/phone/MiuiNotificationMgr;->mCurrentCallRecordNotificationId:I
 
     invoke-virtual {v1, v2, v0}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 153
+    .line 175
     return-void
 
-    .line 137
+    .line 159
     .end local v0           #notification:Landroid/app/Notification;
     :cond_1
     const-string v1, "com.android.settings"
@@ -405,9 +518,9 @@
 
     goto :goto_0
 
-    .line 140
+    .line 162
     :cond_2
-    const v3, 0x7f0c029e
+    const v3, 0x7f0c02b6
 
     goto :goto_1
 .end method
@@ -417,26 +530,26 @@
     .parameter "allowFullScreenIntent"
 
     .prologue
-    .line 68
+    .line 69
     invoke-super {p0, p1}, Lcom/android/phone/NotificationMgr;->updateInCallNotification(Z)V
 
-    .line 69
+    .line 70
     iget-object v5, p0, Lcom/android/phone/MiuiNotificationMgr;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-static {v5}, Lcom/android/phone/MiuiPhoneUtils;->getCurrentConnection(Lcom/android/internal/telephony/CallManager;)Lcom/android/internal/telephony/Connection;
 
     move-result-object v0
 
-    .line 70
+    .line 71
     .local v0, c:Lcom/android/internal/telephony/Connection;
     if-eqz v0, :cond_1
 
-    .line 71
+    .line 72
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v4
 
-    .line 72
+    .line 73
     .local v4, state:Lcom/android/internal/telephony/Call$State;
     iget-object v5, p0, Lcom/android/phone/MiuiNotificationMgr;->mApp:Lcom/android/phone/PhoneApp;
 
@@ -454,7 +567,7 @@
 
     if-nez v5, :cond_1
 
-    .line 74
+    .line 75
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v5
@@ -465,7 +578,7 @@
 
     sub-long v1, v5, v7
 
-    .line 77
+    .line 78
     .local v1, diff:J
     new-instance v3, Landroid/content/Intent;
 
@@ -473,7 +586,7 @@
 
     invoke-direct {v3, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 78
+    .line 79
     .local v3, intent:Landroid/content/Intent;
     const-string v5, "call_state"
 
@@ -483,7 +596,7 @@
 
     invoke-virtual {v3, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 79
+    .line 80
     const-string v7, "base_time"
 
     sget-object v5, Lcom/android/internal/telephony/Call$State;->ACTIVE:Lcom/android/internal/telephony/Call$State;
@@ -504,21 +617,21 @@
     :goto_0
     invoke-virtual {v3, v7, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 82
+    .line 83
     iget-object v5, p0, Lcom/android/phone/MiuiNotificationMgr;->mApp:Lcom/android/phone/PhoneApp;
 
     const-string v6, "android.permission.READ_PHONE_STATE"
 
     invoke-virtual {v5, v3, v6}, Lcom/android/phone/PhoneApp;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 85
+    .line 86
     .end local v1           #diff:J
     .end local v3           #intent:Landroid/content/Intent;
     .end local v4           #state:Lcom/android/internal/telephony/Call$State;
     :cond_1
     return-void
 
-    .line 79
+    .line 80
     .restart local v1       #diff:J
     .restart local v3       #intent:Landroid/content/Intent;
     .restart local v4       #state:Lcom/android/internal/telephony/Call$State;

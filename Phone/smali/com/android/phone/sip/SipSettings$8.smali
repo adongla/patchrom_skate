@@ -54,7 +54,6 @@
     .line 448
     iget-object v1, p0, Lcom/android/phone/sip/SipSettings$8;->this$0:Lcom/android/phone/sip/SipSettings;
 
-    #getter for: Lcom/android/phone/sip/SipSettings;->mSipPreferenceMap:Ljava/util/Map;
     invoke-static {v1}, Lcom/android/phone/sip/SipSettings;->access$1000(Lcom/android/phone/sip/SipSettings;)Ljava/util/Map;
 
     move-result-object v1

@@ -308,7 +308,7 @@
     .parameter "v"
 
     .prologue
-    const v9, 0x7f0c031d
+    const v9, 0x7f0c0335
 
     const/4 v7, 0x2
 
@@ -391,11 +391,11 @@
     if-ne v4, v7, :cond_5
 
     .line 124
-    const v5, 0x7f0c0310
+    const v5, 0x7f0c0328
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    const v7, 0x7f0c031e
+    const v7, 0x7f0c0336
 
     invoke-virtual {p0, v7}, Lcom/android/phone/MiuiEditCustomLocationActivity;->getString(I)Ljava/lang/String;
 
@@ -426,7 +426,7 @@
     .line 127
     new-array v5, v6, [Ljava/lang/Object;
 
-    const v6, 0x7f0c0321
+    const v6, 0x7f0c0339
 
     invoke-virtual {p0, v6}, Lcom/android/phone/MiuiEditCustomLocationActivity;->getString(I)Ljava/lang/String;
 
@@ -447,7 +447,7 @@
     .line 130
     new-array v5, v6, [Ljava/lang/Object;
 
-    const v6, 0x7f0c0320
+    const v6, 0x7f0c0338
 
     invoke-virtual {p0, v6}, Lcom/android/phone/MiuiEditCustomLocationActivity;->getString(I)Ljava/lang/String;
 
@@ -484,7 +484,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0c02c3
+    const v6, 0x7f0c02db
 
     invoke-virtual {v5, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 

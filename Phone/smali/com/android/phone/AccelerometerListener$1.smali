@@ -79,7 +79,6 @@
 
     float-to-double v5, v5
 
-    #calls: Lcom/android/phone/AccelerometerListener;->onSensorEvent(DDD)V
     invoke-static/range {v0 .. v6}, Lcom/android/phone/AccelerometerListener;->access$000(Lcom/android/phone/AccelerometerListener;DDD)V
 
     .line 136

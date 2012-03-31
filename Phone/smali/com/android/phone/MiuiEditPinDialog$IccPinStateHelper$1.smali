@@ -38,7 +38,6 @@
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
     .line 567
-    #calls: Lcom/android/phone/MiuiEditPinDialog$IccPinStateHelper;->getCommandsInterface()Lcom/android/internal/telephony/CommandsInterface;
     invoke-static {}, Lcom/android/phone/MiuiEditPinDialog$IccPinStateHelper;->access$800()Lcom/android/internal/telephony/CommandsInterface;
 
     move-result-object v0

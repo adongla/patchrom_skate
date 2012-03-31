@@ -46,7 +46,6 @@
     .line 76
     iget-object v0, p0, Lcom/android/phone/MiuiEditCustomLocationActivity$1;->this$0:Lcom/android/phone/MiuiEditCustomLocationActivity;
 
-    #calls: Lcom/android/phone/MiuiEditCustomLocationActivity;->resetDoneButtonEnabled()V
     invoke-static {v0}, Lcom/android/phone/MiuiEditCustomLocationActivity;->access$100(Lcom/android/phone/MiuiEditCustomLocationActivity;)V
 
     .line 77

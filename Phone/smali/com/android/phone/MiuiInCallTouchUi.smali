@@ -35,8 +35,6 @@
 
 .field private mCallRecordTimer:Landroid/widget/Chronometer;
 
-.field private mCdmaFlashButton:Landroid/widget/Button;
-
 .field private mContactButton:Landroid/widget/Button;
 
 .field private mDampingInterpolator:Lmiui/animation/DampingInterpolator;
@@ -87,7 +85,7 @@
     .parameter "attrs"
 
     .prologue
-    .line 127
+    .line 126
     invoke-direct {p0, p1, p2}, Lcom/android/phone/InCallTouchUi;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 57
@@ -111,17 +109,17 @@
 
     iput-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAnswerWidgetType:Lcom/android/phone/MiuiInCallTouchUi$AnswerWidgetType;
 
-    .line 103
+    .line 102
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mLastClickTime:J
 
-    .line 759
+    .line 734
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     iput-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mLastPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
-    .line 128
+    .line 127
     new-instance v0, Lcom/android/phone/MiuiInCallTouchUi$Handler;
 
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHandler:Landroid/os/Handler;
@@ -130,22 +128,22 @@
 
     iput-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHandler:Landroid/os/Handler;
 
-    .line 129
+    .line 128
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIsAutoHideAudioModePanel:Z
 
-    .line 130
+    .line 129
     sget-object v0, Lcom/android/phone/MiuiConstants$AudioMode;->Invalid:Lcom/android/phone/MiuiConstants$AudioMode;
 
     iput-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
 
-    .line 131
+    .line 130
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     iput-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
-    .line 132
+    .line 131
     return-void
 .end method
 
@@ -219,16 +217,16 @@
 
     const/4 v8, 0x0
 
-    .line 762
+    .line 737
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     if-ne p1, v0, :cond_0
 
-    .line 877
+    .line 852
     :goto_0
     return-void
 
-    .line 766
+    .line 741
     :cond_0
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
@@ -246,26 +244,26 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 767
+    .line 742
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mLastPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     invoke-direct {p0, v0}, Lcom/android/phone/MiuiInCallTouchUi;->setPanelState(Lcom/android/phone/MiuiInCallTouchUi$PanelState;)V
 
-    .line 768
+    .line 743
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     iput-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mLastPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     goto :goto_0
 
-    .line 772
+    .line 747
     :cond_1
     iget-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
-    .line 773
+    .line 748
     iput-object p1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
-    .line 774
+    .line 749
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->AudioModePanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     if-eq p1, v0, :cond_2
@@ -274,7 +272,7 @@
 
     if-ne v2, v0, :cond_3
 
-    .line 775
+    .line 750
     :cond_2
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHandler:Landroid/os/Handler;
 
@@ -282,11 +280,11 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 778
+    .line 753
     :cond_3
     const/4 v0, 0x0
 
-    .line 779
+    .line 754
     sget-object v3, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     if-eq p1, v3, :cond_4
@@ -297,7 +295,7 @@
 
     move v0, v1
 
-    .line 782
+    .line 757
     :cond_4
     sget-object v3, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
@@ -315,25 +313,25 @@
 
     move v0, v1
 
-    .line 786
+    .line 761
     :cond_5
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 788
+    .line 763
     sget-object v4, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->DialerPanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     if-ne v2, v4, :cond_9
 
-    .line 789
+    .line 764
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
 
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 790
+    .line 765
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     iget-object v4, v4, Lcom/android/phone/InCallScreen;->mDialerView:Lcom/android/phone/DTMFTwelveKeyDialerView;
@@ -352,10 +350,10 @@
 
     move-result-object v4
 
-    .line 794
+    .line 769
     if-eqz v0, :cond_8
 
-    .line 795
+    .line 770
     iget-object v5, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAccelerateInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v4, v5}, Lmiui/animation/AnimatorBuilder;->setInterpolator(Landroid/animation/TimeInterpolator;)Lmiui/animation/AnimatorBuilder;
@@ -364,7 +362,7 @@
 
     invoke-virtual {v5, v11, v12}, Lmiui/animation/AnimatorBuilder;->setDuration(J)Lmiui/animation/AnimatorBuilder;
 
-    .line 799
+    .line 774
     :goto_1
     invoke-virtual {v4}, Lmiui/animation/AnimatorBuilder;->animator()Landroid/animation/Animator;
 
@@ -372,14 +370,14 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 800
+    .line 775
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     iget-object v4, v4, Lcom/android/phone/InCallScreen;->mDialer:Lcom/android/phone/DTMFTwelveKeyDialer;
 
     invoke-virtual {v4}, Lcom/android/phone/DTMFTwelveKeyDialer;->onDialerClose()V
 
-    .line 801
+    .line 776
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mApp:Lcom/android/phone/PhoneApp;
 
     iget-object v4, v4, Lcom/android/phone/PhoneApp;->inCallUiState:Lcom/android/phone/InCallUiState;
@@ -388,19 +386,19 @@
 
     iput-boolean v5, v4, Lcom/android/phone/InCallUiState;->showDialpad:Z
 
-    .line 828
+    .line 803
     :cond_6
     :goto_2
     sget-object v4, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->DialerPanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     if-ne p1, v4, :cond_e
 
-    .line 829
+    .line 804
     iget-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v2, v1}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 830
+    .line 805
     iget-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     iget-object v2, v2, Lcom/android/phone/InCallScreen;->mDialerView:Lcom/android/phone/DTMFTwelveKeyDialerView;
@@ -409,10 +407,10 @@
 
     move-result-object v2
 
-    .line 832
+    .line 807
     if-eqz v0, :cond_d
 
-    .line 833
+    .line 808
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAccelerateInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v2, v0}, Lmiui/animation/AnimatorBuilder;->setInterpolator(Landroid/animation/TimeInterpolator;)Lmiui/animation/AnimatorBuilder;
@@ -421,7 +419,7 @@
 
     invoke-virtual {v0, v11, v12}, Lmiui/animation/AnimatorBuilder;->setDuration(J)Lmiui/animation/AnimatorBuilder;
 
-    .line 837
+    .line 812
     :goto_3
     invoke-virtual {v2}, Lmiui/animation/AnimatorBuilder;->animator()Landroid/animation/Animator;
 
@@ -429,48 +427,48 @@
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 838
+    .line 813
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     iget-object v0, v0, Lcom/android/phone/InCallScreen;->mDialer:Lcom/android/phone/DTMFTwelveKeyDialer;
 
     invoke-virtual {v0}, Lcom/android/phone/DTMFTwelveKeyDialer;->onDialerOpen()V
 
-    .line 839
+    .line 814
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mApp:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->inCallUiState:Lcom/android/phone/InCallUiState;
 
     iput-boolean v1, v0, Lcom/android/phone/InCallUiState;->showDialpad:Z
 
-    .line 863
+    .line 838
     :cond_7
     :goto_4
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 864
+    .line 839
     new-instance v1, Lcom/android/phone/MiuiInCallTouchUi$2;
 
     invoke-direct {v1, p0}, Lcom/android/phone/MiuiInCallTouchUi$2;-><init>(Lcom/android/phone/MiuiInCallTouchUi;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 872
+    .line 847
     invoke-virtual {v0, v3}, Landroid/animation/AnimatorSet;->playSequentially(Ljava/util/List;)V
 
-    .line 873
+    .line 848
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 876
+    .line 851
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mApp:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v0}, Lcom/android/phone/PhoneApp;->pokeUserActivity()V
 
     goto/16 :goto_0
 
-    .line 797
+    .line 772
     :cond_8
     iget-object v5, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDampingInterpolator:Lmiui/animation/DampingInterpolator;
 
@@ -484,20 +482,20 @@
 
     goto :goto_1
 
-    .line 802
+    .line 777
     :cond_9
     sget-object v4, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->ToolsPanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     if-ne v2, v4, :cond_b
 
-    .line 803
+    .line 778
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsButton:Landroid/widget/ToggleButton;
 
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 804
+    .line 779
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsPanel:Landroid/view/View;
 
     invoke-static {v4, v10, v8, v9}, Lmiui/animation/ViewPropertyAnimator;->of(Landroid/view/View;IFF)Lmiui/animation/ViewPropertyAnimator$Builder;
@@ -514,10 +512,10 @@
 
     move-result-object v4
 
-    .line 808
+    .line 783
     if-eqz v0, :cond_a
 
-    .line 809
+    .line 784
     iget-object v5, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAccelerateInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v4, v5}, Lmiui/animation/AnimatorBuilder;->setInterpolator(Landroid/animation/TimeInterpolator;)Lmiui/animation/AnimatorBuilder;
@@ -526,7 +524,7 @@
 
     invoke-virtual {v5, v11, v12}, Lmiui/animation/AnimatorBuilder;->setDuration(J)Lmiui/animation/AnimatorBuilder;
 
-    .line 813
+    .line 788
     :goto_5
     invoke-virtual {v4}, Lmiui/animation/AnimatorBuilder;->animator()Landroid/animation/Animator;
 
@@ -536,7 +534,7 @@
 
     goto/16 :goto_2
 
-    .line 811
+    .line 786
     :cond_a
     iget-object v5, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDampingInterpolator:Lmiui/animation/DampingInterpolator;
 
@@ -550,20 +548,20 @@
 
     goto :goto_5
 
-    .line 814
+    .line 789
     :cond_b
     sget-object v4, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->AudioModePanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     if-ne v2, v4, :cond_6
 
-    .line 815
+    .line 790
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
 
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 816
+    .line 791
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModePanel:Landroid/view/View;
 
     invoke-static {v4, v10, v8, v9}, Lmiui/animation/ViewPropertyAnimator;->of(Landroid/view/View;IFF)Lmiui/animation/ViewPropertyAnimator$Builder;
@@ -580,10 +578,10 @@
 
     move-result-object v4
 
-    .line 820
+    .line 795
     if-eqz v0, :cond_c
 
-    .line 821
+    .line 796
     iget-object v5, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAccelerateInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v4, v5}, Lmiui/animation/AnimatorBuilder;->setInterpolator(Landroid/animation/TimeInterpolator;)Lmiui/animation/AnimatorBuilder;
@@ -592,7 +590,7 @@
 
     invoke-virtual {v5, v11, v12}, Lmiui/animation/AnimatorBuilder;->setDuration(J)Lmiui/animation/AnimatorBuilder;
 
-    .line 825
+    .line 800
     :goto_6
     invoke-virtual {v4}, Lmiui/animation/AnimatorBuilder;->animator()Landroid/animation/Animator;
 
@@ -602,7 +600,7 @@
 
     goto/16 :goto_2
 
-    .line 823
+    .line 798
     :cond_c
     iget-object v5, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDampingInterpolator:Lmiui/animation/DampingInterpolator;
 
@@ -616,7 +614,7 @@
 
     goto :goto_6
 
-    .line 835
+    .line 810
     :cond_d
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDampingInterpolator:Lmiui/animation/DampingInterpolator;
 
@@ -630,28 +628,28 @@
 
     goto/16 :goto_3
 
-    .line 840
+    .line 815
     :cond_e
     sget-object v4, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->ToolsPanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     if-ne p1, v4, :cond_10
 
-    .line 841
+    .line 816
     iget-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v2, v1}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 842
+    .line 817
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsPanel:Landroid/view/View;
 
     invoke-static {v1, v10, v9, v8}, Lmiui/animation/ViewPropertyAnimator;->of(Landroid/view/View;IFF)Lmiui/animation/ViewPropertyAnimator$Builder;
 
     move-result-object v1
 
-    .line 844
+    .line 819
     if-eqz v0, :cond_f
 
-    .line 845
+    .line 820
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAccelerateInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v1, v0}, Lmiui/animation/AnimatorBuilder;->setInterpolator(Landroid/animation/TimeInterpolator;)Lmiui/animation/AnimatorBuilder;
@@ -660,7 +658,7 @@
 
     invoke-virtual {v0, v11, v12}, Lmiui/animation/AnimatorBuilder;->setDuration(J)Lmiui/animation/AnimatorBuilder;
 
-    .line 849
+    .line 824
     :goto_7
     invoke-virtual {v1}, Lmiui/animation/AnimatorBuilder;->animator()Landroid/animation/Animator;
 
@@ -670,7 +668,7 @@
 
     goto/16 :goto_4
 
-    .line 847
+    .line 822
     :cond_f
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDampingInterpolator:Lmiui/animation/DampingInterpolator;
 
@@ -684,28 +682,28 @@
 
     goto :goto_7
 
-    .line 850
+    .line 825
     :cond_10
     sget-object v4, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->AudioModePanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     if-ne p1, v4, :cond_7
 
-    .line 851
+    .line 826
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v1}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 852
+    .line 827
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModePanel:Landroid/view/View;
 
     invoke-static {v1, v10, v9, v8}, Lmiui/animation/ViewPropertyAnimator;->of(Landroid/view/View;IFF)Lmiui/animation/ViewPropertyAnimator$Builder;
 
     move-result-object v1
 
-    .line 854
+    .line 829
     if-eqz v0, :cond_11
 
-    .line 855
+    .line 830
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAccelerateInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v1, v0}, Lmiui/animation/AnimatorBuilder;->setInterpolator(Landroid/animation/TimeInterpolator;)Lmiui/animation/AnimatorBuilder;
@@ -714,7 +712,7 @@
 
     invoke-virtual {v0, v11, v12}, Lmiui/animation/AnimatorBuilder;->setDuration(J)Lmiui/animation/AnimatorBuilder;
 
-    .line 859
+    .line 834
     :goto_8
     invoke-virtual {v1}, Lmiui/animation/AnimatorBuilder;->animator()Landroid/animation/Animator;
 
@@ -722,12 +720,12 @@
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 860
+    .line 835
     iput-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mLastPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     goto/16 :goto_4
 
-    .line 857
+    .line 832
     :cond_11
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDampingInterpolator:Lmiui/animation/DampingInterpolator;
 
@@ -749,24 +747,24 @@
     .prologue
     const/16 v3, 0x64
 
-    .line 619
+    .line 594
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/phone/MiuiInCallTouchUi;->showAudioModePanel(Z)V
 
-    .line 621
+    .line 596
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 622
+    .line 597
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHandler:Landroid/os/Handler;
 
     int-to-long v1, p1
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 623
+    .line 598
     return-void
 .end method
 
@@ -776,7 +774,7 @@
     .locals 0
 
     .prologue
-    .line 616
+    .line 591
     return-void
 .end method
 
@@ -784,7 +782,7 @@
     .locals 1
 
     .prologue
-    .line 136
+    .line 135
     const v0, 0x7f04001e
 
     return v0
@@ -796,7 +794,7 @@
     .prologue
     const/16 v4, 0x8
 
-    .line 627
+    .line 602
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v1
@@ -826,7 +824,7 @@
     :goto_0
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAnswerWidgetType:Lcom/android/phone/MiuiInCallTouchUi$AnswerWidgetType;
 
-    .line 631
+    .line 606
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAnswerWidgetType:Lcom/android/phone/MiuiInCallTouchUi$AnswerWidgetType;
 
     sget-object v2, Lcom/android/phone/MiuiInCallTouchUi$AnswerWidgetType;->Vertical:Lcom/android/phone/MiuiInCallTouchUi$AnswerWidgetType;
@@ -837,7 +835,7 @@
 
     if-nez v1, :cond_1
 
-    .line 632
+    .line 607
     const v1, 0x7f0700ae
 
     invoke-virtual {p0, v1}, Lcom/android/phone/MiuiInCallTouchUi;->findViewById(I)Landroid/view/View;
@@ -846,11 +844,11 @@
 
     check-cast v0, Landroid/view/ViewStub;
 
-    .line 633
+    .line 608
     .local v0, stub:Landroid/view/ViewStub;
     invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
-    .line 634
+    .line 609
     const v1, 0x7f070083
 
     invoke-virtual {p0, v1}, Lcom/android/phone/MiuiInCallTouchUi;->findViewById(I)Landroid/view/View;
@@ -861,12 +859,12 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidgetVertical:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    .line 635
+    .line 610
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidgetVertical:Lcom/android/phone/MiuiInCallAnswerWidget;
 
     invoke-virtual {v1, p0}, Lcom/android/phone/MiuiInCallAnswerWidget;->setOnTriggerListener(Lcom/android/internal/widget/multiwaveview/MultiWaveView$OnTriggerListener;)V
 
-    .line 636
+    .line 611
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidgetVertical:Lcom/android/phone/MiuiInCallAnswerWidget;
 
     iget-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
@@ -887,21 +885,21 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/phone/MiuiInCallAnswerWidget;->setSlidingTarget(Landroid/view/View;Landroid/view/View;)V
 
-    .line 638
+    .line 613
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidgetVertical:Lcom/android/phone/MiuiInCallAnswerWidget;
 
-    .line 660
+    .line 635
     .end local v0           #stub:Landroid/view/ViewStub;
     :goto_1
     return-object v1
 
-    .line 627
+    .line 602
     :cond_0
     sget-object v1, Lcom/android/phone/MiuiInCallTouchUi$AnswerWidgetType;->Horizontal:Lcom/android/phone/MiuiInCallTouchUi$AnswerWidgetType;
 
     goto :goto_0
 
-    .line 639
+    .line 614
     :cond_1
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAnswerWidgetType:Lcom/android/phone/MiuiInCallTouchUi$AnswerWidgetType;
 
@@ -913,7 +911,7 @@
 
     if-nez v1, :cond_2
 
-    .line 640
+    .line 615
     const v1, 0x7f0700ad
 
     invoke-virtual {p0, v1}, Lcom/android/phone/MiuiInCallTouchUi;->findViewById(I)Landroid/view/View;
@@ -922,11 +920,11 @@
 
     check-cast v0, Landroid/view/ViewStub;
 
-    .line 641
+    .line 616
     .restart local v0       #stub:Landroid/view/ViewStub;
     invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
-    .line 642
+    .line 617
     const v1, 0x7f070082
 
     invoke-virtual {p0, v1}, Lcom/android/phone/MiuiInCallTouchUi;->findViewById(I)Landroid/view/View;
@@ -937,12 +935,12 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
-    .line 643
+    .line 618
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     invoke-virtual {v1, p0}, Lcom/android/internal/widget/multiwaveview/MultiWaveView;->setOnTriggerListener(Lcom/android/internal/widget/multiwaveview/MultiWaveView$OnTriggerListener;)V
 
-    .line 644
+    .line 619
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getResources()Landroid/content/res/Resources;
@@ -957,12 +955,12 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/multiwaveview/MultiWaveView;->setTranslationY(F)V
 
-    .line 645
+    .line 620
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     goto :goto_1
 
-    .line 648
+    .line 623
     .end local v0           #stub:Landroid/view/ViewStub;
     :cond_2
     sget-object v1, Lcom/android/phone/MiuiInCallTouchUi$3;->$SwitchMap$com$android$phone$MiuiInCallTouchUi$AnswerWidgetType:[I
@@ -977,46 +975,46 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 660
+    .line 635
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 650
+    .line 625
     :pswitch_0
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     if-eqz v1, :cond_3
 
-    .line 651
+    .line 626
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     invoke-virtual {v1, v4}, Lcom/android/internal/widget/multiwaveview/MultiWaveView;->setVisibility(I)V
 
-    .line 653
+    .line 628
     :cond_3
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidgetVertical:Lcom/android/phone/MiuiInCallAnswerWidget;
 
     goto :goto_1
 
-    .line 655
+    .line 630
     :pswitch_1
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidgetVertical:Lcom/android/phone/MiuiInCallAnswerWidget;
 
     if-eqz v1, :cond_4
 
-    .line 656
+    .line 631
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidgetVertical:Lcom/android/phone/MiuiInCallAnswerWidget;
 
     invoke-virtual {v1, v4}, Lcom/android/phone/MiuiInCallAnswerWidget;->setVisibility(I)V
 
-    .line 658
+    .line 633
     :cond_4
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     goto :goto_1
 
-    .line 648
+    .line 623
     nop
 
     :pswitch_data_0
@@ -1030,7 +1028,7 @@
     .locals 2
 
     .prologue
-    .line 718
+    .line 693
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     sget-object v1, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->AudioModePanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
@@ -1052,7 +1050,7 @@
     .locals 2
 
     .prologue
-    .line 706
+    .line 681
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     sget-object v1, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->DialerPanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
@@ -1074,7 +1072,7 @@
     .locals 2
 
     .prologue
-    .line 730
+    .line 705
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mPanelState:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     sget-object v1, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->ToolsPanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
@@ -1093,163 +1091,223 @@
 .end method
 
 .method public onClick(Landroid/view/View;)V
-    .locals 9
+    .locals 10
     .parameter "view"
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    .line 272
+    .line 259
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    .line 273
-    .local v1, now:J
-    iget-wide v5, p0, Lcom/android/phone/MiuiInCallTouchUi;->mLastClickTime:J
+    .line 260
+    .local v2, now:J
+    iget-wide v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mLastClickTime:J
 
-    sub-long v5, v1, v5
+    sub-long v6, v2, v6
 
-    const-wide/16 v7, 0x12c
+    const-wide/16 v8, 0x12c
 
-    cmp-long v5, v5, v7
+    cmp-long v6, v6, v8
 
-    if-gtz v5, :cond_0
+    if-gtz v6, :cond_0
 
-    .line 315
+    .line 312
     :goto_0
     return-void
 
-    .line 276
+    .line 263
     :cond_0
-    iput-wide v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mLastClickTime:J
+    iput-wide v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mLastClickTime:J
 
-    .line 278
+    .line 265
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
-    move-result v0
+    move-result v1
 
-    .line 279
-    .local v0, id:I
+    .line 266
+    .local v1, id:I
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
-    move-result v5
+    move-result v6
 
-    packed-switch v5, :pswitch_data_0
+    packed-switch v6, :pswitch_data_0
 
-    .line 313
+    .line 310
+    :cond_1
+    :goto_1
     :pswitch_0
     invoke-super {p0, p1}, Lcom/android/phone/InCallTouchUi;->onClick(Landroid/view/View;)V
 
     goto :goto_0
 
-    .line 286
+    .line 272
     :pswitch_1
-    iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
+    iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    invoke-virtual {v3, v0}, Lcom/android/phone/InCallScreen;->handleOnscreenButtonClick(I)V
+    invoke-virtual {v4, v1}, Lcom/android/phone/InCallScreen;->handleOnscreenButtonClick(I)V
 
     goto :goto_0
 
-    .line 290
+    .line 276
     :pswitch_2
-    sget-object v3, Lcom/android/phone/MiuiConstants$AudioMode;->Bluetooth:Lcom/android/phone/MiuiConstants$AudioMode;
+    sget-object v4, Lcom/android/phone/MiuiConstants$AudioMode;->Bluetooth:Lcom/android/phone/MiuiConstants$AudioMode;
 
-    iput-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
+    iput-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
 
-    .line 291
-    iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
+    .line 277
+    iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    invoke-virtual {v3, v0}, Lcom/android/phone/InCallScreen;->handleOnscreenButtonClick(I)V
+    invoke-virtual {v4, v1}, Lcom/android/phone/InCallScreen;->handleOnscreenButtonClick(I)V
 
     goto :goto_0
 
-    .line 294
+    .line 280
     :pswitch_3
-    sget-object v3, Lcom/android/phone/MiuiConstants$AudioMode;->Earpiece:Lcom/android/phone/MiuiConstants$AudioMode;
+    sget-object v4, Lcom/android/phone/MiuiConstants$AudioMode;->Earpiece:Lcom/android/phone/MiuiConstants$AudioMode;
 
-    iput-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
+    iput-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
 
-    .line 295
-    iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
+    .line 281
+    iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    invoke-virtual {v3, v0}, Lcom/android/phone/InCallScreen;->handleOnscreenButtonClick(I)V
+    invoke-virtual {v4, v1}, Lcom/android/phone/InCallScreen;->handleOnscreenButtonClick(I)V
 
     goto :goto_0
 
-    .line 298
+    .line 284
     :pswitch_4
-    sget-object v3, Lcom/android/phone/MiuiConstants$AudioMode;->Speaker:Lcom/android/phone/MiuiConstants$AudioMode;
+    sget-object v4, Lcom/android/phone/MiuiConstants$AudioMode;->Speaker:Lcom/android/phone/MiuiConstants$AudioMode;
 
-    iput-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
+    iput-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
 
-    .line 299
-    iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
+    .line 285
+    iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    invoke-virtual {v3, v0}, Lcom/android/phone/InCallScreen;->handleOnscreenButtonClick(I)V
+    invoke-virtual {v4, v1}, Lcom/android/phone/InCallScreen;->handleOnscreenButtonClick(I)V
 
     goto :goto_0
 
-    .line 303
+    .line 289
     :pswitch_5
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isAudioModePanelOpened()Z
 
-    move-result v5
+    move-result v6
 
-    if-nez v5, :cond_1
-
-    :goto_1
-    invoke-virtual {p0, v3}, Lcom/android/phone/MiuiInCallTouchUi;->showAudioModePanel(Z)V
-
-    goto :goto_0
-
-    :cond_1
-    move v3, v4
-
-    goto :goto_1
-
-    .line 306
-    :pswitch_6
-    invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isToolsPanelOpened()Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
+    if-nez v6, :cond_2
 
     :goto_2
-    invoke-virtual {p0, v3}, Lcom/android/phone/MiuiInCallTouchUi;->showToolsPanel(Z)V
+    invoke-virtual {p0, v4}, Lcom/android/phone/MiuiInCallTouchUi;->showAudioModePanel(Z)V
 
     goto :goto_0
 
     :cond_2
-    move v3, v4
+    move v4, v5
 
     goto :goto_2
 
-    .line 309
-    :pswitch_7
-    invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isDialerPanelOpened()Z
+    .line 292
+    :pswitch_6
+    invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isToolsPanelOpened()Z
 
-    move-result v5
+    move-result v6
 
-    if-nez v5, :cond_3
+    if-nez v6, :cond_3
 
     :goto_3
-    invoke-virtual {p0, v3}, Lcom/android/phone/MiuiInCallTouchUi;->showDialerPanel(Z)V
+    invoke-virtual {p0, v4}, Lcom/android/phone/MiuiInCallTouchUi;->showToolsPanel(Z)V
 
     goto :goto_0
 
     :cond_3
-    move v3, v4
+    move v4, v5
 
     goto :goto_3
 
-    .line 279
+    .line 295
+    :pswitch_7
+    invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isDialerPanelOpened()Z
+
+    move-result v6
+
+    if-nez v6, :cond_4
+
+    :goto_4
+    invoke-virtual {p0, v4}, Lcom/android/phone/MiuiInCallTouchUi;->showDialerPanel(Z)V
+
+    goto :goto_0
+
+    :cond_4
+    move v4, v5
+
+    goto :goto_4
+
+    .line 299
+    :pswitch_8
+    iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mApp:Lcom/android/phone/PhoneApp;
+
+    iget-object v4, v4, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    invoke-static {v4}, Lcom/android/phone/MiuiPhoneUtils;->getCurrentActiveCall(Lcom/android/internal/telephony/CallManager;)Lcom/android/internal/telephony/Call;
+
+    move-result-object v0
+
+    .line 300
+    .local v0, call:Lcom/android/internal/telephony/Call;
+    invoke-virtual {v0}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v4
+
+    const/4 v5, 0x2
+
+    if-ne v4, v5, :cond_1
+
+    .line 301
+    invoke-static {v0}, Lcom/android/phone/MiuiExtraConnectionData;->getCdmaCallState(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    move-result-object v4
+
+    sget-object v5, Lcom/android/phone/MiuiConstants$CdmaCallState;->Holding:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    if-ne v4, v5, :cond_5
+
+    .line 302
+    sget-object v4, Lcom/android/phone/MiuiConstants$CdmaCallState;->AuthenticatedActive:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    invoke-static {v0, v4}, Lcom/android/phone/MiuiExtraConnectionData;->setCdmaCallState(Lcom/android/internal/telephony/Call;Lcom/android/phone/MiuiConstants$CdmaCallState;)V
+
+    goto :goto_1
+
+    .line 305
+    :cond_5
+    sget-object v4, Lcom/android/phone/MiuiConstants$CdmaCallState;->Holding:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    invoke-static {v0, v4}, Lcom/android/phone/MiuiExtraConnectionData;->setCdmaCallState(Lcom/android/internal/telephony/Call;Lcom/android/phone/MiuiConstants$CdmaCallState;)V
+
+    goto :goto_1
+
+    .line 266
+    nop
+
     :pswitch_data_0
-    .packed-switch 0x7f0700b1
-        :pswitch_1
+    .packed-switch 0x7f0700a8
+        :pswitch_8
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
         :pswitch_1
         :pswitch_1
         :pswitch_0
@@ -1271,7 +1329,7 @@
     .locals 3
 
     .prologue
-    .line 150
+    .line 149
     const v1, 0x7f07009a
 
     invoke-virtual {p0, v1}, Lcom/android/phone/MiuiInCallTouchUi;->findViewById(I)Landroid/view/View;
@@ -1280,8 +1338,8 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
-    .line 151
-    const v1, 0x7f0700c0
+    .line 150
+    const v1, 0x7f0700bf
 
     invoke-virtual {p0, v1}, Lcom/android/phone/MiuiInCallTouchUi;->findViewById(I)Landroid/view/View;
 
@@ -1289,7 +1347,7 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControlsMask:Landroid/view/View;
 
-    .line 152
+    .line 151
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControlsMask:Landroid/view/View;
 
     new-instance v2, Lcom/android/phone/MiuiInCallTouchUi$1;
@@ -1298,7 +1356,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 161
+    .line 160
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700ab
@@ -1311,12 +1369,12 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
 
-    .line 162
+    .line 161
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
 
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 163
+    .line 162
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700ac
@@ -1329,12 +1387,12 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
 
-    .line 164
+    .line 163
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
 
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 165
+    .line 164
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700a4
@@ -1347,15 +1405,15 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mEndButton:Landroid/widget/Button;
 
-    .line 166
+    .line 165
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mEndButton:Landroid/widget/Button;
 
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 167
+    .line 166
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
-    const v2, 0x7f0700b5
+    const v2, 0x7f0700b4
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1365,12 +1423,12 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mContactButton:Landroid/widget/Button;
 
-    .line 168
+    .line 167
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mContactButton:Landroid/widget/Button;
 
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 169
+    .line 168
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700a7
@@ -1383,12 +1441,30 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
 
-    .line 170
+    .line 169
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 170
+    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
+
+    const v2, 0x7f0700bb
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ToggleButton;
+
+    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSpeakerButton:Landroid/widget/ToggleButton;
+
     .line 171
+    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSpeakerButton:Landroid/widget/ToggleButton;
+
+    invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 172
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700bc
@@ -1399,14 +1475,14 @@
 
     check-cast v1, Landroid/widget/ToggleButton;
 
-    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSpeakerButton:Landroid/widget/ToggleButton;
+    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
 
-    .line 172
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSpeakerButton:Landroid/widget/ToggleButton;
+    .line 173
+    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 173
+    .line 174
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700bd
@@ -1417,14 +1493,14 @@
 
     check-cast v1, Landroid/widget/ToggleButton;
 
-    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
+    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
 
-    .line 174
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
+    .line 175
+    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 175
+    .line 176
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700be
@@ -1435,32 +1511,14 @@
 
     check-cast v1, Landroid/widget/ToggleButton;
 
-    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
-
-    .line 176
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
-
-    invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 177
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
-
-    const v2, 0x7f0700bf
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ToggleButton;
-
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsButton:Landroid/widget/ToggleButton;
 
-    .line 178
+    .line 177
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 181
+    .line 180
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700b0
@@ -1473,10 +1531,10 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCallRecordPrompt:Landroid/widget/TextView;
 
-    .line 182
+    .line 181
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
-    const v2, 0x7f0700b2
+    const v2, 0x7f0700b1
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1486,15 +1544,15 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
 
-    .line 183
+    .line 182
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
 
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 184
+    .line 183
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
-    const v2, 0x7f0700b3
+    const v2, 0x7f0700b2
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1502,15 +1560,15 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStopRecordButton:Landroid/view/View;
 
-    .line 185
+    .line 184
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStopRecordButton:Landroid/view/View;
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 188
+    .line 187
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
-    const v2, 0x7f0700b6
+    const v2, 0x7f0700b5
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1520,12 +1578,12 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mNoteButton:Landroid/widget/Button;
 
-    .line 189
+    .line 188
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mNoteButton:Landroid/widget/Button;
 
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 192
+    .line 191
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700a8
@@ -1538,12 +1596,12 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
 
-    .line 193
+    .line 192
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 196
+    .line 195
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700a9
@@ -1556,105 +1614,61 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSwapButton:Landroid/widget/Button;
 
-    .line 197
+    .line 196
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSwapButton:Landroid/widget/Button;
 
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 198
-    invoke-static {}, Lcom/android/phone/PhoneApp;->getPhone()Lcom/android/internal/telephony/Phone;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_0
-
-    .line 201
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSwapButton:Landroid/widget/Button;
-
-    const v2, 0x7f0c032e
-
-    invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
-
-    .line 207
-    :goto_0
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
-
-    const v2, 0x7f0700b1
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/Button;
-
-    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCdmaFlashButton:Landroid/widget/Button;
-
-    .line 208
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCdmaFlashButton:Landroid/widget/Button;
-
-    invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 210
     new-instance v0, Lcom/android/phone/InCallTouchUi$SmallerHitTargetTouchListener;
 
     invoke-direct {v0, p0}, Lcom/android/phone/InCallTouchUi$SmallerHitTargetTouchListener;-><init>(Lcom/android/phone/InCallTouchUi;)V
 
-    .line 211
+    .line 199
     .local v0, smallerHitTargetTouchListener:Landroid/view/View$OnTouchListener;
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
 
     invoke-virtual {v1, v0}, Landroid/widget/Button;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 212
+    .line 200
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
 
     invoke-virtual {v1, v0}, Landroid/widget/Button;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 213
+    .line 201
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v1, v0}, Landroid/widget/ToggleButton;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 214
+    .line 202
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSwapButton:Landroid/widget/Button;
 
     invoke-virtual {v1, v0}, Landroid/widget/Button;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 215
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCdmaFlashButton:Landroid/widget/Button;
-
-    invoke-virtual {v1, v0}, Landroid/widget/Button;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    .line 216
+    .line 203
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v1, v0}, Landroid/widget/ToggleButton;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 217
+    .line 204
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mContactButton:Landroid/widget/Button;
 
     invoke-virtual {v1, v0}, Landroid/widget/Button;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 218
+    .line 205
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
 
     invoke-virtual {v1, v0}, Landroid/widget/Button;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 219
+    .line 206
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mNoteButton:Landroid/widget/Button;
 
     invoke-virtual {v1, v0}, Landroid/widget/Button;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 221
+    .line 208
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
-    const v2, 0x7f0700b4
+    const v2, 0x7f0700b3
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1664,7 +1678,25 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCallRecordTimer:Landroid/widget/Chronometer;
 
-    .line 223
+    .line 210
+    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
+
+    const v2, 0x7f0700b7
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ToggleButton;
+
+    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeBluetoothButton:Landroid/widget/ToggleButton;
+
+    .line 211
+    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeBluetoothButton:Landroid/widget/ToggleButton;
+
+    invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 212
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700b8
@@ -1675,14 +1707,14 @@
 
     check-cast v1, Landroid/widget/ToggleButton;
 
-    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeBluetoothButton:Landroid/widget/ToggleButton;
+    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
-    .line 224
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeBluetoothButton:Landroid/widget/ToggleButton;
+    .line 213
+    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 225
+    .line 214
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     const v2, 0x7f0700b9
@@ -1693,32 +1725,14 @@
 
     check-cast v1, Landroid/widget/ToggleButton;
 
-    iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
-
-    .line 226
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
-
-    invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 227
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
-
-    const v2, 0x7f0700ba
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ToggleButton;
-
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeSpeakerButton:Landroid/widget/ToggleButton;
 
-    .line 228
+    .line 215
     iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeSpeakerButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v1, p0}, Landroid/widget/ToggleButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 232
+    .line 219
     const v1, 0x7f0700af
 
     invoke-virtual {p0, v1}, Lcom/android/phone/MiuiInCallTouchUi;->findViewById(I)Landroid/view/View;
@@ -1727,8 +1741,8 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsPanel:Landroid/view/View;
 
-    .line 233
-    const v1, 0x7f0700b7
+    .line 220
+    const v1, 0x7f0700b6
 
     invoke-virtual {p0, v1}, Lcom/android/phone/MiuiInCallTouchUi;->findViewById(I)Landroid/view/View;
 
@@ -1736,19 +1750,8 @@
 
     iput-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModePanel:Landroid/view/View;
 
-    .line 234
+    .line 221
     return-void
-
-    .line 203
-    .end local v0           #smallerHitTargetTouchListener:Landroid/view/View$OnTouchListener;
-    :cond_0
-    iget-object v1, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSwapButton:Landroid/widget/Button;
-
-    const v2, 0x7f0c0334
-
-    invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
-
-    goto/16 :goto_0
 .end method
 
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
@@ -1756,7 +1759,7 @@
     .parameter "item"
 
     .prologue
-    .line 611
+    .line 586
     const/4 v0, 0x1
 
     return v0
@@ -1768,19 +1771,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 742
+    .line 717
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 743
+    .line 718
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStopRecordButton:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 744
+    .line 719
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCallRecordTimer:Landroid/widget/Chronometer;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -1789,12 +1792,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/Chronometer;->setBase(J)V
 
-    .line 745
+    .line 720
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCallRecordTimer:Landroid/widget/Chronometer;
 
     invoke-virtual {v0}, Landroid/widget/Chronometer;->start()V
 
-    .line 746
+    .line 721
     sget-boolean v0, Lmiui/os/Build;->IS_MIONE:Z
 
     if-nez v0, :cond_0
@@ -1803,12 +1806,12 @@
 
     if-nez v0, :cond_0
 
-    .line 747
+    .line 722
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCallRecordPrompt:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 749
+    .line 724
     :cond_0
     return-void
 .end method
@@ -1819,29 +1822,29 @@
     .prologue
     const/16 v2, 0x8
 
-    .line 752
+    .line 727
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCallRecordTimer:Landroid/widget/Chronometer;
 
     invoke-virtual {v0}, Landroid/widget/Chronometer;->stop()V
 
-    .line 753
+    .line 728
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStopRecordButton:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 754
+    .line 729
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 755
+    .line 730
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCallRecordPrompt:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 756
+    .line 731
     return-void
 .end method
 
@@ -1850,13 +1853,13 @@
     .parameter "inCallScreen"
 
     .prologue
-    .line 141
+    .line 140
     invoke-super {p0, p1}, Lcom/android/phone/InCallTouchUi;->setInCallScreenInstance(Lcom/android/phone/InCallScreen;)V
 
-    .line 142
+    .line 141
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getIncomingCallWidget()Landroid/view/View;
 
-    .line 143
+    .line 142
     return-void
 .end method
 
@@ -1865,35 +1868,35 @@
     .parameter "allowRespondViaSms"
 
     .prologue
-    .line 665
+    .line 640
     if-eqz p1, :cond_0
 
-    .line 668
+    .line 643
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     const v1, 0x7f060029
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/multiwaveview/MultiWaveView;->setTargetResources(I)V
 
-    .line 669
+    .line 644
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     const v1, 0x7f06002b
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/multiwaveview/MultiWaveView;->setTargetDescriptionsResourceId(I)V
 
-    .line 671
+    .line 646
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     const v1, 0x7f06002c
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/multiwaveview/MultiWaveView;->setDirectionDescriptionsResourceId(I)V
 
-    .line 681
+    .line 656
     :goto_0
     return-void
 
-    .line 675
+    .line 650
     :cond_0
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
@@ -1901,14 +1904,14 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/multiwaveview/MultiWaveView;->setTargetResources(I)V
 
-    .line 676
+    .line 651
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     const v1, 0x7f06002e
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/multiwaveview/MultiWaveView;->setTargetDescriptionsResourceId(I)V
 
-    .line 678
+    .line 653
     iget-object v0, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidget:Lcom/android/internal/widget/multiwaveview/MultiWaveView;
 
     const v1, 0x7f06002f
@@ -1923,20 +1926,20 @@
     .parameter "show"
 
     .prologue
-    .line 722
+    .line 697
     if-eqz p1, :cond_1
 
-    .line 723
+    .line 698
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->AudioModePanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     invoke-direct {p0, v0}, Lcom/android/phone/MiuiInCallTouchUi;->setPanelState(Lcom/android/phone/MiuiInCallTouchUi$PanelState;)V
 
-    .line 727
+    .line 702
     :cond_0
     :goto_0
     return-void
 
-    .line 724
+    .line 699
     :cond_1
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isAudioModePanelOpened()Z
 
@@ -1944,7 +1947,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 725
+    .line 700
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     invoke-direct {p0, v0}, Lcom/android/phone/MiuiInCallTouchUi;->setPanelState(Lcom/android/phone/MiuiInCallTouchUi$PanelState;)V
@@ -1956,12 +1959,12 @@
     .locals 1
 
     .prologue
-    .line 606
+    .line 581
     const/16 v0, 0x1388
 
     invoke-direct {p0, v0}, Lcom/android/phone/MiuiInCallTouchUi;->showAudioModePopup(I)V
 
-    .line 607
+    .line 582
     return-void
 .end method
 
@@ -1970,20 +1973,20 @@
     .parameter "show"
 
     .prologue
-    .line 710
+    .line 685
     if-eqz p1, :cond_1
 
-    .line 711
+    .line 686
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->DialerPanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     invoke-direct {p0, v0}, Lcom/android/phone/MiuiInCallTouchUi;->setPanelState(Lcom/android/phone/MiuiInCallTouchUi$PanelState;)V
 
-    .line 715
+    .line 690
     :cond_0
     :goto_0
     return-void
 
-    .line 712
+    .line 687
     :cond_1
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isDialerPanelOpened()Z
 
@@ -1991,7 +1994,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 713
+    .line 688
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     invoke-direct {p0, v0}, Lcom/android/phone/MiuiInCallTouchUi;->setPanelState(Lcom/android/phone/MiuiInCallTouchUi$PanelState;)V
@@ -2004,33 +2007,33 @@
     .parameter "ringingCall"
 
     .prologue
-    .line 685
+    .line 660
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getIncomingCallWidget()Landroid/view/View;
 
     move-result-object v1
 
-    .line 686
+    .line 661
     .local v1, v:Landroid/view/View;
     iget-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidgetVertical:Lcom/android/phone/MiuiInCallAnswerWidget;
 
     if-ne v1, v2, :cond_1
 
-    .line 687
+    .line 662
     invoke-virtual {v1}, Landroid/view/View;->getAnimation()Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    .line 688
+    .line 663
     .local v0, anim:Landroid/view/animation/Animation;
     if-eqz v0, :cond_0
 
-    .line 689
+    .line 664
     invoke-virtual {v0}, Landroid/view/animation/Animation;->reset()V
 
-    .line 690
+    .line 665
     invoke-virtual {v1}, Landroid/view/View;->clearAnimation()V
 
-    .line 692
+    .line 667
     :cond_0
     iget-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIncomingCallWidgetVertical:Lcom/android/phone/MiuiInCallAnswerWidget;
 
@@ -2040,12 +2043,12 @@
 
     invoke-virtual {v2, v3}, Lcom/android/phone/MiuiInCallAnswerWidget;->reset(Lcom/android/internal/telephony/CallManager;)V
 
-    .line 696
+    .line 671
     .end local v0           #anim:Landroid/view/animation/Animation;
     :goto_0
     return-void
 
-    .line 694
+    .line 669
     :cond_1
     invoke-super {p0, p1}, Lcom/android/phone/InCallTouchUi;->showIncomingCallWidget(Lcom/android/internal/telephony/Call;)V
 
@@ -2057,20 +2060,20 @@
     .parameter "show"
 
     .prologue
-    .line 734
+    .line 709
     if-eqz p1, :cond_1
 
-    .line 735
+    .line 710
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->ToolsPanel:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     invoke-direct {p0, v0}, Lcom/android/phone/MiuiInCallTouchUi;->setPanelState(Lcom/android/phone/MiuiInCallTouchUi$PanelState;)V
 
-    .line 739
+    .line 714
     :cond_0
     :goto_0
     return-void
 
-    .line 736
+    .line 711
     :cond_1
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isToolsPanelOpened()Z
 
@@ -2078,7 +2081,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 737
+    .line 712
     sget-object v0, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
     invoke-direct {p0, v0}, Lcom/android/phone/MiuiInCallTouchUi;->setPanelState(Lcom/android/phone/MiuiInCallTouchUi$PanelState;)V
@@ -2090,7 +2093,7 @@
     .locals 2
 
     .prologue
-    .line 700
+    .line 675
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getIncomingCallWidget()Landroid/view/View;
 
     move-result-object v0
@@ -2099,10 +2102,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 701
+    .line 676
     invoke-super {p0}, Lcom/android/phone/InCallTouchUi;->triggerPing()V
 
-    .line 703
+    .line 678
     :cond_0
     return-void
 .end method
@@ -2118,60 +2121,60 @@
 
     const/4 v3, 0x0
 
-    .line 552
+    .line 527
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSpeakerButton:Landroid/widget/ToggleButton;
 
     iget-boolean v5, p1, Lcom/android/phone/InCallControlState;->speakerEnabled:Z
 
     invoke-virtual {v4, v5}, Landroid/widget/ToggleButton;->setEnabled(Z)V
 
-    .line 553
+    .line 528
     iget-boolean v4, p1, Lcom/android/phone/InCallControlState;->bluetoothEnabled:Z
 
     if-nez v4, :cond_1
 
-    .line 554
+    .line 529
     iget-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSpeakerButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v2, v3}, Landroid/widget/ToggleButton;->setVisibility(I)V
 
-    .line 555
+    .line 530
     invoke-virtual {p0, v3}, Lcom/android/phone/MiuiInCallTouchUi;->showAudioModePanel(Z)V
 
-    .line 556
+    .line 531
     iget-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v2, v6}, Landroid/widget/ToggleButton;->setVisibility(I)V
 
-    .line 557
+    .line 532
     iget-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSpeakerButton:Landroid/widget/ToggleButton;
 
     iget-boolean v3, p1, Lcom/android/phone/InCallControlState;->speakerOn:Z
 
     invoke-virtual {v2, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 602
+    .line 577
     :cond_0
     :goto_0
     return-void
 
-    .line 559
+    .line 534
     :cond_1
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSpeakerButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v6}, Landroid/widget/ToggleButton;->setVisibility(I)V
 
-    .line 560
+    .line 535
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v3}, Landroid/widget/ToggleButton;->setVisibility(I)V
 
-    .line 561
+    .line 536
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v2}, Landroid/widget/ToggleButton;->setEnabled(Z)V
 
-    .line 562
+    .line 537
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isAudioModePanelOpened()Z
@@ -2180,7 +2183,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 564
+    .line 539
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v4
@@ -2191,61 +2194,61 @@
 
     if-eqz v4, :cond_2
 
-    .line 565
+    .line 540
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    const v5, 0x7f0c0327
+    const v5, 0x7f0c033f
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 567
+    .line 542
     .local v0, buttonText:Ljava/lang/CharSequence;
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v0}, Landroid/widget/ToggleButton;->setTextOn(Ljava/lang/CharSequence;)V
 
-    .line 568
+    .line 543
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v0}, Landroid/widget/ToggleButton;->setTextOff(Ljava/lang/CharSequence;)V
 
-    .line 569
+    .line 544
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
     const v5, 0x7f020046
 
     invoke-virtual {v4, v5, v3, v3, v3}, Landroid/widget/ToggleButton;->setCompoundDrawablesRelativeWithIntrinsicBounds(IIII)V
 
-    .line 580
+    .line 555
     :goto_1
     const/4 v1, 0x0
 
-    .line 581
+    .line 556
     .local v1, switchAudioModeFinished:Z
     iget-boolean v4, p1, Lcom/android/phone/InCallControlState;->bluetoothIndicatorOn:Z
 
     if-eqz v4, :cond_4
 
-    .line 582
+    .line 557
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeBluetoothButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v2}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 583
+    .line 558
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 584
+    .line 559
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeSpeakerButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 585
+    .line 560
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
 
     sget-object v5, Lcom/android/phone/MiuiConstants$AudioMode;->Bluetooth:Lcom/android/phone/MiuiConstants$AudioMode;
@@ -2254,23 +2257,23 @@
 
     move v1, v2
 
-    .line 597
+    .line 572
     :goto_2
     if-eqz v1, :cond_0
 
-    .line 598
+    .line 573
     const/16 v2, 0x64
 
     invoke-direct {p0, v2}, Lcom/android/phone/MiuiInCallTouchUi;->showAudioModePopup(I)V
 
-    .line 599
+    .line 574
     sget-object v2, Lcom/android/phone/MiuiConstants$AudioMode;->Invalid:Lcom/android/phone/MiuiConstants$AudioMode;
 
     iput-object v2, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
 
     goto :goto_0
 
-    .line 572
+    .line 547
     .end local v0           #buttonText:Ljava/lang/CharSequence;
     .end local v1           #switchAudioModeFinished:Z
     :cond_2
@@ -2278,24 +2281,24 @@
 
     move-result-object v4
 
-    const v5, 0x7f0c0326
+    const v5, 0x7f0c033e
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 574
+    .line 549
     .restart local v0       #buttonText:Ljava/lang/CharSequence;
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v0}, Landroid/widget/ToggleButton;->setTextOn(Ljava/lang/CharSequence;)V
 
-    .line 575
+    .line 550
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v0}, Landroid/widget/ToggleButton;->setTextOff(Ljava/lang/CharSequence;)V
 
-    .line 576
+    .line 551
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
     const v5, 0x7f020043
@@ -2308,31 +2311,31 @@
     :cond_3
     move v1, v3
 
-    .line 585
+    .line 560
     goto :goto_2
 
-    .line 586
+    .line 561
     :cond_4
     iget-boolean v4, p1, Lcom/android/phone/InCallControlState;->speakerOn:Z
 
     if-eqz v4, :cond_6
 
-    .line 587
+    .line 562
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeBluetoothButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 588
+    .line 563
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 589
+    .line 564
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeSpeakerButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v2}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 590
+    .line 565
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
 
     sget-object v5, Lcom/android/phone/MiuiConstants$AudioMode;->Speaker:Lcom/android/phone/MiuiConstants$AudioMode;
@@ -2349,23 +2352,23 @@
 
     goto :goto_3
 
-    .line 592
+    .line 567
     :cond_6
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeBluetoothButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 593
+    .line 568
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeEarpieceButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v2}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 594
+    .line 569
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAudioModeSpeakerButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {v4, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 595
+    .line 570
     iget-object v4, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDesiredAudioMode:Lcom/android/phone/MiuiConstants$AudioMode;
 
     sget-object v5, Lcom/android/phone/MiuiConstants$AudioMode;->Earpiece:Lcom/android/phone/MiuiConstants$AudioMode;
@@ -2384,888 +2387,679 @@
 .end method
 
 .method updateInCallControls(Lcom/android/internal/telephony/CallManager;)V
-    .locals 10
+    .locals 13
     .parameter "cm"
 
     .prologue
-    .line 324
+    const v12, 0x7f0e003c
+
+    const v11, 0x7f0e003b
+
+    const/16 v8, 0x8
+
+    const/4 v10, 0x1
+
+    const/4 v7, 0x0
+
+    .line 321
     const/4 v3, 0x0
 
-    .line 326
+    .line 323
     .local v3, curCall:Lcom/android/internal/telephony/Call;
     invoke-virtual {p1}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v1
 
-    .line 327
+    .line 324
     .local v1, activeFgCall:Lcom/android/internal/telephony/Call;
     invoke-virtual {p1}, Lcom/android/internal/telephony/CallManager;->getFirstActiveBgCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v0
 
-    .line 328
+    .line 325
     .local v0, activeBgCall:Lcom/android/internal/telephony/Call;
     invoke-virtual {v1}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
-    move-result-object v7
+    move-result-object v6
 
-    sget-object v8, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
+    sget-object v9, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v7, v8, :cond_8
+    if-eq v6, v9, :cond_8
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
-    move-result-object v7
+    move-result-object v6
 
-    sget-object v8, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
+    sget-object v9, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v7, v8, :cond_8
+    if-eq v6, v9, :cond_8
 
-    .line 331
+    .line 328
     move-object v3, v1
 
-    .line 341
+    .line 338
     :goto_0
     invoke-virtual {v3}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-interface {v7}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+    invoke-interface {v6}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
 
     move-result v5
 
-    .line 355
+    .line 352
     .local v5, phoneType:I
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    invoke-virtual {v7}, Lcom/android/phone/InCallScreen;->getUpdatedInCallControlState()Lcom/android/phone/InCallControlState;
+    invoke-virtual {v6}, Lcom/android/phone/InCallScreen;->getUpdatedInCallControlState()Lcom/android/phone/InCallControlState;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/phone/MiuiInCallControlState;
 
-    .line 361
+    .line 358
     .local v4, inCallControlState:Lcom/android/phone/MiuiInCallControlState;
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canAddCall:Z
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canAddCall:Z
 
-    if-eqz v7, :cond_a
+    if-eqz v6, :cond_a
+
+    .line 359
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
+
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setVisibility(I)V
+
+    .line 360
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
+
+    invoke-virtual {v6, v10}, Landroid/widget/Button;->setEnabled(Z)V
+
+    .line 361
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
+
+    invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
+
+    move-result-object v9
+
+    invoke-static {v6, v9, v11}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
 
     .line 362
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
 
-    const/4 v8, 0x0
+    invoke-virtual {v6, v8}, Landroid/widget/Button;->setVisibility(I)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 363
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
-
-    const/4 v8, 0x1
-
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setEnabled(Z)V
-
-    .line 364
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
-
-    invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
-
-    move-result-object v8
-
-    const v9, 0x7f0e003b
-
-    invoke-static {v7, v8, v9}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
-
-    .line 365
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
-
-    const/16 v8, 0x8
-
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 394
+    .line 382
     :goto_1
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canAddCall:Z
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canAddCall:Z
 
-    if-eqz v7, :cond_1
+    if-eqz v6, :cond_1
 
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canMerge:Z
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canMerge:Z
 
-    if-eqz v7, :cond_1
+    if-eqz v6, :cond_1
 
-    .line 395
-    const/4 v7, 0x1
+    .line 383
+    if-eq v5, v10, :cond_0
 
-    if-eq v5, v7, :cond_0
+    const/4 v6, 0x3
 
-    const/4 v7, 0x3
+    if-ne v5, v6, :cond_c
 
-    if-ne v5, v7, :cond_f
+    .line 390
+    :cond_0
+    const-string v6, "MiuiInCallTouchUi"
+
+    const-string v9, "updateInCallControls: Add *and* Merge enabled, but can\'t show both!"
+
+    invoke-static {v6, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 402
-    :cond_0
-    const-string v7, "MiuiInCallTouchUi"
-
-    const-string v8, "updateInCallControls: Add *and* Merge enabled, but can\'t show both!"
-
-    invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 414
     :cond_1
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mEndButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mEndButton:Landroid/widget/Button;
 
-    iget-boolean v8, v4, Lcom/android/phone/MiuiInCallControlState;->canEndCall:Z
+    iget-boolean v9, v4, Lcom/android/phone/MiuiInCallControlState;->canEndCall:Z
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v6, v9}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 417
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mContactButton:Landroid/widget/Button;
+    .line 405
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mContactButton:Landroid/widget/Button;
 
-    const/4 v8, 0x1
+    invoke-virtual {v6, v10}, Landroid/widget/Button;->setEnabled(Z)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setEnabled(Z)V
-
-    .line 418
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mContactButton:Landroid/widget/Button;
+    .line 406
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mContactButton:Landroid/widget/Button;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
 
-    move-result-object v8
+    move-result-object v9
 
-    const v9, 0x7f0e003b
+    invoke-static {v6, v9, v11}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
 
-    invoke-static {v7, v8, v9}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
+    .line 409
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
 
-    .line 421
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
+    invoke-virtual {v6, v10}, Landroid/widget/ToggleButton;->setEnabled(Z)V
 
-    const/4 v8, 0x1
-
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setEnabled(Z)V
-
-    .line 422
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
+    .line 410
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mDialerButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isDialerPanelOpened()Z
 
-    move-result v8
+    move-result v9
 
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setChecked(Z)V
+    invoke-virtual {v6, v9}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 425
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsButton:Landroid/widget/ToggleButton;
+    .line 413
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsButton:Landroid/widget/ToggleButton;
 
-    const/4 v8, 0x1
+    invoke-virtual {v6, v10}, Landroid/widget/ToggleButton;->setEnabled(Z)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setEnabled(Z)V
-
-    .line 426
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsButton:Landroid/widget/ToggleButton;
+    .line 414
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mToolsButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->isToolsPanelOpened()Z
 
-    move-result v8
+    move-result v9
 
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setChecked(Z)V
+    invoke-virtual {v6, v9}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    .line 429
+    .line 417
     invoke-virtual {p0, v4}, Lcom/android/phone/MiuiInCallTouchUi;->updateAudioButton(Lcom/android/phone/InCallControlState;)V
 
-    .line 432
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canRecordCall:Z
+    .line 420
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canRecordCall:Z
 
-    if-nez v7, :cond_10
+    if-nez v6, :cond_d
 
-    .line 433
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
+    .line 421
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
 
-    const/4 v8, 0x0
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setVisibility(I)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
+    .line 422
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
 
-    .line 434
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setEnabled(Z)V
 
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setEnabled(Z)V
-
-    .line 435
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
+    .line 423
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
 
-    move-result-object v8
+    move-result-object v9
 
-    const v9, 0x7f0e003c
+    invoke-static {v6, v9, v12}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
 
-    invoke-static {v7, v8, v9}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
+    .line 424
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStopRecordButton:Landroid/view/View;
 
-    .line 436
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStopRecordButton:Landroid/view/View;
+    invoke-virtual {v6, v8}, Landroid/view/View;->setVisibility(I)V
 
-    const/16 v8, 0x8
-
-    invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
-
-    .line 450
+    .line 438
     :goto_2
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canMute:Z
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canMute:Z
 
-    if-eqz v7, :cond_12
+    if-eqz v6, :cond_f
 
-    .line 451
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
+    .line 439
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
 
-    const/4 v8, 0x1
+    invoke-virtual {v6, v10}, Landroid/widget/ToggleButton;->setEnabled(Z)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setEnabled(Z)V
-
-    .line 452
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
+    .line 440
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
 
-    move-result-object v8
+    move-result-object v9
 
-    const v9, 0x7f0e003b
+    invoke-static {v6, v9, v11}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
 
-    invoke-static {v7, v8, v9}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
+    .line 441
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
 
-    .line 453
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
+    iget-boolean v9, v4, Lcom/android/phone/MiuiInCallControlState;->muteIndicatorOn:Z
 
-    iget-boolean v8, v4, Lcom/android/phone/MiuiInCallControlState;->muteIndicatorOn:Z
+    invoke-virtual {v6, v9}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setChecked(Z)V
-
-    .line 466
+    .line 454
     :goto_3
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canHold:Z
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canHold:Z
 
-    if-eqz v7, :cond_13
+    if-eqz v6, :cond_10
+
+    .line 455
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
+
+    invoke-virtual {v6, v10}, Landroid/widget/ToggleButton;->setEnabled(Z)V
+
+    .line 456
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
+
+    invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
+
+    move-result-object v9
+
+    invoke-static {v6, v9, v11}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
+
+    .line 457
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
+
+    iget-boolean v9, v4, Lcom/android/phone/MiuiInCallControlState;->onHold:Z
+
+    invoke-virtual {v6, v9}, Landroid/widget/ToggleButton;->setChecked(Z)V
+
+    .line 458
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
+
+    invoke-virtual {v6, v7}, Landroid/widget/ToggleButton;->setVisibility(I)V
 
     .line 467
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
-
-    const/4 v8, 0x1
-
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setEnabled(Z)V
-
-    .line 468
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
-
-    invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
-
-    move-result-object v8
-
-    const v9, 0x7f0e003b
-
-    invoke-static {v7, v8, v9}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
-
-    .line 469
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
-
-    iget-boolean v8, v4, Lcom/android/phone/MiuiInCallControlState;->onHold:Z
-
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setChecked(Z)V
-
-    .line 470
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setVisibility(I)V
-
-    .line 479
     :goto_4
-    iget-object v8, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSwapButton:Landroid/widget/Button;
+    iget-object v9, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSwapButton:Landroid/widget/Button;
 
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canSwap:Z
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canSwap:Z
 
-    if-eqz v7, :cond_14
+    if-eqz v6, :cond_11
 
-    const/4 v7, 0x0
+    move v6, v7
 
     :goto_5
-    invoke-virtual {v8, v7}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v9, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 485
-    const/4 v7, 0x2
+    .line 471
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
 
-    if-ne v5, v7, :cond_15
+    invoke-virtual {v6}, Landroid/widget/ToggleButton;->getVisibility()I
 
-    if-eqz v3, :cond_15
+    move-result v6
 
-    invoke-virtual {v3}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
+    if-ne v6, v8, :cond_2
 
-    move-result-object v7
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSwapButton:Landroid/widget/Button;
 
-    sget-object v8, Lcom/android/internal/telephony/Call$State;->ACTIVE:Lcom/android/internal/telephony/Call$State;
+    invoke-virtual {v6}, Landroid/widget/Button;->getVisibility()I
 
-    if-ne v7, v8, :cond_15
+    move-result v6
 
-    const/4 v6, 0x1
+    if-ne v6, v8, :cond_2
 
-    .line 487
-    .local v6, showCdmaFlash:Z
-    :goto_6
-    if-eqz v6, :cond_16
+    .line 474
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
 
-    .line 488
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCdmaFlashButton:Landroid/widget/Button;
+    invoke-virtual {v6, v7}, Landroid/widget/ToggleButton;->setVisibility(I)V
 
-    const/4 v8, 0x0
+    .line 475
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v6, v7}, Landroid/widget/ToggleButton;->setEnabled(Z)V
 
-    .line 489
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
-
-    const/16 v8, 0x8
-
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setVisibility(I)V
-
-    .line 490
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSwapButton:Landroid/widget/Button;
-
-    const/16 v8, 0x8
-
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 495
-    :goto_7
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
-
-    invoke-virtual {v7}, Landroid/widget/ToggleButton;->getVisibility()I
-
-    move-result v7
-
-    const/16 v8, 0x8
-
-    if-ne v7, v8, :cond_2
-
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mSwapButton:Landroid/widget/Button;
-
-    invoke-virtual {v7}, Landroid/widget/Button;->getVisibility()I
-
-    move-result v7
-
-    const/16 v8, 0x8
-
-    if-ne v7, v8, :cond_2
-
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCdmaFlashButton:Landroid/widget/Button;
-
-    invoke-virtual {v7}, Landroid/widget/Button;->getVisibility()I
-
-    move-result v7
-
-    const/16 v8, 0x8
-
-    if-ne v7, v8, :cond_2
-
-    .line 499
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setVisibility(I)V
-
-    .line 500
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setEnabled(Z)V
-
-    .line 501
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
+    .line 476
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
 
-    move-result-object v8
+    move-result-object v9
 
-    const v9, 0x7f0e003c
+    invoke-static {v6, v9, v12}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
 
-    invoke-static {v7, v8, v9}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
-
-    .line 504
+    .line 479
     :cond_2
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canSwap:Z
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canSwap:Z
 
-    if-eqz v7, :cond_3
+    if-eqz v6, :cond_3
 
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canHold:Z
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canHold:Z
 
-    if-eqz v7, :cond_3
+    if-eqz v6, :cond_3
 
-    .line 510
-    const-string v7, "MiuiInCallTouchUi"
+    .line 485
+    const-string v6, "MiuiInCallTouchUi"
 
-    const-string v8, "updateInCallControls: Hold *and* Swap enabled, but can\'t show both!"
+    const-string v9, "updateInCallControls: Hold *and* Swap enabled, but can\'t show both!"
 
-    invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 513
+    .line 488
     :cond_3
-    const/4 v7, 0x2
+    const/4 v6, 0x2
 
-    if-ne v5, v7, :cond_4
+    if-ne v5, v6, :cond_4
 
-    .line 514
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canSwap:Z
+    .line 489
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canSwap:Z
 
-    if-eqz v7, :cond_4
+    if-eqz v6, :cond_4
 
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canMerge:Z
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canMerge:Z
 
-    if-eqz v7, :cond_4
+    if-eqz v6, :cond_4
 
-    .line 520
-    const-string v7, "MiuiInCallTouchUi"
+    .line 495
+    const-string v6, "MiuiInCallTouchUi"
 
-    const-string v8, "updateInCallControls: Merge *and* Swapenabled, but can\'t show both!"
+    const-string v9, "updateInCallControls: Merge *and* Swapenabled, but can\'t show both!"
 
-    invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
+    .line 500
     :cond_4
     invoke-virtual {v3}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v2
 
-    .line 526
+    .line 501
     .local v2, callState:Lcom/android/internal/telephony/Call$State;
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
-    invoke-virtual {v7}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v6}, Landroid/view/View;->getVisibility()I
 
-    move-result v7
+    move-result v6
 
-    if-nez v7, :cond_17
+    if-nez v6, :cond_12
 
-    sget-object v7, Lcom/android/internal/telephony/Call$State;->DISCONNECTING:Lcom/android/internal/telephony/Call$State;
+    sget-object v6, Lcom/android/internal/telephony/Call$State;->DISCONNECTING:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v2, v7, :cond_5
+    if-eq v2, v6, :cond_5
 
-    sget-object v7, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
+    sget-object v6, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
 
-    if-ne v2, v7, :cond_17
+    if-ne v2, v6, :cond_12
 
-    .line 528
+    .line 503
     :cond_5
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControlsMask:Landroid/view/View;
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControlsMask:Landroid/view/View;
 
-    const/4 v8, 0x0
+    invoke-virtual {v6, v7}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
+    .line 504
+    sget-object v6, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
 
-    .line 529
-    sget-object v7, Lcom/android/phone/MiuiInCallTouchUi$PanelState;->None:Lcom/android/phone/MiuiInCallTouchUi$PanelState;
+    invoke-direct {p0, v6}, Lcom/android/phone/MiuiInCallTouchUi;->setPanelState(Lcom/android/phone/MiuiInCallTouchUi$PanelState;)V
 
-    invoke-direct {p0, v7}, Lcom/android/phone/MiuiInCallTouchUi;->setPanelState(Lcom/android/phone/MiuiInCallTouchUi$PanelState;)V
+    .line 505
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mEndButton:Landroid/widget/Button;
 
-    .line 530
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mEndButton:Landroid/widget/Button;
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setEnabled(Z)V
 
-    const/4 v8, 0x0
+    .line 510
+    :goto_6
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->bluetoothEnabled:Z
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setEnabled(Z)V
+    if-eqz v6, :cond_13
 
-    .line 535
-    :goto_8
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->bluetoothEnabled:Z
+    iget-boolean v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIsAutoHideAudioModePanel:Z
 
-    if-eqz v7, :cond_18
-
-    iget-boolean v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIsAutoHideAudioModePanel:Z
-
-    if-eqz v7, :cond_18
+    if-eqz v6, :cond_13
 
     invoke-virtual {p1}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
 
-    move-result-object v7
+    move-result-object v6
 
     sget-object v8, Lcom/android/internal/telephony/Phone$State;->OFFHOOK:Lcom/android/internal/telephony/Phone$State;
 
-    if-ne v7, v8, :cond_18
+    if-ne v6, v8, :cond_13
 
-    .line 538
-    const/4 v7, 0x0
-
+    .line 513
     iput-boolean v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIsAutoHideAudioModePanel:Z
 
-    .line 539
-    const/16 v7, 0x1388
+    .line 514
+    const/16 v6, 0x1388
 
-    invoke-direct {p0, v7}, Lcom/android/phone/MiuiInCallTouchUi;->showAudioModePopup(I)V
+    invoke-direct {p0, v6}, Lcom/android/phone/MiuiInCallTouchUi;->showAudioModePopup(I)V
 
-    .line 544
+    .line 519
     :cond_6
-    :goto_9
+    :goto_7
     invoke-virtual {p1}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
 
-    move-result-object v7
+    move-result-object v6
 
-    sget-object v8, Lcom/android/internal/telephony/Phone$State;->IDLE:Lcom/android/internal/telephony/Phone$State;
+    sget-object v7, Lcom/android/internal/telephony/Phone$State;->IDLE:Lcom/android/internal/telephony/Phone$State;
 
-    if-ne v7, v8, :cond_7
+    if-ne v6, v7, :cond_7
 
-    .line 546
-    const/4 v7, 0x1
+    .line 521
+    iput-boolean v10, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIsAutoHideAudioModePanel:Z
 
-    iput-boolean v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mIsAutoHideAudioModePanel:Z
-
-    .line 548
+    .line 523
     :cond_7
     return-void
 
-    .line 332
+    .line 329
     .end local v2           #callState:Lcom/android/internal/telephony/Call$State;
     .end local v4           #inCallControlState:Lcom/android/phone/MiuiInCallControlState;
     .end local v5           #phoneType:I
-    .end local v6           #showCdmaFlash:Z
     :cond_8
     invoke-virtual {v0}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
-    move-result-object v7
+    move-result-object v6
 
-    sget-object v8, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
+    sget-object v9, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v7, v8, :cond_9
+    if-eq v6, v9, :cond_9
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
-    move-result-object v7
+    move-result-object v6
 
-    sget-object v8, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
+    sget-object v9, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v7, v8, :cond_9
+    if-eq v6, v9, :cond_9
 
-    .line 335
+    .line 332
     move-object v3, v0
 
     goto/16 :goto_0
 
-    .line 338
+    .line 335
     :cond_9
     invoke-virtual {p1}, Lcom/android/internal/telephony/CallManager;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-interface {v7}, Lcom/android/internal/telephony/Phone;->getForegroundCall()Lcom/android/internal/telephony/Call;
+    invoke-interface {v6}, Lcom/android/internal/telephony/Phone;->getForegroundCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v3
 
     goto/16 :goto_0
 
-    .line 366
+    .line 363
     .restart local v4       #inCallControlState:Lcom/android/phone/MiuiInCallControlState;
     .restart local v5       #phoneType:I
     :cond_a
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->canMerge:Z
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->canMerge:Z
 
-    if-eqz v7, :cond_e
+    if-eqz v6, :cond_b
 
-    .line 367
-    const/4 v7, 0x2
+    .line 364
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
 
-    if-ne v5, v7, :cond_b
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 371
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
+    .line 365
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
 
-    const/16 v8, 0x8
+    invoke-virtual {v6, v10}, Landroid/widget/Button;->setEnabled(Z)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
-
-    goto/16 :goto_1
-
-    .line 372
-    :cond_b
-    const/4 v7, 0x1
-
-    if-eq v5, v7, :cond_c
-
-    const/4 v7, 0x3
-
-    if-ne v5, v7, :cond_d
-
-    .line 374
-    :cond_c
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 375
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
-
-    const/4 v8, 0x1
-
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setEnabled(Z)V
-
-    .line 376
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
+    .line 366
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
 
-    move-result-object v8
+    move-result-object v9
 
-    const v9, 0x7f0e003b
+    invoke-static {v6, v9, v11}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
 
-    invoke-static {v7, v8, v9}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
+    .line 368
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
+
+    invoke-virtual {v6, v8}, Landroid/widget/Button;->setVisibility(I)V
+
+    goto/16 :goto_1
 
     .line 377
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
+    :cond_b
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
 
-    const/16 v8, 0x8
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setVisibility(I)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
+    .line 378
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
 
-    goto/16 :goto_1
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 379
-    :cond_d
-    new-instance v7, Ljava/lang/IllegalStateException;
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "Unexpected phone type: "
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-direct {v7, v8}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v7
-
-    .line 389
-    :cond_e
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 390
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setEnabled(Z)V
-
-    .line 391
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mAddButton:Landroid/widget/Button;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
 
-    move-result-object v8
+    move-result-object v9
 
-    const v9, 0x7f0e003c
+    invoke-static {v6, v9, v12}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
 
-    invoke-static {v7, v8, v9}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
+    .line 380
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
 
-    .line 392
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMergeButton:Landroid/widget/Button;
-
-    const/16 v8, 0x8
-
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v6, v8}, Landroid/widget/Button;->setVisibility(I)V
 
     goto/16 :goto_1
 
-    .line 404
-    :cond_f
-    const/4 v7, 0x2
+    .line 392
+    :cond_c
+    const/4 v6, 0x2
 
-    if-eq v5, v7, :cond_1
+    if-eq v5, v6, :cond_1
 
-    .line 409
-    new-instance v7, Ljava/lang/IllegalStateException;
+    .line 397
+    new-instance v6, Ljava/lang/IllegalStateException;
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "Unexpected phone type: "
+    const-string v8, "Unexpected phone type: "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-direct {v7, v8}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v6, v7}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v7
+    throw v6
 
-    .line 438
-    :cond_10
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->isCallRecording:Z
+    .line 426
+    :cond_d
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->isCallRecording:Z
 
-    if-eqz v7, :cond_11
+    if-eqz v6, :cond_e
 
-    .line 439
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
+    .line 427
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
 
-    const/16 v8, 0x8
+    invoke-virtual {v6, v8}, Landroid/widget/Button;->setVisibility(I)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
+    .line 428
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStopRecordButton:Landroid/view/View;
 
-    .line 440
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStopRecordButton:Landroid/view/View;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v6, v7}, Landroid/view/View;->setVisibility(I)V
 
     goto/16 :goto_2
 
-    .line 442
-    :cond_11
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
+    .line 430
+    :cond_e
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
 
-    const/4 v8, 0x0
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setVisibility(I)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
+    .line 431
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
+
+    invoke-virtual {v6, v10}, Landroid/widget/Button;->setEnabled(Z)V
+
+    .line 432
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
+
+    invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
+
+    move-result-object v9
+
+    invoke-static {v6, v9, v11}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
+
+    .line 433
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStopRecordButton:Landroid/view/View;
+
+    invoke-virtual {v6, v8}, Landroid/view/View;->setVisibility(I)V
+
+    goto/16 :goto_2
 
     .line 443
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
+    :cond_f
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
 
-    const/4 v8, 0x1
-
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v6, v7}, Landroid/widget/ToggleButton;->setEnabled(Z)V
 
     .line 444
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStartRecordButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
 
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
 
-    move-result-object v8
+    move-result-object v9
 
-    const v9, 0x7f0e003b
-
-    invoke-static {v7, v8, v9}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
+    invoke-static {v6, v9, v12}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
 
     .line 445
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mStopRecordButton:Landroid/view/View;
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
 
-    const/16 v8, 0x8
-
-    invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
-
-    goto/16 :goto_2
-
-    .line 455
-    :cond_12
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setEnabled(Z)V
-
-    .line 456
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
-
-    invoke-virtual {p0}, Lcom/android/phone/MiuiInCallTouchUi;->getContext()Landroid/content/Context;
-
-    move-result-object v8
-
-    const v9, 0x7f0e003c
-
-    invoke-static {v7, v8, v9}, Lcom/android/phone/MiuiPhoneUtils;->setTextStyle(Landroid/widget/TextView;Landroid/content/Context;I)V
-
-    .line 457
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mMuteButton:Landroid/widget/ToggleButton;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setChecked(Z)V
+    invoke-virtual {v6, v7}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
     goto/16 :goto_3
 
-    .line 472
-    :cond_13
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
+    .line 460
+    :cond_10
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
 
-    const/16 v8, 0x8
+    invoke-virtual {v6, v8}, Landroid/widget/ToggleButton;->setVisibility(I)V
 
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setVisibility(I)V
+    .line 461
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
 
-    .line 473
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mHoldButton:Landroid/widget/ToggleButton;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Landroid/widget/ToggleButton;->setChecked(Z)V
+    invoke-virtual {v6, v7}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
     goto/16 :goto_4
 
-    .line 479
-    :cond_14
-    const/16 v7, 0x8
+    :cond_11
+    move v6, v8
 
+    .line 467
     goto/16 :goto_5
 
-    .line 485
-    :cond_15
-    const/4 v6, 0x0
+    .line 507
+    .restart local v2       #callState:Lcom/android/internal/telephony/Call$State;
+    :cond_12
+    iget-object v6, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControlsMask:Landroid/view/View;
+
+    invoke-virtual {v6, v8}, Landroid/view/View;->setVisibility(I)V
 
     goto/16 :goto_6
 
-    .line 492
-    .restart local v6       #showCdmaFlash:Z
-    :cond_16
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mCdmaFlashButton:Landroid/widget/Button;
+    .line 515
+    :cond_13
+    iget-boolean v6, v4, Lcom/android/phone/MiuiInCallControlState;->popupToolsPanel:Z
 
-    const/16 v8, 0x8
+    if-eqz v6, :cond_6
 
-    invoke-virtual {v7, v8}, Landroid/widget/Button;->setVisibility(I)V
+    .line 516
+    invoke-virtual {p0, v10}, Lcom/android/phone/MiuiInCallTouchUi;->showToolsPanel(Z)V
 
     goto/16 :goto_7
-
-    .line 532
-    .restart local v2       #callState:Lcom/android/internal/telephony/Call$State;
-    :cond_17
-    iget-object v7, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControlsMask:Landroid/view/View;
-
-    const/16 v8, 0x8
-
-    invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
-
-    goto/16 :goto_8
-
-    .line 540
-    :cond_18
-    iget-boolean v7, v4, Lcom/android/phone/MiuiInCallControlState;->popupToolsPanel:Z
-
-    if-eqz v7, :cond_6
-
-    .line 541
-    const/4 v7, 0x1
-
-    invoke-virtual {p0, v7}, Lcom/android/phone/MiuiInCallTouchUi;->showToolsPanel(Z)V
-
-    goto/16 :goto_9
 .end method
 
 .method updateState(Lcom/android/internal/telephony/CallManager;)V
@@ -3283,18 +3077,18 @@
 
     const/4 v5, 0x0
 
-    .line 238
+    .line 225
     iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
 
     move-result v1
 
-    .line 239
+    .line 226
     .local v1, oldVisiblity:I
     invoke-super {p0, p1}, Lcom/android/phone/InCallTouchUi;->updateState(Lcom/android/internal/telephony/CallManager;)V
 
-    .line 240
+    .line 227
     invoke-virtual {p1}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
 
     move-result-object v3
@@ -3303,12 +3097,12 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 241
+    .line 228
     iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 244
+    .line 231
     :cond_0
     if-ne v1, v6, :cond_2
 
@@ -3320,12 +3114,12 @@
 
     if-nez v3, :cond_2
 
-    .line 245
+    .line 232
     iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     invoke-virtual {v3, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 246
+    .line 233
     iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     invoke-static {v3, v8, v7, v5}, Lmiui/animation/ViewPropertyAnimator;->of(Landroid/view/View;IFF)Lmiui/animation/ViewPropertyAnimator$Builder;
@@ -3344,12 +3138,12 @@
 
     invoke-virtual {v3}, Lmiui/animation/ViewPropertyAnimator$Builder;->start()Landroid/animation/Animator;
 
-    .line 268
+    .line 255
     :cond_1
     :goto_0
     return-void
 
-    .line 250
+    .line 237
     :cond_2
     if-nez v1, :cond_1
 
@@ -3361,17 +3155,17 @@
 
     if-ne v3, v6, :cond_1
 
-    .line 251
+    .line 238
     iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
     invoke-virtual {v3, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 252
+    .line 239
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 253
+    .line 240
     .local v0, anims:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControls:Landroid/view/View;
 
@@ -3393,7 +3187,7 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 257
+    .line 244
     iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControlsMask:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
@@ -3402,7 +3196,7 @@
 
     if-nez v3, :cond_3
 
-    .line 258
+    .line 245
     iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mInCallControlsMask:Landroid/view/View;
 
     invoke-static {v3, v8, v5, v7}, Lmiui/animation/ViewPropertyAnimator;->of(Landroid/view/View;IFF)Lmiui/animation/ViewPropertyAnimator$Builder;
@@ -3423,17 +3217,17 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 263
+    .line 250
     :cond_3
     new-instance v2, Landroid/animation/AnimatorSet;
 
     invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 264
+    .line 251
     .local v2, set:Landroid/animation/AnimatorSet;
     invoke-virtual {v2, v0}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    .line 265
+    .line 252
     invoke-static {v2}, Lmiui/animation/AnimatorBuilder;->of(Landroid/animation/Animator;)Lmiui/animation/AnimatorBuilder;
 
     move-result-object v3
@@ -3450,7 +3244,7 @@
 
     invoke-virtual {v3}, Lmiui/animation/AnimatorBuilder;->start()Landroid/animation/Animator;
 
-    .line 266
+    .line 253
     iget-object v3, p0, Lcom/android/phone/MiuiInCallTouchUi;->mEndButton:Landroid/widget/Button;
 
     const/4 v4, 0x1

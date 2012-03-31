@@ -43,7 +43,6 @@
 
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$2;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mCurrentPhonebook:Ljava/lang/String;
     invoke-static {v3}, Lcom/android/phone/BluetoothAtPhonebook;->access$300(Lcom/android/phone/BluetoothAtPhonebook;)Ljava/lang/String;
 
     move-result-object v3
@@ -71,7 +70,6 @@
 
     const/4 v5, 0x0
 
-    #calls: Lcom/android/phone/BluetoothAtPhonebook;->getMaxPhoneBookSize(I)I
     invoke-static {v4, v5}, Lcom/android/phone/BluetoothAtPhonebook;->access$400(Lcom/android/phone/BluetoothAtPhonebook;I)I
 
     move-result v4
@@ -96,14 +94,12 @@
 
     iget-object v3, p0, Lcom/android/phone/BluetoothAtPhonebook$2;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mCurrentPhonebook:Ljava/lang/String;
     invoke-static {v3}, Lcom/android/phone/BluetoothAtPhonebook;->access$300(Lcom/android/phone/BluetoothAtPhonebook;)Ljava/lang/String;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    #calls: Lcom/android/phone/BluetoothAtPhonebook;->getPhonebookResult(Ljava/lang/String;Z)Lcom/android/phone/BluetoothAtPhonebook$PhonebookResult;
     invoke-static {v2, v3, v4}, Lcom/android/phone/BluetoothAtPhonebook;->access$500(Lcom/android/phone/BluetoothAtPhonebook;Ljava/lang/String;Z)Lcom/android/phone/BluetoothAtPhonebook$PhonebookResult;
 
     move-result-object v0
@@ -115,7 +111,6 @@
     .line 168
     iget-object v2, p0, Lcom/android/phone/BluetoothAtPhonebook$2;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mHandsfree:Lcom/android/phone/BluetoothHandsfree;
     invoke-static {v2}, Lcom/android/phone/BluetoothAtPhonebook;->access$200(Lcom/android/phone/BluetoothAtPhonebook;)Lcom/android/phone/BluetoothHandsfree;
 
     move-result-object v2
@@ -152,7 +147,6 @@
 
     iget-object v4, p0, Lcom/android/phone/BluetoothAtPhonebook$2;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mCurrentPhonebook:Ljava/lang/String;
     invoke-static {v4}, Lcom/android/phone/BluetoothAtPhonebook;->access$300(Lcom/android/phone/BluetoothAtPhonebook;)Ljava/lang/String;
 
     move-result-object v4
@@ -179,7 +173,6 @@
 
     iget-object v4, p0, Lcom/android/phone/BluetoothAtPhonebook$2;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #calls: Lcom/android/phone/BluetoothAtPhonebook;->getMaxPhoneBookSize(I)I
     invoke-static {v4, v1}, Lcom/android/phone/BluetoothAtPhonebook;->access$400(Lcom/android/phone/BluetoothAtPhonebook;I)I
 
     move-result v4
@@ -285,7 +278,6 @@
     :cond_3
     iget-object v1, p0, Lcom/android/phone/BluetoothAtPhonebook$2;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #calls: Lcom/android/phone/BluetoothAtPhonebook;->getPhonebookResult(Ljava/lang/String;Z)Lcom/android/phone/BluetoothAtPhonebook$PhonebookResult;
     invoke-static {v1, v0, v2}, Lcom/android/phone/BluetoothAtPhonebook;->access$500(Lcom/android/phone/BluetoothAtPhonebook;Ljava/lang/String;Z)Lcom/android/phone/BluetoothAtPhonebook$PhonebookResult;
 
     move-result-object v1
@@ -303,7 +295,6 @@
     .line 185
     iget-object v1, p0, Lcom/android/phone/BluetoothAtPhonebook$2;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #getter for: Lcom/android/phone/BluetoothAtPhonebook;->mHandsfree:Lcom/android/phone/BluetoothHandsfree;
     invoke-static {v1}, Lcom/android/phone/BluetoothAtPhonebook;->access$200(Lcom/android/phone/BluetoothAtPhonebook;)Lcom/android/phone/BluetoothHandsfree;
 
     move-result-object v1
@@ -320,7 +311,6 @@
     :cond_4
     iget-object v1, p0, Lcom/android/phone/BluetoothAtPhonebook$2;->this$0:Lcom/android/phone/BluetoothAtPhonebook;
 
-    #setter for: Lcom/android/phone/BluetoothAtPhonebook;->mCurrentPhonebook:Ljava/lang/String;
     invoke-static {v1, v0}, Lcom/android/phone/BluetoothAtPhonebook;->access$302(Lcom/android/phone/BluetoothAtPhonebook;Ljava/lang/String;)Ljava/lang/String;
 
     .line 188

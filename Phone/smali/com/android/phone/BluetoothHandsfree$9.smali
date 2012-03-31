@@ -43,7 +43,6 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mCmee:Z
     invoke-static {v0, v1}, Lcom/android/phone/BluetoothHandsfree;->access$6202(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     .line 2218
@@ -75,7 +74,6 @@
 
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$9;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #getter for: Lcom/android/phone/BluetoothHandsfree;->mCmee:Z
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree;->access$6200(Lcom/android/phone/BluetoothHandsfree;)Z
 
     move-result v0
@@ -120,7 +118,6 @@
     .line 2229
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$9;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mCmee:Z
     invoke-static {v0, v2}, Lcom/android/phone/BluetoothHandsfree;->access$6202(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     .line 2230
@@ -164,7 +161,6 @@
     move v0, v1
 
     :goto_1
-    #setter for: Lcom/android/phone/BluetoothHandsfree;->mCmee:Z
     invoke-static {v3, v0}, Lcom/android/phone/BluetoothHandsfree;->access$6202(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
     .line 2236

@@ -46,7 +46,6 @@
     .line 1326
     iget-object v0, p0, Lcom/android/phone/OtaUtils$3;->this$0:Lcom/android/phone/OtaUtils;
 
-    #calls: Lcom/android/phone/OtaUtils;->otaSkipActivation()V
     invoke-static {v0}, Lcom/android/phone/OtaUtils;->access$200(Lcom/android/phone/OtaUtils;)V
 
     .line 1327

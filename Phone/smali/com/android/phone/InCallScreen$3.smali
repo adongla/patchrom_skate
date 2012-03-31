@@ -49,7 +49,6 @@
     check-cast p2, Landroid/bluetooth/BluetoothHeadset;
 
     .end local p2
-    #setter for: Lcom/android/phone/InCallScreen;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
     invoke-static {v0, p2}, Lcom/android/phone/InCallScreen;->access$1002(Lcom/android/phone/InCallScreen;Landroid/bluetooth/BluetoothHeadset;)Landroid/bluetooth/BluetoothHeadset;
 
     .line 564
@@ -66,7 +65,6 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/android/phone/InCallScreen;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
     invoke-static {v0, v1}, Lcom/android/phone/InCallScreen;->access$1002(Lcom/android/phone/InCallScreen;Landroid/bluetooth/BluetoothHeadset;)Landroid/bluetooth/BluetoothHeadset;
 
     .line 568

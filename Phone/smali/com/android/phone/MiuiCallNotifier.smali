@@ -59,54 +59,54 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 142
+    .line 153
     invoke-direct/range {p0 .. p5}, Lcom/android/phone/CallNotifier;-><init>(Lcom/android/phone/PhoneApp;Lcom/android/internal/telephony/Phone;Lcom/android/phone/Ringer;Lcom/android/phone/BluetoothHandsfree;Lcom/android/phone/CallLogAsync;)V
 
-    .line 44
+    .line 47
     iput-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
-    .line 45
+    .line 48
     iput v0, p0, Lcom/android/phone/MiuiCallNotifier;->mRedialTimes:I
 
-    .line 52
+    .line 55
     iput-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorRunning:Z
 
-    .line 53
+    .line 56
     iput v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorCount:I
 
-    .line 58
+    .line 61
     iput v0, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerSetFlags:I
 
-    .line 59
+    .line 62
     iput-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerVolumeControlling:Z
 
-    .line 60
+    .line 63
     iput-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverTriggered:Z
 
-    .line 61
+    .line 64
     iput v0, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverTiggeringCount:I
 
-    .line 62
+    .line 65
     iput-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonTriggered:Z
 
-    .line 63
+    .line 66
     iput v0, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonTriggeringCount:I
 
-    .line 65
+    .line 68
     new-instance v0, Lcom/android/phone/MiuiCallNotifier$1;
 
     invoke-direct {v0, p0}, Lcom/android/phone/MiuiCallNotifier$1;-><init>(Lcom/android/phone/MiuiCallNotifier;)V
 
     iput-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorListener:Landroid/hardware/SensorEventListener;
 
-    .line 610
+    .line 653
     new-instance v0, Lcom/android/phone/MiuiCallNotifier$2;
 
     invoke-direct {v0, p0}, Lcom/android/phone/MiuiCallNotifier$2;-><init>(Lcom/android/phone/MiuiCallNotifier;)V
 
     iput-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->queryListenerForWaitingCall:Lcom/android/internal/telephony/CallerInfoAsyncQuery$OnQueryCompleteListener;
 
-    .line 143
+    .line 154
     const-string v0, "vibrator"
 
     invoke-virtual {p1, v0}, Lcom/android/phone/PhoneApp;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -117,7 +117,7 @@
 
     iput-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mVibrator:Landroid/os/Vibrator;
 
-    .line 144
+    .line 155
     const-string v0, "sensor"
 
     invoke-virtual {p1, v0}, Lcom/android/phone/PhoneApp;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -128,7 +128,7 @@
 
     iput-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 145
+    .line 156
     iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x1
@@ -139,17 +139,17 @@
 
     iput-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensor:Landroid/hardware/Sensor;
 
-    .line 146
+    .line 157
     sget-object v0, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
     iput-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousForeCallState:Lcom/android/internal/telephony/Call$State;
 
-    .line 147
+    .line 158
     sget-object v0, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
     iput-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousBackCallState:Lcom/android/internal/telephony/Call$State;
 
-    .line 148
+    .line 159
     return-void
 .end method
 
@@ -158,7 +158,7 @@
     .parameter "x0"
 
     .prologue
-    .line 32
+    .line 34
     iget v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorCount:I
 
     return v0
@@ -169,7 +169,7 @@
     .parameter "x0"
 
     .prologue
-    .line 32
+    .line 34
     iget v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -184,7 +184,7 @@
     .parameter "x0"
 
     .prologue
-    .line 32
+    .line 34
     iget v0, p0, Lcom/android/phone/MiuiCallNotifier;->mStartZ:F
 
     return v0
@@ -196,7 +196,7 @@
     .parameter "x1"
 
     .prologue
-    .line 32
+    .line 34
     iput p1, p0, Lcom/android/phone/MiuiCallNotifier;->mStartZ:F
 
     return p1
@@ -207,7 +207,7 @@
     .parameter "x0"
 
     .prologue
-    .line 32
+    .line 34
     iget-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverMuteEnable:Z
 
     return v0
@@ -218,7 +218,7 @@
     .parameter "x0"
 
     .prologue
-    .line 32
+    .line 34
     iget-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverTriggered:Z
 
     return v0
@@ -230,7 +230,7 @@
     .parameter "x1"
 
     .prologue
-    .line 32
+    .line 34
     iput-boolean p1, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverTriggered:Z
 
     return p1
@@ -242,7 +242,7 @@
     .parameter "x1"
 
     .prologue
-    .line 32
+    .line 34
     iput p1, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverTiggeringCount:I
 
     return p1
@@ -253,7 +253,7 @@
     .parameter "x0"
 
     .prologue
-    .line 32
+    .line 34
     iget v0, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverTiggeringCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -268,7 +268,7 @@
     .parameter "x0"
 
     .prologue
-    .line 32
+    .line 34
     iget-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonRingerEnable:Z
 
     return v0
@@ -279,7 +279,7 @@
     .parameter "x0"
 
     .prologue
-    .line 32
+    .line 34
     iget-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonTriggered:Z
 
     return v0
@@ -291,7 +291,7 @@
     .parameter "x1"
 
     .prologue
-    .line 32
+    .line 34
     iput-boolean p1, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonTriggered:Z
 
     return p1
@@ -303,7 +303,7 @@
     .parameter "x1"
 
     .prologue
-    .line 32
+    .line 34
     iput p1, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonTriggeringCount:I
 
     return p1
@@ -314,7 +314,7 @@
     .parameter "x0"
 
     .prologue
-    .line 32
+    .line 34
     iget v0, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonTriggeringCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -329,7 +329,7 @@
     .parameter "x0"
 
     .prologue
-    .line 32
+    .line 34
     invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->decrescendoRingerVolume()V
 
     return-void
@@ -341,7 +341,7 @@
     .parameter "x1"
 
     .prologue
-    .line 32
+    .line 34
     invoke-direct {p0, p1}, Lcom/android/phone/MiuiCallNotifier;->processTelephonyFirewall(Lcom/android/internal/telephony/CallerInfo;)V
 
     return-void
@@ -356,12 +356,12 @@
     .parameter "duration"
 
     .prologue
-    .line 673
+    .line 716
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 674
+    .line 717
     .local v1, values:Landroid/content/ContentValues;
     const-string v2, "number"
 
@@ -371,7 +371,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 675
+    .line 718
     const-string v2, "date"
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -380,7 +380,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 676
+    .line 719
     const-string v2, "type"
 
     const/4 v3, 0x1
@@ -391,7 +391,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 677
+    .line 720
     const-string v2, "reason"
 
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -400,7 +400,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 678
+    .line 721
     const-string v2, "data1"
 
     invoke-static {p5, p6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -409,7 +409,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 680
+    .line 723
     :try_start_0
     sget-object v2, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
 
@@ -425,15 +425,15 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 684
+    .line 727
     :goto_0
     return-void
 
-    .line 681
+    .line 724
     :catch_0
     move-exception v0
 
-    .line 682
+    .line 725
     .local v0, e:Ljava/lang/RuntimeException;
     const-string v2, "MiuiCallNotifier"
 
@@ -450,31 +450,31 @@
     .parameter "logNumber"
 
     .prologue
-    .line 689
+    .line 732
     sget v0, Lcom/android/internal/telephony/Connection;->PRESENTATION_RESTRICTED:I
 
     if-ne p0, v0, :cond_1
 
-    .line 690
+    .line 733
     const-string p1, "-2"
 
-    .line 697
+    .line 740
     :cond_0
     :goto_0
     return-object p1
 
-    .line 691
+    .line 734
     :cond_1
     sget v0, Lcom/android/internal/telephony/Connection;->PRESENTATION_PAYPHONE:I
 
     if-ne p0, v0, :cond_2
 
-    .line 692
+    .line 735
     const-string p1, "-3"
 
     goto :goto_0
 
-    .line 693
+    .line 736
     :cond_2
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -486,7 +486,7 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 695
+    .line 738
     :cond_3
     const-string p1, "-1"
 
@@ -501,7 +501,7 @@
 
     const/4 v5, 0x2
 
-    .line 710
+    .line 753
     iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v4, v5}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -510,17 +510,17 @@
 
     if-nez v4, :cond_1
 
-    .line 731
+    .line 774
     :cond_0
     return-void
 
-    .line 715
+    .line 758
     :cond_1
     iget-boolean v4, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerVolumeControlling:Z
 
     if-nez v4, :cond_2
 
-    .line 716
+    .line 759
     iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v4, v5}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -529,23 +529,23 @@
 
     iput v4, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerVolume:I
 
-    .line 717
+    .line 760
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerVolumeControlling:Z
 
-    .line 721
+    .line 764
     :cond_2
     invoke-virtual {p0, v6}, Lcom/android/phone/MiuiCallNotifier;->removeMessages(I)V
 
-    .line 724
+    .line 767
     iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v4, v5}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
 
     move-result v1
 
-    .line 725
+    .line 768
     .local v1, maxVolume:I
     iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mAudioManager:Landroid/media/AudioManager;
 
@@ -558,26 +558,26 @@
     .local v3, volume:I
     const/16 v0, 0x7530
 
-    .line 726
+    .line 769
     .local v0, delayTime:I
     :goto_0
     if-gt v3, v1, :cond_0
 
-    .line 727
+    .line 770
     invoke-static {p0, v6}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
 
     move-result-object v2
 
-    .line 728
+    .line 771
     .local v2, message:Landroid/os/Message;
     iput v3, v2, Landroid/os/Message;->arg1:I
 
-    .line 729
+    .line 772
     int-to-long v4, v0
 
     invoke-virtual {p0, v2, v4, v5}, Lcom/android/phone/MiuiCallNotifier;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 726
+    .line 769
     add-int/lit8 v3, v3, 0x1
 
     add-int/lit16 v0, v0, 0x1388
@@ -593,12 +593,12 @@
 
     const/4 v4, 0x2
 
-    .line 734
+    .line 777
     iget-boolean v3, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerVolumeControlling:Z
 
     if-nez v3, :cond_0
 
-    .line 735
+    .line 778
     iget-object v3, p0, Lcom/android/phone/MiuiCallNotifier;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v3, v4}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -607,16 +607,16 @@
 
     iput v3, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerVolume:I
 
-    .line 736
+    .line 779
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerVolumeControlling:Z
 
-    .line 740
+    .line 783
     :cond_0
     invoke-virtual {p0, v5}, Lcom/android/phone/MiuiCallNotifier;->removeMessages(I)V
 
-    .line 742
+    .line 785
     iget-object v3, p0, Lcom/android/phone/MiuiCallNotifier;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v3, v4}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -628,7 +628,7 @@
     .local v2, volume:I
     const/4 v0, 0x0
 
-    .line 743
+    .line 786
     .local v0, delayTime:I
     :goto_0
     if-ltz v2, :cond_1
@@ -639,28 +639,28 @@
 
     if-lt v2, v3, :cond_1
 
-    .line 744
+    .line 787
     invoke-static {p0, v5}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 745
+    .line 788
     .local v1, message:Landroid/os/Message;
     iput v2, v1, Landroid/os/Message;->arg1:I
 
-    .line 746
+    .line 789
     int-to-long v3, v0
 
     invoke-virtual {p0, v1, v3, v4}, Lcom/android/phone/MiuiCallNotifier;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 743
+    .line 786
     add-int/lit8 v2, v2, -0x1
 
     add-int/lit16 v0, v0, 0x1f4
 
     goto :goto_0
 
-    .line 748
+    .line 791
     .end local v1           #message:Landroid/os/Message;
     :cond_1
     return-void
@@ -675,18 +675,18 @@
     .parameter
 
     .prologue
-    .line 114
+    .line 117
     const-class v6, Lcom/android/phone/CallNotifier;
 
     monitor-enter v6
 
-    .line 115
+    .line 118
     :try_start_0
     sget-object v0, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
 
     if-nez v0, :cond_0
 
-    .line 116
+    .line 119
     new-instance v0, Lcom/android/phone/MiuiCallNotifier;
 
     move-object v1, p0
@@ -703,7 +703,7 @@
 
     sput-object v0, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
 
-    .line 120
+    .line 123
     :goto_0
     sget-object v0, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
 
@@ -711,7 +711,7 @@
 
     return-object v0
 
-    .line 118
+    .line 121
     :cond_0
     const-string v0, "MiuiCallNotifier"
 
@@ -739,7 +739,7 @@
 
     goto :goto_0
 
-    .line 121
+    .line 124
     :catchall_0
     move-exception v0
 
@@ -755,10 +755,10 @@
     .parameter "firewallCode"
 
     .prologue
-    .line 495
+    .line 523
     const/4 v0, 0x0
 
-    .line 496
+    .line 524
     .local v0, skipping:Z
     const/4 v1, 0x7
 
@@ -791,11 +791,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 502
+    .line 530
     :cond_1
     const/4 v0, 0x1
 
-    .line 504
+    .line 532
     :cond_2
     return v0
 .end method
@@ -805,12 +805,12 @@
     .parameter "c"
 
     .prologue
-    .line 424
+    .line 452
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/Connection;->getDisconnectCause()Lcom/android/internal/telephony/Connection$DisconnectCause;
 
     move-result-object v20
 
-    .line 425
+    .line 453
     .local v20, cause:Lcom/android/internal/telephony/Connection$DisconnectCause;
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/Connection;->getCall()Lcom/android/internal/telephony/Call;
 
@@ -820,25 +820,25 @@
 
     move-result-object v24
 
-    .line 426
+    .line 454
     .local v24, phone:Lcom/android/internal/telephony/Phone;
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/Connection;->getAddress()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 427
+    .line 455
     .local v1, number:Ljava/lang/String;
     invoke-static {v1}, Lmiui/telephony/PhoneNumberUtils;->isEmergencyNumber(Ljava/lang/String;)Z
 
     move-result v21
 
-    .line 428
+    .line 456
     .local v21, isEmergencyNumber:Z
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/Connection;->getCreateTime()J
 
     move-result-wide v3
 
-    .line 429
+    .line 457
     .local v3, date:J
     sget-object v9, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
 
@@ -848,7 +848,7 @@
 
     move-result-object v10
 
-    .line 430
+    .line 458
     .local v10, ci:Lcom/android/internal/telephony/CallerInfo;
     sget-object v9, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
 
@@ -858,7 +858,7 @@
 
     move-result-object v11
 
-    .line 432
+    .line 460
     .local v11, logNumber:Ljava/lang/String;
     sget-object v9, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
 
@@ -868,7 +868,7 @@
 
     move-result v2
 
-    .line 438
+    .line 466
     .local v2, presentation:I
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/Connection;->isIncoming()Z
 
@@ -876,30 +876,30 @@
 
     if-eqz v9, :cond_8
 
-    .line 439
+    .line 467
     sget-object v9, Lcom/android/internal/telephony/Connection$DisconnectCause;->INCOMING_MISSED:Lcom/android/internal/telephony/Connection$DisconnectCause;
 
     move-object/from16 v0, v20
 
     if-ne v0, v9, :cond_2
 
-    .line 440
+    .line 468
     const/4 v13, 0x3
 
-    .line 441
+    .line 469
     .local v13, callLogType:I
     invoke-static/range {p0 .. p0}, Lcom/android/phone/MiuiExtraConnectionData;->getRingDurationMillis(Lcom/android/internal/telephony/Connection;)J
 
     move-result-wide v6
 
-    .line 447
+    .line 475
     .local v6, duration:J
     :goto_0
     invoke-static/range {p0 .. p0}, Lcom/android/phone/MiuiExtraConnectionData;->getFirewallCode(Lcom/android/internal/telephony/Connection;)I
 
     move-result v5
 
-    .line 448
+    .line 476
     .local v5, firewallCode:I
     const/4 v9, 0x2
 
@@ -909,11 +909,11 @@
 
     if-ne v5, v9, :cond_3
 
-    .line 450
+    .line 478
     :cond_0
     const/16 v18, 0x2
 
-    .line 459
+    .line 487
     .local v18, firewallType:I
     :goto_1
     invoke-static/range {p0 .. p0}, Lcom/android/phone/MiuiExtraConnectionData;->isForwarded(Lcom/android/internal/telephony/Connection;)Z
@@ -924,21 +924,21 @@
 
     const/16 v19, 0x1
 
-    .line 461
+    .line 489
     .local v19, forwardedCall:I
     :goto_2
     if-eqz v5, :cond_7
 
-    .line 462
+    .line 490
     invoke-static {v5}, Lcom/android/phone/MiuiCallNotifier;->isSkippingCallLog(I)Z
 
     move-result v25
 
-    .line 464
+    .line 492
     .local v25, skipCallLog:Z
     invoke-static/range {v1 .. v7}, Lcom/android/phone/MiuiCallNotifier;->addFirewallLog(Ljava/lang/String;IJIJ)V
 
-    .line 477
+    .line 505
     .end local v5           #firewallCode:I
     :goto_3
     invoke-static/range {v24 .. v24}, Lcom/android/phone/TelephonyCapabilities;->supportsOtasp(Lcom/android/internal/telephony/Phone;)Z
@@ -957,7 +957,7 @@
 
     const/16 v22, 0x1
 
-    .line 481
+    .line 509
     .local v22, isOtaspNumber:Z
     :goto_4
     if-nez v22, :cond_a
@@ -966,12 +966,12 @@
 
     const/16 v23, 0x1
 
-    .line 485
+    .line 513
     .local v23, okToLogThisCall:Z
     :goto_5
     if-eqz v23, :cond_1
 
-    .line 486
+    .line 514
     new-instance v8, Lcom/android/phone/CallLogAsync$AddCallArgs;
 
     sget-object v9, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
@@ -986,7 +986,7 @@
 
     invoke-direct/range {v8 .. v19}, Lcom/android/phone/CallLogAsync$AddCallArgs;-><init>(Landroid/content/Context;Lcom/android/internal/telephony/CallerInfo;Ljava/lang/String;IIJJII)V
 
-    .line 490
+    .line 518
     .local v8, args:Lcom/android/phone/CallLogAsync$AddCallArgs;
     sget-object v9, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
 
@@ -994,12 +994,12 @@
 
     invoke-virtual {v9, v8}, Lcom/android/phone/CallLogAsync;->addCall(Lcom/android/phone/CallLogAsync$AddCallArgs;)Landroid/os/AsyncTask;
 
-    .line 492
+    .line 520
     .end local v8           #args:Lcom/android/phone/CallLogAsync$AddCallArgs;
     :cond_1
     return-void
 
-    .line 443
+    .line 471
     .end local v6           #duration:J
     .end local v13           #callLogType:I
     .end local v18           #firewallType:I
@@ -1010,7 +1010,7 @@
     :cond_2
     const/4 v13, 0x1
 
-    .line 444
+    .line 472
     .restart local v13       #callLogType:I
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/Connection;->getDurationMillis()J
 
@@ -1019,7 +1019,7 @@
     .restart local v6       #duration:J
     goto :goto_0
 
-    .line 451
+    .line 479
     .restart local v5       #firewallCode:I
     :cond_3
     const/4 v9, 0x1
@@ -1034,14 +1034,14 @@
 
     if-ne v5, v9, :cond_5
 
-    .line 454
+    .line 482
     :cond_4
     const/16 v18, 0x1
 
     .restart local v18       #firewallType:I
     goto :goto_1
 
-    .line 456
+    .line 484
     .end local v18           #firewallType:I
     :cond_5
     const/16 v18, 0x0
@@ -1049,13 +1049,13 @@
     .restart local v18       #firewallType:I
     goto :goto_1
 
-    .line 459
+    .line 487
     :cond_6
     const/16 v19, 0x0
 
     goto :goto_2
 
-    .line 466
+    .line 494
     .restart local v19       #forwardedCall:I
     :cond_7
     const/16 v25, 0x0
@@ -1063,7 +1063,7 @@
     .restart local v25       #skipCallLog:Z
     goto :goto_3
 
-    .line 469
+    .line 497
     .end local v5           #firewallCode:I
     .end local v6           #duration:J
     .end local v13           #callLogType:I
@@ -1073,34 +1073,34 @@
     :cond_8
     const/4 v13, 0x2
 
-    .line 470
+    .line 498
     .restart local v13       #callLogType:I
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/Connection;->getDurationMillis()J
 
     move-result-wide v6
 
-    .line 471
+    .line 499
     .restart local v6       #duration:J
     const/16 v18, 0x0
 
-    .line 472
+    .line 500
     .restart local v18       #firewallType:I
     const/16 v19, 0x0
 
-    .line 473
+    .line 501
     .restart local v19       #forwardedCall:I
     const/16 v25, 0x0
 
     .restart local v25       #skipCallLog:Z
     goto :goto_3
 
-    .line 477
+    .line 505
     :cond_9
     const/16 v22, 0x0
 
     goto :goto_4
 
-    .line 481
+    .line 509
     .restart local v22       #isOtaspNumber:Z
     :cond_a
     const/16 v23, 0x0
@@ -1109,35 +1109,85 @@
 .end method
 
 .method public static onNewPhoneRegisterToCallManager(Lcom/android/internal/telephony/Phone;)V
-    .locals 3
+    .locals 4
     .parameter "phone"
 
     .prologue
-    .line 129
+    const/4 v3, 0x0
+
+    .line 132
+    invoke-interface {p0}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    .line 133
+    invoke-static {p0}, Lcom/android/phone/MiuiPhoneUtils;->getBasePhone(Lcom/android/internal/telephony/Phone;)Lcom/android/internal/telephony/PhoneBase;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+
+    sget-object v1, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
+
+    const/16 v2, 0x195
+
+    invoke-interface {v0, v1, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->registerForLineControlInfo(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    .line 137
+    :goto_0
+    return-void
+
+    .line 135
+    :cond_0
     sget-object v0, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
 
     const/16 v1, 0x192
 
-    const/4 v2, 0x0
+    invoke-interface {p0, v0, v1, v3}, Lcom/android/internal/telephony/Phone;->registerForSuppServiceNotification(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    invoke-interface {p0, v0, v1, v2}, Lcom/android/internal/telephony/Phone;->registerForSuppServiceNotification(Landroid/os/Handler;ILjava/lang/Object;)V
-
-    .line 130
-    return-void
+    goto :goto_0
 .end method
 
 .method public static onPhoneUnregisterToCallManager(Lcom/android/internal/telephony/Phone;)V
-    .locals 1
+    .locals 2
     .parameter "phone"
 
     .prologue
-    .line 137
+    .line 144
+    invoke-interface {p0}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    .line 145
+    invoke-static {p0}, Lcom/android/phone/MiuiPhoneUtils;->getBasePhone(Lcom/android/internal/telephony/Phone;)Lcom/android/internal/telephony/PhoneBase;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+
+    sget-object v1, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
+
+    invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForLineControlInfo(Landroid/os/Handler;)V
+
+    .line 149
+    :goto_0
+    return-void
+
+    .line 147
+    :cond_0
     sget-object v0, Lcom/android/phone/MiuiCallNotifier;->sInstance:Lcom/android/phone/CallNotifier;
 
     invoke-interface {p0, v0}, Lcom/android/internal/telephony/Phone;->unregisterForSuppServiceNotification(Landroid/os/Handler;)V
 
-    .line 138
-    return-void
+    goto :goto_0
 .end method
 
 .method private onSuppServiceNotification(Landroid/os/AsyncResult;)V
@@ -1145,50 +1195,50 @@
     .parameter "r"
 
     .prologue
-    .line 653
+    .line 696
     if-eqz p1, :cond_0
 
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     if-nez v2, :cond_1
 
-    .line 670
+    .line 713
     :cond_0
     :goto_0
     return-void
 
-    .line 657
+    .line 700
     :cond_1
     iget-object v1, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/internal/telephony/gsm/SuppServiceNotification;
 
-    .line 658
+    .line 701
     .local v1, not:Lcom/android/internal/telephony/gsm/SuppServiceNotification;
     if-eqz v1, :cond_0
 
-    .line 659
+    .line 702
     iget v2, v1, Lcom/android/internal/telephony/gsm/SuppServiceNotification;->notificationType:I
 
     if-nez v2, :cond_2
 
-    .line 661
+    .line 704
     iget-object v2, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-static {v2}, Lcom/android/phone/MiuiPhoneUtils;->getCurrentConnection(Lcom/android/internal/telephony/CallManager;)Lcom/android/internal/telephony/Connection;
 
     move-result-object v0
 
-    .line 662
+    .line 705
     .local v0, c:Lcom/android/internal/telephony/Connection;
     if-eqz v0, :cond_0
 
-    .line 663
+    .line 706
     invoke-static {v0, v1}, Lcom/android/phone/MiuiExtraConnectionData;->setSuppServiceNotification(Lcom/android/internal/telephony/Connection;Lcom/android/internal/telephony/gsm/SuppServiceNotification;)V
 
     goto :goto_0
 
-    .line 667
+    .line 710
     .end local v0           #c:Lcom/android/internal/telephony/Connection;
     :cond_2
     invoke-static {v1}, Lcom/android/phone/MiuiExtraConnectionData;->setIncomingCallSuppServiceNotification(Lcom/android/internal/telephony/gsm/SuppServiceNotification;)V
@@ -1205,58 +1255,58 @@
 
     const/4 v6, 0x1
 
-    .line 560
+    .line 603
     iget-object v5, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-static {v5}, Lcom/android/phone/MiuiPhoneUtils;->getCurrentConnection(Lcom/android/internal/telephony/CallManager;)Lcom/android/internal/telephony/Connection;
 
     move-result-object v2
 
-    .line 561
+    .line 604
     .local v2, c:Lcom/android/internal/telephony/Connection;
     if-eqz v2, :cond_0
 
-    .line 562
+    .line 605
     const/4 v5, 0x0
 
     invoke-static {v2, v5}, Lcom/android/phone/MiuiExtraConnectionData;->setFirewallCode(Lcom/android/internal/telephony/Connection;I)V
 
-    .line 565
+    .line 608
     :cond_0
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/phone/MiuiCallNotifier;->getTelephonyFirewallBlockType(Lcom/android/internal/telephony/CallerInfo;)I
 
     move-result v4
 
-    .line 566
+    .line 609
     .local v4, ret:I
     if-ne v4, v6, :cond_4
 
-    .line 568
+    .line 611
     iget-object v5, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
     invoke-static {v5}, Lmiui/provider/ExtraTelephony;->getCallAct(Landroid/content/Context;)I
 
     move-result v1
 
-    .line 569
+    .line 612
     .local v1, blacklist_act:I
     if-nez v1, :cond_3
 
-    .line 570
+    .line 613
     const-string v5, "Rejected incoming call for caller in blacklist"
 
     invoke-virtual {p0, v5}, Lcom/android/phone/MiuiCallNotifier;->log(Ljava/lang/String;)V
 
-    .line 571
+    .line 614
     if-eqz v2, :cond_1
 
-    .line 572
+    .line 615
     const/4 v5, 0x1
 
     invoke-static {v2, v5}, Lcom/android/phone/MiuiExtraConnectionData;->setFirewallCode(Lcom/android/internal/telephony/Connection;I)V
 
-    .line 574
+    .line 617
     :cond_1
     iget-object v5, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
@@ -1266,20 +1316,20 @@
 
     invoke-static {v5}, Lcom/android/phone/PhoneUtils;->hangupRingingCall(Lcom/android/internal/telephony/Call;)Z
 
-    .line 608
+    .line 651
     .end local v1           #blacklist_act:I
     .end local v4           #ret:I
     :cond_2
     :goto_0
     return-void
 
-    .line 576
+    .line 619
     .restart local v1       #blacklist_act:I
     .restart local v4       #ret:I
     :cond_3
     if-ne v1, v6, :cond_2
 
-    .line 577
+    .line 620
     if-eqz v2, :cond_2
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/Connection;->getState()Lcom/android/internal/telephony/Call$State;
@@ -1292,17 +1342,17 @@
 
     if-eqz v5, :cond_2
 
-    .line 578
+    .line 621
     const-string v5, "Muted incoming call for caller in blacklist"
 
     invoke-virtual {p0, v5}, Lcom/android/phone/MiuiCallNotifier;->log(Ljava/lang/String;)V
 
-    .line 579
+    .line 622
     const/4 v5, 0x2
 
     invoke-static {v2, v5}, Lcom/android/phone/MiuiExtraConnectionData;->setFirewallCode(Lcom/android/internal/telephony/Connection;I)V
 
-    .line 580
+    .line 623
     iget-object v5, p0, Lcom/android/phone/MiuiCallNotifier;->mRinger:Lcom/android/phone/Ringer;
 
     check-cast v5, Lcom/android/phone/MiuiRinger;
@@ -1313,13 +1363,13 @@
 
     goto :goto_0
 
-    .line 605
+    .line 648
     .end local v1           #blacklist_act:I
     .end local v4           #ret:I
     :catch_0
     move-exception v3
 
-    .line 606
+    .line 649
     .local v3, e:Ljava/lang/RuntimeException;
     const-string v5, "MiuiCallNotifier"
 
@@ -1331,13 +1381,13 @@
 
     goto :goto_0
 
-    .line 585
+    .line 628
     .end local v3           #e:Ljava/lang/RuntimeException;
     .restart local v4       #ret:I
     :cond_4
     if-ne v4, v7, :cond_2
 
-    .line 587
+    .line 630
     :try_start_1
     iget-object v5, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
@@ -1345,24 +1395,24 @@
 
     move-result v0
 
-    .line 588
+    .line 631
     .local v0, act:I
     if-nez v0, :cond_6
 
-    .line 589
+    .line 632
     const-string v5, "Rejected incoming call for caller not in whitelist"
 
     invoke-virtual {p0, v5}, Lcom/android/phone/MiuiCallNotifier;->log(Ljava/lang/String;)V
 
-    .line 590
+    .line 633
     if-eqz v2, :cond_5
 
-    .line 591
+    .line 634
     const/16 v5, 0x101
 
     invoke-static {v2, v5}, Lcom/android/phone/MiuiExtraConnectionData;->setFirewallCode(Lcom/android/internal/telephony/Connection;I)V
 
-    .line 593
+    .line 636
     :cond_5
     iget-object v5, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
@@ -1374,11 +1424,11 @@
 
     goto :goto_0
 
-    .line 595
+    .line 638
     :cond_6
     if-ne v0, v6, :cond_2
 
-    .line 596
+    .line 639
     if-eqz v2, :cond_2
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/Connection;->getState()Lcom/android/internal/telephony/Call$State;
@@ -1391,17 +1441,17 @@
 
     if-eqz v5, :cond_2
 
-    .line 597
+    .line 640
     const-string v5, "Muted incoming call for caller not in whitelist"
 
     invoke-virtual {p0, v5}, Lcom/android/phone/MiuiCallNotifier;->log(Ljava/lang/String;)V
 
-    .line 598
+    .line 641
     const/16 v5, 0x102
 
     invoke-static {v2, v5}, Lcom/android/phone/MiuiExtraConnectionData;->setFirewallCode(Lcom/android/internal/telephony/Connection;I)V
 
-    .line 599
+    .line 642
     iget-object v5, p0, Lcom/android/phone/MiuiCallNotifier;->mRinger:Lcom/android/phone/Ringer;
 
     check-cast v5, Lcom/android/phone/MiuiRinger;
@@ -1417,17 +1467,17 @@
     .locals 4
 
     .prologue
-    .line 701
+    .line 744
     iget-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerVolumeControlling:Z
 
     if-eqz v0, :cond_0
 
-    .line 703
+    .line 746
     const/16 v0, 0x191
 
     invoke-virtual {p0, v0}, Lcom/android/phone/MiuiCallNotifier;->removeMessages(I)V
 
-    .line 704
+    .line 747
     iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v1, 0x2
@@ -1438,242 +1488,217 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 705
+    .line 748
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerVolumeControlling:Z
 
-    .line 707
+    .line 750
     :cond_0
     return-void
 .end method
 
 .method private startAutoAnswer()V
-    .locals 12
+    .locals 6
 
     .prologue
-    const/4 v9, 0x1
+    const/4 v1, 0x1
 
-    const/4 v10, 0x0
+    const/4 v2, 0x0
 
-    .line 751
-    iget-object v11, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+    .line 794
+    iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
-    invoke-virtual {v11}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall()Lcom/android/internal/telephony/Call;
+    invoke-virtual {v0}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall()Lcom/android/internal/telephony/Call;
+
+    move-result-object v0
+
+    .line 795
+    iget-object v3, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    invoke-virtual {v3}, Lcom/android/internal/telephony/CallManager;->getFirstActiveBgCall()Lcom/android/internal/telephony/Call;
+
+    move-result-object v3
+
+    .line 796
+    iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    invoke-virtual {v4}, Lcom/android/internal/telephony/CallManager;->getFirstActiveRingingCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v4
 
-    .line 752
-    .local v4, fgCall:Lcom/android/internal/telephony/Call;
-    iget-object v11, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+    .line 799
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v11}, Lcom/android/internal/telephony/CallManager;->getFirstActiveBgCall()Lcom/android/internal/telephony/Call;
+    invoke-virtual {v0}, Lcom/android/internal/telephony/Call;->isIdle()Z
 
-    move-result-object v2
+    move-result v0
 
-    .line 753
-    .local v2, bgCall:Lcom/android/internal/telephony/Call;
-    iget-object v11, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
-
-    invoke-virtual {v11}, Lcom/android/internal/telephony/CallManager;->getFirstActiveRingingCall()Lcom/android/internal/telephony/Call;
-
-    move-result-object v7
-
-    .line 756
-    .local v7, ringingCall:Lcom/android/internal/telephony/Call;
-    if-eqz v4, :cond_0
-
-    invoke-virtual {v4}, Lcom/android/internal/telephony/Call;->isIdle()Z
-
-    move-result v11
-
-    if-eqz v11, :cond_2
+    if-eqz v0, :cond_2
 
     :cond_0
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/Call;->isIdle()Z
+    invoke-virtual {v3}, Lcom/android/internal/telephony/Call;->isIdle()Z
 
-    move-result v11
+    move-result v0
 
-    if-eqz v11, :cond_2
+    if-eqz v0, :cond_2
 
     :cond_1
-    if-eqz v7, :cond_2
+    if-eqz v4, :cond_2
 
-    invoke-virtual {v7}, Lcom/android/internal/telephony/Call;->isRinging()Z
+    invoke-virtual {v4}, Lcom/android/internal/telephony/Call;->isRinging()Z
 
-    move-result v11
+    move-result v0
 
-    if-nez v11, :cond_3
+    if-nez v0, :cond_3
 
-    .line 789
+    .line 832
     :cond_2
     :goto_0
     return-void
 
-    .line 763
+    .line 806
     :cond_3
-    iget-object v11, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
+    iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
-    invoke-static {v11}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    move-result-object v6
+    move-result-object v3
 
-    .line 764
-    .local v6, pref:Landroid/content/SharedPreferences;
-    const-string v11, "button_auto_answer"
+    .line 807
+    const-string v0, "button_auto_answer"
 
-    invoke-interface {v6, v11, v10}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v3, v0, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v11
+    move-result v0
 
-    if-eqz v11, :cond_2
+    if-eqz v0, :cond_2
 
-    .line 765
-    const-string v11, "button_auto_answer_scenario"
+    .line 808
+    const-string v0, "button_auto_answer_scenario"
 
-    invoke-interface {v6, v11, v10}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v3, v0, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    move-result v8
+    move-result v5
 
-    .line 766
-    .local v8, scenario:I
-    const/4 v1, 0x0
-
-    .line 767
-    .local v1, autoAnswer:Z
+    .line 810
     iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
     check-cast v0, Lcom/android/phone/MiuiPhoneApp;
 
-    .line 768
-    .local v0, app:Lcom/android/phone/MiuiPhoneApp;
-    packed-switch v8, :pswitch_data_0
+    .line 811
+    packed-switch v5, :pswitch_data_0
 
-    .line 779
-    const/4 v1, 0x1
-
-    .line 782
+    .line 825
+    :cond_4
     :goto_1
     if-eqz v1, :cond_2
 
-    .line 783
-    const-string v9, "button_auto_answer_delay"
+    .line 826
+    const-string v0, "button_auto_answer_delay"
 
-    const-string v10, "3"
+    const-string v1, "3"
 
-    invoke-interface {v6, v9, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v3, v0, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v0
 
-    invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result v3
+    move-result v0
 
-    .line 784
-    .local v3, delay:I
-    const/16 v9, 0x194
+    .line 827
+    const/16 v1, 0x194
 
-    invoke-static {p0, v9}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
+    invoke-static {p0, v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
 
-    move-result-object v5
+    move-result-object v1
 
-    .line 785
-    .local v5, msg:Landroid/os/Message;
-    iput-object v7, v5, Landroid/os/Message;->obj:Ljava/lang/Object;
+    .line 828
+    iput-object v4, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 786
-    mul-int/lit16 v9, v3, 0x3e8
+    .line 829
+    mul-int/lit16 v0, v0, 0x3e8
 
-    int-to-long v9, v9
+    int-to-long v2, v0
 
-    invoke-virtual {p0, v5, v9, v10}, Lcom/android/phone/MiuiCallNotifier;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {p0, v1, v2, v3}, Lcom/android/phone/MiuiCallNotifier;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_0
 
-    .line 770
-    .end local v3           #delay:I
-    .end local v5           #msg:Landroid/os/Message;
+    .line 813
     :pswitch_0
     invoke-virtual {v0}, Lcom/android/phone/MiuiPhoneApp;->isBluetoothAvailable()Z
 
-    move-result v11
+    move-result v5
 
-    if-eqz v11, :cond_4
+    if-eqz v5, :cond_5
 
     invoke-virtual {v0}, Lcom/android/phone/MiuiPhoneApp;->isHeadsetPlugged()Z
 
-    move-result v11
+    move-result v0
 
-    if-nez v11, :cond_4
+    if-nez v0, :cond_5
 
-    move v1, v9
+    move v0, v1
 
-    .line 771
     :goto_2
-    goto :goto_1
+    move v1, v0
 
-    :cond_4
-    move v1, v10
-
-    .line 770
-    goto :goto_2
-
-    .line 773
-    :pswitch_1
-    invoke-virtual {v0}, Lcom/android/phone/MiuiPhoneApp;->isHeadsetPlugged()Z
-
-    move-result v11
-
-    if-eqz v11, :cond_5
-
-    invoke-virtual {v0}, Lcom/android/phone/MiuiPhoneApp;->isBluetoothAvailable()Z
-
-    move-result v11
-
-    if-nez v11, :cond_5
-
-    move v1, v9
-
-    .line 774
-    :goto_3
+    .line 814
     goto :goto_1
 
     :cond_5
-    move v1, v10
+    move v0, v2
 
-    .line 773
-    goto :goto_3
+    .line 813
+    goto :goto_2
 
-    .line 776
-    :pswitch_2
+    .line 816
+    :pswitch_1
     invoke-virtual {v0}, Lcom/android/phone/MiuiPhoneApp;->isHeadsetPlugged()Z
 
-    move-result v11
+    move-result v5
 
-    if-nez v11, :cond_6
+    if-eqz v5, :cond_6
 
     invoke-virtual {v0}, Lcom/android/phone/MiuiPhoneApp;->isBluetoothAvailable()Z
 
-    move-result v11
+    move-result v0
 
-    if-eqz v11, :cond_7
+    if-eqz v0, :cond_4
 
     :cond_6
-    move v1, v9
+    move v1, v2
 
-    .line 777
-    :goto_4
     goto :goto_1
 
+    .line 819
+    :pswitch_2
+    invoke-virtual {v0}, Lcom/android/phone/MiuiPhoneApp;->isHeadsetPlugged()Z
+
+    move-result v5
+
+    if-nez v5, :cond_7
+
+    invoke-virtual {v0}, Lcom/android/phone/MiuiPhoneApp;->isBluetoothAvailable()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
     :cond_7
-    move v1, v10
+    move v2, v1
 
-    .line 776
-    goto :goto_4
+    :cond_8
+    move v1, v2
 
-    .line 768
+    .line 820
+    goto :goto_1
+
+    .line 811
     nop
 
     :pswitch_data_0
@@ -1685,20 +1710,19 @@
 .end method
 
 .method private startSensor()V
-    .locals 5
+    .locals 4
 
     .prologue
     const/4 v2, 0x0
 
-    .line 805
-    iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
+    .line 848
+    iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
-    invoke-static {v1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 806
-    .local v0, prefs:Landroid/content/SharedPreferences;
+    .line 849
     const-string v1, "button_turnover_mute"
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -1707,52 +1731,52 @@
 
     iput-boolean v1, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverMuteEnable:Z
 
-    .line 807
+    .line 850
     const-string v1, "button_handon_ringer"
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v0
 
-    iput-boolean v1, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonRingerEnable:Z
+    iput-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonRingerEnable:Z
 
-    .line 808
-    iget-boolean v1, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverMuteEnable:Z
+    .line 851
+    iget-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverMuteEnable:Z
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
-    iget-boolean v1, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonRingerEnable:Z
+    iget-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonRingerEnable:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     :cond_0
-    iget-boolean v1, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorRunning:Z
+    iget-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorRunning:Z
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_1
 
-    .line 810
+    .line 853
     iput-boolean v2, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverTriggered:Z
 
-    .line 811
+    .line 854
     iput-boolean v2, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonTriggered:Z
 
-    .line 812
-    iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorManager:Landroid/hardware/SensorManager;
+    .line 855
+    iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorManager:Landroid/hardware/SensorManager;
 
-    iget-object v2, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorListener:Landroid/hardware/SensorEventListener;
+    iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorListener:Landroid/hardware/SensorEventListener;
 
-    iget-object v3, p0, Lcom/android/phone/MiuiCallNotifier;->mSensor:Landroid/hardware/Sensor;
+    iget-object v2, p0, Lcom/android/phone/MiuiCallNotifier;->mSensor:Landroid/hardware/Sensor;
 
-    const/4 v4, 0x3
+    const/4 v3, 0x3
 
-    invoke-virtual {v1, v2, v3, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
+    invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 813
-    const/4 v1, 0x1
+    .line 856
+    const/4 v0, 0x1
 
-    iput-boolean v1, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorRunning:Z
+    iput-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorRunning:Z
 
-    .line 815
+    .line 858
     :cond_1
     return-void
 .end method
@@ -1763,12 +1787,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 792
+    .line 835
     iget-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorRunning:Z
 
     if-eqz v0, :cond_0
 
-    .line 794
+    .line 837
     iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorListener:Landroid/hardware/SensorEventListener;
@@ -1777,25 +1801,64 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V
 
-    .line 795
+    .line 838
     iput-boolean v3, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorRunning:Z
 
-    .line 796
+    .line 839
     iput v3, p0, Lcom/android/phone/MiuiCallNotifier;->mSensorCount:I
 
-    .line 797
+    .line 840
     iput-boolean v3, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverTriggered:Z
 
-    .line 798
+    .line 841
     iput-boolean v3, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonTriggered:Z
 
-    .line 799
+    .line 842
     iput v3, p0, Lcom/android/phone/MiuiCallNotifier;->mTurnoverTiggeringCount:I
 
-    .line 800
+    .line 843
     iput v3, p0, Lcom/android/phone/MiuiCallNotifier;->mHandonTriggeringCount:I
 
-    .line 802
+    .line 845
+    :cond_0
+    return-void
+.end method
+
+.method private vibrateWhenConnectOrDisconnect()V
+    .locals 4
+
+    .prologue
+    .line 361
+    iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
+
+    invoke-static {v1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    const-string v2, "button_connect_disconnect_vibrate"
+
+    const-string v3, "100"
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 365
+    .local v0, vibrateDuration:I
+    if-lez v0, :cond_0
+
+    .line 366
+    iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mVibrator:Landroid/os/Vibrator;
+
+    int-to-long v2, v0
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Vibrator;->vibrate(J)V
+
+    .line 368
     :cond_0
     return-void
 .end method
@@ -1807,16 +1870,16 @@
     .parameter "conn"
 
     .prologue
-    .line 545
+    .line 588
     const/4 v0, 0x0
 
-    .line 546
+    .line 589
     .local v0, ci:Lcom/android/internal/telephony/CallerInfo;
     invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getUserData()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 547
+    .line 590
     .local v1, o:Ljava/lang/Object;
     if-eqz v1, :cond_0
 
@@ -1827,23 +1890,23 @@
     :cond_0
     move-object v0, v1
 
-    .line 548
+    .line 591
     check-cast v0, Lcom/android/internal/telephony/CallerInfo;
 
-    .line 552
+    .line 595
     .end local v1           #o:Ljava/lang/Object;
     :cond_1
     :goto_0
     return-object v0
 
-    .line 549
+    .line 592
     .restart local v1       #o:Ljava/lang/Object;
     :cond_2
     instance-of v2, v1, Lcom/android/phone/PhoneUtils$CallerInfoToken;
 
     if-eqz v2, :cond_1
 
-    .line 550
+    .line 593
     check-cast v1, Lcom/android/phone/PhoneUtils$CallerInfoToken;
 
     .end local v1           #o:Ljava/lang/Object;
@@ -1858,7 +1921,7 @@
     .parameter "callerInfo"
 
     .prologue
-    .line 533
+    .line 576
     invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->isIncoming()Z
 
     move-result v1
@@ -1887,18 +1950,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 536
+    .line 579
     :cond_0
     invoke-static {p1}, Lcom/android/phone/MiuiExtraConnectionData;->getOrigDialAddress(Lcom/android/internal/telephony/Connection;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 540
+    .line 583
     .local v0, logNumber:Ljava/lang/String;
     :goto_0
     return-object v0
 
-    .line 538
+    .line 581
     .end local v0           #logNumber:Ljava/lang/String;
     :cond_1
     invoke-super {p0, p1, p2}, Lcom/android/phone/CallNotifier;->getLogNumber(Lcom/android/internal/telephony/Connection;Lcom/android/internal/telephony/CallerInfo;)Ljava/lang/String;
@@ -1913,7 +1976,7 @@
     .locals 1
 
     .prologue
-    .line 420
+    .line 448
     iget-boolean v0, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
     if-eqz v0, :cond_0
@@ -1934,7 +1997,7 @@
     .parameter "ci"
 
     .prologue
-    .line 556
+    .line 599
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
     iget-object v2, p1, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
@@ -1959,319 +2022,350 @@
 .end method
 
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 5
+    .locals 8
     .parameter "msg"
 
     .prologue
-    .line 152
-    iget v1, p1, Landroid/os/Message;->what:I
+    const/4 v7, 0x2
 
-    packed-switch v1, :pswitch_data_0
+    .line 163
+    iget v4, p1, Landroid/os/Message;->what:I
 
-    .line 177
+    packed-switch v4, :pswitch_data_0
+
+    .line 204
     invoke-super {p0, p1}, Lcom/android/phone/CallNotifier;->handleMessage(Landroid/os/Message;)V
 
-    .line 179
+    .line 206
     :cond_0
     :goto_0
     return-void
 
-    .line 154
+    .line 165
     :pswitch_0
-    iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mAudioManager:Landroid/media/AudioManager;
 
-    const/4 v2, 0x2
+    iget v5, p1, Landroid/os/Message;->arg1:I
 
-    iget v3, p1, Landroid/os/Message;->arg1:I
+    iget v6, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerSetFlags:I
 
-    iget v4, p0, Lcom/android/phone/MiuiCallNotifier;->mRingerSetFlags:I
-
-    invoke-virtual {v1, v2, v3, v4}, Landroid/media/AudioManager;->setStreamVolume(III)V
-
-    goto :goto_0
-
-    .line 158
-    :pswitch_1
-    iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v1, Landroid/os/AsyncResult;
-
-    invoke-direct {p0, v1}, Lcom/android/phone/MiuiCallNotifier;->onSuppServiceNotification(Landroid/os/AsyncResult;)V
-
-    .line 159
-    iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
-
-    invoke-virtual {v1}, Lcom/android/phone/PhoneApp;->updateInCallScreen()V
-
-    goto :goto_0
-
-    .line 163
-    :pswitch_2
-    iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/android/internal/telephony/Phone$State;->IDLE:Lcom/android/internal/telephony/Phone$State;
-
-    if-ne v1, v2, :cond_0
-
-    .line 164
-    invoke-virtual {p0}, Lcom/android/phone/MiuiCallNotifier;->resetAudioStateAfterDisconnect()V
+    invoke-virtual {v4, v7, v5, v6}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
     goto :goto_0
 
     .line 169
-    :pswitch_3
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    :pswitch_1
+    iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Lcom/android/internal/telephony/Call;
+    check-cast v4, Landroid/os/AsyncResult;
+
+    invoke-direct {p0, v4}, Lcom/android/phone/MiuiCallNotifier;->onSuppServiceNotification(Landroid/os/AsyncResult;)V
 
     .line 170
-    .local v0, ringingCall:Lcom/android/internal/telephony/Call;
-    iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+    iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CallManager;->getFirstActiveRingingCall()Lcom/android/internal/telephony/Call;
-
-    move-result-object v1
-
-    if-ne v1, v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/android/internal/telephony/Call;->isRinging()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 172
-    invoke-static {v0}, Lcom/android/phone/PhoneUtils;->answerCall(Lcom/android/internal/telephony/Call;)Z
+    invoke-virtual {v4}, Lcom/android/phone/PhoneApp;->updateInCallScreen()V
 
     goto :goto_0
 
-    .line 152
-    nop
+    .line 174
+    :pswitch_2
+    iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
+    invoke-virtual {v4}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
+
+    move-result-object v4
+
+    sget-object v5, Lcom/android/internal/telephony/Phone$State;->IDLE:Lcom/android/internal/telephony/Phone$State;
+
+    if-ne v4, v5, :cond_0
+
+    .line 175
+    invoke-virtual {p0}, Lcom/android/phone/MiuiCallNotifier;->resetAudioStateAfterDisconnect()V
+
+    goto :goto_0
+
+    .line 180
+    :pswitch_3
+    iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v3, Lcom/android/internal/telephony/Call;
+
+    .line 181
+    .local v3, ringingCall:Lcom/android/internal/telephony/Call;
+    iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    invoke-virtual {v4}, Lcom/android/internal/telephony/CallManager;->getFirstActiveRingingCall()Lcom/android/internal/telephony/Call;
+
+    move-result-object v4
+
+    if-ne v4, v3, :cond_0
+
+    invoke-virtual {v3}, Lcom/android/internal/telephony/Call;->isRinging()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    .line 183
+    invoke-static {v3}, Lcom/android/phone/PhoneUtils;->answerCall(Lcom/android/internal/telephony/Call;)Z
+
+    goto :goto_0
+
+    .line 188
+    .end local v3           #ringingCall:Lcom/android/internal/telephony/Call;
+    :pswitch_4
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/AsyncResult;
+
+    .line 189
+    .local v0, ar:Landroid/os/AsyncResult;
+    iget-object v4, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
+
+    if-nez v4, :cond_0
+
+    .line 190
+    iget-object v2, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
+
+    check-cast v2, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaLineControlInfoRec;
+
+    .line 191
+    .local v2, record:Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaLineControlInfoRec;
+    iget-byte v4, v2, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaLineControlInfoRec;->lineCtrlPolarityIncluded:B
+
+    const/4 v5, 0x1
+
+    if-ne v4, v5, :cond_0
+
+    .line 192
+    iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    invoke-static {v4}, Lcom/android/phone/MiuiPhoneUtils;->getCurrentActiveCall(Lcom/android/internal/telephony/CallManager;)Lcom/android/internal/telephony/Call;
+
+    move-result-object v1
+
+    .line 193
+    .local v1, call:Lcom/android/internal/telephony/Call;
+    invoke-virtual {v1}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v4
+
+    if-ne v4, v7, :cond_0
+
+    .line 194
+    sget-object v4, Lcom/android/phone/MiuiConstants$CdmaCallState;->AuthenticatedActive:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    invoke-static {v1, v4}, Lcom/android/phone/MiuiExtraConnectionData;->setCdmaCallState(Lcom/android/internal/telephony/Call;Lcom/android/phone/MiuiConstants$CdmaCallState;)V
+
+    .line 196
+    invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->vibrateWhenConnectOrDisconnect()V
+
+    .line 197
+    iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
+
+    invoke-virtual {v4}, Lcom/android/phone/PhoneApp;->updateInCallScreen()V
+
+    goto :goto_0
+
+    .line 163
     :pswitch_data_0
     .packed-switch 0x191
         :pswitch_0
         :pswitch_1
         :pswitch_2
         :pswitch_3
+        :pswitch_4
     .end packed-switch
 .end method
 
 .method protected onDisconnect(Landroid/os/AsyncResult;)V
-    .locals 12
+    .locals 10
     .parameter "r"
 
     .prologue
-    const/4 v11, 0x0
+    const/4 v9, 0x0
 
-    .line 337
+    .line 372
     invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->stopSensor()V
 
-    .line 338
+    .line 373
     invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->resetRingerVolume()V
 
-    .line 340
+    .line 375
     iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 341
+    .line 376
     .local v0, c:Lcom/android/internal/telephony/Connection;
     if-eqz v0, :cond_6
 
-    .line 342
+    .line 377
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getDisconnectCause()Lcom/android/internal/telephony/Connection$DisconnectCause;
 
     move-result-object v2
 
-    .line 343
+    .line 378
     .local v2, cause:Lcom/android/internal/telephony/Connection$DisconnectCause;
-    sget-object v8, Lcom/android/internal/telephony/Connection$DisconnectCause;->LOCAL:Lcom/android/internal/telephony/Connection$DisconnectCause;
+    sget-object v7, Lcom/android/internal/telephony/Connection$DisconnectCause;->LOCAL:Lcom/android/internal/telephony/Connection$DisconnectCause;
 
-    if-eq v2, v8, :cond_2
+    if-eq v2, v7, :cond_2
 
-    .line 344
+    .line 379
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v1
 
-    .line 345
+    .line 380
     .local v1, call:Lcom/android/internal/telephony/Call;
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+    iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
-    invoke-virtual {v8}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall()Lcom/android/internal/telephony/Call;
+    invoke-virtual {v7}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall()Lcom/android/internal/telephony/Call;
 
-    move-result-object v8
+    move-result-object v7
 
-    if-ne v1, v8, :cond_0
+    if-ne v1, v7, :cond_0
 
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousForeCallState:Lcom/android/internal/telephony/Call$State;
+    iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousForeCallState:Lcom/android/internal/telephony/Call$State;
 
-    sget-object v9, Lcom/android/internal/telephony/Call$State;->ACTIVE:Lcom/android/internal/telephony/Call$State;
+    sget-object v8, Lcom/android/internal/telephony/Call$State;->ACTIVE:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v8, v9, :cond_1
+    if-eq v7, v8, :cond_1
 
     :cond_0
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+    iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
-    invoke-virtual {v8}, Lcom/android/internal/telephony/CallManager;->getFirstActiveBgCall()Lcom/android/internal/telephony/Call;
+    invoke-virtual {v7}, Lcom/android/internal/telephony/CallManager;->getFirstActiveBgCall()Lcom/android/internal/telephony/Call;
 
-    move-result-object v8
+    move-result-object v7
 
-    if-ne v1, v8, :cond_2
+    if-ne v1, v7, :cond_2
 
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousBackCallState:Lcom/android/internal/telephony/Call$State;
+    iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousBackCallState:Lcom/android/internal/telephony/Call$State;
 
-    sget-object v9, Lcom/android/internal/telephony/Call$State;->HOLDING:Lcom/android/internal/telephony/Call$State;
+    sget-object v8, Lcom/android/internal/telephony/Call$State;->HOLDING:Lcom/android/internal/telephony/Call$State;
 
-    if-ne v8, v9, :cond_2
+    if-ne v7, v8, :cond_2
 
-    .line 348
+    .line 382
     :cond_1
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
+    invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->vibrateWhenConnectOrDisconnect()V
 
-    invoke-static {v8}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v8
-
-    const-string v9, "button_connect_disconnect_vibrate"
-
-    const-string v10, "100"
-
-    invoke-interface {v8, v9, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v7
-
-    .line 352
-    .local v7, vibrateDuration:I
-    if-lez v7, :cond_2
-
-    .line 353
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mVibrator:Landroid/os/Vibrator;
-
-    int-to-long v9, v7
-
-    invoke-virtual {v8, v9, v10}, Landroid/os/Vibrator;->vibrate(J)V
-
-    .line 358
+    .line 386
     .end local v1           #call:Lcom/android/internal/telephony/Call;
-    .end local v7           #vibrateDuration:I
     :cond_2
-    sget-object v8, Lcom/android/internal/telephony/Connection$DisconnectCause;->NORMAL:Lcom/android/internal/telephony/Connection$DisconnectCause;
+    sget-object v7, Lcom/android/internal/telephony/Connection$DisconnectCause;->NORMAL:Lcom/android/internal/telephony/Connection$DisconnectCause;
 
-    if-eq v2, v8, :cond_3
+    if-eq v2, v7, :cond_3
 
-    sget-object v8, Lcom/android/internal/telephony/Connection$DisconnectCause;->LOCAL:Lcom/android/internal/telephony/Connection$DisconnectCause;
+    sget-object v7, Lcom/android/internal/telephony/Connection$DisconnectCause;->LOCAL:Lcom/android/internal/telephony/Connection$DisconnectCause;
 
-    if-ne v2, v8, :cond_4
+    if-ne v2, v7, :cond_4
 
-    .line 360
+    .line 388
     :cond_3
-    iput-boolean v11, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
+    iput-boolean v9, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
-    .line 363
+    .line 391
     :cond_4
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getAddress()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 364
+    .line 392
     .local v4, number:Ljava/lang/String;
     invoke-static {v4}, Lmiui/telephony/PhoneNumberUtils;->isEmergencyNumber(Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 365
+    .line 393
     .local v3, isEmergencyNumber:Z
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getCall()Lcom/android/internal/telephony/Call;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-virtual {v8}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
+    invoke-virtual {v7}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v5
 
-    .line 366
+    .line 394
     .local v5, phone:Lcom/android/internal/telephony/Phone;
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousForeCallState:Lcom/android/internal/telephony/Call$State;
+    iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousForeCallState:Lcom/android/internal/telephony/Call$State;
 
-    invoke-virtual {v8}, Lcom/android/internal/telephony/Call$State;->isDialing()Z
+    invoke-virtual {v7}, Lcom/android/internal/telephony/Call$State;->isDialing()Z
 
-    move-result v8
+    move-result v7
 
-    if-eqz v8, :cond_a
+    if-eqz v7, :cond_a
 
     if-nez v3, :cond_a
 
-    sget-object v8, Lcom/android/internal/telephony/Connection$DisconnectCause;->NORMAL:Lcom/android/internal/telephony/Connection$DisconnectCause;
+    sget-object v7, Lcom/android/internal/telephony/Connection$DisconnectCause;->NORMAL:Lcom/android/internal/telephony/Connection$DisconnectCause;
 
-    if-eq v2, v8, :cond_a
+    if-eq v2, v7, :cond_a
 
-    sget-object v8, Lcom/android/internal/telephony/Connection$DisconnectCause;->LOCAL:Lcom/android/internal/telephony/Connection$DisconnectCause;
+    sget-object v7, Lcom/android/internal/telephony/Connection$DisconnectCause;->LOCAL:Lcom/android/internal/telephony/Connection$DisconnectCause;
 
-    if-eq v2, v8, :cond_a
+    if-eq v2, v7, :cond_a
 
-    sget-object v8, Lcom/android/internal/telephony/Connection$DisconnectCause;->FDN_BLOCKED:Lcom/android/internal/telephony/Connection$DisconnectCause;
+    sget-object v7, Lcom/android/internal/telephony/Connection$DisconnectCause;->FDN_BLOCKED:Lcom/android/internal/telephony/Connection$DisconnectCause;
 
-    if-eq v2, v8, :cond_a
+    if-eq v2, v7, :cond_a
 
-    .line 371
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
+    .line 399
+    iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
-    invoke-static {v8}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-static {v7}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v6
 
-    .line 372
+    .line 400
     .local v6, pref:Landroid/content/SharedPreferences;
-    const-string v8, "button_auto_redial"
+    const-string v7, "button_auto_redial"
 
-    invoke-interface {v6, v8, v11}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v6, v7, v9}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v8
+    move-result v7
 
-    if-eqz v8, :cond_9
+    if-eqz v7, :cond_9
 
-    .line 373
-    iget-boolean v8, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
+    .line 401
+    iget-boolean v7, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
-    if-nez v8, :cond_5
+    if-nez v7, :cond_5
 
-    .line 374
-    iput v11, p0, Lcom/android/phone/MiuiCallNotifier;->mRedialTimes:I
+    .line 402
+    iput v9, p0, Lcom/android/phone/MiuiCallNotifier;->mRedialTimes:I
 
-    .line 375
-    const/4 v8, 0x1
+    .line 403
+    const/4 v7, 0x1
 
-    iput-boolean v8, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
+    iput-boolean v7, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
-    .line 377
+    .line 405
     :cond_5
-    iget v8, p0, Lcom/android/phone/MiuiCallNotifier;->mRedialTimes:I
+    iget v7, p0, Lcom/android/phone/MiuiCallNotifier;->mRedialTimes:I
 
-    const/16 v9, 0xa
+    const/16 v8, 0xa
 
-    if-ge v8, v9, :cond_8
+    if-ge v7, v8, :cond_8
 
-    .line 378
-    iget v8, p0, Lcom/android/phone/MiuiCallNotifier;->mRedialTimes:I
+    .line 406
+    iget v7, p0, Lcom/android/phone/MiuiCallNotifier;->mRedialTimes:I
 
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v7, v7, 0x1
 
-    iput v8, p0, Lcom/android/phone/MiuiCallNotifier;->mRedialTimes:I
+    iput v7, p0, Lcom/android/phone/MiuiCallNotifier;->mRedialTimes:I
 
-    .line 379
+    .line 407
     invoke-static {v5, v4, v0}, Lcom/android/phone/MiuiPhoneUtils;->placeCall(Lcom/android/internal/telephony/Phone;Ljava/lang/String;Lcom/android/internal/telephony/Connection;)I
 
-    .line 391
+    .line 419
     .end local v2           #cause:Lcom/android/internal/telephony/Connection$DisconnectCause;
     .end local v3           #isEmergencyNumber:Z
     .end local v4           #number:Ljava/lang/String;
@@ -2281,52 +2375,52 @@
     :goto_0
     invoke-super {p0, p1}, Lcom/android/phone/CallNotifier;->onDisconnect(Landroid/os/AsyncResult;)V
 
-    .line 393
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+    .line 421
+    iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
-    invoke-virtual {v8}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
+    invoke-virtual {v7}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
 
-    move-result-object v8
+    move-result-object v7
 
-    sget-object v9, Lcom/android/internal/telephony/Phone$State;->IDLE:Lcom/android/internal/telephony/Phone$State;
+    sget-object v8, Lcom/android/internal/telephony/Phone$State;->IDLE:Lcom/android/internal/telephony/Phone$State;
 
-    if-ne v8, v9, :cond_7
+    if-ne v7, v8, :cond_7
 
-    .line 394
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
+    .line 422
+    iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
-    invoke-virtual {v8}, Lcom/android/phone/PhoneApp;->wakeUpScreen()V
+    invoke-virtual {v7}, Lcom/android/phone/PhoneApp;->wakeUpScreen()V
 
-    .line 395
-    iget-object v8, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
+    .line 423
+    iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
-    invoke-virtual {v8}, Lcom/android/phone/PhoneApp;->pokeUserActivity()V
+    invoke-virtual {v7}, Lcom/android/phone/PhoneApp;->pokeUserActivity()V
 
-    .line 397
+    .line 425
     :cond_7
     return-void
 
-    .line 381
+    .line 409
     .restart local v2       #cause:Lcom/android/internal/telephony/Connection$DisconnectCause;
     .restart local v3       #isEmergencyNumber:Z
     .restart local v4       #number:Ljava/lang/String;
     .restart local v5       #phone:Lcom/android/internal/telephony/Phone;
     .restart local v6       #pref:Landroid/content/SharedPreferences;
     :cond_8
-    iput-boolean v11, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
+    iput-boolean v9, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
     goto :goto_0
 
-    .line 384
+    .line 412
     :cond_9
-    iput-boolean v11, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
+    iput-boolean v9, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
     goto :goto_0
 
-    .line 387
+    .line 415
     .end local v6           #pref:Landroid/content/SharedPreferences;
     :cond_a
-    iput-boolean v11, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
+    iput-boolean v9, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
     goto :goto_0
 .end method
@@ -2338,15 +2432,15 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 184
+    .line 211
     iput-boolean v9, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
-    .line 186
+    .line 213
     iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 187
+    .line 214
     .local v0, c:Lcom/android/internal/telephony/Connection;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2390,37 +2484,37 @@
 
     invoke-virtual {p0, v7}, Lcom/android/phone/MiuiCallNotifier;->log(Ljava/lang/String;)V
 
-    .line 188
+    .line 215
     if-nez v0, :cond_1
 
-    .line 189
+    .line 216
     const-string v7, "MiuiCallNotifier"
 
     const-string v8, "CallNotifier.onNewRingingConnection(): null connection!"
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 302
+    .line 329
     :cond_0
     :goto_0
     return-void
 
-    .line 194
+    .line 221
     :cond_1
     invoke-static {v0}, Lcom/android/phone/MiuiExtraConnectionData;->onIncomingCall(Lcom/android/internal/telephony/Connection;)V
 
-    .line 196
+    .line 223
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v5
 
-    .line 197
+    .line 224
     .local v5, ringing:Lcom/android/internal/telephony/Call;
     invoke-virtual {v5}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v3
 
-    .line 200
+    .line 227
     .local v3, phone:Lcom/android/internal/telephony/Phone;
     invoke-virtual {p0, v3}, Lcom/android/phone/MiuiCallNotifier;->ignoreAllIncomingCalls(Lcom/android/internal/telephony/Phone;)Z
 
@@ -2428,12 +2522,12 @@
 
     if-eqz v7, :cond_2
 
-    .line 205
+    .line 232
     invoke-static {v5}, Lcom/android/phone/PhoneUtils;->hangupRingingCall(Lcom/android/internal/telephony/Call;)Z
 
     goto :goto_0
 
-    .line 209
+    .line 236
     :cond_2
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->isRinging()Z
 
@@ -2441,7 +2535,7 @@
 
     if-nez v7, :cond_3
 
-    .line 210
+    .line 237
     const-string v7, "MiuiCallNotifier"
 
     const-string v8, "CallNotifier.onNewRingingConnection(): connection not ringing!"
@@ -2450,7 +2544,7 @@
 
     goto :goto_0
 
-    .line 220
+    .line 247
     :cond_3
     iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
@@ -2460,18 +2554,18 @@
 
     if-eqz v7, :cond_6
 
-    .line 221
+    .line 248
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getAddress()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 222
+    .line 249
     .local v2, number:Ljava/lang/String;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getNumberPresentation()I
 
     move-result v4
 
-    .line 223
+    .line 250
     .local v4, presentation:I
     sget v7, Lcom/android/internal/telephony/Connection;->PRESENTATION_UNKNOWN:I
 
@@ -2509,38 +2603,38 @@
 
     if-eqz v7, :cond_6
 
-    .line 229
+    .line 256
     :cond_4
     const-string v7, "Rejected incoming call for caller is private number/unknown number"
 
     invoke-virtual {p0, v7}, Lcom/android/phone/MiuiCallNotifier;->log(Ljava/lang/String;)V
 
-    .line 230
+    .line 257
     if-eqz v0, :cond_5
 
-    .line 231
+    .line 258
     const/4 v7, 0x7
 
     invoke-static {v0, v7}, Lcom/android/phone/MiuiExtraConnectionData;->setFirewallCode(Lcom/android/internal/telephony/Connection;I)V
 
-    .line 233
+    .line 260
     :cond_5
     invoke-static {v5}, Lcom/android/phone/PhoneUtils;->hangupRingingCall(Lcom/android/internal/telephony/Call;)Z
 
     goto :goto_0
 
-    .line 239
+    .line 266
     .end local v2           #number:Ljava/lang/String;
     .end local v4           #presentation:I
     :cond_6
     invoke-virtual {p0}, Lcom/android/phone/MiuiCallNotifier;->stopSignalInfoTone()V
 
-    .line 241
+    .line 268
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v6
 
-    .line 243
+    .line 270
     .local v6, state:Lcom/android/internal/telephony/Call$State;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2562,35 +2656,35 @@
 
     invoke-virtual {p0, v7}, Lcom/android/phone/MiuiCallNotifier;->log(Ljava/lang/String;)V
 
-    .line 272
+    .line 299
     iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
     sget-object v8, Lcom/android/phone/PhoneApp$WakeState;->PARTIAL:Lcom/android/phone/PhoneApp$WakeState;
 
     invoke-virtual {v7, v8}, Lcom/android/phone/PhoneApp;->requestWakeState(Lcom/android/phone/PhoneApp$WakeState;)V
 
-    .line 276
+    .line 303
     invoke-static {v6}, Lcom/android/phone/PhoneUtils;->isRealIncomingCall(Lcom/android/internal/telephony/Call$State;)Z
 
     move-result v7
 
     if-eqz v7, :cond_7
 
-    .line 277
+    .line 304
     invoke-virtual {p0, v0}, Lcom/android/phone/MiuiCallNotifier;->startIncomingCallQuery(Lcom/android/internal/telephony/Connection;)V
 
-    .line 278
+    .line 305
     invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->crescendoRingerVolumeDelayed()V
 
-    .line 279
+    .line 306
     invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->startSensor()V
 
-    .line 280
+    .line 307
     invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->startAutoAnswer()V
 
     goto/16 :goto_0
 
-    .line 283
+    .line 310
     :cond_7
     iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
@@ -2600,13 +2694,13 @@
 
     move-result-object v1
 
-    .line 286
+    .line 313
     .local v1, cit:Lcom/android/phone/PhoneUtils$CallerInfoToken;
     iget-boolean v7, v1, Lcom/android/phone/PhoneUtils$CallerInfoToken;->isFinal:Z
 
     if-eqz v7, :cond_0
 
-    .line 287
+    .line 314
     iget-object v7, p0, Lcom/android/phone/MiuiCallNotifier;->queryListenerForWaitingCall:Lcom/android/internal/telephony/CallerInfoAsyncQuery$OnQueryCompleteListener;
 
     iget-object v8, v1, Lcom/android/phone/PhoneUtils$CallerInfoToken;->currentInfo:Lcom/android/internal/telephony/CallerInfo;
@@ -2617,19 +2711,19 @@
 .end method
 
 .method protected onPhoneStateChanged(Landroid/os/AsyncResult;)V
-    .locals 7
+    .locals 6
     .parameter "r"
 
     .prologue
-    .line 306
+    .line 333
     iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/CallManager;->getActiveFgCallState()Lcom/android/internal/telephony/Call$State;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 307
-    .local v1, foreCallState:Lcom/android/internal/telephony/Call$State;
+    .line 334
+    .local v2, foreCallState:Lcom/android/internal/telephony/Call$State;
     iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/CallManager;->getFirstActiveBgCall()Lcom/android/internal/telephony/Call;
@@ -2640,7 +2734,7 @@
 
     move-result-object v0
 
-    .line 308
+    .line 335
     .local v0, backCallState:Lcom/android/internal/telephony/Call$State;
     iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousForeCallState:Lcom/android/internal/telephony/Call$State;
 
@@ -2648,74 +2742,77 @@
 
     move-result v4
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_2
 
     sget-object v4, Lcom/android/internal/telephony/Call$State;->ACTIVE:Lcom/android/internal/telephony/Call$State;
 
-    if-ne v1, v4, :cond_1
+    if-ne v2, v4, :cond_2
 
-    .line 310
-    iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
+    .line 337
+    iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
-    invoke-static {v4}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-virtual {v4}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall()Lcom/android/internal/telephony/Call;
 
-    move-result-object v4
+    move-result-object v1
 
-    const-string v5, "button_connect_disconnect_vibrate"
-
-    const-string v6, "100"
-
-    invoke-interface {v4, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 338
+    .local v1, call:Lcom/android/internal/telephony/Call;
+    invoke-virtual {v1}, Lcom/android/internal/telephony/Call;->getPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v4
 
-    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-interface {v4}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
 
-    move-result v3
+    move-result v4
 
-    .line 314
-    .local v3, vibrateDuration:I
-    if-lez v3, :cond_0
+    const/4 v5, 0x2
 
-    .line 315
-    iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mVibrator:Landroid/os/Vibrator;
+    if-ne v4, v5, :cond_0
 
-    int-to-long v5, v3
+    invoke-static {v1}, Lcom/android/phone/MiuiExtraConnectionData;->getCdmaCallState(Lcom/android/internal/telephony/Call;)Lcom/android/phone/MiuiConstants$CdmaCallState;
 
-    invoke-virtual {v4, v5, v6}, Landroid/os/Vibrator;->vibrate(J)V
+    move-result-object v4
 
-    .line 318
+    sget-object v5, Lcom/android/phone/MiuiConstants$CdmaCallState;->UnauthenticatedActive:Lcom/android/phone/MiuiConstants$CdmaCallState;
+
+    if-eq v4, v5, :cond_1
+
+    .line 340
     :cond_0
+    invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->vibrateWhenConnectOrDisconnect()V
+
+    .line 343
+    :cond_1
     iget-boolean v4, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_2
 
-    .line 319
-    const/16 v2, 0xb
+    .line 344
+    const/16 v3, 0xb
 
-    .line 320
-    .local v2, toneToPlay:I
+    .line 345
+    .local v3, toneToPlay:I
     new-instance v4, Lcom/android/phone/CallNotifier$InCallTonePlayer;
 
-    invoke-direct {v4, p0, v2}, Lcom/android/phone/CallNotifier$InCallTonePlayer;-><init>(Lcom/android/phone/CallNotifier;I)V
+    invoke-direct {v4, p0, v3}, Lcom/android/phone/CallNotifier$InCallTonePlayer;-><init>(Lcom/android/phone/CallNotifier;I)V
 
     invoke-virtual {v4}, Lcom/android/phone/CallNotifier$InCallTonePlayer;->start()V
 
-    .line 321
+    .line 346
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Lcom/android/phone/MiuiCallNotifier;->mIsRedialCall:Z
 
-    .line 324
-    .end local v2           #toneToPlay:I
-    .end local v3           #vibrateDuration:I
-    :cond_1
-    iput-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousForeCallState:Lcom/android/internal/telephony/Call$State;
+    .line 349
+    .end local v1           #call:Lcom/android/internal/telephony/Call;
+    .end local v3           #toneToPlay:I
+    :cond_2
+    iput-object v2, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousForeCallState:Lcom/android/internal/telephony/Call$State;
 
-    .line 325
+    .line 350
     iput-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mPreviousBackCallState:Lcom/android/internal/telephony/Call$State;
 
-    .line 327
+    .line 352
     iget-object v4, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
@@ -2724,19 +2821,19 @@
 
     sget-object v5, Lcom/android/internal/telephony/Phone$State;->OFFHOOK:Lcom/android/internal/telephony/Phone$State;
 
-    if-ne v4, v5, :cond_2
+    if-ne v4, v5, :cond_3
 
-    .line 328
+    .line 353
     invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->stopSensor()V
 
-    .line 329
+    .line 354
     invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->resetRingerVolume()V
 
-    .line 332
-    :cond_2
+    .line 357
+    :cond_3
     invoke-super {p0, p1}, Lcom/android/phone/CallNotifier;->onPhoneStateChanged(Landroid/os/AsyncResult;)V
 
-    .line 333
+    .line 358
     return-void
 .end method
 
@@ -2747,12 +2844,12 @@
     .parameter "ci"
 
     .prologue
-    .line 629
+    .line 672
     instance-of v1, p2, Ljava/lang/Long;
 
     if-eqz v1, :cond_1
 
-    .line 630
+    .line 673
     invoke-virtual {p0, p3}, Lcom/android/phone/MiuiCallNotifier;->getTelephonyFirewallBlockType(Lcom/android/internal/telephony/CallerInfo;)I
 
     move-result v1
@@ -2763,30 +2860,30 @@
 
     if-nez v1, :cond_0
 
-    .line 631
+    .line 674
     invoke-super {p0, p1, p2, p3}, Lcom/android/phone/CallNotifier;->onQueryComplete(ILjava/lang/Object;Lcom/android/internal/telephony/CallerInfo;)V
 
-    .line 650
+    .line 693
     :cond_0
     :goto_0
     return-void
 
-    .line 633
+    .line 676
     :cond_1
     instance-of v1, p2, Lcom/android/phone/CallNotifier;
 
     if-eqz v1, :cond_0
 
-    .line 634
+    .line 677
     const/4 v0, 0x0
 
-    .line 635
+    .line 678
     .local v0, isQueryExecutionTimeOK:Z
     iget-object v2, p0, Lcom/android/phone/MiuiCallNotifier;->mCallerInfoQueryStateGuard:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 636
+    .line 679
     const/16 v1, 0x64
 
     :try_start_0
@@ -2796,34 +2893,34 @@
 
     if-eqz v1, :cond_2
 
-    .line 637
+    .line 680
     const/16 v1, 0x64
 
     invoke-virtual {p0, v1}, Lcom/android/phone/MiuiCallNotifier;->removeMessages(I)V
 
-    .line 638
+    .line 681
     const/4 v0, 0x1
 
-    .line 640
+    .line 683
     :cond_2
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 641
+    .line 684
     if-eqz v0, :cond_3
 
-    .line 642
+    .line 685
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mRinger:Lcom/android/phone/Ringer;
 
     check-cast v1, Lcom/android/phone/MiuiRinger;
 
     invoke-virtual {v1}, Lcom/android/phone/MiuiRinger;->unMute()V
 
-    .line 643
+    .line 686
     invoke-direct {p0, p3}, Lcom/android/phone/MiuiCallNotifier;->processTelephonyFirewall(Lcom/android/internal/telephony/CallerInfo;)V
 
-    .line 646
+    .line 689
     iget-object v1, p0, Lcom/android/phone/MiuiCallNotifier;->mRinger:Lcom/android/phone/Ringer;
 
     check-cast v1, Lcom/android/phone/MiuiRinger;
@@ -2845,13 +2942,13 @@
     :goto_1
     invoke-virtual {v1, v2}, Lcom/android/phone/MiuiRinger;->setAntiStranger(Z)V
 
-    .line 648
+    .line 691
     :cond_3
     invoke-super {p0, p1, p2, p3}, Lcom/android/phone/CallNotifier;->onQueryComplete(ILjava/lang/Object;Lcom/android/internal/telephony/CallerInfo;)V
 
     goto :goto_0
 
-    .line 640
+    .line 683
     :catchall_0
     move-exception v1
 
@@ -2862,7 +2959,7 @@
 
     throw v1
 
-    .line 646
+    .line 689
     :cond_4
     const/4 v2, 0x0
 
@@ -2870,13 +2967,15 @@
 .end method
 
 .method protected registerForNotifications()V
-    .locals 4
+    .locals 5
 
     .prologue
-    .line 517
+    const/4 v4, 0x0
+
+    .line 556
     invoke-super {p0}, Lcom/android/phone/CallNotifier;->registerForNotifications()V
 
-    .line 518
+    .line 557
     iget-object v2, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/CallManager;->getAllPhones()Ljava/util/List;
@@ -2893,7 +2992,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2901,19 +3000,40 @@
 
     check-cast v1, Lcom/android/internal/telephony/Phone;
 
-    .line 519
+    .line 558
     .local v1, phone:Lcom/android/internal/telephony/Phone;
-    const/16 v2, 0x192
+    invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
 
-    const/4 v3, 0x0
+    move-result v2
 
-    invoke-interface {v1, p0, v2, v3}, Lcom/android/internal/telephony/Phone;->registerForSuppServiceNotification(Landroid/os/Handler;ILjava/lang/Object;)V
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_0
+
+    .line 559
+    invoke-static {v1}, Lcom/android/phone/MiuiPhoneUtils;->getBasePhone(Lcom/android/internal/telephony/Phone;)Lcom/android/internal/telephony/PhoneBase;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+
+    const/16 v3, 0x195
+
+    invoke-interface {v2, p0, v3, v4}, Lcom/android/internal/telephony/CommandsInterface;->registerForLineControlInfo(Landroid/os/Handler;ILjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 521
-    .end local v1           #phone:Lcom/android/internal/telephony/Phone;
+    .line 561
     :cond_0
+    const/16 v2, 0x192
+
+    invoke-interface {v1, p0, v2, v4}, Lcom/android/internal/telephony/Phone;->registerForSuppServiceNotification(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 564
+    .end local v1           #phone:Lcom/android/internal/telephony/Phone;
+    :cond_1
     return-void
 .end method
 
@@ -2921,7 +3041,7 @@
     .locals 2
 
     .prologue
-    .line 401
+    .line 429
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -2936,14 +3056,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 403
+    .line 431
     invoke-super {p0}, Lcom/android/phone/CallNotifier;->resetAudioStateAfterDisconnect()V
 
-    .line 407
+    .line 435
     :goto_0
     return-void
 
-    .line 405
+    .line 433
     :cond_0
     const/16 v0, 0x193
 
@@ -2958,7 +3078,7 @@
     .parameter "date"
 
     .prologue
-    .line 411
+    .line 439
     invoke-static {p1}, Lcom/android/phone/MiuiExtraConnectionData;->getFirewallCode(Lcom/android/internal/telephony/Connection;)I
 
     move-result v0
@@ -2969,24 +3089,24 @@
 
     if-nez v0, :cond_0
 
-    .line 412
+    .line 440
     invoke-virtual {p0, p1}, Lcom/android/phone/MiuiCallNotifier;->getCallerInfoFromConnection(Lcom/android/internal/telephony/Connection;)Lcom/android/internal/telephony/CallerInfo;
 
     move-result-object v6
 
-    .line 413
+    .line 441
     .local v6, ci:Lcom/android/internal/telephony/CallerInfo;
     invoke-static {v6}, Lcom/android/phone/MiuiPhoneUtils;->getDisplayName(Lcom/android/internal/telephony/CallerInfo;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 414
+    .line 442
     .local v1, name:Ljava/lang/String;
     invoke-virtual {p0, p1, v6}, Lcom/android/phone/MiuiCallNotifier;->getLogNumber(Lcom/android/internal/telephony/Connection;Lcom/android/internal/telephony/CallerInfo;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 415
+    .line 443
     .local v2, number:Ljava/lang/String;
     iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier;->mApplication:Lcom/android/phone/PhoneApp;
 
@@ -2998,7 +3118,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/phone/NotificationMgr;->notifyMissedCall(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
-    .line 417
+    .line 445
     .end local v1           #name:Ljava/lang/String;
     .end local v2           #number:Ljava/lang/String;
     .end local v6           #ci:Lcom/android/internal/telephony/CallerInfo;
@@ -3010,27 +3130,28 @@
     .locals 0
 
     .prologue
-    .line 525
+    .line 568
     invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->stopSensor()V
 
-    .line 526
+    .line 569
     invoke-super {p0}, Lcom/android/phone/CallNotifier;->silenceRinger()V
 
-    .line 527
+    .line 570
     invoke-direct {p0}, Lcom/android/phone/MiuiCallNotifier;->resetRingerVolume()V
 
-    .line 528
+    .line 571
     return-void
 .end method
 
 .method updateCallNotifierRegistrationsAfterRadioTechnologyChange()V
-    .locals 3
+    .locals 6
 
     .prologue
-    .line 509
-    invoke-super {p0}, Lcom/android/phone/CallNotifier;->updateCallNotifierRegistrationsAfterRadioTechnologyChange()V
+    const/4 v5, 0x0
 
-    .line 510
+    const/4 v4, 0x2
+
+    .line 537
     iget-object v2, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/CallManager;->getAllPhones()Ljava/util/List;
@@ -3047,7 +3168,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -3055,14 +3176,91 @@
 
     check-cast v1, Lcom/android/internal/telephony/Phone;
 
-    .line 511
+    .line 538
     .local v1, phone:Lcom/android/internal/telephony/Phone;
+    invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v2
+
+    if-ne v2, v4, :cond_0
+
+    .line 539
+    invoke-static {v1}, Lcom/android/phone/MiuiPhoneUtils;->getBasePhone(Lcom/android/internal/telephony/Phone;)Lcom/android/internal/telephony/PhoneBase;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+
+    invoke-interface {v2, p0}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForLineControlInfo(Landroid/os/Handler;)V
+
+    goto :goto_0
+
+    .line 541
+    :cond_0
     invoke-interface {v1, p0}, Lcom/android/internal/telephony/Phone;->unregisterForSuppServiceNotification(Landroid/os/Handler;)V
 
     goto :goto_0
 
-    .line 513
+    .line 544
     .end local v1           #phone:Lcom/android/internal/telephony/Phone;
-    :cond_0
+    :cond_1
+    invoke-super {p0}, Lcom/android/phone/CallNotifier;->updateCallNotifierRegistrationsAfterRadioTechnologyChange()V
+
+    .line 545
+    iget-object v2, p0, Lcom/android/phone/MiuiCallNotifier;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    invoke-virtual {v2}, Lcom/android/internal/telephony/CallManager;->getAllPhones()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/internal/telephony/Phone;
+
+    .line 546
+    .restart local v1       #phone:Lcom/android/internal/telephony/Phone;
+    invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v2
+
+    if-ne v2, v4, :cond_2
+
+    .line 547
+    invoke-static {v1}, Lcom/android/phone/MiuiPhoneUtils;->getBasePhone(Lcom/android/internal/telephony/Phone;)Lcom/android/internal/telephony/PhoneBase;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+
+    const/16 v3, 0x195
+
+    invoke-interface {v2, p0, v3, v5}, Lcom/android/internal/telephony/CommandsInterface;->registerForLineControlInfo(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    goto :goto_1
+
+    .line 549
+    :cond_2
+    const/16 v2, 0x192
+
+    invoke-interface {v1, p0, v2, v5}, Lcom/android/internal/telephony/Phone;->registerForSuppServiceNotification(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    goto :goto_1
+
+    .line 552
+    .end local v1           #phone:Lcom/android/internal/telephony/Phone;
+    :cond_3
     return-void
 .end method

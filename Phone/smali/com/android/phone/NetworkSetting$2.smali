@@ -53,13 +53,11 @@
 
     move-result-object v1
 
-    #setter for: Lcom/android/phone/NetworkSetting;->mNetworkQueryService:Lcom/android/phone/INetworkQueryService;
     invoke-static {v0, v1}, Lcom/android/phone/NetworkSetting;->access$302(Lcom/android/phone/NetworkSetting;Lcom/android/phone/INetworkQueryService;)Lcom/android/phone/INetworkQueryService;
 
     .line 147
     iget-object v0, p0, Lcom/android/phone/NetworkSetting$2;->this$0:Lcom/android/phone/NetworkSetting;
 
-    #calls: Lcom/android/phone/NetworkSetting;->loadNetworksList()V
     invoke-static {v0}, Lcom/android/phone/NetworkSetting;->access$400(Lcom/android/phone/NetworkSetting;)V
 
     .line 148
@@ -76,7 +74,6 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/android/phone/NetworkSetting;->mNetworkQueryService:Lcom/android/phone/INetworkQueryService;
     invoke-static {v0, v1}, Lcom/android/phone/NetworkSetting;->access$302(Lcom/android/phone/NetworkSetting;Lcom/android/phone/INetworkQueryService;)Lcom/android/phone/INetworkQueryService;
 
     .line 154

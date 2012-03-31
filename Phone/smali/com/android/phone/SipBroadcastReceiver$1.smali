@@ -103,7 +103,6 @@
 
     iget-object v7, p0, Lcom/android/phone/SipBroadcastReceiver$1;->this$0:Lcom/android/phone/SipBroadcastReceiver;
 
-    #getter for: Lcom/android/phone/SipBroadcastReceiver;->mSipSharedPreferences:Lcom/android/phone/sip/SipSharedPreferences;
     invoke-static {v7}, Lcom/android/phone/SipBroadcastReceiver;->access$000(Lcom/android/phone/SipBroadcastReceiver;)Lcom/android/phone/sip/SipSharedPreferences;
 
     move-result-object v7

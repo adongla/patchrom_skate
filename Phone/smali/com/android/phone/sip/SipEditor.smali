@@ -1657,7 +1657,7 @@
     iput-object v5, p0, Lcom/android/phone/sip/SipEditor;->mCallManager:Lcom/android/internal/telephony/CallManager;
 
     .line 179
-    const v5, 0x7f040029
+    const v5, 0x7f04002a
 
     invoke-virtual {p0, v5}, Lcom/android/phone/sip/SipEditor;->setContentView(I)V
 

@@ -57,7 +57,6 @@
 
     iget-object v2, p0, Lcom/android/phone/EmergencyCallbackModeExitDialog$1;->this$0:Lcom/android/phone/EmergencyCallbackModeExitDialog;
 
-    #getter for: Lcom/android/phone/EmergencyCallbackModeExitDialog;->mConnection:Landroid/content/ServiceConnection;
     invoke-static {v2}, Lcom/android/phone/EmergencyCallbackModeExitDialog;->access$000(Lcom/android/phone/EmergencyCallbackModeExitDialog;)Landroid/content/ServiceConnection;
 
     move-result-object v2
@@ -126,7 +125,6 @@
 
     move-result v1
 
-    #setter for: Lcom/android/phone/EmergencyCallbackModeExitDialog;->mInEmergencyCall:Z
     invoke-static {v0, v1}, Lcom/android/phone/EmergencyCallbackModeExitDialog;->access$102(Lcom/android/phone/EmergencyCallbackModeExitDialog;Z)Z
 
     .line 154
@@ -135,7 +133,6 @@
 
     iget-object v1, p0, Lcom/android/phone/EmergencyCallbackModeExitDialog$1;->this$0:Lcom/android/phone/EmergencyCallbackModeExitDialog;
 
-    #getter for: Lcom/android/phone/EmergencyCallbackModeExitDialog;->mConnection:Landroid/content/ServiceConnection;
     invoke-static {v1}, Lcom/android/phone/EmergencyCallbackModeExitDialog;->access$000(Lcom/android/phone/EmergencyCallbackModeExitDialog;)Landroid/content/ServiceConnection;
 
     move-result-object v1

@@ -45,7 +45,6 @@
     .line 140
     iget-object v0, p0, Lcom/android/phone/EnableFdnScreen$3;->this$0:Lcom/android/phone/EnableFdnScreen;
 
-    #getter for: Lcom/android/phone/EnableFdnScreen;->mPin2Field:Landroid/widget/EditText;
     invoke-static {v0}, Lcom/android/phone/EnableFdnScreen;->access$100(Lcom/android/phone/EnableFdnScreen;)Landroid/widget/EditText;
 
     move-result-object v0
@@ -80,13 +79,11 @@
 
     move-result-object v1
 
-    #calls: Lcom/android/phone/EnableFdnScreen;->showStatus(Ljava/lang/CharSequence;)V
     invoke-static {v0, v1}, Lcom/android/phone/EnableFdnScreen;->access$200(Lcom/android/phone/EnableFdnScreen;Ljava/lang/CharSequence;)V
 
     .line 147
     iget-object v0, p0, Lcom/android/phone/EnableFdnScreen$3;->this$0:Lcom/android/phone/EnableFdnScreen;
 
-    #calls: Lcom/android/phone/EnableFdnScreen;->enableFdn()V
     invoke-static {v0}, Lcom/android/phone/EnableFdnScreen;->access$300(Lcom/android/phone/EnableFdnScreen;)V
 
     goto :goto_0

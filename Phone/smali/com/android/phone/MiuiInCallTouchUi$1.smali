@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 152
+    .line 151
     iput-object p1, p0, Lcom/android/phone/MiuiInCallTouchUi$1;->this$0:Lcom/android/phone/MiuiInCallTouchUi;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "event"
 
     .prologue
-    .line 155
+    .line 154
     const/4 v0, 0x1
 
     return v0

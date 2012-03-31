@@ -50,7 +50,6 @@
 
     check-cast v1, Lcom/android/internal/telephony/IccCardStatus;
 
-    #calls: Lcom/android/phone/MiuiEditPinDialog$IccPinStateHelper;->handlerIccCardStatus(Lcom/android/internal/telephony/IccCardStatus;)V
     invoke-static {v1}, Lcom/android/phone/MiuiEditPinDialog$IccPinStateHelper;->access$700(Lcom/android/internal/telephony/IccCardStatus;)V
 
     .line 572

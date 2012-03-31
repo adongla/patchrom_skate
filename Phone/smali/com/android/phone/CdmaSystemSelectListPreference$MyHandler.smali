@@ -75,7 +75,6 @@
     .local v2, statusCdmaRoamingMode:I
     iget-object v3, p0, Lcom/android/phone/CdmaSystemSelectListPreference$MyHandler;->this$0:Lcom/android/phone/CdmaSystemSelectListPreference;
 
-    #getter for: Lcom/android/phone/CdmaSystemSelectListPreference;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v3}, Lcom/android/phone/CdmaSystemSelectListPreference;->access$100(Lcom/android/phone/CdmaSystemSelectListPreference;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v3
@@ -112,7 +111,6 @@
     .line 130
     iget-object v3, p0, Lcom/android/phone/CdmaSystemSelectListPreference$MyHandler;->this$0:Lcom/android/phone/CdmaSystemSelectListPreference;
 
-    #getter for: Lcom/android/phone/CdmaSystemSelectListPreference;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v3}, Lcom/android/phone/CdmaSystemSelectListPreference;->access$100(Lcom/android/phone/CdmaSystemSelectListPreference;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v3
@@ -205,7 +203,6 @@
     .local v1, cdmaRoamingMode:I
     iget-object v2, p0, Lcom/android/phone/CdmaSystemSelectListPreference$MyHandler;->this$0:Lcom/android/phone/CdmaSystemSelectListPreference;
 
-    #getter for: Lcom/android/phone/CdmaSystemSelectListPreference;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v2}, Lcom/android/phone/CdmaSystemSelectListPreference;->access$100(Lcom/android/phone/CdmaSystemSelectListPreference;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v2
@@ -231,7 +228,6 @@
     :cond_0
     iget-object v2, p0, Lcom/android/phone/CdmaSystemSelectListPreference$MyHandler;->this$0:Lcom/android/phone/CdmaSystemSelectListPreference;
 
-    #getter for: Lcom/android/phone/CdmaSystemSelectListPreference;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v2}, Lcom/android/phone/CdmaSystemSelectListPreference;->access$100(Lcom/android/phone/CdmaSystemSelectListPreference;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v2
@@ -265,7 +261,6 @@
     .line 162
     iget-object v0, p0, Lcom/android/phone/CdmaSystemSelectListPreference$MyHandler;->this$0:Lcom/android/phone/CdmaSystemSelectListPreference;
 
-    #getter for: Lcom/android/phone/CdmaSystemSelectListPreference;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v0}, Lcom/android/phone/CdmaSystemSelectListPreference;->access$100(Lcom/android/phone/CdmaSystemSelectListPreference;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
@@ -285,7 +280,6 @@
     .line 166
     iget-object v0, p0, Lcom/android/phone/CdmaSystemSelectListPreference$MyHandler;->this$0:Lcom/android/phone/CdmaSystemSelectListPreference;
 
-    #getter for: Lcom/android/phone/CdmaSystemSelectListPreference;->mPhone:Lcom/android/internal/telephony/Phone;
     invoke-static {v0}, Lcom/android/phone/CdmaSystemSelectListPreference;->access$100(Lcom/android/phone/CdmaSystemSelectListPreference;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v0

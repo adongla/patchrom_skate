@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 611
+    .line 654
     iput-object p1, p0, Lcom/android/phone/MiuiCallNotifier$2;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,20 +44,19 @@
     .parameter "ci"
 
     .prologue
-    .line 613
+    .line 656
     iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier$2;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
-    #calls: Lcom/android/phone/MiuiCallNotifier;->processTelephonyFirewall(Lcom/android/internal/telephony/CallerInfo;)V
     invoke-static {v0, p3}, Lcom/android/phone/MiuiCallNotifier;->access$900(Lcom/android/phone/MiuiCallNotifier;Lcom/android/internal/telephony/CallerInfo;)V
 
-    .line 616
+    .line 659
     iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier$2;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     iget-object v0, v0, Lcom/android/phone/MiuiCallNotifier;->mCallWaitingTonePlayer:Lcom/android/phone/CallNotifier$InCallTonePlayer;
 
     if-nez v0, :cond_0
 
-    .line 617
+    .line 660
     iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier$2;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     new-instance v1, Lcom/android/phone/CallNotifier$InCallTonePlayer;
@@ -70,19 +69,19 @@
 
     iput-object v1, v0, Lcom/android/phone/MiuiCallNotifier;->mCallWaitingTonePlayer:Lcom/android/phone/CallNotifier$InCallTonePlayer;
 
-    .line 618
+    .line 661
     iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier$2;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     iget-object v0, v0, Lcom/android/phone/MiuiCallNotifier;->mCallWaitingTonePlayer:Lcom/android/phone/CallNotifier$InCallTonePlayer;
 
     invoke-virtual {v0}, Lcom/android/phone/CallNotifier$InCallTonePlayer;->start()V
 
-    .line 623
+    .line 666
     :cond_0
     iget-object v0, p0, Lcom/android/phone/MiuiCallNotifier$2;->this$0:Lcom/android/phone/MiuiCallNotifier;
 
     invoke-virtual {v0}, Lcom/android/phone/MiuiCallNotifier;->showIncomingCall()V
 
-    .line 624
+    .line 667
     return-void
 .end method

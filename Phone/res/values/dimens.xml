@@ -27,7 +27,7 @@
     <dimen name="provider_overlay_top_margin">160.0dip</dimen>
     <dimen name="multiwaveview_target_placement_radius_miui">126.0dip</dimen>
     <dimen name="multiwaveview_snap_margin_miui">20.0dip</dimen>
-    <dimen name="multiwaveview_hit_radius_miui">40.0dip</dimen>
+    <dimen name="multiwaveview_hit_radius_miui">80.0dip</dimen>
     <dimen name="multiwaveview_bottom_margin_miui">27.0dip</dimen>
     <dimen name="incall_sliding_bar_extend_width_miui">10.0dip</dimen>
 </resources>

@@ -172,23 +172,23 @@
     .locals 2
 
     .prologue
-    .line 298
+    .line 295
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 299
+    .line 296
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "vnd.android.cursor.dir/contact"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 300
+    .line 297
     invoke-virtual {p0, v0}, Lcom/android/phone/MiuiInCallScreen;->startActivity(Landroid/content/Intent;)V
 
-    .line 301
+    .line 298
     return-void
 .end method
 
@@ -196,22 +196,22 @@
     .locals 8
 
     .prologue
-    .line 266
+    .line 263
     iget-object v6, p0, Lcom/android/phone/MiuiInCallScreen;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-static {v6}, Lcom/android/phone/MiuiPhoneUtils;->getCurrentConnection(Lcom/android/internal/telephony/CallManager;)Lcom/android/internal/telephony/Connection;
 
     move-result-object v0
 
-    .line 267
+    .line 264
     .local v0, c:Lcom/android/internal/telephony/Connection;
     if-nez v0, :cond_0
 
-    .line 294
+    .line 291
     :goto_0
     return-void
 
-    .line 272
+    .line 269
     :cond_0
     iget-object v6, p0, Lcom/android/phone/MiuiInCallScreen;->mApp:Lcom/android/phone/PhoneApp;
 
@@ -229,22 +229,22 @@
 
     move-result-object v4
 
-    .line 278
+    .line 275
     .local v4, number:Ljava/lang/String;
     if-nez v4, :cond_1
 
-    .line 279
+    .line 276
     const-string v6, "number is null when record through note"
 
     invoke-virtual {p0, v6}, Lcom/android/phone/MiuiInCallScreen;->log(Ljava/lang/String;)V
 
-    .line 282
+    .line 279
     :cond_1
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->getCreateTime()J
 
     move-result-wide v1
 
-    .line 284
+    .line 281
     .local v1, date:J
     :try_start_0
     new-instance v5, Landroid/content/Intent;
@@ -253,18 +253,18 @@
 
     invoke-direct {v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 285
+    .line 282
     .local v5, sendIntent:Landroid/content/Intent;
     const/high16 v6, 0x1000
 
     invoke-virtual {v5, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 286
+    .line 283
     const-string v6, "vnd.android.cursor.item/call_note"
 
     invoke-virtual {v5, v6}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 287
+    .line 284
     const-string v6, "android.intent.extra.PHONE_NUMBER"
 
     if-nez v4, :cond_2
@@ -275,15 +275,15 @@
     :cond_2
     invoke-virtual {v5, v6, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 288
+    .line 285
     const-string v6, "com.miui.notes.call_date"
 
     invoke-virtual {v5, v6, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 289
+    .line 286
     invoke-virtual {p0, v5}, Lcom/android/phone/MiuiInCallScreen;->startActivity(Landroid/content/Intent;)V
 
-    .line 290
+    .line 287
     iget-object v6, p0, Lcom/android/phone/MiuiInCallScreen;->mApp:Lcom/android/phone/PhoneApp;
 
     check-cast v6, Lcom/android/phone/MiuiPhoneApp;
@@ -294,12 +294,12 @@
 
     goto :goto_0
 
-    .line 291
+    .line 288
     .end local v5           #sendIntent:Landroid/content/Intent;
     :catch_0
     move-exception v3
 
-    .line 292
+    .line 289
     .local v3, e:Landroid/content/ActivityNotFoundException;
     const-string v6, "MiuiInCallScreen"
 
@@ -320,25 +320,25 @@
 
     const/4 v13, 0x1
 
-    .line 304
+    .line 301
     invoke-static {}, Lcom/android/phone/MiuiTelephonyCapabilities;->supportCallRecording()Z
 
     move-result v10
 
     if-nez v10, :cond_1
 
-    .line 417
+    .line 414
     :cond_0
     :goto_0
     return-void
 
-    .line 308
+    .line 305
     :cond_1
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mStorageMonitor:Lcom/android/phone/MiuiStorageMonitor;
 
     if-nez v10, :cond_2
 
-    .line 309
+    .line 306
     new-instance v10, Lcom/android/phone/MiuiStorageMonitor;
 
     iget-object v11, p0, Lcom/android/phone/MiuiInCallScreen;->mPhone:Lcom/android/internal/telephony/Phone;
@@ -351,7 +351,7 @@
 
     iput-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mStorageMonitor:Lcom/android/phone/MiuiStorageMonitor;
 
-    .line 312
+    .line 309
     :cond_2
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mStorageMonitor:Lcom/android/phone/MiuiStorageMonitor;
 
@@ -363,14 +363,14 @@
 
     move-result v3
 
-    .line 319
+    .line 316
     .local v3, error:I
     if-eqz v3, :cond_6
 
-    .line 320
+    .line 317
     if-ne v3, v13, :cond_3
 
-    .line 321
+    .line 318
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mStorageMonitor:Lcom/android/phone/MiuiStorageMonitor;
 
     invoke-virtual {v10}, Lcom/android/phone/MiuiStorageMonitor;->isUsingExternalStorage()Z
@@ -379,14 +379,14 @@
 
     if-eqz v10, :cond_5
 
-    .line 322
+    .line 319
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mPhone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v10}, Lcom/android/internal/telephony/Phone;->getContext()Landroid/content/Context;
 
     move-result-object v10
 
-    const v11, 0x7f0c02a2
+    const v11, 0x7f0c02ba
 
     invoke-static {v10, v11, v13}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -394,21 +394,21 @@
 
     invoke-virtual {v10}, Landroid/widget/Toast;->show()V
 
-    .line 329
+    .line 326
     :cond_3
     :goto_1
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     if-eqz v10, :cond_4
 
-    .line 330
+    .line 327
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     check-cast v10, Lcom/android/phone/MiuiInCallTouchUi;
 
     invoke-virtual {v10}, Lcom/android/phone/MiuiInCallTouchUi;->onStopCallRecord()V
 
-    .line 332
+    .line 329
     :cond_4
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mStorageMonitor:Lcom/android/phone/MiuiStorageMonitor;
 
@@ -416,7 +416,7 @@
 
     goto :goto_0
 
-    .line 324
+    .line 321
     :cond_5
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -434,7 +434,7 @@
 
     goto :goto_1
 
-    .line 336
+    .line 333
     :cond_6
     new-instance v9, Ljava/io/File;
 
@@ -475,7 +475,7 @@
 
     invoke-direct {v9, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 340
+    .line 337
     .local v9, sampleDir:Ljava/io/File;
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
@@ -483,7 +483,7 @@
 
     if-nez v10, :cond_9
 
-    .line 341
+    .line 338
     const/16 v10, 0x1ff
 
     invoke-static {v9, v10, v12, v12}, Lmiui/os/ExtraFileUtils;->mkdirs(Ljava/io/File;III)Z
@@ -492,14 +492,14 @@
 
     if-nez v10, :cond_9
 
-    .line 342
+    .line 339
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mPhone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v10}, Lcom/android/internal/telephony/Phone;->getContext()Landroid/content/Context;
 
     move-result-object v10
 
-    const v11, 0x7f0c02a1
+    const v11, 0x7f0c02b9
 
     invoke-static {v10, v11, v13}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -507,19 +507,19 @@
 
     invoke-virtual {v10}, Landroid/widget/Toast;->show()V
 
-    .line 344
+    .line 341
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     if-eqz v10, :cond_7
 
-    .line 345
+    .line 342
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     check-cast v10, Lcom/android/phone/MiuiInCallTouchUi;
 
     invoke-virtual {v10}, Lcom/android/phone/MiuiInCallTouchUi;->onStopCallRecord()V
 
-    .line 347
+    .line 344
     :cond_7
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mStorageMonitor:Lcom/android/phone/MiuiStorageMonitor;
 
@@ -527,7 +527,7 @@
 
     goto/16 :goto_0
 
-    .line 336
+    .line 333
     .end local v9           #sampleDir:Ljava/io/File;
     :cond_8
     invoke-static {}, Lmiui/os/Environment;->getMIUIInternalStorageDirectory()Ljava/io/File;
@@ -540,44 +540,44 @@
 
     goto :goto_2
 
-    .line 352
+    .line 349
     .restart local v9       #sampleDir:Ljava/io/File;
     :cond_9
     const-string v10, "start CallRecord!"
 
     invoke-virtual {p0, v10}, Lcom/android/phone/MiuiInCallScreen;->log(Ljava/lang/String;)V
 
-    .line 353
+    .line 350
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     if-nez v10, :cond_a
 
-    .line 354
+    .line 351
     new-instance v10, Landroid/media/MediaRecorder;
 
     invoke-direct {v10}, Landroid/media/MediaRecorder;-><init>()V
 
     iput-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
-    .line 356
+    .line 353
     :cond_a
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v10}, Landroid/media/MediaRecorder;->reset()V
 
-    .line 357
+    .line 354
     sget-boolean v10, Lmiui/os/Build;->IS_MIONE:Z
 
     if-eqz v10, :cond_e
 
-    .line 358
+    .line 355
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     const/4 v11, 0x4
 
     invoke-virtual {v10, v11}, Landroid/media/MediaRecorder;->setAudioSource(I)V
 
-    .line 362
+    .line 359
     :goto_3
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
@@ -585,12 +585,12 @@
 
     invoke-virtual {v10, v11}, Landroid/media/MediaRecorder;->setOutputFormat(I)V
 
-    .line 363
+    .line 360
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v10, v13}, Landroid/media/MediaRecorder;->setAudioEncoder(I)V
 
-    .line 365
+    .line 362
     :try_start_0
     sget-object v10, Lcom/android/phone/MiuiInCallScreen;->mDateFormat:Ljava/text/SimpleDateFormat;
 
@@ -606,13 +606,13 @@
 
     move-result-object v1
 
-    .line 367
+    .line 364
     .local v1, date:Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 368
+    .line 365
     .local v4, fileNameBuilder:Ljava/lang/StringBuilder;
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -620,7 +620,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f0c02a0
+    const v11, 0x7f0c02b8
 
     invoke-virtual {v10, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -628,7 +628,7 @@
 
     invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 369
+    .line 366
     const/16 v10, 0x5f
 
     invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -643,10 +643,10 @@
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 370
+    .line 367
     const/4 v5, 0x1
 
-    .line 371
+    .line 368
     .local v5, firstNumber:Z
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCM:Lcom/android/internal/telephony/CallManager;
 
@@ -672,7 +672,7 @@
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 372
+    .line 369
     .local v0, c:Lcom/android/internal/telephony/Connection;
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mApp:Lcom/android/phone/PhoneApp;
 
@@ -684,27 +684,27 @@
 
     move-result-object v7
 
-    .line 373
+    .line 370
     .local v7, number:Ljava/lang/String;
     if-nez v5, :cond_b
 
-    .line 374
+    .line 371
     const/16 v10, 0x5f
 
     invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 376
+    .line 373
     :cond_b
     const/4 v5, 0x0
 
-    .line 377
+    .line 374
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_4
 
-    .line 401
+    .line 398
     .end local v0           #c:Lcom/android/internal/telephony/Connection;
     .end local v1           #date:Ljava/lang/String;
     .end local v4           #fileNameBuilder:Ljava/lang/StringBuilder;
@@ -714,42 +714,42 @@
     :catch_0
     move-exception v2
 
-    .line 402
+    .line 399
     .local v2, e:Ljava/lang/Exception;
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v10}, Landroid/media/MediaRecorder;->reset()V
 
-    .line 403
+    .line 400
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v10}, Landroid/media/MediaRecorder;->release()V
 
-    .line 404
+    .line 401
     iput-object v14, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
-    .line 405
+    .line 402
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     if-eqz v10, :cond_c
 
-    .line 406
+    .line 403
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     check-cast v10, Lcom/android/phone/MiuiInCallTouchUi;
 
     invoke-virtual {v10}, Lcom/android/phone/MiuiInCallTouchUi;->onStopCallRecord()V
 
-    .line 408
+    .line 405
     :cond_c
     iput-object v14, p0, Lcom/android/phone/MiuiInCallScreen;->mCurrentRecordFileName:Ljava/lang/String;
 
-    .line 409
+    .line 406
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mStorageMonitor:Lcom/android/phone/MiuiStorageMonitor;
 
     invoke-virtual {v10}, Lcom/android/phone/MiuiStorageMonitor;->stopMonitor()V
 
-    .line 412
+    .line 409
     .end local v2           #e:Ljava/lang/Exception;
     :cond_d
     :goto_5
@@ -765,7 +765,7 @@
 
     if-nez v10, :cond_0
 
-    .line 413
+    .line 410
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mPhone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v10}, Lcom/android/internal/telephony/Phone;->getContext()Landroid/content/Context;
@@ -782,7 +782,7 @@
 
     goto/16 :goto_0
 
-    .line 360
+    .line 357
     :cond_e
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
@@ -790,7 +790,7 @@
 
     goto/16 :goto_3
 
-    .line 379
+    .line 376
     .restart local v1       #date:Ljava/lang/String;
     .restart local v4       #fileNameBuilder:Ljava/lang/StringBuilder;
     .restart local v5       #firstNumber:Z
@@ -820,7 +820,7 @@
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 380
+    .line 377
     .restart local v0       #c:Lcom/android/internal/telephony/Connection;
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mApp:Lcom/android/phone/PhoneApp;
 
@@ -832,25 +832,25 @@
 
     move-result-object v7
 
-    .line 381
+    .line 378
     .restart local v7       #number:Ljava/lang/String;
     if-nez v5, :cond_10
 
-    .line 382
+    .line 379
     const/16 v10, 0x5f
 
     invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 384
+    .line 381
     :cond_10
     const/4 v5, 0x0
 
-    .line 385
+    .line 382
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_6
 
-    .line 387
+    .line 384
     .end local v0           #c:Lcom/android/internal/telephony/Connection;
     .end local v7           #number:Ljava/lang/String;
     :cond_11
@@ -858,7 +858,7 @@
 
     invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 389
+    .line 386
     new-instance v8, Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -891,7 +891,7 @@
 
     invoke-direct {v8, v9, v10}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 391
+    .line 388
     .local v8, recordFile:Ljava/io/File;
     invoke-virtual {v8}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -899,34 +899,34 @@
 
     iput-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCurrentRecordFileName:Ljava/lang/String;
 
-    .line 392
+    .line 389
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     iget-object v11, p0, Lcom/android/phone/MiuiInCallScreen;->mCurrentRecordFileName:Ljava/lang/String;
 
     invoke-virtual {v10, v11}, Landroid/media/MediaRecorder;->setOutputFile(Ljava/lang/String;)V
 
-    .line 393
+    .line 390
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v10}, Landroid/media/MediaRecorder;->prepare()V
 
-    .line 394
+    .line 391
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v10}, Landroid/media/MediaRecorder;->start()V
 
-    .line 395
+    .line 392
     const-string v10, "CallRecord is started!"
 
     invoke-virtual {p0, v10}, Lcom/android/phone/MiuiInCallScreen;->log(Ljava/lang/String;)V
 
-    .line 396
+    .line 393
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     if-eqz v10, :cond_d
 
-    .line 397
+    .line 394
     iget-object v10, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     check-cast v10, Lcom/android/phone/MiuiInCallTouchUi;
@@ -942,12 +942,12 @@
     .locals 1
 
     .prologue
-    .line 420
+    .line 417
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/phone/MiuiInCallScreen;->stopCallRecord(I)V
 
-    .line 421
+    .line 418
     return-void
 .end method
 
@@ -966,51 +966,51 @@
 
     const/4 v5, 0x1
 
-    .line 424
+    .line 421
     const-string v0, "stop CallRecord!"
 
     invoke-virtual {p0, v0}, Lcom/android/phone/MiuiInCallScreen;->log(Ljava/lang/String;)V
 
-    .line 425
+    .line 422
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     if-eqz v0, :cond_5
 
-    .line 426
+    .line 423
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mStorageMonitor:Lcom/android/phone/MiuiStorageMonitor;
 
     invoke-virtual {v0}, Lcom/android/phone/MiuiStorageMonitor;->stopMonitor()V
 
-    .line 427
+    .line 424
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0}, Landroid/media/MediaRecorder;->stop()V
 
-    .line 428
+    .line 425
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0}, Landroid/media/MediaRecorder;->release()V
 
-    .line 429
+    .line 426
     iput-object v8, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
-    .line 430
+    .line 427
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     if-eqz v0, :cond_0
 
-    .line 431
+    .line 428
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     check-cast v0, Lcom/android/phone/MiuiInCallTouchUi;
 
     invoke-virtual {v0}, Lcom/android/phone/MiuiInCallTouchUi;->onStopCallRecord()V
 
-    .line 435
+    .line 432
     :cond_0
     if-nez p1, :cond_3
 
-    .line 436
+    .line 433
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1023,7 +1023,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 438
+    .line 435
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mApp:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->notificationMgr:Lcom/android/phone/NotificationMgr;
@@ -1036,7 +1036,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c029c
+    const v2, 0x7f0c02b4
 
     new-array v3, v5, [Ljava/lang/Object;
 
@@ -1052,26 +1052,26 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/android/phone/MiuiNotificationMgr;->updateCallRecordNotification(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 442
+    .line 439
     :cond_1
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mCurrentRecordFileName:Ljava/lang/String;
 
     invoke-static {v0, v9, v6, v6}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 453
+    .line 450
     :cond_2
     :goto_0
     iput-object v8, p0, Lcom/android/phone/MiuiInCallScreen;->mCurrentRecordFileName:Ljava/lang/String;
 
-    .line 457
+    .line 454
     :goto_1
     return-void
 
-    .line 443
+    .line 440
     :cond_3
     if-ne p1, v5, :cond_4
 
-    .line 444
+    .line 441
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mApp:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->notificationMgr:Lcom/android/phone/NotificationMgr;
@@ -1084,7 +1084,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c029b
+    const v2, 0x7f0c02b3
 
     new-array v3, v5, [Ljava/lang/Object;
 
@@ -1100,20 +1100,20 @@
 
     invoke-virtual {v0, v7, v1, v2}, Lcom/android/phone/MiuiNotificationMgr;->updateCallRecordNotification(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 447
+    .line 444
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mCurrentRecordFileName:Ljava/lang/String;
 
     invoke-static {v0, v9, v6, v6}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
     goto :goto_0
 
-    .line 448
+    .line 445
     :cond_4
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_2
 
-    .line 449
+    .line 446
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mApp:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->notificationMgr:Lcom/android/phone/NotificationMgr;
@@ -1126,7 +1126,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c029d
+    const v2, 0x7f0c02b5
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1136,7 +1136,7 @@
 
     goto :goto_0
 
-    .line 455
+    .line 452
     :cond_5
     const-string v0, "CallRecord is stopped already!"
 
@@ -1256,11 +1256,11 @@
     .line 223
     packed-switch p1, :pswitch_data_0
 
-    .line 252
+    .line 249
     :pswitch_0
     invoke-super {p0, p1}, Lcom/android/phone/InCallScreen;->handleOnscreenButtonClick(I)V
 
-    .line 254
+    .line 251
     :goto_0
     return-void
 
@@ -1318,24 +1318,11 @@
 
     goto :goto_0
 
-    .line 249
-    :pswitch_9
-    iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mCM:Lcom/android/internal/telephony/CallManager;
-
-    invoke-static {v0}, Lcom/android/phone/MiuiPhoneUtils;->getCurrentActivePhone(Lcom/android/internal/telephony/CallManager;)Lcom/android/internal/telephony/Phone;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/PhoneUtils;->sendEmptyFlash(Lcom/android/internal/telephony/Phone;)V
-
-    goto :goto_0
-
     .line 223
     nop
 
     :pswitch_data_0
     .packed-switch 0x7f0700b1
-        :pswitch_9
         :pswitch_2
         :pswitch_3
         :pswitch_0
@@ -1402,7 +1389,7 @@
     .locals 1
 
     .prologue
-    .line 262
+    .line 259
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mCallRecorder:Landroid/media/MediaRecorder;
 
     if-eqz v0, :cond_0
@@ -1422,7 +1409,7 @@
     .locals 1
 
     .prologue
-    .line 258
+    .line 255
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     check-cast v0, Lcom/android/phone/MiuiInCallTouchUi;
@@ -1494,24 +1481,24 @@
     .locals 1
 
     .prologue
-    .line 460
+    .line 457
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallScreen;->isBluetoothAvailable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 461
+    .line 458
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     check-cast v0, Lcom/android/phone/MiuiInCallTouchUi;
 
     invoke-virtual {v0}, Lcom/android/phone/MiuiInCallTouchUi;->showAudioModePopup()V
 
-    .line 462
+    .line 459
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallScreen;->updateInCallTouchUi()V
 
-    .line 464
+    .line 461
     :cond_0
     return-void
 .end method
@@ -1543,24 +1530,24 @@
     .locals 1
 
     .prologue
-    .line 467
+    .line 464
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallScreen;->isBluetoothAvailable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 468
+    .line 465
     iget-object v0, p0, Lcom/android/phone/MiuiInCallScreen;->mInCallTouchUi:Lcom/android/phone/InCallTouchUi;
 
     check-cast v0, Lcom/android/phone/MiuiInCallTouchUi;
 
     invoke-virtual {v0}, Lcom/android/phone/MiuiInCallTouchUi;->showAudioModePopup()V
 
-    .line 469
+    .line 466
     invoke-virtual {p0}, Lcom/android/phone/MiuiInCallScreen;->updateInCallTouchUi()V
 
-    .line 471
+    .line 468
     :cond_0
     return-void
 .end method

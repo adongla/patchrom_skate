@@ -474,7 +474,7 @@
     .prologue
     const v4, 0x7f0c01c9
 
-    const v3, 0x7f0200d0
+    const v3, 0x7f0200d7
 
     .line 203
     packed-switch p1, :pswitch_data_0

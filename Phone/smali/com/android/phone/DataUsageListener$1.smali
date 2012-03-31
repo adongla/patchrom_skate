@@ -84,7 +84,6 @@
 
     move-result-wide v7
 
-    #calls: Lcom/android/phone/DataUsageListener;->updateUsageStats(JJJJ)V
     invoke-static/range {v0 .. v8}, Lcom/android/phone/DataUsageListener;->access$000(Lcom/android/phone/DataUsageListener;JJJJ)V
 
     .line 104
@@ -105,7 +104,6 @@
     .line 100
     iget-object v0, p0, Lcom/android/phone/DataUsageListener$1;->this$0:Lcom/android/phone/DataUsageListener;
 
-    #calls: Lcom/android/phone/DataUsageListener;->updatePolicy()V
     invoke-static {v0}, Lcom/android/phone/DataUsageListener;->access$100(Lcom/android/phone/DataUsageListener;)V
 
     goto :goto_0
@@ -131,7 +129,6 @@
 
     move-result v1
 
-    #calls: Lcom/android/phone/DataUsageListener;->updateThrottleRate(I)V
     invoke-static {v0, v1}, Lcom/android/phone/DataUsageListener;->access$200(Lcom/android/phone/DataUsageListener;I)V
 
     goto :goto_0

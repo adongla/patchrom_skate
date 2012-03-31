@@ -53,7 +53,6 @@
 
     iget-boolean v1, p0, Lcom/android/phone/sip/SipSettings$2$1;->val$enabled:Z
 
-    #calls: Lcom/android/phone/sip/SipSettings;->handleSipReceiveCallsOption(Z)V
     invoke-static {v0, v1}, Lcom/android/phone/sip/SipSettings;->access$500(Lcom/android/phone/sip/SipSettings;Z)V
 
     .line 251

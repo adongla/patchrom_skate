@@ -60,7 +60,6 @@
     .line 421
     iget-object v0, p0, Lcom/android/phone/EditFdnContactScreen$QueryHandler;->this$0:Lcom/android/phone/EditFdnContactScreen;
 
-    #calls: Lcom/android/phone/EditFdnContactScreen;->displayProgress(Z)V
     invoke-static {v0, v1}, Lcom/android/phone/EditFdnContactScreen;->access$600(Lcom/android/phone/EditFdnContactScreen;Z)V
 
     .line 422
@@ -71,7 +70,6 @@
     const/4 v0, 0x1
 
     :goto_0
-    #calls: Lcom/android/phone/EditFdnContactScreen;->handleResult(ZZ)V
     invoke-static {v2, v0, v1}, Lcom/android/phone/EditFdnContactScreen;->access$700(Lcom/android/phone/EditFdnContactScreen;ZZ)V
 
     .line 423
@@ -107,7 +105,6 @@
     .line 428
     iget-object v0, p0, Lcom/android/phone/EditFdnContactScreen$QueryHandler;->this$0:Lcom/android/phone/EditFdnContactScreen;
 
-    #calls: Lcom/android/phone/EditFdnContactScreen;->displayProgress(Z)V
     invoke-static {v0, v1}, Lcom/android/phone/EditFdnContactScreen;->access$600(Lcom/android/phone/EditFdnContactScreen;Z)V
 
     .line 429
@@ -118,7 +115,6 @@
     const/4 v0, 0x1
 
     :goto_0
-    #calls: Lcom/android/phone/EditFdnContactScreen;->handleResult(ZZ)V
     invoke-static {v2, v0, v1}, Lcom/android/phone/EditFdnContactScreen;->access$700(Lcom/android/phone/EditFdnContactScreen;ZZ)V
 
     .line 430

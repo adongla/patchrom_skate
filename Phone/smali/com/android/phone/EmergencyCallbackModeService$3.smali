@@ -52,13 +52,11 @@
     .line 148
     iget-object v0, p0, Lcom/android/phone/EmergencyCallbackModeService$3;->this$0:Lcom/android/phone/EmergencyCallbackModeService;
 
-    #setter for: Lcom/android/phone/EmergencyCallbackModeService;->mTimeLeft:J
     invoke-static {v0, p1, p2}, Lcom/android/phone/EmergencyCallbackModeService;->access$102(Lcom/android/phone/EmergencyCallbackModeService;J)J
 
     .line 149
     iget-object v0, p0, Lcom/android/phone/EmergencyCallbackModeService$3;->this$0:Lcom/android/phone/EmergencyCallbackModeService;
 
-    #calls: Lcom/android/phone/EmergencyCallbackModeService;->showNotification(J)V
     invoke-static {v0, p1, p2}, Lcom/android/phone/EmergencyCallbackModeService;->access$200(Lcom/android/phone/EmergencyCallbackModeService;J)V
 
     .line 150

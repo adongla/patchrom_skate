@@ -169,7 +169,6 @@
     <item type="id" name="inCallAnswerWidgetStubVertical">false</item>
     <item type="id" name="inCallToolPanel">false</item>
     <item type="id" name="inCallRecordPrompt">false</item>
-    <item type="id" name="cdmaFlashButton">false</item>
     <item type="id" name="recordStartButton">false</item>
     <item type="id" name="recordStopButton">false</item>
     <item type="id" name="callRecordTimer">false</item>
@@ -196,6 +195,7 @@
     <item type="id" name="caller3">false</item>
     <item type="id" name="caller4">false</item>
     <item type="id" name="manage_done">false</item>
+    <item type="id" name="number_picker">false</item>
     <item type="id" name="status_bar_latest_event_content">false</item>
     <item type="id" name="icon">false</item>
     <item type="id" name="status_bar_latest_event_content_large_icon">false</item>

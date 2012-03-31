@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 84
+    .line 86
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
@@ -32,19 +32,19 @@
     .parameter "msg"
 
     .prologue
-    .line 88
+    .line 90
     move-object/from16 v0, p1
 
     iget v1, v0, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 114
+    .line 116
     :cond_0
     :goto_0
     return-void
 
-    .line 90
+    .line 92
     :pswitch_0
     move-object/from16 v0, p1
 
@@ -52,7 +52,7 @@
 
     check-cast v14, Landroid/os/AsyncResult;
 
-    .line 91
+    .line 93
     .local v14, ar:Landroid/os/AsyncResult;
     iget-object v0, v14, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -60,7 +60,7 @@
 
     check-cast v18, Lcom/android/phone/MiuiPhoneUtils$RetryWrapper$Retrier;
 
-    .line 92
+    .line 94
     .local v18, retrier:Lcom/android/phone/MiuiPhoneUtils$RetryWrapper$Retrier;
     iget-object v1, v14, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -74,7 +74,7 @@
 
     if-lt v1, v2, :cond_2
 
-    .line 93
+    .line 95
     :cond_1
     move-object/from16 v0, v18
 
@@ -86,7 +86,7 @@
 
     invoke-static {v1, v2, v3}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
-    .line 94
+    .line 96
     move-object/from16 v0, v18
 
     iget-object v1, v0, Lcom/android/phone/MiuiPhoneUtils$RetryWrapper$Retrier;->orig:Landroid/os/Message;
@@ -95,7 +95,7 @@
 
     goto :goto_0
 
-    .line 96
+    .line 98
     :cond_2
     move-object/from16 v0, v18
 
@@ -107,12 +107,12 @@
 
     iput v1, v0, Lcom/android/phone/MiuiPhoneUtils$RetryWrapper$Retrier;->retryCount:I
 
-    .line 97
+    .line 99
     invoke-virtual/range {v18 .. v18}, Lcom/android/phone/MiuiPhoneUtils$RetryWrapper$Retrier;->retry()V
 
     goto :goto_0
 
-    .line 102
+    .line 104
     .end local v14           #ar:Landroid/os/AsyncResult;
     .end local v18           #retrier:Lcom/android/phone/MiuiPhoneUtils$RetryWrapper$Retrier;
     :pswitch_1
@@ -128,7 +128,7 @@
 
     check-cast v17, Landroid/os/PowerManager;
 
-    .line 103
+    .line 105
     .local v17, pm:Landroid/os/PowerManager;
     invoke-virtual/range {v17 .. v17}, Landroid/os/PowerManager;->isScreenOn()Z
 
@@ -136,7 +136,7 @@
 
     if-nez v1, :cond_0
 
-    .line 104
+    .line 106
     move-object/from16 v0, p1
 
     iget-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -147,7 +147,7 @@
 
     check-cast v16, [Ljava/lang/Object;
 
-    .line 105
+    .line 107
     .local v16, objs:[Ljava/lang/Object;
     const/4 v1, 0x1
 
@@ -155,7 +155,7 @@
 
     check-cast v15, Landroid/view/KeyEvent;
 
-    .line 106
+    .line 108
     .local v15, event:Landroid/view/KeyEvent;
     const/4 v1, 0x0
 
@@ -215,7 +215,7 @@
 
     goto/16 :goto_0
 
-    .line 88
+    .line 90
     nop
 
     :pswitch_data_0
